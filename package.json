@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
@@ -33,6 +34,14 @@
     "redux": "^4.2.0",
     "styled-components": "^5.3.6",
     "uuid": "^9.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "applypatch-msg": "echo '[Husky] applypatch-msg'",
+      "pre-applypatch": "echo '[Husky] pre-applypatch'",
+      "post-applypatch": "echo '[Husky] post-applypatch'",
+      "pre-commit": "echo '[Husky] pre-commit'"
+    }
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
