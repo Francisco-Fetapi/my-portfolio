@@ -1,7 +1,7 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
 import AppStore from "../core/AppStore";
-import MantineProvider from "../core/MantineProvider";
+import AppProvider from "../core/AppProvider";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -18,7 +18,7 @@ export default function App(props: AppProps) {
       </Head>
 
       <AppStore>
-        <MantineProvider Page={<Component {...pageProps} />} />
+        <AppProvider Page={<Component {...pageProps} />} />
       </AppStore>
     </>
   );

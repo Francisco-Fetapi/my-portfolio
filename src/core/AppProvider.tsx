@@ -1,25 +1,28 @@
 import React from "react";
-import { MantineProvider as MMantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../store/App.selectors";
+import { GlobalStyles } from "../styles/GlobalStyles";
 
 interface MantineProviderInterface {
   Page: React.ReactNode;
 }
 
-export default function MantineProvider({ Page }: MantineProviderInterface) {
+export default function AppProvider({ Page }: MantineProviderInterface) {
   const isDark = useSelector(selectTheme);
+  const mode = isDark ? "dark" : "light";
 
   return (
-    <MMantineProvider
+    <MantineProvider
       withGlobalStyles
       withNormalizeCSS
       theme={{
         /** Put your mantine theme override here */
-        colorScheme: isDark ? "dark" : "light",
+        colorScheme: mode,
       }}
     >
+      <GlobalStyles mode={mode} />
       {Page}
-    </MMantineProvider>
+    </MantineProvider>
   );
 }
