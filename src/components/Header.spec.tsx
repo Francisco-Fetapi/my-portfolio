@@ -4,7 +4,7 @@ import { AppProvider } from "../__test__/AppProvider";
 
 describe("Header", () => {
   it("should be rendered correctly", () => {
-    const { getByText, debug } = render(
+    const { getByText } = render(
       <AppProvider>
         <Button>Clicar</Button>
       </AppProvider>

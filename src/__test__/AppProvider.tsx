@@ -1,6 +1,6 @@
-import store from "./App.store";
 import { Provider, useDispatch } from "react-redux";
 import { ReactNode, useEffect } from "react";
+import store from "./App.store";
 import { resetAllState } from "../store/App.store";
 
 interface AppSetupProps {

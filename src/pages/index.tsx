@@ -7,7 +7,7 @@ export default function IndexPage() {
 
   return (
     <Group mt={50} position="center">
-      <Button size="xl" onClick={() => dispatch(toggleTheme())}>
+      <Button size="xl" onClick={() => dispatch(toggleTheme(true))}>
         Welcome to Mantine!
       </Button>
     </Group>
