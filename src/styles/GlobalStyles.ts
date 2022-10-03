@@ -5,7 +5,5 @@ interface StylesProps {
 }
 
 export const GlobalStyles = createGlobalStyle<StylesProps>`
-    body{
-        background-color:#F0F0F0;
-    }
+    
 `;

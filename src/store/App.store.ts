@@ -31,6 +31,12 @@ export function sliceCreator(initialState: App) {
         const { save } = useStatePersist<boolean>(THEME_KEY_IN_LOCALSTORAGE);
         save(state.darkMode);
       },
+      setTheme(state, action: PayloadAction<boolean>) {
+        state.darkMode = action.payload;
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        const { save } = useStatePersist<boolean>(THEME_KEY_IN_LOCALSTORAGE);
+        save(state.darkMode);
+      },
       resetAllState(state, action: PayloadAction<boolean | undefined>) {
         if (action.payload) {
           return Object.assign(state, initialState);
@@ -56,7 +62,7 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) => getDefaultMiddleware(middlewares),
 });
 
-export const { toggleTheme, resetAllState } = app.actions;
+export const { toggleTheme, resetAllState, setTheme } = app.actions;
 
 export default store;
 

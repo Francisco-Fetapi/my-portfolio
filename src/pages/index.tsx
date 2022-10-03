@@ -1,13 +1,16 @@
 import { Button, Group } from "@mantine/core";
 import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { toggleTheme } from "../store/App.store";
 
 export default function IndexPage() {
-  const { locale } = useRouter();
+  const dispatch = useDispatch();
+
   return (
     <Group mt={50} position="center">
-      <Button size="xl">Welcome to Mantine!</Button>
-      <br />
-      <h1>{locale}</h1>
+      <Button size="xl" onClick={() => dispatch(toggleTheme())}>
+        Welcome to Mantine!
+      </Button>
     </Group>
   );
 }
