@@ -8,7 +8,7 @@ interface AppSetupProps {
 }
 
 // for testing
-export function AppSetup({ children }: AppSetupProps) {
+export function AppProvider({ children }: AppSetupProps) {
   return (
     <Provider store={store}>
       <ComponentWrapper>{children}</ComponentWrapper>
@@ -26,6 +26,7 @@ function ComponentWrapper({ children }: ComponentWrapperProps) {
     return () => {
       dispatch(resetAllState(true));
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [children]);
   return <div>{children}</div>;
 }
