@@ -39,6 +39,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@mantine/ds": "^5.4.2",
     "@swc/core": "^1.3.3",
     "@swc/jest": "^0.2.23",
     "@testing-library/jest-dom": "^5.16.5",
