@@ -1,5 +1,4 @@
 import { Button, Group } from "@mantine/core";
-import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { toggleTheme } from "../store/App.store";
 
