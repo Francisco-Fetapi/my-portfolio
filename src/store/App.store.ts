@@ -11,7 +11,8 @@ export interface App extends IDarkMode {}
 
 const initialState: App = {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  darkMode: useStatePersist<boolean>(THEME_KEY_IN_LOCALSTORAGE).get(),
+  // darkMode: useStatePersist<boolean>(THEME_KEY_IN_LOCALSTORAGE).get(),
+  darkMode: true,
 };
 
 function stateReseted(initialState: App): App {
