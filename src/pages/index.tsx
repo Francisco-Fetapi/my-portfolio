@@ -1,13 +1,11 @@
-import { Button, Group } from "@mantine/core";
-import { useDispatch } from "react-redux";
-import { toggleTheme } from "../store/App.store";
+import { Button, Group, useMantineColorScheme } from "@mantine/core";
 
 export default function IndexPage() {
-  const dispatch = useDispatch();
+  const { toggleColorScheme } = useMantineColorScheme();
 
   return (
     <Group mt={50} position="center">
-      <Button size="xl" onClick={() => dispatch(toggleTheme(true))}>
+      <Button size="xl" onClick={() => toggleColorScheme()}>
         Welcome to Mantine!
       </Button>
     </Group>
