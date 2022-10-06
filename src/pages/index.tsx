@@ -1,12 +1,20 @@
-import { Center } from "@mantine/core";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import { Center, useMantineColorScheme } from "@mantine/core";
+import Head from "next/head";
+import { HeaderMegaMenu } from "../components/HeaderMenu";
+import { parseCookies } from "nookies";
 
 export default function IndexPage() {
+  const { colorScheme } = useMantineColorScheme();
+  console.log("provide", colorScheme);
+  console.log(parseCookies());
   return (
-    <Center sx={{ height: "100vh" }}>
-      <Header />
-      <Footer />
-    </Center>
+    <div>
+      <Head>
+        <title>Home</title>
+      </Head>
+      <div>
+        <HeaderMegaMenu />
+      </div>
+    </div>
   );
 }

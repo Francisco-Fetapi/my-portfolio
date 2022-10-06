@@ -27,7 +27,7 @@ export default function App(props: AppProps) {
   return (
     <>
       <Head>
-        <title>Page title</title>
+        <title>Francisco Fetapi - Portfolio</title>
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta
           name="viewport"
