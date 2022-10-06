@@ -1,16 +1,16 @@
-import { Button } from "@mantine/core";
 import { render } from "@testing-library/react";
 import { AppProvider } from "../__test__/AppProvider";
+import Header from "./Header";
 
 describe("Header", () => {
   it("should be rendered correctly", () => {
     const { getByText } = render(
       <AppProvider>
-        <Button>Clicar</Button>
+        <Header />
       </AppProvider>
     );
 
-    expect(getByText("Clicar")).toBeInTheDocument();
+    expect(getByText("NextJs + Mantine Boilerplate")).toBeInTheDocument();
   });
 });
 
