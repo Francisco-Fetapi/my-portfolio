@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { middlewares, sliceCreator } from "./utils";
+import { createSlice } from "@reduxjs/toolkit";
+import { reducers } from "./App.actions";
 
 export const THEME_KEY_IN_LOCALSTORAGE = "darkMode";
 
@@ -12,7 +13,22 @@ export const initialState: App = {
   darkMode: false,
 };
 
+export function sliceCreator(initialState: App) {
+  return createSlice({
+    name: "app",
+    initialState,
+    reducers,
+  });
+}
+
 export const app = sliceCreator(initialState);
+
+export const middlewares = {
+  serializableCheck: {
+    // Ignore these paths in the state
+    ignoredPaths: [],
+  },
+};
 
 export const store = configureStore({
   reducer: {

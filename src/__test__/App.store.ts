@@ -1,6 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { middlewares, sliceCreator } from "../store/utils";
-import { App } from "../store/App.store";
+import { App, middlewares, sliceCreator } from "../store/App.store";
 
 const initialState: App = {
   darkMode: false,

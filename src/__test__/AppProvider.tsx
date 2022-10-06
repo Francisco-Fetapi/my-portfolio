@@ -2,6 +2,7 @@ import { Provider, useDispatch } from "react-redux";
 import { ReactNode, useEffect } from "react";
 import store from "./App.store";
 import { resetAllState } from "../store/App.store";
+import { ColorSchemeProvider } from "@mantine/core";
 
 interface AppSetupProps {
   children: ReactNode;
@@ -11,7 +12,9 @@ interface AppSetupProps {
 export function AppProvider({ children }: AppSetupProps) {
   return (
     <Provider store={store}>
-      <ComponentWrapper>{children}</ComponentWrapper>
+      <ColorSchemeProvider colorScheme="dark" toggleColorScheme={() => null}>
+        <ComponentWrapper>{children}</ComponentWrapper>
+      </ColorSchemeProvider>
     </Provider>
   );
 }
