@@ -28,6 +28,8 @@ import {
   IconCoin,
   IconChevronDown,
 } from "@tabler/icons";
+import Image from "next/image";
+import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
 
 const useStyles = createStyles((theme) => ({
@@ -137,6 +139,7 @@ export function HeaderMegaMenu() {
     useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const { classes, theme } = useStyles();
+  // const logoType = theme.colorScheme === "dark" ? "light" : "dark";
 
   const links = mockdata.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
@@ -160,7 +163,14 @@ export function HeaderMegaMenu() {
     <Box pb={120}>
       <Header height={60} px="md">
         <Group position="apart" sx={{ height: "100%" }}>
-          <MantineLogo size={30} />
+          {/* <Image
+            src={`/logo-${logoType}.png`}
+            alt="logo"
+            width={40}
+            height={40}
+            style={{ zoom: 1.3 }}
+          /> */}
+          <div />
 
           <Group
             sx={{ height: "100%" }}
@@ -233,7 +243,8 @@ export function HeaderMegaMenu() {
           </Group>
 
           <Group className={classes.hiddenMobile}>
-            <Button variant="default">Log in</Button>
+            {/* <Button variant="default">Log in</Button> */}
+            <LanguageToggle />
             <ThemeToggle />
           </Group>
 
