@@ -1,7 +1,8 @@
 import { createStyles, Button, Menu, Group } from "@mantine/core";
-import {IconChevronDown,} from "@tabler/icons";
+import { IconChevronDown } from "@tabler/icons";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 const useStyles = createStyles((theme) => ({
@@ -31,7 +32,7 @@ function ImgLanguage({ locale }: { locale?: string }) {
 
 export function LanguageToggle() {
   const { classes } = useStyles();
-  const { locales, locale: currentLocale, defaultLocale } = useRouter();
+  const { asPath, locales, locale: currentLocale, defaultLocale } = useRouter();
   const { t } = useTranslation("common");
 
   return (
@@ -48,13 +49,14 @@ export function LanguageToggle() {
         </Menu.Target>
         <Menu.Dropdown>
           {locales?.map((locale) => (
-            <Menu.Item
-              key={locale}
-              icon={<ImgLanguage locale={locale} />}
-              disabled={locale === currentLocale}
-            >
-              {t(locale)}
-            </Menu.Item>
+            <Link key={locale} locale={locale} href={asPath}>
+              <Menu.Item
+                icon={<ImgLanguage locale={locale} />}
+                disabled={locale === currentLocale}
+              >
+                {t(locale)}
+              </Menu.Item>
+            </Link>
           ))}
         </Menu.Dropdown>
       </Menu>

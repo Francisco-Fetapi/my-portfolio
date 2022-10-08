@@ -243,7 +243,6 @@ export function HeaderMegaMenu() {
           </Group>
 
           <Group className={classes.hiddenMobile}>
-            {/* <Button variant="default">Log in</Button> */}
             <LanguageToggle />
             <ThemeToggle />
           </Group>
