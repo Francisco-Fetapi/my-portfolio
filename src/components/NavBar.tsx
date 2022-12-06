@@ -35,7 +35,18 @@ export default function NavBar({ drawerOpened }: NavBarProps) {
         <NavbarMantine.Section grow>
           <SideNavBarContent>
             {socialMedia.map(({ Icon, href }) => (
-              <ActionIcon key={href}>
+              <ActionIcon
+                key={href}
+                sx={(theme) => ({
+                  ":hover": {
+                    color: theme.colors.blue[5],
+                    transition: "all .1s linear",
+                    transform: "translateY(-2px)",
+                    background: "transparent",
+                  },
+                  marginBottom: 8,
+                })}
+              >
                 <Icon size={22} />
               </ActionIcon>
             ))}

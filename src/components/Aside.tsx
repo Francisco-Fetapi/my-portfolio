@@ -24,7 +24,7 @@ export default function Aside() {
             }}
             size="sm"
             weight={400}
-            color="dimmed"
+            color="blue"
             href={`mailto://${me.email}`}
           >
             {me.email}

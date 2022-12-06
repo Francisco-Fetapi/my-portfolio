@@ -1,5 +1,6 @@
 import { createStyles, Container, Text, Button, Group } from "@mantine/core";
 import { GithubIcon } from "@mantine/ds";
+import { IconDownload } from "@tabler/icons";
 import { me } from "../database/me";
 
 const BREAKPOINT = "@media (max-width: 755px)";
@@ -75,7 +76,7 @@ export function HeroTitle() {
   return (
     <div className={classes.wrapper}>
       <Container size={700} className={classes.inner}>
-        <Text color="dimmed" size="md" mb={20}>
+        <Text color="dimmed" size="md" mb={20} italic weight={300}>
           Olá, meu nome é
         </Text>
         <h1 className={classes.title}>
@@ -91,24 +92,29 @@ export function HeroTitle() {
         </h1>
 
         <Text className={classes.description} color="dimmed">
-          Build fully functional accessible web applications with ease – Mantine
-          includes more than 100 customizable components and hooks to cover you
-          in any situation
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
+          consectetur ducimus sed atque sequi architecto? Optio, nisi, amet
+          recusandae magna!
         </Text>
 
         <Group className={classes.controls}>
           <Button
+            component="a"
             size="lg"
             className={classes.control}
             variant="gradient"
+            href={me.downloadCV}
+            target="__blank"
             gradient={{ from: "blue", to: "cyan" }}
+            leftIcon={<IconDownload size={20}/>}
           >
-            Get started
+            Baixar CV
           </Button>
 
           <Button
             component="a"
             href={me.github}
+            target="__blank"
             size="lg"
             variant="default"
             className={classes.control}

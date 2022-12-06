@@ -100,6 +100,7 @@ const useStyles = createStyles((theme) => ({
       display: "none",
     },
   },
+  header: {},
 }));
 
 const mockdata = [
@@ -170,7 +171,7 @@ export function HeaderMegaMenu({}: HeaderMegaMenuProps) {
 
   return (
     <Box>
-      <Header height={60} px="md">
+      <Header height={60} px="md" className={classes.header}>
         <Group position="apart" sx={{ height: "100%" }}>
           {/* <Image
             src={`/logo-${logoType}.png`}
