@@ -10,7 +10,6 @@ import { IconSun, IconMoon } from "@tabler/icons";
 export function ThemeToggle() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
-
   return (
     <Group position="center">
       <SegmentedControl
@@ -22,7 +21,7 @@ export function ThemeToggle() {
             label: (
               <Center>
                 <IconSun size={16} stroke={1.5} />
-                <Box ml={10}>Light</Box>
+                <Box ml={10}>Claro</Box>
               </Center>
             ),
           },
@@ -31,7 +30,7 @@ export function ThemeToggle() {
             label: (
               <Center>
                 <IconMoon size={16} stroke={1.5} />
-                <Box ml={10}>Dark</Box>
+                <Box ml={10}>Escuro</Box>
               </Center>
             ),
           },
