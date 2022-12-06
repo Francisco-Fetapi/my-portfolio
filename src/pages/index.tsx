@@ -3,6 +3,7 @@ import Head from "next/head";
 import { HeaderMegaMenu } from "../components/HeaderMenu";
 import { parseCookies } from "nookies";
 import AppScheme from "../components/AppScheme";
+import { HeroTitle } from "../components/HeroTitle";
 
 export default function IndexPage() {
   const { colorScheme } = useMantineColorScheme();
@@ -14,7 +15,7 @@ export default function IndexPage() {
         <title>Home</title>
       </Head>
       <AppScheme>
-        <h1>Ola Mundo</h1>
+        <HeroTitle />
       </AppScheme>
     </div>
   );

@@ -26,8 +26,8 @@ export default function SideNavBarContent({
           height: "20vh",
           background:
             theme.colorScheme === "dark"
-              ? theme.colors.dark[5]
-              : theme.colors.gray[1],
+              ? theme.colors.dark[4]
+              : theme.colors.gray[4],
         })}
       ></Box>
     </Box>

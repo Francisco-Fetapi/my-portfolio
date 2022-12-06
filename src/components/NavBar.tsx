@@ -1,28 +1,47 @@
-import { Navbar as NavbarMantine } from "@mantine/core";
+import { Navbar as NavbarMantine, ActionIcon, MediaQuery } from "@mantine/core";
 import { SIZE_NAVBAR_AND_SIDEBAR } from "./AppScheme";
 import SideNavBarContent from "./SideNavBarContent";
+
+import {
+  IconBrandGithub,
+  IconBrandTwitter,
+  IconBrandFacebook,
+  IconBrandLinkedin,
+  IconBrandInstagram,
+} from "@tabler/icons";
+import { me } from "../database/me";
 
 interface NavBarProps {
   drawerOpened: boolean;
 }
 
+const socialMedia = [
+  { Icon: IconBrandGithub, href: me.github },
+  { Icon: IconBrandLinkedin, href: me.linkedin },
+  { Icon: IconBrandFacebook, href: me.facebook },
+  { Icon: IconBrandTwitter, href: me.twitter },
+  { Icon: IconBrandInstagram, href: me.instagram },
+];
+
 export default function NavBar({ drawerOpened }: NavBarProps) {
   return (
-    <NavbarMantine
-      hiddenBreakpoint="xs"
-      hidden={!drawerOpened}
-      width={{ md: SIZE_NAVBAR_AND_SIDEBAR }}
-      withBorder={false}
-    >
-      <NavbarMantine.Section grow>
-        <SideNavBarContent>
-          <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-          </ul>
-        </SideNavBarContent>
-      </NavbarMantine.Section>
-    </NavbarMantine>
+    <MediaQuery smallerThan="md" styles={{ display: "none" }}>
+      <NavbarMantine
+        hiddenBreakpoint="xs"
+        hidden={!drawerOpened}
+        width={{ md: SIZE_NAVBAR_AND_SIDEBAR }}
+        withBorder={false}
+      >
+        <NavbarMantine.Section grow>
+          <SideNavBarContent>
+            {socialMedia.map(({ Icon, href }) => (
+              <ActionIcon key={href}>
+                <Icon size={22} />
+              </ActionIcon>
+            ))}
+          </SideNavBarContent>
+        </NavbarMantine.Section>
+      </NavbarMantine>
+    </MediaQuery>
   );
 }
