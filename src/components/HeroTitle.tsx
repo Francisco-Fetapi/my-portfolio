@@ -15,8 +15,8 @@ const useStyles = createStyles((theme) => ({
 
   inner: {
     position: "relative",
-    paddingTop: 100,
-    paddingBottom: 120,
+    paddingTop: 50,
+    paddingBottom: 80,
 
     [BREAKPOINT]: {
       paddingBottom: 80,
@@ -106,7 +106,7 @@ export function HeroTitle() {
             href={me.downloadCV}
             target="__blank"
             gradient={{ from: "blue", to: "cyan" }}
-            leftIcon={<IconDownload size={20}/>}
+            leftIcon={<IconDownload size={20} />}
           >
             Baixar CV
           </Button>

@@ -47,7 +47,11 @@ export function LanguageToggle() {
             {t(currentLocale || defaultLocale!)}
           </Button>
         </Menu.Target>
-        <Menu.Dropdown>
+        <Menu.Dropdown
+          sx={{
+            zIndex: 102,
+          }}
+        >
           {locales?.map((locale) => (
             <Link key={locale} locale={locale} href={asPath}>
               <Menu.Item

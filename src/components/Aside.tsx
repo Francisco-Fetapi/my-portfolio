@@ -17,15 +17,20 @@ export default function Aside() {
       >
         <SideNavBarContent>
           <Anchor
-            sx={{
+            size="sm"
+            weight={400}
+            color="dimmed"
+            href={`mailto://${me.email}`}
+            sx={(theme) => ({
               transform: "rotate(90deg) translateX(-100px)",
               display: "inline-block",
               letterSpacing: 1.2,
-            }}
-            size="sm"
-            weight={400}
-            color="blue"
-            href={`mailto://${me.email}`}
+              ":hover": {
+                textDecoration: "none",
+                color: theme.colors.blue[5],
+                transition: "all .1s linear",
+              },
+            })}
           >
             {me.email}
           </Anchor>
