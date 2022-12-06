@@ -1,6 +1,7 @@
 import {
   createStyles,
   Header,
+  ThemeIconVariant,
   HoverCard,
   Group,
   Button,
@@ -134,17 +135,25 @@ const mockdata = [
   },
 ];
 
-export function HeaderMegaMenu() {
+interface HeaderMegaMenuProps {
+  drawerOpened: boolean;
+  toggleDrawer: () => void;
+}
+
+export function HeaderMegaMenu({}: HeaderMegaMenuProps) {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const { classes, theme } = useStyles();
-  // const logoType = theme.colorScheme === "dark" ? "light" : "dark";
 
   const links = mockdata.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
-        <ThemeIcon size={34} variant="default" radius="md">
+        <ThemeIcon
+          size={34}
+          variant={"default" as ThemeIconVariant}
+          radius="md"
+        >
           <item.icon size={22} color={theme.fn.primaryColor()} />
         </ThemeIcon>
         <div>
@@ -160,7 +169,7 @@ export function HeaderMegaMenu() {
   ));
 
   return (
-    <Box pb={120}>
+    <Box>
       <Header height={60} px="md">
         <Group position="apart" sx={{ height: "100%" }}>
           {/* <Image

@@ -2,6 +2,7 @@ import { Center, useMantineColorScheme } from "@mantine/core";
 import Head from "next/head";
 import { HeaderMegaMenu } from "../components/HeaderMenu";
 import { parseCookies } from "nookies";
+import AppScheme from "../components/AppScheme";
 
 export default function IndexPage() {
   const { colorScheme } = useMantineColorScheme();
@@ -12,9 +13,9 @@ export default function IndexPage() {
       <Head>
         <title>Home</title>
       </Head>
-      <div>
-        <HeaderMegaMenu />
-      </div>
+      <AppScheme>
+        <h1>Ola Mundo</h1>
+      </AppScheme>
     </div>
   );
 }
