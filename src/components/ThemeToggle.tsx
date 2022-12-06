@@ -10,6 +10,7 @@ import { IconSun, IconMoon } from "@tabler/icons";
 export function ThemeToggle() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
+
   return (
     <Group position="center">
       <SegmentedControl

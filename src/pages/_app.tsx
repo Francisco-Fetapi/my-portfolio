@@ -1,28 +1,30 @@
-import { AppProps } from "next/app";
 import Head from "next/head";
 import AppStore from "../core/AppStore";
 import AppProvider from "../core/AppProvider";
-import { ColorScheme, ColorSchemeProvider } from "@mantine/core";
+import { ColorSchemeProvider } from "@mantine/core";
 import { useState } from "react";
-import nookies, { setCookie, parseCookies } from "nookies";
+import nookies, { setCookie } from "nookies";
+import { AppProps } from "next/app";
 
-export default function App(props: AppProps) {
+interface WithColorScheme {
+  preferredColorScheme: "light" | "dark";
+}
+const THEME_COOKIE = "theme_mantine_portfolio";
+export default function App(props: AppProps & WithColorScheme) {
   const { Component, pageProps } = props;
-  const cookiesServer = nookies.get();
-  const [colorScheme, setColorScheme] = useState<ColorScheme>(
-    (cookiesServer.theme || "light") as ColorScheme
-  );
+  const [colorScheme, setColorScheme] = useState(props.preferredColorScheme);
 
-  const toggleColorScheme = (value?: ColorScheme) => {
+  console.log("props server color", props.preferredColorScheme);
+
+  function toggleColorScheme(value: "light" | "dark") {
     const nextColorScheme =
-      value || (colorScheme === "dark" ? "light" : "dark");
+      value || (colorScheme === "light" ? "dark" : "light");
     setColorScheme(nextColorScheme);
-    setCookie(null, "theme", nextColorScheme, {
-      maxAge: 12 * 30 * 24 * 60 * 60,
+    setCookie(null, THEME_COOKIE, nextColorScheme, {
+      maxAge: 30 * 24 * 60 * 60,
+      path: "/",
     });
-
-    console.log("client cookies", parseCookies());
-  };
+  }
 
   return (
     <>
@@ -46,3 +48,11 @@ export default function App(props: AppProps) {
     </>
   );
 }
+
+// App.getInitialProps = ({ ctx }: { ctx: any }) => {
+//   const cookies = nookies.get(ctx);
+//   console.log("server cookies", cookies);
+//   return {
+//     preferredColorScheme: cookies[THEME_COOKIE] || "light",
+//   };
+// };
