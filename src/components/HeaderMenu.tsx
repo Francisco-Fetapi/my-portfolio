@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import {
   createStyles,
+  Text,
   Header,
   ActionIcon,
   Group,
@@ -29,6 +30,7 @@ import {
 import { useRouter } from "next/router";
 import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
+import Link from "next/link";
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -55,6 +57,13 @@ const useStyles = createStyles((theme) => ({
           ? theme.colors.dark[6]
           : theme.colors.gray[0],
     }),
+  },
+  linkActive: {
+    backgroundColor:
+      (theme.colorScheme === "dark"
+        ? theme.colors.dark[8]
+        : theme.colors.gray[3]) + " !important",
+    pointerEvents: "none",
   },
 
   subLink: {
@@ -114,9 +123,9 @@ interface HeaderMegaMenuProps {
 const links = [
   { label: "Página Inicial", href: "/" },
   { label: "Sobre", href: "/about" },
-  { label: "Projeto", href: "/projects" },
+  { label: "Projetos", href: "/projects" },
   { label: "Jornada", href: "/journey" },
-  { label: "Contato", href: "/contact" },
+  { label: "Contacto", href: "/contact" },
 ];
 
 export function HeaderMegaMenu({}: HeaderMegaMenuProps) {
@@ -127,12 +136,19 @@ export function HeaderMegaMenu({}: HeaderMegaMenuProps) {
   const router = useRouter();
 
   const Links = useMemo(() => {
-    return links.map((link) => (
-      <a href={link.href} key={link.href} className={classes.link}>
-        {link.label}
-      </a>
-    ));
-  }, [router.pathname]);
+    return links.map((link) => {
+      const isActive = router.pathname === link.href;
+      return (
+        <Link href={link.href} key={link.href}>
+          <a
+            className={classes.link + ` ${isActive ? classes.linkActive : ""}`}
+          >
+            {link.label}
+          </a>
+        </Link>
+      );
+    });
+  }, [router.pathname, classes]);
 
   console.log(router);
 

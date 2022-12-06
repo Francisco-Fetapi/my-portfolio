@@ -1,15 +1,14 @@
 import Head from "next/head";
 import AppScheme from "../components/AppScheme";
-import { HeroTitle } from "../components/HeroTitle";
 
 export default function IndexPage() {
   return (
     <div>
       <Head>
-        <title>Home</title>
+        <title>Sobre</title>
       </Head>
       <AppScheme>
-        <HeroTitle />
+        <h1>Sobre</h1>
       </AppScheme>
     </div>
   );
