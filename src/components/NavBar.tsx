@@ -35,20 +35,21 @@ export default function NavBar({ drawerOpened }: NavBarProps) {
         <NavbarMantine.Section grow>
           <SideNavBarContent>
             {socialMedia.map(({ Icon, href }) => (
-              <ActionIcon
-                key={href}
-                sx={(theme) => ({
-                  ":hover": {
-                    color: theme.colors.blue[5],
-                    transition: "all .1s linear",
-                    transform: "translateY(-2px)",
-                    background: "transparent",
-                  },
-                  marginBottom: 8,
-                })}
-              >
-                <Icon size={22} />
-              </ActionIcon>
+              <a key={href} href={href} target="__blank">
+                <ActionIcon
+                  sx={(theme) => ({
+                    ":hover": {
+                      color: theme.colors.blue[5],
+                      transition: "all .1s linear",
+                      transform: "translateY(-2px)",
+                      background: "transparent",
+                    },
+                    marginBottom: 8,
+                  })}
+                >
+                  <Icon size={22} />
+                </ActionIcon>
+              </a>
             ))}
           </SideNavBarContent>
         </NavbarMantine.Section>
