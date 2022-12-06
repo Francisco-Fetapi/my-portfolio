@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import {
   createStyles,
   Header,
@@ -25,7 +26,7 @@ import {
   IconSun,
   IconMoonStars,
 } from "@tabler/icons";
-import Image from "next/image";
+import { useRouter } from "next/router";
 import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -123,6 +124,17 @@ export function HeaderMegaMenu({}: HeaderMegaMenuProps) {
     useDisclosure(false);
   const { classes, theme } = useStyles();
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const router = useRouter();
+
+  const Links = useMemo(() => {
+    return links.map((link) => (
+      <a href={link.href} key={link.href} className={classes.link}>
+        {link.label}
+      </a>
+    ));
+  }, [router.pathname]);
+
+  console.log(router);
 
   return (
     <Box>
@@ -142,11 +154,7 @@ export function HeaderMegaMenu({}: HeaderMegaMenuProps) {
             spacing={0}
             className={classes.hiddenMobile}
           >
-            {links.map((link) => (
-              <a href={link.href} key={link.href} className={classes.link}>
-                {link.label}
-              </a>
-            ))}
+            {Links}
           </Group>
 
           <Group className={classes.hiddenMobile}>
@@ -187,11 +195,7 @@ export function HeaderMegaMenu({}: HeaderMegaMenuProps) {
             color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"}
           />
 
-          {links.map((link) => (
-            <a href={link.href} key={link.href} className={classes.link}>
-              {link.label}
-            </a>
-          ))}
+          {Links}
 
           <Divider
             my="sm"
