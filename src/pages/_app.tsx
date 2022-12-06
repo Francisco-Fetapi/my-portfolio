@@ -1,20 +1,19 @@
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import AppStore from "../core/AppStore";
 import AppProvider from "../core/AppProvider";
 import { ColorSchemeProvider } from "@mantine/core";
-import { useState } from "react";
-import nookies, { setCookie } from "nookies";
+import nookies, { parseCookies, setCookie } from "nookies";
 import { AppProps } from "next/app";
 
+type IColor = "light" | "dark";
 interface WithColorScheme {
-  preferredColorScheme: "light" | "dark";
+  preferredColorScheme: IColor;
 }
 const THEME_COOKIE = "theme_mantine_portfolio";
 export default function App(props: AppProps & WithColorScheme) {
   const { Component, pageProps } = props;
-  const [colorScheme, setColorScheme] = useState(props.preferredColorScheme);
-
-  console.log("props server color", props.preferredColorScheme);
+  const [colorScheme, setColorScheme] = useState<IColor>("light");
 
   function toggleColorScheme(value: "light" | "dark") {
     const nextColorScheme =
@@ -25,6 +24,12 @@ export default function App(props: AppProps & WithColorScheme) {
       path: "/",
     });
   }
+
+  useEffect(() => {
+    const cookies = parseCookies();
+    const nextColor = (cookies[THEME_COOKIE] || colorScheme) as IColor;
+    toggleColorScheme(nextColor);
+  }, []);
 
   return (
     <>
