@@ -8,7 +8,7 @@ const footer: FooterLinksProps["data"] = [
   {
     title: "Tecnologias",
     links: me.tecnologies.slice(0, 5).map((tec) => ({
-      href: "/projects?languange=" + tec.toLowerCase(),
+      href: "/projects?language=" + tec.toLowerCase(),
       label: tec,
     })),
   },
