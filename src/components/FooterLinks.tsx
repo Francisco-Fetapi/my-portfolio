@@ -6,24 +6,16 @@ import {
   ActionIcon,
   Group,
 } from "@mantine/core";
-import {
-  IconBrandTwitter,
-  IconBrandYoutube,
-  IconBrandInstagram,
-} from "@tabler/icons";
+
 import { MantineLogo } from "@mantine/ds";
 import { contacts } from "../pages/contact";
 import { me } from "../database/me";
+import Link from "next/link";
 
 const useStyles = createStyles((theme) => ({
   footer: {
     marginTop: 120,
     paddingTop: theme.spacing.xl * 2,
-    // paddingBottom: theme.spacing.xl,
-    // backgroundColor:
-    //   theme.colorScheme === "dark"
-    //     ? theme.colors.dark[6]
-    //     : theme.colors.gray[0],
     borderTop: `1px solid ${
       theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
@@ -134,15 +126,11 @@ export function FooterLinks({ data }: FooterLinksProps) {
 
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
-      <Text<"a">
-        key={index}
-        className={classes.link}
-        component="a"
-        href={link.href}
-        onClick={(event) => event.preventDefault()}
-      >
-        {link.label}
-      </Text>
+      <Link key={index} href={link.href} passHref>
+        <Text<"a"> className={classes.link} component="a" href={link.href}>
+          {link.label}
+        </Text>
+      </Link>
     ));
 
     return (
