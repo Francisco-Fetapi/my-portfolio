@@ -94,24 +94,22 @@ export default function IndexPage() {
 
           <Box mt={50} sx={{ zoom: 0.8 }}>
             <Text className={classes.description}>
-              My name is Marcos Meneghetti, I am a Front-End JavaScript and
-              React Developer. I discovered HTML in july 2020 and now it&apos;s
-              &quot;my precious&quot;. I have a bachelor degree in publicity,
-              certified in Front-End development and I am certified in Game
-              Designer. I speak portuguese (maternal language), french and
-              english.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Excepturi quidem qui explicabo officia at et possimus nesciunt
+              fuga unde, laborum adipisci vel a deserunt dignissimos laudantium
+              labore?
             </Text>
             <Text className={classes.description}>
-              I lived in Canada during 2 years (2019-2021) and now I live again
-              in France. I have worked in the industry as 3D animator for 15
-              years in short and feature films, TV shows and for various
-              animation studios like Blue Spirit Canada, Bullit Studio, TeamTo,
-              Citron Vache and Otto Desenhos Animados.
+              Qui, dolor. Obcaecati odio libero dolor! Consequatur ea doloribus
+              voluptatum laudantium. Impedit optio dolorem sequi qui, et quis in
+              consequuntur, autem dolore nobis magni, sapiente unde alias atque
+              natus veritatis eius voluptates. Deserunt.
             </Text>
             <Text className={classes.description}>
-              My passions are: web development, 3D animation, take pictures,
-              cinema, miniatures, listen to music, hockey, martial arts and
-              magic tricks.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
+              inventore doloribus harum et cum voluptatibus incidunt! Eligendi
+              hic deleniti dolorum aliquam quod, in blanditiis illum voluptatem
+              tempore sint repudiandae ex.
             </Text>
           </Box>
         </Box>
