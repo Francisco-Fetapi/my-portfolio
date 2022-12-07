@@ -71,7 +71,7 @@ export default function IndexPage() {
           <MainTitle>Contacto</MainTitle>
           {/* <br /> */}
           <Text color="dimmed" className={classes.description}>
-            Se tens alguma pergunta ou se quiseres apenas dar um &quot;Oi&quot;,
+            Se quiseres fazer alguma pergunta ou apenas dar um &quot;Oi&quot;,
             darei o meu melhor para lhe atender o mais rápido possivel. Estou
             sempre aberto para discutir novas ideias e participar de novos
             projetos.
