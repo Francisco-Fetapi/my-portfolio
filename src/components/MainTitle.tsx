@@ -12,9 +12,10 @@ const useStyles = createStyles((theme) => ({
   },
   ornament: {
     width: "90%",
-    maxWidth: 500,
+    maxWidth: 400,
     height: 2,
-    background: theme.colors.blue[6],
+    background:
+      theme.colorScheme === "dark" ? theme.colors.gray[6] : theme.black,
     marginLeft: 10,
   },
   title: {
