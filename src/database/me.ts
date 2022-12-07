@@ -12,4 +12,5 @@ export const me = {
   phone2: "958727914",
   calendly: "linkdocalendly",
   whatsapp: `https://api.whatsapp.com?tel=${phone1}`,
+  tecnologies: ["Javascript", "Typescript", "Php", "React", "Nextjs"],
 };

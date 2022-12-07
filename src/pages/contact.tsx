@@ -16,7 +16,7 @@ import {
 } from "@tabler/icons";
 import { me } from "../database/me";
 
-const contacts = [
+export const contacts = [
   {
     Icon: IconBrandGmail,
     href: `mailto://${me.email}`,

@@ -126,7 +126,7 @@ interface HeaderMegaMenuProps {
   toggleDrawer: () => void;
 }
 
-const links = [
+export const links = [
   { label: "Página Inicial", href: "/" },
   { label: "Sobre", href: "/about" },
   { label: "Projetos", href: "/projects" },

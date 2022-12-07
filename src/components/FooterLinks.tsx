@@ -1,5 +1,6 @@
 import {
   createStyles,
+  Anchor,
   Text,
   Container,
   ActionIcon,
@@ -11,6 +12,7 @@ import {
   IconBrandInstagram,
 } from "@tabler/icons";
 import { MantineLogo } from "@mantine/ds";
+import { contacts } from "../pages/contact";
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -117,9 +119,14 @@ const useStyles = createStyles((theme) => ({
 export interface FooterLinksProps {
   data: {
     title: string;
-    links: { label: string; link: string }[];
+    links: { label: string; href: string }[];
   }[];
 }
+
+const linksSocial = contacts.filter((contact) => {
+  const linksToShow = ["Whatsapp", "Telemóvel", "Calendly"];
+  return linksToShow.includes(contact.label);
+});
 
 export function FooterLinks({ data }: FooterLinksProps) {
   const { classes } = useStyles();
@@ -130,7 +137,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
         key={index}
         className={classes.link}
         component="a"
-        href={link.link}
+        href={link.href}
         onClick={(event) => event.preventDefault()}
       >
         {link.label}
@@ -158,19 +165,18 @@ export function FooterLinks({ data }: FooterLinksProps) {
       </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          © 2020 mantine.dev. All rights reserved.
+          © {new Date().getFullYear()} - Todos os direitos reservados por{" "}
+          <Anchor>Francisco Fetapi</Anchor>.
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
-          <ActionIcon size="lg">
-            <IconBrandTwitter size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandYoutube size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandInstagram size={18} stroke={1.5} />
-          </ActionIcon>
+          {linksSocial.map(({ Icon, ...social }) => (
+            <a href={social.href} target="__blank" key={social.href}>
+              <ActionIcon size="lg">
+                <Icon size={18} stroke={1.5} />
+              </ActionIcon>
+            </a>
+          ))}
         </Group>
       </Container>
     </footer>
