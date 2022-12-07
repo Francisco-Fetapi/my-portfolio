@@ -1,7 +1,7 @@
 import Head from "next/head";
 import AppScheme from "../components/AppScheme";
 import MainTitle from "../components/MainTitle";
-import { Box, Group, Text, Button } from "@mantine/core";
+import { Box, Grid, Group, Text, Button } from "@mantine/core";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 import { me } from "../database/me";
 import Link from "next/link";
@@ -15,13 +15,30 @@ export default function IndexPage() {
       </Head>
       <AppScheme>
         <Box mt={20}>
-          <MainTitle>Sobre</MainTitle>
-          <Box sx={{ zoom: 0.9, width: "90%", maxWidth: 600 }}>
-            <Text color="dimmed" className={classes.description}>
-              Sou um cara apaixonado por desenvolvimento de software. Atualmente
-              com foco em Front-End.
-            </Text>
-          </Box>
+          <Grid gutter="lg" justify="flex-end">
+            <Grid.Col md={6} xs={12}>
+              <MainTitle>Sobre</MainTitle>
+              <Box sx={{ zoom: 0.9, width: "100%", maxWidth: 600 }}>
+                <Text color="dimmed" className={classes.description}>
+                  Sou um cara apaixonado por desenvolvimento de software.
+                  Atualmente com foco em Front-End.
+                </Text>
+              </Box>
+            </Grid.Col>
+            <Grid.Col md={6} xs={12}>
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  background: "red",
+                  display: "flex",
+                  justifyContent: "flex-end",
+                }}
+              >
+                O
+              </Box>
+            </Grid.Col>
+          </Grid>
           <Group mt={30}>
             <Link href="/contact" passHref>
               <Button
