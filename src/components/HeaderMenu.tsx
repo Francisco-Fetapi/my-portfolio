@@ -106,7 +106,9 @@ const useStyles = createStyles((theme) => ({
       display: "none",
     },
   },
-  header: {},
+  header: {
+    zIndex:105
+  },
   theme: {
     color:
       theme.colorScheme === "dark"
