@@ -18,6 +18,8 @@ export default function AppProvider({ Page }: MantineProviderInterface) {
         /** Put your mantine theme override here */
         fontFamily: "Roboto, sans-serif",
         colorScheme,
+        black: "#333",
+        // white: "#F4F4F4",
       }}
     >
       <GlobalStyles mode={colorScheme} />
