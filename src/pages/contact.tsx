@@ -66,7 +66,7 @@ export default function IndexPage() {
                 href={contact.href}
                 target="__blank"
               >
-                <Grid gutter={20} align="center">
+                <Grid gutter={40} align="center">
                   <Grid.Col span={2}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
