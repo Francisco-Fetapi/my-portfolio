@@ -158,7 +158,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
         <div className={classes.logo}>
           <MantineLogo size={30} />
           <Text size="xs" color="dimmed" className={classes.description}>
-            Build fully functional accessible web applications faster than ever
+            Projetado e Desenvolvido por <i>Francisco Fetapi</i>
           </Text>
         </div>
         <div className={classes.groups}>{groups}</div>
