@@ -1,3 +1,5 @@
+const phone1 = "934712217";
+
 export const me = {
   email: "franciscofetapi@gmail.com",
   github: "https://github.com/Francisco-Fetapi",
@@ -6,4 +8,8 @@ export const me = {
   facebook: "https://facebook.com/alexander.garret.75",
   linkedin: "https://www.linkedin.com/in/francisco-fetapi-058472223/",
   downloadCV: "https://downloadcv.com",
+  phone1,
+  phone2: "958727914",
+  calendly: "linkdocalendly",
+  whatsapp: `https://api.whatsapp.com?tel=${phone1}`,
 };
