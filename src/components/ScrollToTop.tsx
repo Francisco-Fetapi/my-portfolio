@@ -16,6 +16,7 @@ export default function ScrollToTop() {
               size="xl"
               sx={(theme) => ({
                 background: theme.colors.blue[6] + "!important",
+                color: theme.colors.gray[1],
               })}
             >
               <IconArrowUp size={20} />
