@@ -16,7 +16,7 @@ export default function IndexPage() {
       <AppScheme>
         <Box mt={20}>
           <Grid gutter="lg" justify="flex-end">
-            <Grid.Col md={6} xs={12}>
+            <Grid.Col md={8} xs={12}>
               <MainTitle>Sobre</MainTitle>
               <Box sx={{ zoom: 0.9, width: "100%", maxWidth: 600 }}>
                 <Text color="dimmed" className={classes.description}>
@@ -24,8 +24,30 @@ export default function IndexPage() {
                   Atualmente com foco em Front-End.
                 </Text>
               </Box>
+              <Group mt={30}>
+                <Link href="/contact" passHref>
+                  <Button
+                    component="a"
+                    variant="gradient"
+                    size="md"
+                    gradient={{ from: "blue", to: "cyan" }}
+                  >
+                    Contactar
+                  </Button>
+                </Link>
+                <Button
+                  component="a"
+                  size="md"
+                  variant="subtle"
+                  href={me.downloadCV}
+                  target="__blank"
+                  color="cyan"
+                >
+                  Baixar Curriculum
+                </Button>
+              </Group>
             </Grid.Col>
-            <Grid.Col md={6} xs={12}>
+            <Grid.Col md={4} xs={12}>
               <Box
                 sx={{
                   width: "100%",
@@ -39,32 +61,7 @@ export default function IndexPage() {
               </Box>
             </Grid.Col>
           </Grid>
-          <Group mt={30}>
-            <Link href="/contact" passHref>
-              <Button
-                component="a"
-                variant="gradient"
-                size="md"
-                gradient={{ from: "blue", to: "cyan" }}
-                // className={classes.control}
-                // leftIcon={<GithubIcon size={20} />}
-              >
-                Contactar
-              </Button>
-            </Link>
-            <Button
-              component="a"
-              size="md"
-              // className={classes.control}
-              variant="subtle"
-              href={me.downloadCV}
-              target="__blank"
-              color="cyan"
-              // leftIcon={<IconDownload size={20} />}
-            >
-              Baixar Curriculum
-            </Button>
-          </Group>
+
           <Box mt={50} sx={{ zoom: 0.8 }}>
             <Text className={classes.description}>
               My name is Marcos Meneghetti, I am a Front-End JavaScript and
