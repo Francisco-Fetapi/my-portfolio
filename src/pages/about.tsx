@@ -18,23 +18,7 @@ import Image from "next/image";
 const PHOTO_SIZE = 250;
 
 const useStyles = createStyles((theme) => ({
-  figure: {
-    ":after": {
-      border: "2px solid" + theme.black,
-      top: 20,
-      left: 20,
-      zIndex: -1,
-      content: `""`,
-      display: "block",
-      position: "absolute",
-      width: "100%",
-      height: "100%",
-      borderRadius: 4,
-      transition: "all .5s linear",
-    },
-  },
   image: {
-    // transform: "translateX(-30px) translateY(-30px)",
     borderRadius: theme.radius.md,
   },
 }));
