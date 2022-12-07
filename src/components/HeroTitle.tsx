@@ -87,7 +87,7 @@ export function HeroTitle() {
             inherit
           >
             Francisco Fetapi
-          </Text>{" "}
+          </Text>{" "}<br />
           Desenvolvedor Front-end
         </h1>
 
