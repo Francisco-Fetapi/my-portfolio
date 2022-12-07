@@ -5,7 +5,7 @@ import { me } from "../database/me";
 
 const BREAKPOINT = "@media (max-width: 755px)";
 
-const useStyles = createStyles((theme) => ({
+export const useStyles = createStyles((theme) => ({
   wrapper: {
     position: "relative",
     boxSizing: "border-box",
@@ -87,7 +87,8 @@ export function HeroTitle() {
             inherit
           >
             Francisco Fetapi
-          </Text>{" "}<br />
+          </Text>{" "}
+          <br />
           Desenvolvedor Front-end
         </h1>
 
