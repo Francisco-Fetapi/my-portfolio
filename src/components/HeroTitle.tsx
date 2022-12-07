@@ -5,7 +5,7 @@ import { me } from "../database/me";
 
 const BREAKPOINT = "@media (max-width: 755px)";
 
-const useStyles = createStyles((theme) => ({
+export const useStyles = createStyles((theme) => ({
   wrapper: {
     position: "relative",
     boxSizing: "border-box",
@@ -16,7 +16,7 @@ const useStyles = createStyles((theme) => ({
   inner: {
     position: "relative",
     paddingTop: 50,
-    paddingBottom: 80,
+    // paddingBottom: 80,
 
     [BREAKPOINT]: {
       paddingBottom: 80,
@@ -88,6 +88,7 @@ export function HeroTitle() {
           >
             Francisco Fetapi
           </Text>{" "}
+          <br />
           Desenvolvedor Front-end
         </h1>
 

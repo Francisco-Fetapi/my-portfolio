@@ -59,11 +59,15 @@ const useStyles = createStyles((theme) => ({
     }),
   },
   linkActive: {
-    backgroundColor:
-      (theme.colorScheme === "dark"
-        ? theme.colors.dark[8]
-        : theme.colors.gray[3]) + " !important",
+    [theme.fn.largerThan("sm")]: {
+      // backgroundImage: theme.fn.gradient({ from: "blue", to: "cyan" }),
+      borderBottom: "1px solid " + theme.colors.blue[6],
+    },
+    [theme.fn.smallerThan("sm")]: {
+      borderLeft: "3px solid " + theme.colors.blue[6],
+    },
     pointerEvents: "none",
+    userSelect: "none",
   },
 
   subLink: {
@@ -106,7 +110,9 @@ const useStyles = createStyles((theme) => ({
       display: "none",
     },
   },
-  header: {},
+  header: {
+    zIndex: 105,
+  },
   theme: {
     color:
       theme.colorScheme === "dark"
@@ -120,7 +126,7 @@ interface HeaderMegaMenuProps {
   toggleDrawer: () => void;
 }
 
-const links = [
+export const links = [
   { label: "Página Inicial", href: "/" },
   { label: "Sobre", href: "/about" },
   { label: "Projetos", href: "/projects" },

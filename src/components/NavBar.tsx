@@ -15,7 +15,7 @@ interface NavBarProps {
   drawerOpened: boolean;
 }
 
-const socialMedia = [
+export const socialMedia = [
   { Icon: IconBrandGithub, href: me.github },
   { Icon: IconBrandLinkedin, href: me.linkedin },
   { Icon: IconBrandFacebook, href: me.facebook },
