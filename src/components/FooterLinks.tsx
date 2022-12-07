@@ -8,8 +8,7 @@ import {
 } from "@mantine/core";
 
 import { MantineLogo } from "@mantine/ds";
-import { contacts } from "../pages/contact";
-import { me } from "../database/me";
+import { me, contacts } from "../database/me";
 import Link from "next/link";
 
 const useStyles = createStyles((theme) => ({

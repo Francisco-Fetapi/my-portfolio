@@ -1,63 +1,19 @@
 import Head from "next/head";
 import AppScheme from "../components/AppScheme";
 import MainTitle from "../components/MainTitle";
-import { Title, Button, Box, Text, Paper, SimpleGrid } from "@mantine/core";
+import {
+  Grid,
+  Title,
+  Button,
+  Box,
+  Text,
+  Paper,
+  SimpleGrid,
+} from "@mantine/core";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 import { socialMedia } from "../components/NavBar";
-import {
-  IconPhoneCall,
-  IconCalendar,
-  IconBrandTwitter,
-  IconBrandFacebook,
-  IconBrandLinkedin,
-  IconBrandInstagram,
-  IconBrandGmail,
-  IconBrandWhatsapp,
-} from "@tabler/icons";
-import { me } from "../database/me";
 
-export const contacts = [
-  {
-    Icon: IconBrandGmail,
-    href: `mailto://${me.email}`,
-    label: "Gmail",
-  },
-  {
-    Icon: IconBrandLinkedin,
-    href: me.linkedin,
-    label: "Linkedin",
-  },
-  {
-    Icon: IconBrandFacebook,
-    href: me.facebook,
-    label: "Facebook",
-  },
-  {
-    Icon: IconBrandTwitter,
-    href: me.twitter,
-    label: "Twitter",
-  },
-  {
-    Icon: IconBrandInstagram,
-    href: me.instagram,
-    label: "Instagram",
-  },
-  {
-    Icon: IconBrandWhatsapp,
-    href: me.whatsapp,
-    label: "Whatsapp",
-  },
-  {
-    Icon: IconPhoneCall,
-    href: `tel://${me.phone2}`,
-    label: "Telemóvel",
-  },
-  {
-    Icon: IconCalendar,
-    href: me.calendly,
-    label: "Calendly",
-  },
-];
+import { me, contacts } from "../database/me";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -98,27 +54,32 @@ export default function IndexPage() {
             cols={4}
             spacing="lg"
             breakpoints={[
-              { maxWidth: "sm", cols: 3, spacing: "sm" },
-              { maxWidth: "xs", cols: 2, spacing: "sm" },
+              { maxWidth: "sm", cols: 3, spacing: "lg" },
+              { maxWidth: "xs", cols: 2, spacing: "lg" },
             ]}
           >
             {contacts.map(({ Icon, ...contact }) => (
-              <Button
-                key={contact.href}
-                leftIcon={<Icon size={20} />}
-                variant="subtle"
-                color="gray"
+              <Text
                 component="a"
+                color="dimmed"
+                key={contact.label}
                 href={contact.href}
                 target="__blank"
-                sx={(theme) => ({
-                  ":hover": {
-                    color: theme.colors.blue[6],
-                  },
-                })}
               >
-                {contact.label}
-              </Button>
+                <Grid gutter={50} align="center">
+                  <Grid.Col span={2}>
+                    <img
+                      src={`/${contact.icon}`}
+                      width={40}
+                      height={40}
+                      alt="Icone Social"
+                    />
+                  </Grid.Col>
+                  <Grid.Col span={9}>
+                    <p>{contact.label}</p>
+                  </Grid.Col>
+                </Grid>
+              </Text>
             ))}
           </SimpleGrid>
         </Paper>
