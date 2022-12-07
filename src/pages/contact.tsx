@@ -70,16 +70,20 @@ export default function IndexPage() {
         <Box mt={20}>
           <MainTitle>Contacto</MainTitle>
           {/* <br /> */}
-          <Text color="dimmed" className={classes.description}>
-            Se quiseres fazer alguma pergunta ou apenas dar um &quot;Oi&quot;,
-            darei o meu melhor para lhe atender o mais rápido possivel. Estou
-            sempre aberto para discutir novas ideias e participar de novos
-            projetos.
-          </Text>
+          <Box sx={{ zoom: 0.9 }}>
+            <Text className={classes.description}>
+              Se quiseres fazer alguma pergunta ou apenas dar um &quot;Oi&quot;,
+              darei o meu melhor para lhe atender o mais rápido possivel. Estou
+              sempre aberto para discutir novas ideias e participar de novos
+              projetos.
+            </Text>
+          </Box>
           <br />
-          <Text color="dimmed" className={classes.description}>
-            Espero ver você em breve! : {")"}
-          </Text>
+          <Box sx={{ zoom: 0.9 }}>
+            <Text className={classes.description}>
+              Espero ver você em breve! : {")"}
+            </Text>
+          </Box>
         </Box>
         <br />
         <Paper shadow="0 6px 14px 1px rgb(0 0 0 / 28%)" radius="md" p="lg">
@@ -107,6 +111,11 @@ export default function IndexPage() {
                 component="a"
                 href={contact.href}
                 target="__blank"
+                sx={(theme) => ({
+                  ":hover": {
+                    color: theme.colors.blue[6],
+                  },
+                })}
               >
                 {contact.label}
               </Button>
