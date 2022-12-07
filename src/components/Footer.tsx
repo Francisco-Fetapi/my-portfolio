@@ -18,6 +18,7 @@ export default function Footer() {
   return (
     <Box>
       <FooterLinks data={footer} />
+      <br />
     </Box>
   );
 }

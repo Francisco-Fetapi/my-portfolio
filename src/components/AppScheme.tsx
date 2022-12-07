@@ -3,6 +3,7 @@ import { Box, AppShell, useMantineTheme } from "@mantine/core";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import Aside from "./Aside";
+import ScrollToTop from "./ScrollToTop";
 import { HeaderMegaMenu } from "./HeaderMenu";
 import { useDisclosure } from "@mantine/hooks";
 
@@ -33,6 +34,7 @@ export default function AppScheme({ children }: AppSchemeProps) {
     >
       {children}
       <Footer />
+      <ScrollToTop />
     </AppShell>
   );
 }

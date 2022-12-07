@@ -66,12 +66,13 @@ export default function IndexPage() {
                 href={contact.href}
                 target="__blank"
               >
-                <Grid gutter={50} align="center">
+                <Grid gutter={20} align="center">
                   <Grid.Col span={2}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={`/${contact.icon}`}
-                      width={40}
-                      height={40}
+                      width={30}
+                      height={30}
                       alt="Icone Social"
                     />
                   </Grid.Col>
