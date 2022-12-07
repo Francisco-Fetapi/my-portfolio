@@ -16,9 +16,12 @@ export default function IndexPage() {
       <AppScheme>
         <Box mt={20}>
           <MainTitle>Sobre</MainTitle>
-          <Text color="dimmed" className={classes.description}>
-            Melhorando a cada dia em Desenvolvimento Front-End e Back-End.
-          </Text>
+          <Box sx={{ zoom: 0.9, width: "90%", maxWidth: 600 }}>
+            <Text color="dimmed" className={classes.description}>
+              Sou um cara apaixonado por desenvolvimento de software. Atualmente
+              com foco em Front-End.
+            </Text>
+          </Box>
           <Group mt={30}>
             <Link href="/contact" passHref>
               <Button
