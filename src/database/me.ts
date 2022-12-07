@@ -1,6 +1,7 @@
 const phone1 = "934712217";
 
 export const me = {
+  name: "Francisco Fetapi",
   email: "franciscofetapi@gmail.com",
   github: "https://github.com/Francisco-Fetapi",
   twitter: "https://twitter.com/FranciscoFetapi",

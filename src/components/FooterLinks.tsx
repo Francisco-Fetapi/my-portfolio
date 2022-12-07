@@ -13,6 +13,7 @@ import {
 } from "@tabler/icons";
 import { MantineLogo } from "@mantine/ds";
 import { contacts } from "../pages/contact";
+import { me } from "../database/me";
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -158,15 +159,14 @@ export function FooterLinks({ data }: FooterLinksProps) {
         <div className={classes.logo}>
           <MantineLogo size={30} />
           <Text size="xs" color="dimmed" className={classes.description}>
-            Projetado e Desenvolvido por <i>Francisco Fetapi</i>
+            Projetado e Desenvolvido por <i>{me.name}</i>
           </Text>
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          © {new Date().getFullYear()} - Todos os direitos reservados por{" "}
-          <Anchor>Francisco Fetapi</Anchor>.
+          © {new Date().getFullYear()} - Todos os direitos reservados.
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
