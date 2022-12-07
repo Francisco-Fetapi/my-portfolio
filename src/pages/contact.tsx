@@ -71,14 +71,14 @@ export default function IndexPage() {
           <MainTitle>Contacto</MainTitle>
           {/* <br /> */}
           <Text color="dimmed" className={classes.description}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem
-            sapiente perspiciatis aut. Ut, inventore cum! Ea perspiciatis harum
-            laudantium distinctio ipsam, ut quod voluptatem obcaecati quia
-            accusantium eaque. Odio, omnis.
+            Se tens alguma pergunta ou se quiseres apenas dar um &quot;Oi&quot;,
+            darei o meu melhor para lhe atender o mais rápido possivel. Estou
+            sempre aberto para discutir novas ideias e participar de novos
+            projetos.
           </Text>
           <br />
           <Text color="dimmed" className={classes.description}>
-            Lorem ipsum dolor
+            Espero ver você em breve! : {")"}
           </Text>
         </Box>
         <br />
