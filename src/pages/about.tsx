@@ -1,13 +1,47 @@
 import Head from "next/head";
 import AppScheme from "../components/AppScheme";
 import MainTitle from "../components/MainTitle";
-import { Box, Grid, Group, Text, Button } from "@mantine/core";
+import {
+  Center,
+  createStyles,
+  Box,
+  Grid,
+  Group,
+  Text,
+  Button,
+} from "@mantine/core";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 import { me } from "../database/me";
 import Link from "next/link";
+import Image from "next/image";
+
+const PHOTO_SIZE = 250;
+
+const useStyles = createStyles((theme) => ({
+  figure: {
+    ":after": {
+      border: "2px solid" + theme.black,
+      top: 20,
+      left: 20,
+      zIndex: -1,
+      content: `""`,
+      display: "block",
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      borderRadius: 4,
+      transition: "all .5s linear",
+    },
+  },
+  image: {
+    // transform: "translateX(-30px) translateY(-30px)",
+    borderRadius: theme.radius.md,
+  },
+}));
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
+  const { classes: classes2 } = useStyles();
   return (
     <div>
       <Head>
@@ -49,15 +83,27 @@ export default function IndexPage() {
             </Grid.Col>
             <Grid.Col md={4} xs={12}>
               <Box
-                sx={{
+                sx={(theme) => ({
                   width: "100%",
                   height: "100%",
-                  background: "red",
                   display: "flex",
-                  justifyContent: "flex-end",
-                }}
+                  flexDirection: "column",
+                  alignItems: "center",
+                  [theme.fn.smallerThan("md")]: {
+                    marginTop: 30,
+                  },
+                })}
               >
-                O
+                <Image
+                  src="/my-photo1.jpg"
+                  width={PHOTO_SIZE}
+                  height={PHOTO_SIZE + 50}
+                  alt="Minha foto"
+                  className={classes2.image}
+                />
+                <Text mt={10} color="dimmed" size="xs" align="center">
+                  {me.name}
+                </Text>
               </Box>
             </Grid.Col>
           </Grid>
