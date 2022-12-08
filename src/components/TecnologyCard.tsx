@@ -16,13 +16,16 @@ const useStyles = createStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-
+    borderRadius: theme.radius.md,
     height: 130,
     width: 130,
     margin: "20px 10px",
     ":hover": {
       boxShadow: "0 6px 14px 1px rgb(0 0 0 / 28%)",
     },
+  },
+  img: {
+    objectFit: "contain",
   },
 }));
 
@@ -48,10 +51,11 @@ export default function TecnologyCard({
         <img
           src={tecnology.image}
           alt={tecnology.name}
-          width={50}
-          height={50}
+          width={45}
+          height={45}
+          className={classes.img}
         />
-        <Text align="center" color="dimmed" size="xs">
+        <Text mt={15} align="center" size="sm" weight={500}>
           {tecnology.name}
         </Text>
       </Paper>

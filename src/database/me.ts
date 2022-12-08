@@ -89,9 +89,19 @@ export const contacts = [
 // Tecnology prop
 // message: hover show it
 
-export const tecnologies: ITecnology[] = [
+export const fontEndTecnologies: ITecnology[] = [
   { name: "HTML5", image: "/html5.svg" },
   { name: "CSS3", image: "/css.svg" },
   { name: "JavaScript", image: "/javascript.svg" },
   { name: "TypeScript", image: "/typescript.svg" },
+  { name: "React", image: "/react.svg" },
+  { name: "Next", image: "/react.svg" },
+];
+export const backEndTecnologies: ITecnology[] = [
+  { name: "PHP", image: "/php.svg" },
+  { name: "Laravel", image: "/laravel.svg" },
+  { name: "MySQL", image: "/mysql.png" },
+  { name: "NodeJs", image: "/nodejs.png" },
+  { name: "Mongo DB", image: "/nodejs.png" },
+  { name: "Strapi", image: "/strapi.ico" },
 ];

@@ -11,7 +11,7 @@ import {
   Button,
 } from "@mantine/core";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
-import { me, tecnologies } from "../database/me";
+import { backEndTecnologies, fontEndTecnologies, me } from "../database/me";
 import Link from "next/link";
 import Image from "next/image";
 import SecondTitle from "../components/SecondTitle";
@@ -121,7 +121,15 @@ export default function IndexPage() {
         <SectionText>
           <SecondTitle>Front-End</SecondTitle>
           <TecnologiesContainer>
-            {tecnologies.map((tecnology) => (
+            {fontEndTecnologies.map((tecnology) => (
+              <TecnologyCard tecnology={tecnology} key={tecnology.name} />
+            ))}
+          </TecnologiesContainer>
+        </SectionText>
+        <SectionText>
+          <SecondTitle>Back-End</SecondTitle>
+          <TecnologiesContainer>
+            {backEndTecnologies.map((tecnology) => (
               <TecnologyCard tecnology={tecnology} key={tecnology.name} />
             ))}
           </TecnologiesContainer>
