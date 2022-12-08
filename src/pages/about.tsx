@@ -4,6 +4,7 @@ import MainTitle from "../components/MainTitle";
 import {
   Center,
   createStyles,
+  Title,
   Box,
   Grid,
   Group,
@@ -133,6 +134,16 @@ export default function IndexPage() {
               <TecnologyCard tecnology={tecnology} key={tecnology.name} />
             ))}
           </TecnologiesContainer>
+        </SectionText>
+
+        <SectionText mt={100} sx={{ zoom: 0.8 }}>
+          <Title order={1}>Algumas Considerações</Title>
+          <Text className={classes.description}>
+            Algumas consideracoes sobre as tecnologias que voce conhece. Citar
+            rapidamente algumas tecnologias que fazem parte do ecossistema
+            Front-End e Back-End que voce conhece, mas que nao fizeste questao
+            de destacar na lista acima.
+          </Text>
         </SectionText>
       </AppScheme>
     </div>
