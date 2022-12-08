@@ -1,27 +1,27 @@
 import React from "react";
 import { Text, createStyles, Paper, PaperProps } from "@mantine/core";
 
+export interface ITecnology {
+  name: string;
+  image: string;
+}
+
 interface TecnologyCardProps extends PaperProps {
-  children: React.ReactNode;
-  tecnology: {
-    name: string;
-    image: string;
-  };
+  tecnology: ITecnology;
 }
 
 const useStyles = createStyles((theme) => ({
   container: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    height: 130,
+    width: 130,
+    margin: "20px 10px",
     ":hover": {
       boxShadow: "0 6px 14px 1px rgb(0 0 0 / 28%)",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      flexDirection: "column",
-      height: 130,
-      width: 130,
-      margin: "20px 10px",
     },
-    // justifyContent: "space-between",
   },
 }));
 

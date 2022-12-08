@@ -8,6 +8,7 @@ import {
   IconBrandGmail,
   IconBrandWhatsapp,
 } from "@tabler/icons";
+import { ITecnology } from "../components/TecnologyCard";
 
 const phone1 = "934712217";
 
@@ -83,4 +84,14 @@ export const contacts = [
     icon: "calendar.svg",
     label: "Calendly",
   },
+];
+
+// Tecnology prop
+// message: hover show it
+
+export const tecnologies: ITecnology[] = [
+  { name: "HTML5", image: "/html5.svg" },
+  { name: "CSS3", image: "/css.svg" },
+  { name: "JavaScript", image: "/javascript.svg" },
+  { name: "TypeScript", image: "/typescript.svg" },
 ];
