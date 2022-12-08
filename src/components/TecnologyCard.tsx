@@ -1,5 +1,13 @@
 import React from "react";
-import { Text, Box, createStyles, Paper, PaperProps } from "@mantine/core";
+import {
+  Text,
+  Box,
+  createStyles,
+  Paper,
+  PaperProps,
+  Popover,
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 
 export interface ITecnology {
   name: string;
@@ -34,24 +42,43 @@ export default function TecnologyCard({
   ...paperProps
 }: TecnologyCardProps) {
   const { classes } = useStyles();
+  const [opened, { close, open, toggle }] = useDisclosure(false);
 
   return (
-    <Paper
-      shadow={"0 6px 14px 1px rgb(0 0 0 / 10%);"}
-      className={classes.container}
-      {...paperProps}
+    <Popover
+      width={300}
+      // position="bottom"
+      withArrow
+      shadow="lg"
+      opened={opened}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={tecnology.image}
-        alt={tecnology.name}
-        width={45}
-        height={45}
-        className={classes.img}
-      />
-      <Text mt={15} align="center" size="sm" weight={500}>
-        {tecnology.name}
-      </Text>
-    </Paper>
+      <Popover.Target>
+        <Paper
+          shadow={"0 6px 14px 1px rgb(0 0 0 / 10%);"}
+          className={classes.container}
+          {...paperProps}
+          onMouseEnter={open}
+          onMouseLeave={close}
+          onClick={toggle}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={tecnology.image}
+            alt={tecnology.name}
+            width={45}
+            height={45}
+            className={classes.img}
+          />
+          <Text mt={15} align="center" size="sm" weight={500}>
+            {tecnology.name}
+          </Text>
+        </Paper>
+      </Popover.Target>
+      <Popover.Dropdown>
+        <Text size="sm">
+          This popover is shown when user hovers the target element
+        </Text>
+      </Popover.Dropdown>
+    </Popover>
   );
 }
