@@ -30,7 +30,10 @@ const useStyles = createStyles((theme) => ({
     margin: "20px 10px",
     ":hover": {
       boxShadow: "0 6px 14px 1px rgb(0 0 0 / 28%)",
+      transition: "all .2s linear",
+      transform: "scale(1.02)",
     },
+    cursor: "pointer",
   },
   img: {
     objectFit: "contain",
@@ -76,7 +79,9 @@ export default function TecnologyCard({
       </Popover.Target>
       <Popover.Dropdown>
         <Text size="sm">
-          This popover is shown when user hovers the target element
+          Neste popover ira mais algumas informacoes relevantes acerca dessa
+          tecnologia. Anos de experiencia, mais uma descricao rapida, ou apenas
+          uma nota.
         </Text>
       </Popover.Dropdown>
     </Popover>
