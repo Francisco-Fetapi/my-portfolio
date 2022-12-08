@@ -6,7 +6,12 @@ interface TecnologiesContainerProps {
 }
 
 const useStyles = createStyles((theme) => ({
-  container: {},
+  container: {
+    margin: "20px auto",
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+  },
 }));
 
 export default function TecnologiesContainer({

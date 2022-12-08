@@ -120,7 +120,7 @@ export default function IndexPage() {
         </Box>
 
         <SectionText>
-          <SecondTitle>Front-End</SecondTitle>
+          <SecondTitle>FRONT-END</SecondTitle>
           <TecnologiesContainer>
             {fontEndTecnologies.map((tecnology) => (
               <TecnologyCard tecnology={tecnology} key={tecnology.name} />
@@ -128,7 +128,7 @@ export default function IndexPage() {
           </TecnologiesContainer>
         </SectionText>
         <SectionText>
-          <SecondTitle>Back-End</SecondTitle>
+          <SecondTitle>BACK-END</SecondTitle>
           <TecnologiesContainer>
             {backEndTecnologies.map((tecnology) => (
               <TecnologyCard tecnology={tecnology} key={tecnology.name} />
@@ -142,7 +142,8 @@ export default function IndexPage() {
             Algumas consideracoes sobre as tecnologias que voce conhece. Citar
             rapidamente algumas tecnologias que fazem parte do ecossistema
             Front-End e Back-End que voce conhece, mas que nao fizeste questao
-            de destacar na lista acima.
+            de destacar na lista acima. Tambem fala sobre o que estas estudando
+            (mais conceitos, tipo clean archicture no front e back...)
           </Text>
         </SectionText>
       </AppScheme>

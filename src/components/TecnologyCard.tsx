@@ -36,29 +36,22 @@ export default function TecnologyCard({
   const { classes } = useStyles();
 
   return (
-    <Box
-      sx={{
-        display: "inline-block",
-        textAlign: "center",
-      }}
+    <Paper
+      shadow={"0 6px 14px 1px rgb(0 0 0 / 10%);"}
+      className={classes.container}
+      {...paperProps}
     >
-      <Paper
-        shadow={"0 6px 14px 1px rgb(0 0 0 / 10%);"}
-        className={classes.container}
-        {...paperProps}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={tecnology.image}
-          alt={tecnology.name}
-          width={45}
-          height={45}
-          className={classes.img}
-        />
-        <Text mt={15} align="center" size="sm" weight={500}>
-          {tecnology.name}
-        </Text>
-      </Paper>
-    </Box>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={tecnology.image}
+        alt={tecnology.name}
+        width={45}
+        height={45}
+        className={classes.img}
+      />
+      <Text mt={15} align="center" size="sm" weight={500}>
+        {tecnology.name}
+      </Text>
+    </Paper>
   );
 }

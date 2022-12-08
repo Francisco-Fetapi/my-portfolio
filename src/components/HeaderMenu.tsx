@@ -129,8 +129,8 @@ interface HeaderMegaMenuProps {
 export const links = [
   { label: "Página Inicial", href: "/" },
   { label: "Sobre", href: "/about" },
-  { label: "Projetos", href: "/projects" },
   { label: "Jornada", href: "/journey" },
+  { label: "Projetos", href: "/projects" },
   { label: "Contacto", href: "/contact" },
 ];
 
