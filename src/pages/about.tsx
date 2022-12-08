@@ -14,6 +14,8 @@ import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitl
 import { me } from "../database/me";
 import Link from "next/link";
 import Image from "next/image";
+import SecondTitle from "../components/SecondTitle";
+import SectionText from "../components/SectionText";
 
 const PHOTO_SIZE = 250;
 
@@ -92,7 +94,7 @@ export default function IndexPage() {
             </Grid.Col>
           </Grid>
 
-          <Box mt={50} sx={{ zoom: 0.8 }}>
+          <SectionText sx={{ zoom: 0.8 }}>
             <Text className={classes.description}>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Excepturi quidem qui explicabo officia at et possimus nesciunt
@@ -111,8 +113,12 @@ export default function IndexPage() {
               hic deleniti dolorum aliquam quod, in blanditiis illum voluptatem
               tempore sint repudiandae ex.
             </Text>
-          </Box>
+          </SectionText>
         </Box>
+
+        <SectionText>
+          <SecondTitle>Front-End</SecondTitle>
+        </SectionText>
       </AppScheme>
     </div>
   );
