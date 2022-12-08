@@ -17,6 +17,7 @@ import Image from "next/image";
 import SecondTitle from "../components/SecondTitle";
 import SectionText from "../components/SectionText";
 import TecnologyCard from "../components/TecnologyCard";
+import TecnologiesContainer from "../components/TecnologiesContainer";
 
 const PHOTO_SIZE = 250;
 
@@ -119,11 +120,11 @@ export default function IndexPage() {
 
         <SectionText>
           <SecondTitle>Front-End</SecondTitle>
-          <Box>
+          <TecnologiesContainer>
             {tecnologies.map((tecnology) => (
               <TecnologyCard tecnology={tecnology} key={tecnology.name} />
             ))}
-          </Box>
+          </TecnologiesContainer>
         </SectionText>
       </AppScheme>
     </div>

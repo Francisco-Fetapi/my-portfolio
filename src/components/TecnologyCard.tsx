@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, createStyles, Paper, PaperProps } from "@mantine/core";
+import { Text, Box, createStyles, Paper, PaperProps } from "@mantine/core";
 
 export interface ITecnology {
   name: string;
@@ -16,6 +16,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
+
     height: 130,
     width: 130,
     margin: "20px 10px",
@@ -32,16 +33,28 @@ export default function TecnologyCard({
   const { classes } = useStyles();
 
   return (
-    <Paper
-      shadow={"0 6px 14px 1px rgb(0 0 0 / 10%);"}
-      className={classes.container}
-      {...paperProps}
+    <Box
+      sx={{
+        display: "inline-block",
+        textAlign: "center",
+      }}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={tecnology.image} alt={tecnology.name} width={50} height={50} />
-      <Text align="center" color="dimmed" size="xs">
-        {tecnology.name}
-      </Text>
-    </Paper>
+      <Paper
+        shadow={"0 6px 14px 1px rgb(0 0 0 / 10%);"}
+        className={classes.container}
+        {...paperProps}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={tecnology.image}
+          alt={tecnology.name}
+          width={50}
+          height={50}
+        />
+        <Text align="center" color="dimmed" size="xs">
+          {tecnology.name}
+        </Text>
+      </Paper>
+    </Box>
   );
 }
