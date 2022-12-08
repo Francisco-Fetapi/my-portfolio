@@ -1,7 +1,7 @@
 import React from "react";
 import { Group, Title, createStyles } from "@mantine/core";
 
-interface MainTitleProps {
+interface SecondTitleProps {
   children: React.ReactNode;
 }
 
@@ -27,7 +27,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export default function SecondTitle({ children }: MainTitleProps) {
+export default function SecondTitle({ children }: SecondTitleProps) {
   const { classes } = useStyles();
 
   return (
