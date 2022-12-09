@@ -20,6 +20,11 @@ export default function AppProvider({ Page }: MantineProviderInterface) {
         colorScheme,
         black: "#333",
         // white: "#F4F4F4",
+        components: {
+          Text: {
+            defaultProps: {},
+          },
+        },
       }}
     >
       <GlobalStyles mode={colorScheme} />

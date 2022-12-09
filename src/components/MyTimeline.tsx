@@ -1,4 +1,4 @@
-import { Group, Timeline, Title, Box, Text } from "@mantine/core";
+import { SimpleGrid, Group, Timeline, Title, Box, Text } from "@mantine/core";
 import { IconCalendarTime, IconDeviceWatch } from "@tabler/icons";
 import { useRouter } from "next/router";
 import { TimeLines } from "../database/me";
@@ -8,12 +8,18 @@ interface MyTimelineProps {
   timelines: TimeLines;
 }
 
+//   <SimpleGrid
+// cols={2}
+// spacing={50}
+// breakpoints={[{ maxWidth: 800, cols: 1, spacing: "sm" }]}
+// >
+
 export default function MyTimeline({ timelines }: MyTimelineProps) {
   const router = useRouter();
   const locale = router.locale as ILocales;
 
   return (
-    <Box sx={{ maxWidth: 800 }}>
+    <Box sx={{ maxWidth: 500 }}>
       {Object.keys(timelines)
         .reverse()
         .map((year, key) => {
@@ -30,11 +36,18 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
                     title={<Title order={4}>{timeline.title}</Title>}
                     key={key}
                   >
-                    <Text color="dimmed" size="sm">
+                    <Text align="justify" color="dimmed" size="sm">
                       {timeline.description}
                     </Text>
                     {timeline.date && (
-                      <Group spacing={2} align="center" mt={10}>
+                      <Group
+                        spacing={2}
+                        align="center"
+                        mt={10}
+                        sx={{
+                          justifyContent: align,
+                        }}
+                      >
                         <IconCalendarTime size={15} />
                         <Text size="xs" mt={4} color="dimmed">
                           {dateDistance(timeline.date, locale)}
