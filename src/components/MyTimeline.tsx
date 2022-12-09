@@ -23,7 +23,6 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
       {Object.keys(timelines)
         .reverse()
         .map((year, key) => {
-          //   const align = key % 2 === 0 ? "left" : "right";
           const align = "left";
           return (
             <Box mb={40} key={year}>
