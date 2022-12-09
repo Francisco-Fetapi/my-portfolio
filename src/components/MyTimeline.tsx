@@ -3,20 +3,14 @@ import { IconCalendarTime, IconDeviceWatch } from "@tabler/icons";
 import { useRouter } from "next/router";
 import { TimeLines } from "../database/me";
 import dateDistance, { ILocales } from "../helpers/dateDistance";
+import useCurrentLocale from "../hooks/useCurrentLocale";
 
 interface MyTimelineProps {
   timelines: TimeLines;
 }
 
-//   <SimpleGrid
-// cols={2}
-// spacing={50}
-// breakpoints={[{ maxWidth: 800, cols: 1, spacing: "sm" }]}
-// >
-
 export default function MyTimeline({ timelines }: MyTimelineProps) {
-  const router = useRouter();
-  const locale = router.locale as ILocales;
+  const { locale } = useCurrentLocale();
 
   return (
     <Box sx={{ maxWidth: 500 }}>

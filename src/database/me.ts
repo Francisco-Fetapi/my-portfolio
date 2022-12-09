@@ -278,12 +278,45 @@ export const timeline: TimeLines = {
   ],
 };
 
-export type IProjetcStatus = "finised" | "building" | "death";
+export type IProjetcStatus = "finished" | "building" | "death";
 
 export interface IProject {
   name: string;
   description: React.ReactNode;
-  image: string;
-  link: string;
+  images: string[];
+  links: {
+    github: string;
+    preview?: string;
+    photoPreview?: string;
+  };
   status: IProjetcStatus;
+  tags: string[];
+  createdAt: Date;
 }
+
+// Top 10 recent projects
+
+// 15 some projects
+export const someProjects: IProject[] = [
+  {
+    name: "Typing Master",
+    description: "Um projeto para exercitar a habilidade de usar o teclado",
+    images: ["typing-master-1.png", "typing-master-2.png"],
+    links: {
+      github: "https://olas.com",
+      preview: "https://preview.com",
+    },
+    status: "finished",
+    tags: ["TypeScript", "React.js", "Keyboard Game"],
+    createdAt: new Date(),
+  },
+];
+someProjects.push(someProjects[0]);
+someProjects.push(someProjects[0]);
+someProjects.push(someProjects[0]);
+someProjects.push(someProjects[0]);
+someProjects.push(someProjects[0]);
+someProjects.push(someProjects[0]);
+someProjects.push(someProjects[0]);
+
+// View More -> redirect to github
