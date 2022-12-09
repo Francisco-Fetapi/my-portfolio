@@ -277,3 +277,13 @@ export const timeline: TimeLines = {
     },
   ],
 };
+
+export type IProjetcStatus = "finised" | "building" | "death";
+
+export interface IProject {
+  name: string;
+  description: React.ReactNode;
+  image: string;
+  link: string;
+  status: IProjetcStatus;
+}
