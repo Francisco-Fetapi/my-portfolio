@@ -8,6 +8,7 @@ import { someProjects } from "../database/me";
 import { ProjectCard } from "../components/ProjectCard";
 import TecnologiesContainer from "../components/TecnologiesContainer";
 import SecondTitle from "../components/SecondTitle";
+import SlideProject from "../components/SlideProjects";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -29,6 +30,10 @@ export default function IndexPage() {
           </Box>
         </Box>
 
+        <SectionText>
+          <SecondTitle>ÚLTIMOS PROJETOS</SecondTitle>
+          <SlideProject />
+        </SectionText>
         <SectionText>
           <SecondTitle>ALGUNS PROJETOS</SecondTitle>
           <TecnologiesContainer>

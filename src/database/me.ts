@@ -321,4 +321,23 @@ someProjects.push(someProjects[0]);
 
 // View More -> redirect to github
 
-export const recentProjects = someProjects.slice(0, 5);
+// TOP 10 recent Projects
+export const recentProjects: IProject[] = [
+  {
+    name: "Social Movies Space",
+    description: "Uma rede social para amantes de filmes e seriados",
+    images: ["sms-demo-1.png", "sms-demo-1.png"],
+    links: {
+      github: "https://olas.com",
+      preview: "https://preview.com",
+    },
+    status: "death",
+    tags: ["React.js", "Laravel", "MySQL"],
+    createdAt: new Date(),
+  },
+];
+
+recentProjects.push(recentProjects[0]);
+recentProjects.push(recentProjects[0]);
+recentProjects.push(recentProjects[0]);
+recentProjects.push(recentProjects[0]);
