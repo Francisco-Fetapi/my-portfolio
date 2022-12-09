@@ -9,9 +9,16 @@ const useStyles = createStyles((theme) => ({
   container: {
     width: "100%",
     height: "100%",
-    backgroundSize: "contain",
+    backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
+  },
+  container2: {
+    width: "100%",
+    height: "100%",
+    // background: "linear-gradient(to top, rgba(0,0,0,.95) 60%,transparent)",
+    // background: theme.fn.linearGradient(45, "black", "transparent"),
+    boxShadow: "inset 50px -230px 50px rgba(0,0,0,.90)",
   },
 }));
 
@@ -25,8 +32,10 @@ export default function ProjectSlideItem({
     <div
       className={classes.container}
       style={{
-        background: `url(/projects_img/${image})`,
+        backgroundImage: `url(/projects_img/${image})`,
       }}
-    ></div>
+    >
+      <div className={classes.container2}></div>
+    </div>
   );
 }

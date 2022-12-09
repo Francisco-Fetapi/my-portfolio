@@ -12,6 +12,17 @@ export default function SlideProject() {
       mx="auto"
       withIndicators
       height={CAROUSEL_HEIGHT}
+      styles={{
+        indicator: {
+          width: 12,
+          height: 4,
+          transition: "width 250ms ease",
+
+          "&[data-active]": {
+            width: 40,
+          },
+        },
+      }}
     >
       {recentProjects.map((project, key) => (
         <Carousel.Slide key={key}>

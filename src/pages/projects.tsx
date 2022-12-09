@@ -32,6 +32,7 @@ export default function IndexPage() {
 
         <SectionText>
           <SecondTitle>ÚLTIMOS PROJETOS</SecondTitle>
+          <br />
           <SlideProject />
         </SectionText>
         <SectionText>
