@@ -4,7 +4,7 @@ import { Box, Text } from "@mantine/core";
 import MainTitle from "../components/MainTitle";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 import SectionText from "../components/SectionText";
-import MyTimeline from "../components/MyTimeLine";
+import MyTimeline from "../components/MyTimeline";
 import { timeline } from "../database/me";
 
 export default function IndexPage() {
