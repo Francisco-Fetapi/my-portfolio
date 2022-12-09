@@ -165,3 +165,101 @@ export const backEndTecnologies: ITecnology[] = [
     description: "Descricao qualquer",
   },
 ];
+
+export interface TimeLine {
+  title: React.ReactNode;
+  description?: React.ReactNode;
+  date?: Date;
+}
+
+export interface TimeLines {
+  [year: string]: TimeLine[];
+}
+
+export const timeline: TimeLines = {
+  "2022": [
+    {
+      title: "Primeiro titulo",
+      // description: "Primeira descricao",
+      // date: new Date(2002, 11, 10),
+    },
+    {
+      title: "Segundo titulo",
+      description: "Segunda descricao",
+      date: new Date(2002, 11, 10),
+    },
+    {
+      title: "Terceiro titulo",
+      description: "Terceira descricao",
+      date: new Date(2002, 11, 10),
+    },
+  ],
+  "2021": [
+    {
+      title: "Primeiro titulo",
+      description: "Primeira descricao",
+      date: new Date(2002, 11, 10),
+    },
+    {
+      title: "Segundo titulo",
+      description: "Segunda descricao",
+      date: new Date(2002, 11, 10),
+    },
+    {
+      title: "Terceiro titulo",
+      description: "Terceira descricao",
+      date: new Date(2002, 11, 10),
+    },
+  ],
+  "2020": [
+    {
+      title: "Primeiro titulo",
+      description: "Primeira descricao",
+      date: new Date(2002, 11, 10),
+    },
+    {
+      title: "Segundo titulo",
+      description: "Segunda descricao",
+      date: new Date(2002, 11, 10),
+    },
+    {
+      title: "Terceiro titulo",
+      description: "Terceira descricao",
+      date: new Date(2002, 11, 10),
+    },
+  ],
+  "2019": [
+    {
+      title: "Primeiro titulo",
+      description: "Primeira descricao",
+      date: new Date(2002, 11, 10),
+    },
+    {
+      title: "Segundo titulo",
+      description: "Segunda descricao",
+      date: new Date(2002, 11, 10),
+    },
+    {
+      title: "Terceiro titulo",
+      description: "Terceira descricao",
+      date: new Date(2002, 11, 10),
+    },
+  ],
+  "2018": [
+    {
+      title: "Primeiro titulo",
+      description: "Primeira descricao",
+      date: new Date(2002, 11, 10),
+    },
+    {
+      title: "Segundo titulo",
+      description: "Segunda descricao",
+      date: new Date(2002, 11, 10),
+    },
+    {
+      title: "Terceiro titulo",
+      description: "Terceira descricao",
+      date: new Date(2002, 11, 10),
+    },
+  ],
+};

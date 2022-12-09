@@ -156,8 +156,6 @@ export function HeaderMegaMenu({}: HeaderMegaMenuProps) {
     });
   }, [router.pathname, classes]);
 
-  console.log(router);
-
   return (
     <Box>
       <Header height={60} px="md" className={classes.header}>

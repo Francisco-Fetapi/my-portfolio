@@ -1,56 +1,38 @@
-import { Timeline, Text } from "@mantine/core";
+import { Timeline, Title, Box, Text } from "@mantine/core";
+import { TimeLines } from "../database/me";
 
-export default function MyTimeline() {
+interface MyTimelineProps {
+  timelines: TimeLines;
+}
+
+export default function MyTimeline({ timelines }: MyTimelineProps) {
   return (
-    <Timeline active={1} bulletSize={20} lineWidth={4}>
-      <Timeline.Item title="New branch">
-        <Text color="dimmed" size="sm">
-          You&apos;ve created new branch{" "}
-          <Text variant="link" component="span" inherit>
-            fix-notifications
-          </Text>{" "}
-          from master
-        </Text>
-        <Text size="xs" mt={4}>
-          2 hours ago
-        </Text>
-      </Timeline.Item>
-
-      <Timeline.Item title="Commits">
-        <Text color="dimmed" size="sm">
-          You&apos;ve pushed 23 commits to
-          <Text variant="link" component="span" inherit>
-            fix-notifications branch
-          </Text>
-        </Text>
-        <Text size="xs" mt={4}>
-          52 minutes ago
-        </Text>
-      </Timeline.Item>
-
-      <Timeline.Item title="Pull request" lineVariant="dashed">
-        <Text color="dimmed" size="sm">
-          You&apos;ve submitted a pull request
-          <Text variant="link" component="span" inherit>
-            Fix incorrect notification message (#187)
-          </Text>
-        </Text>
-        <Text size="xs" mt={4}>
-          34 minutes ago
-        </Text>
-      </Timeline.Item>
-
-      <Timeline.Item title="Code review">
-        <Text color="dimmed" size="sm">
-          <Text variant="link" component="span" inherit>
-            Robert Gluesticker
-          </Text>{" "}
-          left a code review on your pull request
-        </Text>
-        <Text size="xs" mt={4}>
-          12 minutes ago
-        </Text>
-      </Timeline.Item>
-    </Timeline>
+    <Box sx={{ maxWidth: 800 }}>
+      {Object.keys(timelines)
+        .reverse()
+        .map((year, key) => {
+          //   const align = key % 2 === 0 ? "left" : "right";
+          const align = "left";
+          return (
+            <Box mb={40} key={year}>
+              <Title order={2} mb={20} align={align}>
+                {year}
+              </Title>
+              <Timeline align={align} bulletSize={20} lineWidth={4}>
+                {timelines[year].map((timeline, key) => (
+                  <Timeline.Item title={timeline.title} key={key}>
+                    <Text color="dimmed" size="sm">
+                      {timeline.description}
+                    </Text>
+                    <Text size="xs" mt={4}>
+                      {timeline.date?.toLocaleDateString()}
+                    </Text>
+                  </Timeline.Item>
+                ))}
+              </Timeline>
+            </Box>
+          );
+        })}
+    </Box>
   );
 }
