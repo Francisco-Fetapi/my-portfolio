@@ -11,11 +11,7 @@ import {
 } from "@mantine/core";
 import { IProject } from "../database/me";
 
-import {
-  IconShare,
-  IconBrandGithub,
-  IconExternalLink,
-} from "@tabler/icons";
+import { IconShare, IconBrandGithub, IconExternalLink } from "@tabler/icons";
 import dateDistance from "../helpers/dateDistance";
 import useCurrentLocale from "../hooks/useCurrentLocale";
 
@@ -112,9 +108,10 @@ export function ProjectCard({
 
       <Text
         className={classes.title}
-        weight={500}
+        weight={900}
         component="a"
         {...githubLink}
+        transform="uppercase"
       >
         {name}
       </Text>
