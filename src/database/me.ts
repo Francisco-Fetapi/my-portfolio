@@ -320,3 +320,5 @@ someProjects.push(someProjects[0]);
 someProjects.push(someProjects[0]);
 
 // View More -> redirect to github
+
+export const recentProjects = someProjects.slice(0, 5);

@@ -7,6 +7,7 @@ import SectionText from "../components/SectionText";
 import { someProjects } from "../database/me";
 import { ProjectCard } from "../components/ProjectCard";
 import TecnologiesContainer from "../components/TecnologiesContainer";
+import SecondTitle from "../components/SecondTitle";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -29,11 +30,12 @@ export default function IndexPage() {
         </Box>
 
         <SectionText>
+          <SecondTitle>ALGUNS PROJETOS</SecondTitle>
           <TecnologiesContainer>
             {someProjects.map((project, key) => (
               <ProjectCard
                 {...project}
-                description={project.description?.toString().repeat(key + 1)}
+                description={project.description?.toString().repeat(key + 2)}
                 key={project.name + key}
               />
             ))}

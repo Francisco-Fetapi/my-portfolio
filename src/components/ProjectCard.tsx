@@ -12,15 +12,11 @@ import {
 import { IProject } from "../database/me";
 
 import {
-  IconBookmark,
-  IconHeart,
   IconShare,
   IconBrandGithub,
   IconExternalLink,
-  IconTag,
 } from "@tabler/icons";
 import dateDistance from "../helpers/dateDistance";
-import { useRouter } from "next/router";
 import useCurrentLocale from "../hooks/useCurrentLocale";
 
 const useStyles = createStyles((theme) => ({
@@ -30,7 +26,7 @@ const useStyles = createStyles((theme) => ({
     position: "relative",
     width: "100%",
     maxWidth: 380,
-    height: 500,
+    height: 480,
     margin: "20px 10px",
     backgroundColor:
       theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
@@ -82,7 +78,6 @@ export function ProjectCard({
 }: ArticleCardProps &
   Omit<React.ComponentPropsWithoutRef<"div">, keyof ArticleCardProps>) {
   const { classes, cx, theme } = useStyles();
-  const router = useRouter();
   const { locale } = useCurrentLocale();
 
   const githubLink = {
@@ -104,7 +99,7 @@ export function ProjectCard({
       {...others}
     >
       <Card.Section>
-        <Image src={`/projects_img/${images[0]}`} height={250} />
+        <Image src={`/projects_img/${images[0]}`} height={250} alt={name} />
       </Card.Section>
 
       <Badge
@@ -132,7 +127,7 @@ export function ProjectCard({
       </Group>
       <br />
 
-      <Text size="sm" color="dimmed" lineClamp={4}>
+      <Text size="sm" color="dimmed" lineClamp={3}>
         {description}
       </Text>
 
