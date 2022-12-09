@@ -6,12 +6,16 @@ import {
   Paper,
   PaperProps,
   Popover,
+  Grid,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { IconInfoCircle } from "@tabler/icons";
 
 export interface ITecnology {
   name: string;
   image: string;
+  startedAt: Date;
+  description: React.ReactNode;
 }
 
 interface TecnologyCardProps extends PaperProps {
@@ -78,11 +82,16 @@ export default function TecnologyCard({
         </Paper>
       </Popover.Target>
       <Popover.Dropdown>
-        <Text size="sm">
-          Neste popover ira mais algumas informacoes relevantes acerca dessa
-          tecnologia. Anos de experiencia, mais uma descricao rapida, ou apenas
-          uma nota.
-        </Text>
+        <Grid>
+          <Grid.Col span={1}>
+            <IconInfoCircle size={20} />
+          </Grid.Col>
+          <Grid.Col span={11}>
+            <Box ml={5}>
+              <Text size="sm">{tecnology.description}</Text>
+            </Box>
+          </Grid.Col>
+        </Grid>
       </Popover.Dropdown>
     </Popover>
   );

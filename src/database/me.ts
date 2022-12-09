@@ -90,18 +90,78 @@ export const contacts = [
 // message: hover show it
 
 export const fontEndTecnologies: ITecnology[] = [
-  { name: "HTML5", image: "/html5.svg" },
-  { name: "CSS3", image: "/css.svg" },
-  { name: "JavaScript", image: "/javascript.svg" },
-  { name: "TypeScript", image: "/typescript.svg" },
-  { name: "React", image: "/react.svg" },
-  { name: "Next", image: "/react.svg" },
+  {
+    name: "HTML5",
+    image: "/html5.svg",
+    startedAt: new Date(),
+    description: "Descricao qualquer",
+  },
+  {
+    name: "CSS3",
+    image: "/css.svg",
+    startedAt: new Date(),
+    description: "Descricao qualquer",
+  },
+  {
+    name: "JavaScript",
+    image: "/javascript.svg",
+    startedAt: new Date(),
+    description: "Descricao qualquer",
+  },
+  {
+    name: "TypeScript",
+    image: "/typescript.svg",
+    startedAt: new Date(),
+    description: "Descricao qualquer",
+  },
+  {
+    name: "React",
+    image: "/react.svg",
+    startedAt: new Date(),
+    description: "Descricao qualquer",
+  },
+  {
+    name: "Next",
+    image: "/react.svg",
+    startedAt: new Date(),
+    description: "Descricao qualquer",
+  },
 ];
 export const backEndTecnologies: ITecnology[] = [
-  { name: "PHP", image: "/php.svg" },
-  { name: "Laravel", image: "/laravel.svg" },
-  { name: "MySQL", image: "/mysql.png" },
-  { name: "NodeJs", image: "/nodejs.png" },
-  { name: "Mongo DB", image: "/nodejs.png" },
-  { name: "Strapi", image: "/strapi.ico" },
+  {
+    name: "PHP",
+    image: "/php.svg",
+    startedAt: new Date(),
+    description: "Descricao qualquer",
+  },
+  {
+    name: "Laravel",
+    image: "/laravel.svg",
+    startedAt: new Date(),
+    description: "Descricao qualquer",
+  },
+  {
+    name: "MySQL",
+    image: "/mysql.png",
+    startedAt: new Date(),
+    description: "Descricao qualquer",
+  },
+  {
+    name: "NodeJs",
+    image: "/nodejs.png",
+    startedAt: new Date(),
+    description: "Descricao qualquer",
+  },
+  {
+    name: "Mongo DB",
+    image: "/nodejs.png",
+    startedAt: new Date(),
+    description: "Descricao qualquer",
+  },
+  {
+    name: "Strapi",
+    image: "/strapi.ico",
+    startedAt: new Date(),
+    description: "Descricao qualquer",
+  },
 ];
