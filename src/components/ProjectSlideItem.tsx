@@ -1,8 +1,10 @@
 import { IProject } from "../database/me";
-import { createStyles, Space, Group, Text } from "@mantine/core";
+import { ActionIcon, createStyles, Space, Group, Text } from "@mantine/core";
 import ProjectStatus from "./ProjectStatus";
+import { IconShare, IconBrandGithub, IconExternalLink } from "@tabler/icons";
 
 interface ProjectSlideItemProps extends IProject {}
+interface ButtonActionsProps extends IProject {}
 
 const useStyles = createStyles((theme) => ({
   container: {
@@ -23,6 +25,7 @@ const useStyles = createStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "flex-end",
     paddingBottom: 30,
+    position: "relative",
     "*": {
       color: theme.white,
       userSelect: "none",
@@ -65,6 +68,7 @@ export default function ProjectSlideItem({
       }}
     >
       <div className={classes.container2}>
+        <ButtonActions {...project} />
         <div>
           <div className={classes.grid2Between}>
             <h1>{project.name}</h1>
@@ -88,5 +92,44 @@ export default function ProjectSlideItem({
         </div>
       </div>
     </div>
+  );
+}
+
+function ButtonActions({ links }: ButtonActionsProps) {
+  const githubLink = {
+    href: links.github,
+    target: "_blank",
+    rel: "noopener noreferrer",
+  };
+  const previewLink = {
+    href: links.preview,
+    target: "_blank",
+    rel: "noopener noreferrer",
+  };
+  return (
+    <Group
+      sx={{
+        flexDirection: "column",
+        position: "absolute",
+        top: 5,
+        left: -5,
+      }}
+      spacing={15}
+      mr={0}
+    >
+      <a {...githubLink}>
+        <ActionIcon size="sm">
+          <IconBrandGithub size={12} />
+        </ActionIcon>
+      </a>
+      <a {...previewLink}>
+        <ActionIcon size="sm">
+          <IconExternalLink size={12} />
+        </ActionIcon>
+      </a>
+      <ActionIcon size="sm">
+        <IconShare size={12} />
+      </ActionIcon>
+    </Group>
   );
 }
