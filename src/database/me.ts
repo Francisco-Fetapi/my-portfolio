@@ -122,7 +122,7 @@ export const fontEndTecnologies: ITecnology[] = [
   },
   {
     name: "Next",
-    image: "/react.svg",
+    image: "/nextjs-line.svg",
     startedAt: new Date(),
     description: "Descricao qualquer",
   },
@@ -148,7 +148,7 @@ export const backEndTecnologies: ITecnology[] = [
   },
   {
     name: "NodeJs",
-    image: "/nodejs.png",
+    image: "/nodejs2.svg",
     startedAt: new Date(),
     description: "Descricao qualquer",
   },
