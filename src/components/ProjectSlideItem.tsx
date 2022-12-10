@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { IProject } from "../database/me";
-import { createStyles } from "@mantine/core";
-import { CAROUSEL_HEIGHT, CAROUSEL_WIDTH } from "./SlideProjects";
+import { createStyles, Space, Group, Text } from "@mantine/core";
 
 interface ProjectSlideItemProps extends IProject {}
 
@@ -19,6 +17,31 @@ const useStyles = createStyles((theme) => ({
     // background: "linear-gradient(to top, rgba(0,0,0,.95) 60%,transparent)",
     // background: theme.fn.linearGradient(45, "black", "transparent"),
     boxShadow: "inset 50px -230px 50px rgba(0,0,0,.90)",
+    // boxShadow: "inset 50px -230px 50px rgba(255,255,255,.90)",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    paddingBottom: 30,
+    "*": {
+      color: theme.white,
+      userSelect: "none",
+    },
+    "& > div": {
+      padding: 10,
+
+      "h1,p": {
+        margin: 0,
+        padding: 0,
+      },
+      h1: {
+        fontSize: theme.fontSizes.lg,
+      },
+      p: {
+        opacity: 0.8,
+        fontSize: theme.fontSizes.xs,
+        maxWidth: 500,
+      },
+    },
   },
 }));
 
@@ -35,7 +58,26 @@ export default function ProjectSlideItem({
         backgroundImage: `url(/projects_img/${image})`,
       }}
     >
-      <div className={classes.container2}></div>
+      <div className={classes.container2}>
+        <div>
+          <h1>{project.name}</h1>
+          <Text
+            sx={{
+              opacity: 0.7,
+            }}
+          >
+            <Group>
+              {project.tags.map((tag) => (
+                <p key={tag}>{tag}</p>
+              ))}
+            </Group>
+          </Text>
+          <Space mt="sm" />
+          <Text component="p" lineClamp={3}>
+            {project.description?.toString().repeat(10)}
+          </Text>
+        </div>
+      </div>
     </div>
   );
 }

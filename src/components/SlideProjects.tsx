@@ -22,8 +22,8 @@ export const SLIDE_STYLES = {
   },
   root: {
     svg: {
-      width: 50,
-      height: 50,
+      width: 30,
+      height: 30,
     },
   },
 };
