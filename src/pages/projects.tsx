@@ -31,7 +31,7 @@ export default function IndexPage() {
         </Box>
 
         <SectionText>
-          <SecondTitle>ÚLTIMOS PROJETOS</SecondTitle>
+          <SecondTitle>ÚLTIMOS 5 PROJETOS</SecondTitle>
           <SectionText>
             <SlideProject />
           </SectionText>

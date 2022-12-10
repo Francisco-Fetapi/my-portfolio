@@ -92,7 +92,7 @@ export default function ProjectSlideItem({
           </Text>
           <Space mt="sm" />
           <Text component="p" lineClamp={3}>
-            {project.description?.toString().repeat(10)}
+            {project.description}
           </Text>
         </div>
       </div>
