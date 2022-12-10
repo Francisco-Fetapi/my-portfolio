@@ -1,5 +1,6 @@
 import {
   Card,
+  Box,
   Image,
   Text,
   ActionIcon,
@@ -14,6 +15,7 @@ import { IProject } from "../database/me";
 import { IconShare, IconBrandGithub, IconExternalLink } from "@tabler/icons";
 import dateDistance from "../helpers/dateDistance";
 import useCurrentLocale from "../hooks/useCurrentLocale";
+import ProjectStatus from "./ProjectStatus";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -98,13 +100,11 @@ export function ProjectCard({
         <Image src={`/projects_img/${images[0]}`} height={250} alt={name} />
       </Card.Section>
 
-      <Badge
+      <Box
         className={classes.status}
-        variant="gradient"
-        gradient={{ from: "blue", to: "cyan" }}
       >
-        {status}
-      </Badge>
+        <ProjectStatus status={status}/> 
+      </Box>
 
       <Text
         className={classes.title}

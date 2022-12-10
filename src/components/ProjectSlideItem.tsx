@@ -1,5 +1,6 @@
 import { IProject } from "../database/me";
 import { createStyles, Space, Group, Text } from "@mantine/core";
+import ProjectStatus from "./ProjectStatus";
 
 interface ProjectSlideItemProps extends IProject {}
 
@@ -28,6 +29,7 @@ const useStyles = createStyles((theme) => ({
     },
     "& > div": {
       padding: 10,
+      maxWidth: 600,
 
       "h1,p": {
         margin: 0,
@@ -39,9 +41,13 @@ const useStyles = createStyles((theme) => ({
       p: {
         opacity: 0.8,
         fontSize: theme.fontSizes.xs,
-        maxWidth: 500,
       },
     },
+  },
+  grid2Between: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
 }));
 
@@ -60,7 +66,10 @@ export default function ProjectSlideItem({
     >
       <div className={classes.container2}>
         <div>
-          <h1>{project.name}</h1>
+          <div className={classes.grid2Between}>
+            <h1>{project.name}</h1>
+            <ProjectStatus status={project.status} />
+          </div>
           <Text
             sx={{
               opacity: 0.7,

@@ -278,7 +278,13 @@ export const timeline: TimeLines = {
   ],
 };
 
-export type IProjetcStatus = "finished" | "building" | "death";
+// export type IProjetcStatus = "finished" | "building" | "death";
+
+export interface IProjectStatus<T = any> {
+  finished: T;
+  building: T;
+  death: T;
+}
 
 export interface IProject {
   name: string;
@@ -289,7 +295,7 @@ export interface IProject {
     preview?: string;
     photoPreview?: string;
   };
-  status: IProjetcStatus;
+  status: keyof IProjectStatus;
   tags: string[];
   createdAt: Date;
 }
