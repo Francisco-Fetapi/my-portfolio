@@ -5,6 +5,29 @@ import ProjectSlideItem from "./ProjectSlideItem";
 export const CAROUSEL_HEIGHT = 400;
 export const CAROUSEL_WIDTH = 920;
 
+export const SLIDE_STYLES = {
+  indicator: {
+    width: 12,
+    height: 4,
+    transition: "width 250ms ease",
+
+    "&[data-active]": {
+      width: 40,
+    },
+  },
+  control: {
+    background: "transparent !important",
+    border: "none",
+    color: "#FFF",
+  },
+  root: {
+    svg: {
+      width: 50,
+      height: 50,
+    },
+  },
+};
+
 export default function SlideProject() {
   return (
     <Carousel
@@ -12,17 +35,7 @@ export default function SlideProject() {
       mx="auto"
       withIndicators
       height={CAROUSEL_HEIGHT}
-      styles={{
-        indicator: {
-          width: 12,
-          height: 4,
-          transition: "width 250ms ease",
-
-          "&[data-active]": {
-            width: 40,
-          },
-        },
-      }}
+      styles={SLIDE_STYLES}
     >
       {recentProjects.map((project, key) => (
         <Carousel.Slide key={key}>
