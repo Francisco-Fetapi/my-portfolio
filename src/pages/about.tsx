@@ -34,7 +34,7 @@ export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
   const { classes: classes2 } = useStyles();
   const { me } = useMe();
-  const { fontEndTecnologies, backEndTecnologies } = useTecnologies();
+  const { frontEndTecnologies, backEndTecnologies } = useTecnologies();
   return (
     <div>
       <Head>
@@ -126,7 +126,7 @@ export default function IndexPage() {
         <SectionText>
           <SecondTitle>FRONT-END</SecondTitle>
           <TecnologiesContainer>
-            {fontEndTecnologies.map((tecnology) => (
+            {frontEndTecnologies.map((tecnology) => (
               <TecnologyCard tecnology={tecnology} key={tecnology.name} />
             ))}
           </TecnologiesContainer>

@@ -1,7 +1,7 @@
 import { ITecnology } from "../components/TecnologyCard";
 
 export default function useTecnologies() {
-  const fontEndTecnologies: ITecnology[] = [
+  const frontEndTecnologies: ITecnology[] = [
     {
       name: "HTML5",
       image: "/html5.svg",
@@ -78,5 +78,5 @@ export default function useTecnologies() {
     },
   ];
 
-  return { fontEndTecnologies, backEndTecnologies };
+  return { frontEndTecnologies, backEndTecnologies };
 }
