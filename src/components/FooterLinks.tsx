@@ -8,8 +8,9 @@ import {
 } from "@mantine/core";
 
 import { MantineLogo } from "@mantine/ds";
-import { me, contacts } from "../database/me";
 import Link from "next/link";
+import useContacts from "../database/useContacts";
+import useMe from "../database/useMe";
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -115,13 +116,15 @@ export interface FooterLinksProps {
   }[];
 }
 
-const linksSocial = contacts.filter((contact) => {
-  const linksToShow = ["Whatsapp", "Telemóvel", "Calendly"];
-  return linksToShow.includes(contact.label);
-});
-
 export function FooterLinks({ data }: FooterLinksProps) {
   const { classes } = useStyles();
+  const { me } = useMe();
+  const { contacts } = useContacts();
+
+  const linksSocial = contacts.filter((contact) => {
+    const linksToShow = ["Whatsapp", "Telemóvel", "Calendly"];
+    return linksToShow.includes(contact.label);
+  });
 
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (

@@ -5,10 +5,11 @@ import MainTitle from "../components/MainTitle";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 import SectionText from "../components/SectionText";
 import MyTimeline from "../components/MyTimeline";
-import { timeline } from "../database/me";
+import useTimeline from "../database/useTimeline";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
+  const { timeline } = useTimeline();
   return (
     <div>
       <Head>

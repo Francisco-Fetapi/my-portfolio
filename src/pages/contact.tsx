@@ -11,12 +11,14 @@ import {
   SimpleGrid,
 } from "@mantine/core";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
-import { socialMedia } from "../components/NavBar";
-
-import { me, contacts } from "../database/me";
+import useMe from "../database/useMe";
+import useContacts from "../database/useContacts";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
+  const { me } = useMe();
+  const { contacts } = useContacts();
+
   return (
     <div>
       <Head>

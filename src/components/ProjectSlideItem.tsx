@@ -1,4 +1,4 @@
-import { IProject } from "../database/me";
+import { IProject } from "../database/useProjects";
 import { ActionIcon, createStyles, Space, Group, Text } from "@mantine/core";
 import ProjectStatus from "./ProjectStatus";
 import { IconShare, IconBrandGithub, IconExternalLink } from "@tabler/icons";

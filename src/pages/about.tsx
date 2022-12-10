@@ -12,13 +12,15 @@ import {
   Button,
 } from "@mantine/core";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
-import { backEndTecnologies, fontEndTecnologies, me } from "../database/me";
+
 import Link from "next/link";
 import Image from "next/image";
 import SecondTitle from "../components/SecondTitle";
 import SectionText from "../components/SectionText";
 import TecnologyCard from "../components/TecnologyCard";
 import TecnologiesContainer from "../components/TecnologiesContainer";
+import useMe from "../database/useMe";
+import useTecnologies from "../database/useTecnologies";
 
 const PHOTO_SIZE = 250;
 
@@ -31,6 +33,8 @@ const useStyles = createStyles((theme) => ({
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
   const { classes: classes2 } = useStyles();
+  const { me } = useMe();
+  const { fontEndTecnologies, backEndTecnologies } = useTecnologies();
   return (
     <div>
       <Head>

@@ -1,7 +1,7 @@
 import { createStyles, Container, Text, Button, Group } from "@mantine/core";
 import { GithubIcon } from "@mantine/ds";
 import { IconDownload } from "@tabler/icons";
-import { me } from "../database/me";
+import useMe from "../database/useMe";
 
 const BREAKPOINT = "@media (max-width: 755px)";
 
@@ -72,6 +72,7 @@ export const useStyles = createStyles((theme) => ({
 
 export function HeroTitle() {
   const { classes } = useStyles();
+  const { me } = useMe();
 
   return (
     <div className={classes.wrapper}>

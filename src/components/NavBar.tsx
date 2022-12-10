@@ -9,21 +9,21 @@ import {
   IconBrandLinkedin,
   IconBrandInstagram,
 } from "@tabler/icons";
-import { me } from "../database/me";
+import useMe from "../database/useMe";
 
 interface NavBarProps {
   drawerOpened: boolean;
 }
 
-export const socialMedia = [
-  { Icon: IconBrandGithub, href: me.github },
-  { Icon: IconBrandLinkedin, href: me.linkedin },
-  { Icon: IconBrandFacebook, href: me.facebook },
-  { Icon: IconBrandTwitter, href: me.twitter },
-  { Icon: IconBrandInstagram, href: me.instagram },
-];
-
 export default function NavBar({ drawerOpened }: NavBarProps) {
+  const { me } = useMe();
+  const socialMedia = [
+    { Icon: IconBrandGithub, href: me.github },
+    { Icon: IconBrandLinkedin, href: me.linkedin },
+    { Icon: IconBrandFacebook, href: me.facebook },
+    { Icon: IconBrandTwitter, href: me.twitter },
+    { Icon: IconBrandInstagram, href: me.instagram },
+  ];
   return (
     <MediaQuery smallerThan="md" styles={{ display: "none" }}>
       <NavbarMantine

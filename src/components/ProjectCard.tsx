@@ -10,7 +10,7 @@ import {
   Avatar,
   createStyles,
 } from "@mantine/core";
-import { IProject } from "../database/me";
+import { IProject } from "../database/useProjects";
 
 import { IconShare, IconBrandGithub, IconExternalLink } from "@tabler/icons";
 import dateDistance from "../helpers/dateDistance";
@@ -100,10 +100,8 @@ export function ProjectCard({
         <Image src={`/projects_img/${images[0]}`} height={250} alt={name} />
       </Card.Section>
 
-      <Box
-        className={classes.status}
-      >
-        <ProjectStatus status={status}/> 
+      <Box className={classes.status}>
+        <ProjectStatus status={status} />
       </Box>
 
       <Text

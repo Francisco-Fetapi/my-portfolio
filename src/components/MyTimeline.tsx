@@ -1,8 +1,8 @@
-import { SimpleGrid, Group, Timeline, Title, Box, Text } from "@mantine/core";
-import { IconCalendarTime, IconDeviceWatch } from "@tabler/icons";
-import { useRouter } from "next/router";
-import { TimeLines } from "../database/me";
-import dateDistance, { ILocales } from "../helpers/dateDistance";
+import { Group, Timeline, Title, Box, Text } from "@mantine/core";
+import { IconCalendarTime } from "@tabler/icons";
+
+import { TimeLines } from "../database/useTimeline";
+import dateDistance from "../helpers/dateDistance";
 import useCurrentLocale from "../hooks/useCurrentLocale";
 
 interface MyTimelineProps {

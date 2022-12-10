@@ -1,9 +1,11 @@
 import { MediaQuery, Aside as AsideMantine, Anchor } from "@mantine/core";
-import { me } from "../database/me";
+import useMe from "../database/useMe";
+
 import { SIZE_NAVBAR_AND_SIDEBAR } from "./AppScheme";
 import SideNavBarContent from "./SideNavBarContent";
 
 export default function Aside() {
+  const { me } = useMe();
   return (
     <MediaQuery smallerThan="md" styles={{ display: "none" }}>
       <AsideMantine

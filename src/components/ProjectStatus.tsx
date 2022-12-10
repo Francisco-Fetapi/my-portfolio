@@ -1,6 +1,6 @@
 import React from "react";
 import { Badge, MantineGradient } from "@mantine/core";
-import { IProjectStatus } from "../database/me";
+import { IProjectStatus } from "../database/useProjects";
 
 interface ProjectStatusProps {
   status: keyof IProjectStatus;

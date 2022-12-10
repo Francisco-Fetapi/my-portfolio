@@ -4,14 +4,15 @@ import { Box, Text } from "@mantine/core";
 import MainTitle from "../components/MainTitle";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 import SectionText from "../components/SectionText";
-import { someProjects } from "../database/me";
 import { ProjectCard } from "../components/ProjectCard";
 import TecnologiesContainer from "../components/TecnologiesContainer";
 import SecondTitle from "../components/SecondTitle";
 import SlideProject from "../components/SlideProjects";
+import useProjects from "../database/useProjects";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
+  const { someProjects } = useProjects();
   return (
     <div>
       <Head>
@@ -42,7 +43,7 @@ export default function IndexPage() {
             {someProjects.map((project, key) => (
               <ProjectCard
                 {...project}
-                description={project.description?.toString().repeat(key + 2)}
+                // description={project.description?.toString().repeat(key + 2)}
                 key={project.name + key}
               />
             ))}
