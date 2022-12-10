@@ -21,6 +21,10 @@ const useStyles = createStyles((theme) => ({
   },
   title: {
     fontSize: 30,
+    [theme.fn.smallerThan("sm")]: {
+      fontSize: 20,
+      padding: "0px 25px",
+    },
     fontWeight: 700,
     margin: 0,
     padding: "0px 50px",

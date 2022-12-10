@@ -52,6 +52,11 @@ const useStyles = createStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
   },
+  actionIcon: {
+    ":hover": {
+      background: "transparent",
+    },
+  },
 }));
 
 export default function ProjectSlideItem({
@@ -96,6 +101,7 @@ export default function ProjectSlideItem({
 }
 
 function ButtonActions({ links }: ButtonActionsProps) {
+  const { classes } = useStyles();
   const githubLink = {
     href: links.github,
     target: "_blank",
@@ -118,16 +124,16 @@ function ButtonActions({ links }: ButtonActionsProps) {
       mr={0}
     >
       <a {...githubLink}>
-        <ActionIcon size="sm">
+        <ActionIcon size="sm" className={classes.actionIcon}>
           <IconBrandGithub size={12} />
         </ActionIcon>
       </a>
       <a {...previewLink}>
-        <ActionIcon size="sm">
+        <ActionIcon size="sm" className={classes.actionIcon}>
           <IconExternalLink size={12} />
         </ActionIcon>
       </a>
-      <ActionIcon size="sm">
+      <ActionIcon size="sm" className={classes.actionIcon}>
         <IconShare size={12} />
       </ActionIcon>
     </Group>
