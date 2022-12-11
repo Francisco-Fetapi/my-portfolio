@@ -87,10 +87,10 @@ export function HeroTitle() {
             gradient={{ from: "blue", to: "cyan" }}
             inherit
           >
-            Francisco Fetapi
+            {me.name}
           </Text>{" "}
           <br />
-          Desenvolvedor Front-end
+          {me.professional}
         </h1>
 
         <Text className={classes.description} color="dimmed">

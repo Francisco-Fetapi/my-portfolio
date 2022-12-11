@@ -240,7 +240,7 @@ export function HeaderMegaMenu({}: HeaderMegaMenuProps) {
       >
         <ScrollArea sx={{ height: "calc(100vh - 60px)" }} mx="-md">
           <Divider
-            // my="sm"
+            mb="sm"
             color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"}
           />
 
