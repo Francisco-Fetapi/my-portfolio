@@ -88,7 +88,7 @@ export default function IndexPage() {
                 })}
               >
                 <Image
-                  src="/my-photo1.jpg"
+                  src={me.photo}
                   width={PHOTO_SIZE}
                   height={PHOTO_SIZE + 50}
                   alt="Minha foto"

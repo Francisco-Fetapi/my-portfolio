@@ -13,6 +13,7 @@ import {
   Box,
   Collapse,
   ScrollArea,
+  MediaQuery,
 } from "@mantine/core";
 import { MantineLogo } from "@mantine/ds";
 import { useDisclosure } from "@mantine/hooks";
@@ -31,6 +32,7 @@ import { useRouter } from "next/router";
 import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
 import Link from "next/link";
+import ImageLogo from "./ImageLogo";
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -64,7 +66,8 @@ const useStyles = createStyles((theme) => ({
       borderBottom: "1px solid " + theme.colors.blue[6],
     },
     [theme.fn.smallerThan("sm")]: {
-      borderLeft: "3px solid " + theme.colors.blue[6],
+      borderLeft: "8px solid " + theme.colors.blue[6],
+      color: theme.colors.blue[6],
     },
     pointerEvents: "none",
     userSelect: "none",
@@ -119,6 +122,14 @@ const useStyles = createStyles((theme) => ({
         ? theme.colors.yellow[4]
         : theme.colors.blue[6],
   },
+  logoImage: {
+    [theme.fn.smallerThan(940)]: {
+      display: "none",
+    },
+    [theme.fn.smallerThan("sm")]: {
+      display: "block",
+    },
+  },
 }));
 
 interface HeaderMegaMenuProps {
@@ -167,7 +178,10 @@ export function HeaderMegaMenu({}: HeaderMegaMenuProps) {
             height={40}
             style={{ zoom: 1.3 }}
           /> */}
-          <div />
+          <Box className={classes.logoImage}>
+            <ImageLogo />
+          </Box>
+          {/* <div /> */}
 
           <Group
             sx={{ height: "100%" }}
@@ -204,14 +218,29 @@ export function HeaderMegaMenu({}: HeaderMegaMenuProps) {
         opened={drawerOpened}
         onClose={closeDrawer}
         size="100%"
-        padding="md"
-        // title={<Logo />}
+        padding="sm"
+        title={
+          <Group
+            sx={{
+              justifyContent: "space-between",
+              width: "calc(100vw - 30px)",
+            }}
+          >
+            <ImageLogo />
+            <Burger
+              opened={drawerOpened}
+              onClick={toggleDrawer}
+              className={classes.hiddenDesktop}
+            />
+          </Group>
+        }
+        withCloseButton={false}
         className={classes.hiddenDesktop}
         zIndex={1000000}
       >
         <ScrollArea sx={{ height: "calc(100vh - 60px)" }} mx="-md">
           <Divider
-            my="sm"
+            // my="sm"
             color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"}
           />
 

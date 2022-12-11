@@ -3,6 +3,8 @@ export default function useMe() {
   const me = {
     name: "Francisco Fetapi",
     email: "franciscofetapi@gmail.com",
+    photo: "/my-photo1.jpg",
+    professional: "Desenvolvedor Front-End",
     github: "https://github.com/Francisco-Fetapi",
     twitter: "https://twitter.com/FranciscoFetapi",
     instagram: "https://www.instagram.com/franciscofetapi/",
