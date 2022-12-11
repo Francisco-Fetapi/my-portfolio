@@ -5,12 +5,14 @@ import {
   Container,
   ActionIcon,
   Group,
+  Center,
 } from "@mantine/core";
 
 import { MantineLogo } from "@mantine/ds";
 import Link from "next/link";
 import useContacts from "../database/useContacts";
 import useMe from "../database/useMe";
+import ImageLogo from "./ImageLogo";
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -147,8 +149,13 @@ export function FooterLinks({ data }: FooterLinksProps) {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <MantineLogo size={30} />
-          <Text size="xs" color="dimmed" className={classes.description}>
+          <ImageLogo />
+          <Text
+            size="xs"
+            mt={10}
+            color="dimmed"
+            className={classes.description}
+          >
             Projetado e Desenvolvido por <i>{me.name}</i>
           </Text>
         </div>

@@ -19,7 +19,9 @@ export default function ImageLogo() {
         }}
       />
       <Box>
-        <Text size="sm">{me.name}</Text>
+        <Text size="md" weight={600}>
+          {me.name}
+        </Text>
         <Text mt={-4} size="xs" color="dimmed">
           {me.professional}
         </Text>
