@@ -54,7 +54,7 @@ export default function useTecnologies() {
     },
     {
       name: "MySQL",
-      image: "/mysql1.png",
+      image: "/mysql.svg",
       startedAt: new Date(),
       description: "Descricao qualquer",
     },
@@ -66,7 +66,7 @@ export default function useTecnologies() {
     },
     {
       name: "Mongo DB",
-      image: "/mongodb.png",
+      image: "/mongodb.svg",
       startedAt: new Date(),
       description: "Descricao qualquer",
     },
