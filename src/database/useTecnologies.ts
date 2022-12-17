@@ -80,14 +80,14 @@ export default function useTecnologies() {
 
   const otherTecnologies: ITecnology[] = [
     {
-      name: "Adobe XD",
-      image: "/adobexd.png",
+      name: "VS Code",
+      image: "/visual-studio-code.svg",
       startedAt: new Date(),
       description: "Descricao qualquer",
     },
     {
-      name: "VS Code",
-      image: "/visual-studio-code.svg",
+      name: "Adobe XD",
+      image: "/adobexd.png",
       startedAt: new Date(),
       description: "Descricao qualquer",
     },
@@ -99,7 +99,7 @@ export default function useTecnologies() {
     },
     {
       name: "Insomnia Rest Client",
-      image: "/insomnia.jpg",
+      image: "/insomnia.ico",
       startedAt: new Date(),
       description: "Descricao qualquer",
     },
