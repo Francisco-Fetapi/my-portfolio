@@ -78,5 +78,32 @@ export default function useTecnologies() {
     },
   ];
 
-  return { frontEndTecnologies, backEndTecnologies };
+  const otherTecnologies: ITecnology[] = [
+    {
+      name: "Adobe XD",
+      image: "/adobexd.png",
+      startedAt: new Date(),
+      description: "Descricao qualquer",
+    },
+    {
+      name: "VS Code",
+      image: "/visual-studio-code.svg",
+      startedAt: new Date(),
+      description: "Descricao qualquer",
+    },
+    {
+      name: "PHPMyAdmin",
+      image: "/phpmyadmin.ico",
+      startedAt: new Date(),
+      description: "Descricao qualquer",
+    },
+    {
+      name: "Insomnia Rest Client",
+      image: "/insomnia.jpg",
+      startedAt: new Date(),
+      description: "Descricao qualquer",
+    },
+  ];
+
+  return { frontEndTecnologies, backEndTecnologies, otherTecnologies };
 }
