@@ -11,7 +11,10 @@ import {
   Text,
   Button,
 } from "@mantine/core";
-import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
+import {
+  TextWithGradient,
+  useStyles as useStylesHeroTitleComponent,
+} from "../components/HeroTitle";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -48,7 +51,12 @@ export default function IndexPage() {
               <Box sx={{ zoom: 0.9, width: "100%", maxWidth: 600 }}>
                 <Text color="dimmed" className={classes.description}>
                   Sou um cara apaixonado por desenvolvimento de software.
-                  Atualmente com foco em Front-End.
+                  Atualmente com foco em{" "}
+                  <TextWithGradient>
+                    {" "}
+                    Desenvolvimento Web full-stack
+                  </TextWithGradient>
+                  .
                 </Text>
               </Box>
               <Group mt={30}>
@@ -68,7 +76,7 @@ export default function IndexPage() {
                   variant="subtle"
                   href={me.downloadCV}
                   target="__blank"
-                  color="cyan"
+                  color="blue"
                 >
                   Baixar Curriculum
                 </Button>
