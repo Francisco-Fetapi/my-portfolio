@@ -4,7 +4,7 @@ export default function useMe() {
     name: "Francisco Fetapi",
     email: "franciscofetapi@gmail.com",
     photo: "/my-photo1.jpg",
-    professional: "Desenvolvedor Front-End",
+    professional: "Desenvolvedor Web",
     github: "https://github.com/Francisco-Fetapi",
     twitter: "https://twitter.com/FranciscoFetapi",
     instagram: "https://www.instagram.com/franciscofetapi/",

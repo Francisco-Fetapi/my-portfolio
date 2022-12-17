@@ -19,7 +19,6 @@ export const useStyles = createStyles((theme) => ({
     // paddingBottom: 80,
 
     [BREAKPOINT]: {
-      paddingBottom: 80,
       paddingTop: 80,
     },
   },
@@ -81,22 +80,16 @@ export function HeroTitle() {
           Olá, meu nome é
         </Text>
         <h1 className={classes.title}>
-          <Text
-            component="span"
-            variant="gradient"
-            gradient={{ from: "blue", to: "cyan" }}
-            inherit
-          >
-            {me.name}
-          </Text>{" "}
-          <br />
+          <TextWithGradient>{me.name}</TextWithGradient> <br />
           {me.professional}
         </h1>
 
         <Text className={classes.description} color="dimmed">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
-          consectetur ducimus sed atque sequi architecto? Optio, nisi, amet
-          recusandae magna!
+          Apaixonado por desenvolvimento de software. Atualmente Crio sistemas
+          para a internet atuando como desenvolvedor{" "}
+          <TextWithGradient>full-stack</TextWithGradient>. A minha stack é
+          principalmente voltada à{" "}
+          <TextWithGradient> JavaScript/TypeScript</TextWithGradient>
         </Text>
 
         <Group className={classes.controls}>
@@ -127,5 +120,18 @@ export function HeroTitle() {
         </Group>
       </Container>
     </div>
+  );
+}
+
+export function TextWithGradient({ children }: any) {
+  return (
+    <Text
+      component="span"
+      variant="gradient"
+      gradient={{ from: "blue", to: "cyan" }}
+      inherit
+    >
+      {children}
+    </Text>
   );
 }
