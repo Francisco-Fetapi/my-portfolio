@@ -15,8 +15,8 @@ const languages: ILanguages<Locale> = {
 };
 
 const prefixes: ILanguages<string> = {
-  pt: "Há",
-  en: "About",
+  pt: "há",
+  en: "",
 };
 
 export default function dateDistance(date: Date, language: ILocales) {
