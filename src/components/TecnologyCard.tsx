@@ -10,6 +10,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconInfoCircle } from "@tabler/icons";
+import getShortText from "../helpers/getShortText";
 
 export interface ITecnology {
   name: string;
@@ -76,8 +77,14 @@ export default function TecnologyCard({
             height={45}
             className={classes.img}
           />
-          <Text mt={15} align="center" size="sm" weight={500}>
-            {tecnology.name}
+          <Text
+            mt={15}
+            align="center"
+            size="sm"
+            weight={500}
+            title={tecnology.name}
+          >
+            {getShortText(tecnology.name, 2)}
           </Text>
         </Paper>
       </Popover.Target>
