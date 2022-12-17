@@ -1,8 +1,9 @@
 import React from "react";
-import { Group, Title, createStyles } from "@mantine/core";
+import { Title, createStyles } from "@mantine/core";
 
 interface SecondTitleProps {
   children: React.ReactNode;
+  noOrnament?: boolean;
 }
 
 const useStyles = createStyles((theme) => ({
@@ -25,22 +26,26 @@ const useStyles = createStyles((theme) => ({
       fontSize: 20,
       padding: "0px 25px",
     },
-    fontWeight: 700,
+    fontWeight: 900,
+    fontFamily: "Roboto,sans-serif",
     margin: 0,
     padding: "0px 50px",
   },
 }));
 
-export default function SecondTitle({ children }: SecondTitleProps) {
+export default function SecondTitle({
+  children,
+  noOrnament,
+}: SecondTitleProps) {
   const { classes } = useStyles();
 
   return (
     <div className={classes.container}>
-      <div className={classes.ornament} />
+      {noOrnament ? <div /> : <div className={classes.ornament} />}
       <Title order={2} className={classes.title} align="center">
         {children}
       </Title>
-      <div className={classes.ornament} />
+      {noOrnament ? <div /> : <div className={classes.ornament} />}
     </div>
   );
 }

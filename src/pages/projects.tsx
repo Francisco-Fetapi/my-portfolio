@@ -1,6 +1,6 @@
 import Head from "next/head";
 import AppScheme from "../components/AppScheme";
-import { Box, Text } from "@mantine/core";
+import { Box, Button, Center, Text } from "@mantine/core";
 import MainTitle from "../components/MainTitle";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 import SectionText from "../components/SectionText";
@@ -9,10 +9,12 @@ import TecnologiesContainer from "../components/TecnologiesContainer";
 import SecondTitle from "../components/SecondTitle";
 import SlideProject from "../components/SlideProjects";
 import useProjects from "../database/useProjects";
+import useMe from "../database/useMe";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
   const { someProjects } = useProjects();
+  const { me } = useMe();
   return (
     <div>
       <Head>
@@ -48,6 +50,28 @@ export default function IndexPage() {
               />
             ))}
           </TecnologiesContainer>
+        </SectionText>
+
+        <SectionText>
+          <SecondTitle noOrnament>
+            ALGUM PROJETO EM MENTE? VAMOS TRABALHAR JUNTOS
+          </SecondTitle>
+          <SectionText>
+            <Center>
+              <Button
+                component="a"
+                size="lg"
+                className={classes.control}
+                variant="gradient"
+                target="__blank"
+                href={me.calendly}
+                gradient={{ from: "blue", to: "cyan" }}
+                // leftIcon={<IconDownload size={20} />}
+              >
+                Vamos falar
+              </Button>
+            </Center>
+          </SectionText>
         </SectionText>
       </AppScheme>
     </div>
