@@ -63,7 +63,7 @@ export default function IndexPage() {
               <Button
                 component="a"
                 size="lg"
-                className={classes.control}
+                // className={classes.control}
                 variant="gradient"
                 target="__blank"
                 href={me.calendly}
