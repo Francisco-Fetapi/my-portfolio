@@ -24,6 +24,7 @@ import TecnologyCard from "../components/TecnologyCard";
 import TecnologiesContainer from "../components/TecnologiesContainer";
 import useMe from "../database/useMe";
 import useTecnologies from "../database/useTecnologies";
+import RouterTransition from "../components/RouterTransition";
 
 const PHOTO_SIZE = 250;
 
@@ -45,6 +46,7 @@ export default function IndexPage() {
         <title>Sobre</title>
       </Head>
       <AppScheme>
+        <RouterTransition />
         <Box mt={20}>
           <Grid gutter="lg" justify="flex-end">
             <Grid.Col md={8} xs={12}>

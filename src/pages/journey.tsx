@@ -6,6 +6,7 @@ import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitl
 import SectionText from "../components/SectionText";
 import MyTimeline from "../components/MyTimeline";
 import useTimeline from "../database/useTimeline";
+import RouterTransition from "../components/RouterTransition";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -16,6 +17,7 @@ export default function IndexPage() {
         <title>Jornada</title>
       </Head>
       <AppScheme>
+        <RouterTransition />
         <Box mt={10}>
           <MainTitle>Jornada</MainTitle>
           <Box sx={{ zoom: 0.9 }}>

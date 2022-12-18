@@ -10,6 +10,7 @@ import SecondTitle from "../components/SecondTitle";
 import SlideProject from "../components/SlideProjects";
 import useProjects from "../database/useProjects";
 import useMe from "../database/useMe";
+import RouterTransition from "../components/RouterTransition";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -21,6 +22,7 @@ export default function IndexPage() {
         <title>Projetos</title>
       </Head>
       <AppScheme>
+        <RouterTransition />
         <Box mt={10}>
           <MainTitle>Projetos</MainTitle>
           <Box sx={{ zoom: 0.9 }}>

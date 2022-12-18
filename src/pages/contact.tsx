@@ -13,6 +13,7 @@ import {
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 import useMe from "../database/useMe";
 import useContacts from "../database/useContacts";
+import RouterTransition from "../components/RouterTransition";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -25,6 +26,7 @@ export default function IndexPage() {
         <title>Contacto</title>
       </Head>
       <AppScheme>
+        <RouterTransition />
         <Box mt={20}>
           <MainTitle>Contacto</MainTitle>
           {/* <br /> */}
