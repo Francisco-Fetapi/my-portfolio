@@ -11,7 +11,8 @@ import {
 } from "@mantine/core";
 import { usePagination } from "@mantine/hooks";
 import { IconCalendarTime } from "@tabler/icons";
-import { useState } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 import { TimeLines } from "../database/useTimeline";
 import dateDistance from "../helpers/dateDistance";
@@ -23,12 +24,20 @@ interface MyTimelineProps {
 
 export default function MyTimeline({ timelines }: MyTimelineProps) {
   const years = Object.keys(timelines).reverse();
-  // const [year,setYear] = useState();
-  const [activeTab, setActiveTab] = useState<string | null>(years[0]);
+  const router = useRouter();
+  const year = router.query.year as string;
+
+  const [activeTab, setActiveTab] = useState<string | null>(year || years[0]);
+
+  useEffect(() => {
+    if (years.includes(year)) {
+      setActiveTab(year);
+    }
+  }, [year]);
 
   return (
     <Box mt={50} sx={{ maxWidth: 500 }}>
-      <Tabs color="blue" defaultValue={years[0]} onTabChange={setActiveTab}>
+      <Tabs value={activeTab!} color="blue" onTabChange={setActiveTab}>
         {/* <Center> */}
         <Tabs.List position="center">
           {years.map((year) => (
@@ -43,13 +52,6 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
             </Tabs.Tab>
           ))}
         </Tabs.List>
-        {/* </Center> */}
-
-        {/* {years.map((year) => (
-          <Tabs.Panel key={year} value={year} pt="xs">
-            <TimeLine timelines={timelines} year={year} />
-          </Tabs.Panel>
-        ))} */}
 
         <Tabs.Panel value={activeTab!} pt="xs">
           <TimeLine timelines={timelines} year={activeTab!} />

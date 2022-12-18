@@ -3,8 +3,9 @@ import Head from "next/head";
 import AppStore from "../core/AppStore";
 import AppProvider from "../core/AppProvider";
 import { ColorSchemeProvider } from "@mantine/core";
-import nookies, { parseCookies, setCookie } from "nookies";
+import { parseCookies, setCookie } from "nookies";
 import { AppProps } from "next/app";
+import RouterTransition from "../components/RouterTransition";
 
 type IColor = "light" | "dark";
 interface WithColorScheme {
@@ -48,6 +49,7 @@ export default function App(props: AppProps & WithColorScheme) {
           toggleColorScheme={toggleColorScheme}
         >
           <AppProvider Page={<Component {...pageProps} />} />
+          {/* <RouterTransition /> */}
         </ColorSchemeProvider>
       </AppStore>
     </>
