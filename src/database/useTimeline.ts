@@ -110,5 +110,8 @@ export default function useTimeline() {
       },
     ],
   };
-  return { timeline };
+
+  const years = Object.keys(timeline);
+
+  return { timeline, years };
 }
