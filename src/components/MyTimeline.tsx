@@ -29,8 +29,6 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
 
   const [activeTab, setActiveTab] = useState<string | null>(year || years[0]);
 
-  console.log(activeTab);
-
   useEffect(() => {
     if (years.includes(year)) {
       setActiveTab(year);
