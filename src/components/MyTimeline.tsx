@@ -27,13 +27,19 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
   const router = useRouter();
   const year = router.query.year as string;
 
-  const [activeTab, setActiveTab] = useState<string | null>(years[0]);
+  const [activeTab, setActiveTab] = useState<string | null>(year || years[0]);
 
   console.log(activeTab);
 
+  useEffect(() => {
+    if (years.includes(year)) {
+      setActiveTab(year);
+    }
+  }, [year]);
+
   return (
     <Box mt={50} sx={{ maxWidth: 500 }}>
-      <Tabs color="blue" onTabChange={setActiveTab}>
+      <Tabs value={activeTab!} color="blue" onTabChange={setActiveTab}>
         {/* <Center> */}
         <Tabs.List position="center">
           {years.map((year) => (
