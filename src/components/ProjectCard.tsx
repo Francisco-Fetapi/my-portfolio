@@ -16,6 +16,12 @@ import { IconShare, IconBrandGithub, IconExternalLink } from "@tabler/icons";
 import dateDistance from "../helpers/dateDistance";
 import useCurrentLocale from "../hooks/useCurrentLocale";
 import ProjectStatus from "./ProjectStatus";
+import SlideProjectImage from "./SlideProjectImage";
+import { Carousel } from "@mantine/carousel";
+
+export const PROJECT_CARD_MAX_WIDTH = 380;
+export const PROJECT_CARD_HEIGHT = 480;
+export const PROJECT_IMAGE_CARD_IMAGE_HEIGHT = 250;
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -23,8 +29,8 @@ const useStyles = createStyles((theme) => ({
     flexDirection: "column",
     position: "relative",
     width: "100%",
-    maxWidth: 380,
-    height: 480,
+    maxWidth: PROJECT_CARD_MAX_WIDTH,
+    height: PROJECT_CARD_HEIGHT,
     margin: "20px 10px",
     backgroundColor:
       theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
@@ -97,7 +103,21 @@ export function ProjectCard({
       {...others}
     >
       <Card.Section>
-        <Image src={`/projects_img/${images[0]}`} height={250} alt={name} />
+        <SlideProjectImage>
+          {images.map((image) => (
+            <Carousel.Slide key={image}>
+              <Image
+                src={`/projects_img/${image}`}
+                height={PROJECT_IMAGE_CARD_IMAGE_HEIGHT}
+                width="100%"
+                alt={name}
+                sx={{
+                  objectFit: "cover",
+                }}
+              />
+            </Carousel.Slide>
+          ))}
+        </SlideProjectImage>
       </Card.Section>
 
       <Box className={classes.status}>
