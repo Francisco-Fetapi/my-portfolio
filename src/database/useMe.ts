@@ -24,5 +24,9 @@ export default function useMe() {
       "Nextjs",
     ],
   };
-  return { me };
+
+  function getRepositoryByName(repositoryName: string) {
+    return `${me.github}/${repositoryName}`;
+  }
+  return { me, getRepositoryByName };
 }
