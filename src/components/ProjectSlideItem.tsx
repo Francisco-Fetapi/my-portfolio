@@ -121,19 +121,23 @@ function ButtonActions({ links }: ButtonActionsProps) {
       spacing={15}
       mr={0}
     >
-      <a {...githubLink}>
-        <ActionIcon size="sm" className={classes.actionIcon}>
-          <IconBrandGithub size={12} />
-        </ActionIcon>
-      </a>
-      <a {...previewLink}>
-        <ActionIcon size="sm" className={classes.actionIcon}>
-          <IconExternalLink size={12} />
-        </ActionIcon>
-      </a>
-      <ActionIcon size="sm" className={classes.actionIcon}>
+      {links.github && (
+        <a {...githubLink}>
+          <ActionIcon size="sm" className={classes.actionIcon}>
+            <IconBrandGithub size={12} />
+          </ActionIcon>
+        </a>
+      )}
+      {links.preview && (
+        <a {...previewLink}>
+          <ActionIcon size="sm" className={classes.actionIcon}>
+            <IconExternalLink size={12} />
+          </ActionIcon>
+        </a>
+      )}
+      {/* <ActionIcon size="sm" className={classes.actionIcon}>
         <IconShare size={12} />
-      </ActionIcon>
+      </ActionIcon> */}
     </Group>
   );
 }

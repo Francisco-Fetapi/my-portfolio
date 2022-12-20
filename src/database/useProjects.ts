@@ -126,7 +126,7 @@ export default function useProjects() {
     {
       name: "Financial Manager",
       description:
-        "Projeto de estudo desenvolvido para consolidar os conecimentos relacionados ao Redux e  a arquitetura Flow.",
+        "Projeto de estudo desenvolvido para consolidar os conhecimentos relacionados ao Redux.",
       images: ["financial-manager-2.png", "financial-manager-1.png"],
       links: {
         github: getRepositoryByName("financial-manager"),

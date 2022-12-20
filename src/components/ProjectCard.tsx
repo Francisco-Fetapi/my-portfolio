@@ -156,18 +156,18 @@ export function ProjectCard({
 
         <Group spacing={8} mr={0}>
           <a {...githubLink}>
-            <ActionIcon className={classes.action}>
+            <ActionIcon className={classes.action} disabled={!links.github}>
               <IconBrandGithub size={16} />
             </ActionIcon>
           </a>
           <a {...previewLink}>
-            <ActionIcon className={classes.action}>
+            <ActionIcon className={classes.action} disabled={!links.preview}>
               <IconExternalLink size={16} />
             </ActionIcon>
           </a>
-          <ActionIcon className={classes.action}>
+          {/* <ActionIcon className={classes.action}>
             <IconShare size={16} />
-          </ActionIcon>
+          </ActionIcon> */}
         </Group>
       </Group>
     </Card>
