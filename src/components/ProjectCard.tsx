@@ -30,7 +30,7 @@ const useStyles = createStyles((theme) => ({
     position: "relative",
     width: "100%",
     maxWidth: PROJECT_CARD_MAX_WIDTH,
-    height: PROJECT_CARD_HEIGHT,
+    minHeight: PROJECT_CARD_HEIGHT,
     margin: "20px 10px",
     backgroundColor:
       theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
@@ -108,7 +108,7 @@ export function ProjectCard({
             <Carousel.Slide key={image}>
               <Image
                 src={`/projects_img/${image}`}
-                height={PROJECT_IMAGE_CARD_IMAGE_HEIGHT}
+                height={PROJECT_IMAGE_CARD_IMAGE_HEIGHT * 1.5}
                 width="100%"
                 alt={name}
                 sx={{

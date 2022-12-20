@@ -14,11 +14,10 @@ export default function SlideProjectImage({ children }: any) {
     <Carousel
       sx={{
         maxWidth: PROJECT_CARD_MAX_WIDTH,
-        height: PROJECT_IMAGE_CARD_IMAGE_HEIGHT,
       }}
       mx="auto"
       withIndicators
-      height={PROJECT_IMAGE_CARD_IMAGE_HEIGHT}
+      height={PROJECT_IMAGE_CARD_IMAGE_HEIGHT * 1.5}
       styles={SLIDE_STYLES}
     >
       {children}
