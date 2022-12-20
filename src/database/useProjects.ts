@@ -11,7 +11,7 @@ export interface IProject {
   description: React.ReactNode;
   images: string[];
   links: {
-    github: string;
+    github?: string;
     preview?: string;
     photoPreview?: string;
   };
@@ -146,6 +146,122 @@ export default function useProjects() {
       status: "finished",
       tags: ["JavaScript", "React.js"],
       createdAt: new Date(2020, 2, 23),
+    },
+    {
+      name: "Calculadora Simples",
+      description:
+        "Na época desenvolvi esta calculadora para treinar manipulação do DOM com Jquery e como bonús me acostumar com o Bootstrap.",
+      images: [
+        "calculadora-html-css-js-1.png",
+        "calculadora-html-css-js-2.png",
+        "calculadora-html-css-js-3.png",
+        "calculadora-html-css-js-4.png",
+      ],
+      links: {
+        github: getRepositoryByName("calculadora-html-css-js"),
+        preview: "https://francisco-fetapi.github.io/calculadora-html-css-js/",
+      },
+      status: "finished",
+      tags: ["JavaScript", "Jquery", "Bootstrap"],
+      createdAt: new Date(2020, 5, 18),
+    },
+    {
+      name: "Gestor de Tarefas",
+      description:
+        "Projeto de estudo criado para consolidar os conhecimentos em Material-UI e React.",
+      images: [
+        "gestor-de-tarefas-1.png",
+        "gestor-de-tarefas-2.png",
+        "gestor-de-tarefas-3.png",
+      ],
+      links: {
+        github: getRepositoryByName("gestor-de-tarefas"),
+        preview: "https://gestor-de-tarefas.vercel.app",
+      },
+      status: "finished",
+      tags: ["JavaScript", "React.js", "Material-UI"],
+      createdAt: new Date(2021, 5, 28),
+    },
+    {
+      name: "Jogo da Velha",
+      description:
+        "Uma versão do famoso Tic-Tac-Toe desenvolvido com React para fins de estudo.",
+      images: ["jogo-da-velha-react-1.png", "jogo-da-velha-react-2.png"],
+      links: {
+        github: getRepositoryByName("jogo-da-velha"),
+        preview: "https://jogo-da-velha-fetapi.vercel.app",
+      },
+      status: "finished",
+      tags: ["JavaScript", "React.js", "Material-UI"],
+      createdAt: new Date(2021, 6, 21),
+    },
+    {
+      name: "Android App Simulation",
+      description:
+        "Interface estática de uma aplicação android desenvolvida com Material-UI para fins de estudo.",
+      images: ["layout-material-ui-1.png", "layout-material-ui-2.png"],
+      links: {
+        github: getRepositoryByName("layout1-material-ui"),
+        preview: "https://layout1-material-ui.vercel.app/",
+      },
+      status: "finished",
+      tags: ["JavaScript", "React.js", "Material-UI"],
+      createdAt: new Date(2021, 7, 19),
+    },
+    {
+      name: "Portuguese - Umbundo",
+      description: "Dicionário e tradutor Umbundo - Português.",
+      images: ["pt-um-app-1.png", "pt-um-app-2.png", "pt-um-app-3.png"],
+      links: {
+        // github: getRepositoryByName("portuguese-umbundo-app"),
+        preview: "https://portuguese-umbundo-app.vercel.app/",
+      },
+      status: "building",
+      tags: ["TypeScript", "React.js", "Mantine UI", "Firebase"],
+      createdAt: new Date(2022, 9, 2),
+    },
+    {
+      name: "Portuguese - Umbundo (Manager)",
+      description:
+        "Gestor do Dicionário e tradutor Umbundo - Português. Sistema utilizado para gerenciar o conteúdo da aplicação Portuguese - Umbundo.",
+      images: [
+        "tradutor-um-pt-manager.png",
+        "tradutor-um-pt-manager-2.png",
+        "tradutor-um-pt-manager-3.png",
+      ],
+      links: {
+        github: getRepositoryByName("traductor-portuguese-umbundo-manager"),
+        preview: "https://portuguese-umbundo-manager.vercel.app/",
+      },
+      status: "building",
+      tags: ["TypeScript", "React.js", "Mantine UI", "Firebase"],
+      createdAt: new Date(2022, 9, 22),
+    },
+    {
+      name: "Quiz - Quem Sabe?",
+      description:
+        "Quiz desenvolvido com PHP. Sou Angolano e Conheço Angola e Quem Quer Ser Rico serviram de inspiração. O projeto foi criado para fins de estudo.",
+      images: ["quiz-1.png", "quiz-2.png", "quiz-3.png", "quiz-4.png"],
+      links: {
+        // github: getRepositoryByName(""),
+        // preview: "https://portuguese-umbundo-app.vercel.app/",
+      },
+      status: "finished",
+      tags: ["JavaScript", "Jquery", "PHP", "MySQL"],
+      createdAt: new Date(2019, 10, 2),
+    },
+    {
+      name: "Typing Fast",
+      description:
+        "Jogo desenvolvido com React para exercitar a arte de digitar no teclado.",
+      images: ["typing-fast.png"],
+      links: {
+        // github: getRepositoryByName(""),
+        // preview: "https://portuguese-umbundo-app.vercel.app/",
+      },
+      status: "finished",
+      tags: ["TypeScript", "React.js", "Material-UI"],
+      createdAt: new Date(2022, 10, 2),
     },
   ];
 
