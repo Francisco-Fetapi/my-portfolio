@@ -27,12 +27,12 @@ export default function useProjects() {
     {
       name: "Social Movies Space",
       description: "Uma rede social para amantes de filmes e seriados",
-      images: ["sms-demo-1.png", "sms-demo-1.png"],
+      images: ["sms-demo-2.png", "sms-demo-1.png"],
       links: {
-        github: "https://olas.com",
-        preview: "https://preview.com",
+        github: getRepositoryByName("projeto-tcc"),
+        preview: "https://socialmoviesspace.vercel.app/",
       },
-      status: "death",
+      status: "building",
       tags: ["React.js", "Laravel", "MySQL"],
       createdAt: new Date(),
     },
