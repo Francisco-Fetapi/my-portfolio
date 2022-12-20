@@ -217,7 +217,7 @@ export default function useProjects() {
         github: getRepositoryByName("layout1-material-ui"),
         preview: "https://layout1-material-ui.vercel.app/",
       },
-      status: "finished",
+      status: "death",
       tags: ["JavaScript", "React.js", "Material-UI"],
       createdAt: new Date(2021, 7, 19),
     },

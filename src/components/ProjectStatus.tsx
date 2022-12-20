@@ -8,7 +8,7 @@ interface ProjectStatusProps {
 
 const listStatus: IProjectStatus<MantineGradient> = {
   finished: {
-    from: "blue",
+    from: "green",
     to: "cyan",
   },
   building: {
@@ -16,8 +16,8 @@ const listStatus: IProjectStatus<MantineGradient> = {
     to: "cyan",
   },
   death: {
-    from: "blue",
-    to: "cyan",
+    from: "red",
+    to: "red",
   },
 };
 
