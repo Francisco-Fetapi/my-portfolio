@@ -142,7 +142,7 @@ export function ProjectCard({
       </Group>
       <br />
 
-      <Text size="sm" color="dimmed" lineClamp={3}>
+      <Text size="sm" lineClamp={3}>
         {description}
       </Text>
 
