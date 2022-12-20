@@ -11,8 +11,6 @@ const useStyles = createStyles((theme) => ({
     width: "100%",
     height: "100%",
     backgroundSize: "cover",
-    backgroundPosition: "center center",
-    backgroundRepeat: "no-repeat",
   },
   container2: {
     width: "100%",
