@@ -36,13 +36,13 @@ export default function IndexPage() {
         </Box>
 
         <SectionText>
-          <SecondTitle>ÚLTIMOS 5 PROJETOS</SecondTitle>
+          <SecondTitle>EM DESTAQUE</SecondTitle>
           <SectionText>
             <SlideProject />
           </SectionText>
         </SectionText>
         <SectionText>
-          <SecondTitle>ALGUNS PROJETOS</SecondTitle>
+          <SecondTitle>MAIS PROJETOS</SecondTitle>
           <TecnologiesContainer>
             {someProjects.map((project, key) => (
               <ProjectCard
