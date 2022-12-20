@@ -22,27 +22,6 @@ export interface IProject {
 
 export default function useProjects() {
   const { getRepositoryByName } = useMe();
-  const someProjects: IProject[] = [
-    {
-      name: "Typing Master",
-      description: "Um projeto para exercitar a habilidade de usar o teclado",
-      images: ["typing-master-1.png", "typing-master-2.png"],
-      links: {
-        github: "https://olas.com",
-        preview: "https://preview.com",
-      },
-      status: "finished",
-      tags: ["TypeScript", "React.js", "Keyboard Game"],
-      createdAt: new Date(),
-    },
-  ];
-  someProjects.push(someProjects[0]);
-  someProjects.push(someProjects[0]);
-  someProjects.push(someProjects[0]);
-  someProjects.push(someProjects[0]);
-  someProjects.push(someProjects[0]);
-  someProjects.push(someProjects[0]);
-  someProjects.push(someProjects[0]);
 
   const recentProjects: IProject[] = [
     {
@@ -116,6 +95,57 @@ export default function useProjects() {
       status: "finished",
       tags: ["React.js", "PHP", "MySQL", "Galeria"],
       createdAt: new Date(2021, 3, 15),
+    },
+  ];
+
+  const someProjects: IProject[] = [
+    {
+      name: "Typing Master",
+      description: "Um projeto para exercitar a habilidade de usar o teclado",
+      images: ["typing-master-1.png", "typing-master-2.png"],
+      links: {
+        github: getRepositoryByName("typing-master-2"),
+        preview: "https://typing-master-2.vercel.app",
+      },
+      status: "finished",
+      tags: ["TypeScript", "React.js", "Keyboard Game"],
+      createdAt: new Date(2022, 8, 13),
+    },
+    {
+      name: "Sistema de SignUp/Login",
+      description:
+        "Um projeto de estudo criado para exercitar o sistema de autenticação via JWT",
+      images: ["sistema-login-jwt-1.png", "sistema-login-jwt-2.png"],
+      links: {
+        github: getRepositoryByName("sistema-login-front-end"),
+      },
+      status: "finished",
+      tags: ["JavaScript", "React.js", "Laravel", "MySQL", "JWT"],
+      createdAt: new Date(2021, 4, 12),
+    },
+    {
+      name: "Financial Manager",
+      description:
+        "Projeto de estudo desenvolvido para consolidar os conecimentos relacionados ao Redux e  a arquitetura Flow.",
+      images: ["financial-manager-2.png", "financial-manager-1.png"],
+      links: {
+        github: getRepositoryByName("financial-manager"),
+      },
+      status: "finished",
+      tags: ["TypeScript", "React.js", "CRUD", "LocalStorage"],
+      createdAt: new Date(2022, 7, 23),
+    },
+    {
+      name: "Calculadora Reativa",
+      description: "O meu primeiro projeto de estudo desenvolvido com React.",
+      images: ["calculadora-react-1.png", "calculadora-react-2.png"],
+      links: {
+        github: getRepositoryByName("calculadora-react"),
+        preview: "https://calculadora-react-fetapi.vercel.app/",
+      },
+      status: "finished",
+      tags: ["JavaScript", "React.js"],
+      createdAt: new Date(2020, 2, 23),
     },
   ];
 
