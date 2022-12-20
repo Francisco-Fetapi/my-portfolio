@@ -50,10 +50,23 @@ export default function useProjects() {
       createdAt: new Date(2022, 12, 9),
     },
     {
+      name: "Portal Obadias Malaquias",
+      description:
+        "Portal de noticias criado para o colégio Obadias Malaquias.",
+      images: ["portal-obadias-malaquias.png"],
+      links: {
+        // github: getRepositoryByName("my-portfolio"),
+        preview: "http://portal-obadias-malaquias.vercel.app",
+      },
+      status: "finished",
+      tags: ["Next.js", "Mantine UI", "Strapi"],
+      createdAt: new Date(2022, 11, 28),
+    },
+    {
       name: "Salão de Beleza - July Otchacati",
       description:
         "Uma landing page contendo informações sobre o salão de beleza July Otchacati de maneira a facilitar o contato com possiveis clientes.",
-      images: ["salao-de-beleza-1.png", "salao-de-beleza-2.png"],
+      images: ["salao-de-beleza-2.png", "salao-de-beleza-1.png"],
       links: {
         github: getRepositoryByName("salao-de-beleza-da-july"),
         preview: "https://salaodajuly.vercel.app/",
