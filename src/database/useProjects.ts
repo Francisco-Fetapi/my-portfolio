@@ -98,7 +98,7 @@ export default function useProjects() {
     },
   ];
 
-  const someProjects: IProject[] = [
+  let someProjects: IProject[] = [
     {
       name: "Typing Master",
       description: "Um projeto para exercitar a habilidade de usar o teclado",
@@ -264,6 +264,12 @@ export default function useProjects() {
       createdAt: new Date(2022, 10, 2),
     },
   ];
+
+  someProjects = someProjects.sort((a, b) => {
+    if (a.createdAt < b.createdAt) return 1;
+    if (a.createdAt > b.createdAt) return -1;
+    return 0;
+  });
 
   return { someProjects, recentProjects };
 }
