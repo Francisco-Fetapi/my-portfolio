@@ -165,7 +165,7 @@ export default function useProjects() {
       description:
         "Na época desenvolvi esta calculadora para treinar manipulação do DOM com Jquery e como bonús me acostumar com o Bootstrap.",
       images: [
-        "calculadora-html-css-js-1.png",
+        // "calculadora-html-css-js-1.png",
         "calculadora-html-css-js-2.png",
         "calculadora-html-css-js-3.png",
         "calculadora-html-css-js-4.png",
@@ -199,7 +199,7 @@ export default function useProjects() {
       name: "Jogo da Velha",
       description:
         "Uma versão do famoso Tic-Tac-Toe desenvolvido com React para fins de estudo.",
-      images: ["jogo-da-velha-react-1.png", "jogo-da-velha-react-2.png"],
+      images: ["jogo-da-velha-react-2.png", "jogo-da-velha-react-1.png"],
       links: {
         github: getRepositoryByName("jogo-da-velha"),
         preview: "https://jogo-da-velha-fetapi.vercel.app",
