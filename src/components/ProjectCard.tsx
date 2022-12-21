@@ -4,15 +4,13 @@ import {
   Image,
   Text,
   ActionIcon,
-  Badge,
   Group,
   Center,
-  Avatar,
   createStyles,
 } from "@mantine/core";
 import { IProject } from "../database/useProjects";
 
-import { IconShare, IconBrandGithub, IconExternalLink } from "@tabler/icons";
+import { IconBrandGithub, IconExternalLink } from "@tabler/icons";
 import dateDistance from "../helpers/dateDistance";
 import useCurrentLocale from "../hooks/useCurrentLocale";
 import ProjectStatus from "./ProjectStatus";
@@ -165,9 +163,6 @@ export function ProjectCard({
               <IconExternalLink size={16} />
             </ActionIcon>
           </a>
-          {/* <ActionIcon className={classes.action}>
-            <IconShare size={16} />
-          </ActionIcon> */}
         </Group>
       </Group>
     </Card>
