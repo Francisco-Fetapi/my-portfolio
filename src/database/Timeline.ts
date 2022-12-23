@@ -7,6 +7,11 @@ export class Timeline {
     if (!Timeline.timelines[getYear]) {
       Timeline.timelines[getYear] = [];
     }
+    const alreadyExists = Timeline.timelines[getYear].some(
+      (currentTimeline) => currentTimeline.title === timeline.title
+    );
+    if (alreadyExists) return;
+
     Timeline.timelines[getYear].push(timeline);
     this.orderEventsByMonthDESC(getYear);
   }
@@ -18,3 +23,5 @@ export class Timeline {
     });
   }
 }
+
+export const timelineEntity = new Timeline();
