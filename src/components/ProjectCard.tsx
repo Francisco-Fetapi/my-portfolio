@@ -1,5 +1,6 @@
 import {
   Card,
+  Anchor,
   Box,
   Image,
   Text,
@@ -16,6 +17,7 @@ import useCurrentLocale from "../hooks/useCurrentLocale";
 import ProjectStatus from "./ProjectStatus";
 import SlideProjectImage from "./SlideProjectImage";
 import { Carousel } from "@mantine/carousel";
+import Link from "next/link";
 
 export const PROJECT_CARD_MAX_WIDTH = 380;
 export const PROJECT_CARD_HEIGHT = 480;
@@ -133,9 +135,11 @@ export function ProjectCard({
       </Text>
       <Group mt={1}>
         {tags.map((tag) => (
-          <Text color="dimmed" size="xs" key={tag}>
-            {tag}
-          </Text>
+          <Link href={`/projects/?tag=${tag.toLowerCase()}`} key={tag} passHref>
+            <Anchor color="dimmed" size="xs">
+              {tag}
+            </Anchor>
+          </Link>
         ))}
       </Group>
       <br />

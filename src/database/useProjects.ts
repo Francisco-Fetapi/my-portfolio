@@ -43,7 +43,7 @@ export default function useProjects() {
         preview: "https://socialmoviesspace.vercel.app/",
       },
       status: "building",
-      tags: ["React.js", "Laravel", "MySQL"],
+      tags: ["React.js", "JavaScript", "Laravel", "MySQL"],
       createdAt: new Date(),
     },
     {
@@ -56,7 +56,7 @@ export default function useProjects() {
         preview: "https://franciscofetapi.vercel.app",
       },
       status: "building",
-      tags: ["Next.js", "i18n", "Mantine UI"],
+      tags: ["Next.js", "TypeScript", "i18n", "Mantine UI"],
       createdAt: new Date(2022, 12, 9),
     },
     {
@@ -69,7 +69,7 @@ export default function useProjects() {
         preview: "http://portal-obadias-malaquias.vercel.app",
       },
       status: "finished",
-      tags: ["Next.js", "Mantine UI", "Strapi"],
+      tags: ["Next.js", "TypeScript", "Mantine UI", "Strapi"],
       createdAt: new Date(2022, 11, 28),
     },
     {
@@ -105,7 +105,7 @@ export default function useProjects() {
         github: getRepositoryByName("forum-front-end"),
       },
       status: "finished",
-      tags: ["React.js", "PHP", "MySQL", "Forum"],
+      tags: ["React.js", "JavaScript", "PHP", "MySQL", "Forum"],
       createdAt: new Date(2021, 2, 12),
     },
     {
@@ -116,7 +116,7 @@ export default function useProjects() {
         github: getRepositoryByName("jornal-web"),
       },
       status: "finished",
-      tags: ["React.js", "PHP", "MySQL", "Galeria" as "Gallery"],
+      tags: ["React.js", "JavaScript", "PHP", "MySQL", "Galeria" as "Gallery"],
       createdAt: new Date(2021, 3, 15),
     },
   ];
@@ -131,7 +131,7 @@ export default function useProjects() {
         preview: "https://typing-master-2.vercel.app",
       },
       status: "finished",
-      tags: ["TypeScript", "React.js", "Keyboard Game"],
+      tags: ["TypeScript", "React.js", "Mantine UI", "Keyboard Game"],
       createdAt: new Date(2022, 8, 13),
     },
     {
@@ -155,7 +155,7 @@ export default function useProjects() {
         github: getRepositoryByName("financial-manager"),
       },
       status: "finished",
-      tags: ["TypeScript", "React.js", "CRUD", "LocalStorage"],
+      tags: ["TypeScript", "React.js", "Material-UI"],
       createdAt: new Date(2022, 7, 23),
     },
     {
@@ -167,7 +167,7 @@ export default function useProjects() {
         preview: "https://calculadora-react-fetapi.vercel.app/",
       },
       status: "finished",
-      tags: ["JavaScript", "React.js"],
+      tags: ["JavaScript", "React.js", "CSS3"],
       createdAt: new Date(2020, 2, 23),
     },
     {
@@ -185,7 +185,7 @@ export default function useProjects() {
         preview: "https://francisco-fetapi.github.io/calculadora-html-css-js/",
       },
       status: "finished",
-      tags: ["JavaScript", "Jquery", "Bootstrap"],
+      tags: ["HTML5", "CSS3", "JavaScript", "Jquery", "Bootstrap"],
       createdAt: new Date(2020, 5, 18),
     },
     {
@@ -270,7 +270,7 @@ export default function useProjects() {
         // preview: "https://portuguese-umbundo-app.vercel.app/",
       },
       status: "finished",
-      tags: ["JavaScript", "Jquery", "PHP", "MySQL"],
+      tags: ["HTML5", "CSS3", "JavaScript", "Jquery", "PHP", "MySQL"],
       createdAt: new Date(2019, 10, 2),
     },
     {

@@ -14,7 +14,7 @@ export default function Footer() {
     {
       title: "Tecnologias",
       links: me.tecnologies.slice(0, 5).map((tec) => ({
-        href: "/projects?language=" + tec.toLowerCase(),
+        href: "/projects?tag=" + tec.toLowerCase(),
         label: tec,
       })),
     },
