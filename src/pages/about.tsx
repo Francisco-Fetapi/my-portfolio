@@ -11,10 +11,7 @@ import {
   Text,
   Button,
 } from "@mantine/core";
-import {
-  TextWithGradient,
-  useStyles as useStylesHeroTitleComponent,
-} from "../components/HeroTitle";
+import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 
 import Link from "next/link";
 import Image from "next/image";
