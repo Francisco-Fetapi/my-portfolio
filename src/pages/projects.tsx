@@ -39,10 +39,14 @@ export default function IndexPage() {
               <MainTitle>Projetos</MainTitle>
               <Box sx={{ zoom: 0.9 }}>
                 <Text className={classes.description}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-                  odio itaque enim tempora suscipit omnis quibusdam veniam amet
-                  alias culpa error nemo numquam eveniet libero, perspiciatis,
-                  ex aspernatur praesentium. At!
+                  Desde o momento que digitei a minha primeira linha de código
+                  até agora, desenvolvi vários projetos de estudo para ganhar
+                  proeficiencia nas tecnologias que conheço, além é claro de ter
+                  atendido as demandas de um cliente ou outro.
+                  <br />
+                  <br />
+                  Abaixo eis uma lista dos projetos que desenvolvi ao longo dos
+                  anos.
                 </Text>
               </Box>
             </Box>
