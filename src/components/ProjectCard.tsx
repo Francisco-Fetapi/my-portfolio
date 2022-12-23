@@ -167,8 +167,11 @@ export function ProjectCard({
       <Group position="apart" className={classes.footer}>
         <Center>
           <Text size="xs" color="dimmed">
-            {dateDistance(createdAt, locale)}
+            De {dateDistance(createdAt, locale)}
           </Text>
+          {/* <Text size="xs" color="dimmed">
+            Desenvolvido aos <b>{createdAt.toLocaleDateString()}</b>
+          </Text> */}
         </Center>
 
         <Group spacing={8} mr={0}>

@@ -37,7 +37,8 @@ export default function useProjects() {
   const recentProjects: IProject[] = [
     {
       name: "Social Movies Space",
-      description: "Uma rede social para amantes de filmes e seriados",
+      description:
+        "Uma rede social para amantes de filmes e seriados. O sistema oferece um sistema de autenticação, sistema de publicações, comentários, reações e busca dados da API do ThemovieDB.",
       images: ["sms-demo-2.png", "sms-demo-1.png"],
       links: {
         github: getRepositoryByName("projeto-tcc"),
@@ -57,7 +58,7 @@ export default function useProjects() {
     {
       name: "Meu portfolio",
       description:
-        "Um sistema contendo informações relacionadas a minha carreira, tecnologias e projetos desenvolvidos ao longo do tempo.",
+        "Um sistema contendo informações relacionadas a minha carreira, tecnologias e projetos desenvolvidos ao longo do tempo. Através dele é possivel estar a par de todas as etapas que me tornaram o que sou hoje profissionalmente.",
       images: ["portfolio_home.png"],
       links: {
         github: getRepositoryByName("my-portfolio"),
@@ -83,7 +84,7 @@ export default function useProjects() {
     {
       name: "Salão de Beleza - July Otchacati",
       description:
-        "Uma landing page contendo informações sobre o salão de beleza July Otchacati de maneira a facilitar o contato com possiveis clientes.",
+        "Uma landing page contendo informações sobre o salão de beleza July Otchacati de maneira a facilitar o contato com possiveis clientes. A partir do site também o possivel saber a cultura, objetivos e valores do salão.",
       images: ["salao-de-beleza-2.png", "salao-de-beleza-1.png"],
       links: {
         github: getRepositoryByName("salao-de-beleza-da-july"),
@@ -95,19 +96,20 @@ export default function useProjects() {
     },
     {
       name: "Jornal Web - Colégio Chimbanda",
-      description: "Jornal interno para o colégio Chimbanda.",
+      description:
+        "Jornal interno para o colégio Chimbanda. O sistema foi criado para um cólegio perto da minha localidade para servir como principal ferramente na publicação de noticias internas da instituição. Infelizmente o site foi descontinuado e o projeto se tornou apenas de estudo.",
       images: ["jornal-web.png"],
       links: {
         github: getRepositoryByName("jornal-web"),
       },
-      status: "finished",
+      status: "death",
       tags: ["HTML5", "CSS3", "JavaScript", "Jquery", "PHP", "MySQL"],
       createdAt: new Date(2020, 12, 9),
     },
     {
       name: "Forum",
       description:
-        "Um projeto de estudo para simular um forum de discussões com um sistema de publicações, comentários e reações.",
+        "Um projeto de estudo para simular um forum de discussões com um sistema de publicações, comentários e reações. Foi o meu primeiro Projeto com React + PHP no back-end.",
       images: ["forum-3.png", "forum-2.png", "forum-1.png"],
       links: {
         github: getRepositoryByName("forum-front-end"),
@@ -132,7 +134,8 @@ export default function useProjects() {
   let someProjects: IProject[] = [
     {
       name: "Typing Master",
-      description: "Um projeto para exercitar a habilidade de usar o teclado",
+      description:
+        "Um projeto criado para exercitar a habilidade de usar o teclado",
       images: ["typing-master-1.png", "typing-master-2.png"],
       links: {
         github: getRepositoryByName("typing-master-2"),
