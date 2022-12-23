@@ -95,6 +95,32 @@ export default function useTimeline() {
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, est nulla soluta itaque ducimus eos ullam fugit dignissimos nihil eaque natus unde corporis assumenda sunt ab cumque id perferendis at.",
     });
 
+    timelineEntity.addEvent({
+      date: new Date(2021, 2, 12),
+      title: "Primeiro titulo",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, est nulla soluta itaque ducimus eos ullam fugit dignissimos nihil eaque natus unde corporis assumenda sunt ab cumque id perferendis at.",
+    });
+
+    timelineEntity.addEvent({
+      date: new Date(2018, 9, 12),
+      title: "Terceiro titulo",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, est nulla soluta itaque ducimus eos ullam fugit dignissimos nihil eaque natus unde corporis assumenda sunt ab cumque id perferendis at.",
+    });
+    timelineEntity.addEvent({
+      date: new Date(2018, 8, 12),
+      title: "Segundo titulo",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, est nulla soluta itaque ducimus eos ullam fugit dignissimos nihil eaque natus unde corporis assumenda sunt ab cumque id perferendis at.",
+    });
+    timelineEntity.addEvent({
+      date: new Date(2018, 2, 12),
+      title: "Primeiro titulo",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, est nulla soluta itaque ducimus eos ullam fugit dignissimos nihil eaque natus unde corporis assumenda sunt ab cumque id perferendis at.",
+    });
+
     return Timeline.timelines;
   }, []);
 
