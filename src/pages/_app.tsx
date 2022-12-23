@@ -41,6 +41,10 @@ export default function App(props: AppProps & WithColorScheme) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <meta
+          name="description"
+          content="Site pessoal de Francisco Fetapi. Conheça todas as etapas pelas quais passei até me tornar um desenvolvedor Full-Stack"
+        />
       </Head>
 
       <AppStore>

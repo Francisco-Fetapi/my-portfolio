@@ -188,7 +188,7 @@ export default function useProjects() {
       },
       status: "finished",
       tags: ["JavaScript", "React.js", "CSS3"],
-      createdAt: new Date(2020, 2, 23),
+      createdAt: new Date(2021, 2, 23),
     },
     {
       name: "Calculadora Simples",
