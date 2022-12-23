@@ -66,7 +66,7 @@ export default function useProjects() {
       },
       status: "building",
       tags: ["Next.js", "TypeScript", "i18n", "Mantine UI"],
-      createdAt: new Date(2022, 12, 9),
+      createdAt: new Date(2022, 11, 9),
     },
     {
       name: "Portal Obadias Malaquias",
@@ -306,12 +306,11 @@ export default function useProjects() {
       createdAt: new Date(2022, 10, 2),
     },
   ];
+  const allProjects = someProjects.concat(recentProjects);
 
   someProjects = listProjectsFromLastToBegin(someProjects);
 
   function getProjectsByTag(tag: string) {
-    const allProjects = someProjects.concat(recentProjects);
-
     const filtered = allProjects.filter((project) => {
       const allTags = project.tags.map((tag) => tag.toLocaleLowerCase());
       if (allTags.includes(tag.toLowerCase())) {
@@ -323,5 +322,5 @@ export default function useProjects() {
     return listProjectsFromLastToBegin(filtered);
   }
 
-  return { someProjects, recentProjects, getProjectsByTag };
+  return { someProjects, recentProjects, allProjects, getProjectsByTag };
 }

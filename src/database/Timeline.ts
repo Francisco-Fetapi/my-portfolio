@@ -8,7 +8,7 @@ export class Timeline {
       Timeline.timelines[getYear] = [];
     }
     const alreadyExists = Timeline.timelines[getYear].some(
-      (currentTimeline) => currentTimeline.title === timeline.title
+      (currentTimeline) => currentTimeline.date === timeline.date
     );
     if (alreadyExists) return;
 
