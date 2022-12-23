@@ -148,7 +148,7 @@ export default function useProjects() {
     {
       name: "Sistema de SignUp/Login",
       description:
-        "Um projeto de estudo criado para exercitar o sistema de autenticação via JWT",
+        "Um projeto de estudo criado para exercitar o sistema de autenticação via JWT.",
       images: ["sistema-login-jwt-1.png", "sistema-login-jwt-2.png"],
       links: {
         github: getRepositoryByName("sistema-login-front-end"),
@@ -167,7 +167,7 @@ export default function useProjects() {
     {
       name: "Financial Manager",
       description:
-        "Projeto de estudo desenvolvido para consolidar os conhecimentos relacionados ao Redux.",
+        "Projeto de estudo desenvolvido para consolidar os conhecimentos relacionados ao Redux. O sistema serve para registar as receitas e despesa finceiras.",
       images: ["financial-manager-2.png", "financial-manager-1.png"],
       links: {
         github: getRepositoryByName("financial-manager"),
@@ -178,7 +178,8 @@ export default function useProjects() {
     },
     {
       name: "Calculadora Reativa",
-      description: "O meu primeiro projeto de estudo desenvolvido com React.",
+      description:
+        "O meu primeiro projeto de estudo desenvolvido com React. Uma calculadora que realiza as principais operações da matemática.",
       images: ["calculadora-react-1.png", "calculadora-react-2.png"],
       links: {
         github: getRepositoryByName("calculadora-react"),
@@ -191,7 +192,7 @@ export default function useProjects() {
     {
       name: "Calculadora Simples",
       description:
-        "Na época desenvolvi esta calculadora para treinar manipulação do DOM com Jquery e como bonús me acostumar com o Bootstrap.",
+        "A calculadora realiza operações simples da matemática. Desenvolvi esta calculadora para treinar manipulação do DOM com Jquery e treinar Bootstrap.",
       images: [
         // "calculadora-html-css-js-1.png",
         "calculadora-html-css-js-2.png",
@@ -209,7 +210,7 @@ export default function useProjects() {
     {
       name: "Gestor de Tarefas",
       description:
-        "Projeto de estudo criado para consolidar os conhecimentos em Material-UI e React.",
+        "Basicamente um CRUD de tarefas, com ele é possivel: registar, ver, eliminar e editar tarefas. Criado para treinar React + Material UI.",
       images: [
         "gestor-de-tarefas-1.png",
         "gestor-de-tarefas-2.png",
