@@ -11,11 +11,20 @@ import SlideProject from "../components/SlideProjects";
 import useProjects from "../database/useProjects";
 import useMe from "../database/useMe";
 import RouterTransition from "../components/RouterTransition";
+import { useRouter } from "next/router";
+import { useMemo } from "react";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
-  const { someProjects } = useProjects();
+  const { someProjects, getProjectsByTag } = useProjects();
   const { me } = useMe();
+  const router = useRouter();
+  const tagQuery = router.query.tag as string | null;
+  const filteredProjects = useMemo(() => {
+    if (!tagQuery) return null;
+    return getProjectsByTag(tagQuery);
+  }, [tagQuery]);
+
   return (
     <div>
       <Head>
@@ -23,58 +32,77 @@ export default function IndexPage() {
       </Head>
       <AppScheme>
         <RouterTransition />
-        <Box mt={10}>
-          <MainTitle>Projetos</MainTitle>
-          <Box sx={{ zoom: 0.9 }}>
-            <Text className={classes.description}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-              odio itaque enim tempora suscipit omnis quibusdam veniam amet
-              alias culpa error nemo numquam eveniet libero, perspiciatis, ex
-              aspernatur praesentium. At!
-            </Text>
-          </Box>
-        </Box>
+        {!filteredProjects ? (
+          <>
+            <Box mt={10}>
+              <MainTitle>Projetos</MainTitle>
+              <Box sx={{ zoom: 0.9 }}>
+                <Text className={classes.description}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+                  odio itaque enim tempora suscipit omnis quibusdam veniam amet
+                  alias culpa error nemo numquam eveniet libero, perspiciatis,
+                  ex aspernatur praesentium. At!
+                </Text>
+              </Box>
+            </Box>
 
-        <SectionText>
-          <SecondTitle>EM DESTAQUE</SecondTitle>
-          <SectionText>
-            <SlideProject />
-          </SectionText>
-        </SectionText>
-        <SectionText>
-          <SecondTitle>MAIS PROJETOS</SecondTitle>
-          <TecnologiesContainer>
-            {someProjects.map((project, key) => (
-              <ProjectCard
-                {...project}
-                // description={project.description?.toString().repeat(key + 2)}
-                key={project.name + key}
-              />
-            ))}
-          </TecnologiesContainer>
-        </SectionText>
+            <SectionText>
+              <SecondTitle>EM DESTAQUE</SecondTitle>
+              <SectionText>
+                <SlideProject />
+              </SectionText>
+            </SectionText>
+            <SectionText>
+              <SecondTitle>MAIS PROJETOS</SecondTitle>
+              <TecnologiesContainer>
+                {someProjects.map((project, key) => (
+                  <ProjectCard
+                    {...project}
+                    // description={project.description?.toString().repeat(key + 2)}
+                    key={project.name + key}
+                  />
+                ))}
+              </TecnologiesContainer>
+            </SectionText>
 
-        <SectionText>
-          <SecondTitle noOrnament>
-            ALGUM PROJETO EM MENTE? VAMOS TRABALHAR JUNTOS
-          </SecondTitle>
-          <SectionText>
-            <Center>
-              <Button
-                component="a"
-                size="lg"
-                // className={classes.control}
-                variant="gradient"
-                target="__blank"
-                href={me.calendly}
-                gradient={{ from: "blue", to: "cyan" }}
-                // leftIcon={<IconDownload size={20} />}
-              >
-                Vamos falar
-              </Button>
-            </Center>
-          </SectionText>
-        </SectionText>
+            <SectionText>
+              <SecondTitle noOrnament>
+                ALGUM PROJETO EM MENTE? VAMOS TRABALHAR JUNTOS
+              </SecondTitle>
+              <SectionText>
+                <Center>
+                  <Button
+                    component="a"
+                    size="lg"
+                    // className={classes.control}
+                    variant="gradient"
+                    target="__blank"
+                    href={me.calendly}
+                    gradient={{ from: "blue", to: "cyan" }}
+                    // leftIcon={<IconDownload size={20} />}
+                  >
+                    Vamos falar
+                  </Button>
+                </Center>
+              </SectionText>
+            </SectionText>
+          </>
+        ) : (
+          <div>
+            <SectionText>
+              <SecondTitle>{tagQuery?.toUpperCase()}</SecondTitle>
+              <TecnologiesContainer>
+                {filteredProjects.map((project, key) => (
+                  <ProjectCard
+                    {...project}
+                    // description={project.description?.toString().repeat(key + 2)}
+                    key={project.name + key}
+                  />
+                ))}
+              </TecnologiesContainer>
+            </SectionText>
+          </div>
+        )}
       </AppScheme>
     </div>
   );

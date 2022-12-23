@@ -294,5 +294,17 @@ export default function useProjects() {
     return 0;
   });
 
-  return { someProjects, recentProjects };
+  function getProjectsByTag(tag: string) {
+    const allProjects = someProjects.concat(recentProjects);
+
+    return allProjects.filter((project) => {
+      const allTags = project.tags.map((tag) => tag.toLocaleLowerCase());
+      if (allTags.includes(tag.toLowerCase())) {
+        return true;
+      }
+      return false;
+    });
+  }
+
+  return { someProjects, recentProjects, getProjectsByTag };
 }

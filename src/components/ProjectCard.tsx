@@ -18,6 +18,7 @@ import ProjectStatus from "./ProjectStatus";
 import SlideProjectImage from "./SlideProjectImage";
 import { Carousel } from "@mantine/carousel";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export const PROJECT_CARD_MAX_WIDTH = 380;
 export const PROJECT_CARD_HEIGHT = 480;
@@ -83,6 +84,8 @@ export function ProjectCard({
   Omit<React.ComponentPropsWithoutRef<"div">, keyof ArticleCardProps>) {
   const { classes, cx, theme } = useStyles();
   const { locale } = useCurrentLocale();
+  const router = useRouter();
+  const tagQuery = router.query.tag as string | null;
 
   const githubLink = {
     href: links.github,
@@ -134,13 +137,25 @@ export function ProjectCard({
         {name}
       </Text>
       <Group mt={1}>
-        {tags.map((tag) => (
-          <Link href={`/projects/?tag=${tag.toLowerCase()}`} key={tag} passHref>
-            <Anchor color="dimmed" size="xs">
-              {tag}
-            </Anchor>
-          </Link>
-        ))}
+        {tags.map((tag) => {
+          const currentTag = tag.toLowerCase();
+
+          if (currentTag === tagQuery) {
+            return (
+              <Text size="xs" underline>
+                {tag}
+              </Text>
+            );
+          }
+
+          return (
+            <Link href={`/projects/?tag=${currentTag}`} key={tag} passHref>
+              <Anchor color="dimmed" size="xs">
+                {tag}
+              </Anchor>
+            </Link>
+          );
+        })}
       </Group>
       <br />
 
