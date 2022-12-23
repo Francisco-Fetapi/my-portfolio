@@ -1,3 +1,4 @@
+import { listProjectsFromLastToBegin } from "../helpers/listProjectsFromLastToBegin";
 import useMe from "./useMe";
 import { ListTecnologyName } from "./useTecnologies";
 
@@ -302,22 +303,20 @@ export default function useProjects() {
     },
   ];
 
-  someProjects = someProjects.sort((a, b) => {
-    if (a.createdAt < b.createdAt) return 1;
-    if (a.createdAt > b.createdAt) return -1;
-    return 0;
-  });
+  someProjects = listProjectsFromLastToBegin(someProjects);
 
   function getProjectsByTag(tag: string) {
     const allProjects = someProjects.concat(recentProjects);
 
-    return allProjects.filter((project) => {
+    const filtered = allProjects.filter((project) => {
       const allTags = project.tags.map((tag) => tag.toLocaleLowerCase());
       if (allTags.includes(tag.toLowerCase())) {
         return true;
       }
       return false;
     });
+
+    return listProjectsFromLastToBegin(filtered);
   }
 
   return { someProjects, recentProjects, getProjectsByTag };

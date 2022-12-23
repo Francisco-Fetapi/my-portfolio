@@ -39,10 +39,11 @@ export default function IndexPage() {
               <MainTitle>Projetos</MainTitle>
               <Box sx={{ zoom: 0.9 }}>
                 <Text className={classes.description}>
-                  Desde o momento que digitei a minha primeira linha de código
+                  Desde o momento que digitei a minha primeira{" "}
+                  <i>linha de código</i>
                   até agora, desenvolvi vários projetos de estudo para ganhar
                   proeficiencia nas tecnologias que conheço, além é claro de ter
-                  atendido as demandas de um cliente ou outro.
+                  atendido as demandas de um ou outro cliente.
                   <br />
                   <br />
                   Abaixo eis uma lista dos projetos que desenvolvi ao longo dos
