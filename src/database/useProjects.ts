@@ -43,8 +43,8 @@ export default function useProjects() {
         preview: "https://socialmoviesspace.vercel.app/",
       },
       status: "building",
-      tags: ["React.js", "JavaScript", "Laravel", "MySQL"],
-      createdAt: new Date(),
+      tags: ["React.js", "JavaScript", "Laravel", "MySQL", "JWT"],
+      createdAt: new Date(2021, 11, 9),
     },
     {
       name: "Meu portfolio",
@@ -69,7 +69,7 @@ export default function useProjects() {
         preview: "http://portal-obadias-malaquias.vercel.app",
       },
       status: "finished",
-      tags: ["Next.js", "TypeScript", "Mantine UI", "Strapi"],
+      tags: ["Next.js", "TypeScript", "Mantine UI", "Strapi", "JWT"],
       createdAt: new Date(2022, 11, 28),
     },
     {

@@ -114,7 +114,7 @@ export default function IndexPage() {
                     // gradient={{ from: "blue", to: "cyan" }}
                     // leftIcon={<IconDownload size={20} />}
                   >
-                    LIMPAR FILTRO
+                    VER TODOS OS PROJETOS
                   </Button>
                 </Link>
               </Center>
