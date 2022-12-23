@@ -25,6 +25,7 @@ import TecnologiesContainer from "../components/TecnologiesContainer";
 import useMe from "../database/useMe";
 import useTecnologies from "../database/useTecnologies";
 import RouterTransition from "../components/RouterTransition";
+import ExternalLink from "../components/ExternalLink";
 
 const PHOTO_SIZE = 250;
 
@@ -55,10 +56,9 @@ export default function IndexPage() {
                 <Text color="dimmed" className={classes.description}>
                   Sou um cara apaixonado por desenvolvimento de software.
                   Atualmente com foco em{" "}
-                  <TextWithGradient>
-                    {" "}
+                  <ExternalLink href="#">
                     Desenvolvimento Web full-stack
-                  </TextWithGradient>
+                  </ExternalLink>
                   .
                 </Text>
               </Box>
@@ -114,22 +114,40 @@ export default function IndexPage() {
 
           <SectionText sx={{ zoom: 0.8 }}>
             <Text className={classes.description}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Excepturi quidem qui explicabo officia at et possimus nesciunt
-              fuga unde, laborum adipisci vel a deserunt dignissimos laudantium
-              labore?
+              Meu nome é <b>{me.name}</b>, sou{" "}
+              <ExternalLink href="#">{me.professional}</ExternalLink> que atua
+              essencialmente com tecnologias do ecossistema{" "}
+              <ExternalLink href="#">JavaScript</ExternalLink>. O meu primeiro
+              contato com programação foi em 2018 durante o <b>Ensino Médio</b>,
+              nessa fase aprendi{" "}
+              <ExternalLink href="#">Lógica de Programação</ExternalLink> usando
+              o <ExternalLink href="#">Visual G</ExternalLink>. Depois de criar{" "}
+              <ExternalLink href="#"> algoritmos</ExternalLink> que eram
+              executados no <ExternalLink href="#">terminal</ExternalLink> me vi
+              curioso em criar uma interface amigavél para os meus
+              mini-programas, e foi assim que me deparei com{" "}
+              <ExternalLink href="#">HTML5</ExternalLink>,{" "}
+              <ExternalLink href="#">CSS3</ExternalLink> e{" "}
+              <ExternalLink href="#">JavaScript</ExternalLink>, e desde ai
+              continuei estudando sem parar.
             </Text>
             <Text className={classes.description}>
-              Qui, dolor. Obcaecati odio libero dolor! Consequatur ea doloribus
-              voluptatum laudantium. Impedit optio dolorem sequi qui, et quis in
-              consequuntur, autem dolore nobis magni, sapiente unde alias atque
-              natus veritatis eius voluptates. Deserunt.
+              Nasci aos{" "}
+              <b>
+                {me.birthday.toLocaleDateString()} ({me.getMyAge()} anos)
+              </b>
+              , falo Português (minha língua materna) e tenho um Inglês
+              intermediário. Atualmente vivo em{" "}
+              <ExternalLink href="#">Angola, Benguela, Lobito</ExternalLink>.
             </Text>
             <Text className={classes.description}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
-              inventore doloribus harum et cum voluptatibus incidunt! Eligendi
-              hic deleniti dolorum aliquam quod, in blanditiis illum voluptatem
-              tempore sint repudiandae ex.
+              Comecei a trabalhar profissionalmente com programação atendendo
+              demandas de clientes da minha localidade, antes disso apenas
+              criava projetos de estudo.
+            </Text>
+            <Text className={classes.description}>
+              As minhas paixões são: Programação, Cinema (Filmes, Séries e
+              Animes), Música e Literatura.
             </Text>
           </SectionText>
         </Box>

@@ -2,11 +2,12 @@ import { ListTecnologyName } from "./useTecnologies";
 
 export default function useMe() {
   const phone1 = "934712217";
+  const birthday = new Date(2002, 10, 10);
   const me = {
     name: "Francisco Fetapi",
     email: "franciscofetapi@gmail.com",
     photo: "/my-photo1.jpg",
-    professional: "Desenvolvedor Web",
+    professional: "Desenvolvedor Full-Stack",
     github: "https://github.com/Francisco-Fetapi",
     twitter: "https://twitter.com/FranciscoFetapi",
     instagram: "https://www.instagram.com/franciscofetapi/",
@@ -25,6 +26,12 @@ export default function useMe() {
       "PHP",
       "Laravel",
     ] as ListTecnologyName[],
+    birthday,
+    getMyAge() {
+      const date = new Date();
+
+      return date.getFullYear() - birthday.getFullYear();
+    },
   };
 
   function getRepositoryByName(repositoryName: string) {
