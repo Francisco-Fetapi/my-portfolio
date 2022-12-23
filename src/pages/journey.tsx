@@ -22,12 +22,12 @@ export default function IndexPage() {
           <MainTitle>Jornada</MainTitle>
           <Box sx={{ zoom: 0.9 }}>
             <Text className={classes.description}>
-              A minha jornada como Desenvolvedor &nbsp;
+              A minha jornada como desenvolvedor &nbsp;
               <u>
                 <i>começou em 2018</i>
               </u>
               , de lá pra cá passei por um tanto de experiências que me tornaram
-              um Desenvolvedor mais tecnicamente capacitado.
+              um desenvolvedor mais tecnicamente capacitado.
               <br />
               <br />
               Darei o meu máximo para descrever TODAS as etapas do meu processo
