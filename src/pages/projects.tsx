@@ -13,6 +13,7 @@ import useMe from "../database/useMe";
 import RouterTransition from "../components/RouterTransition";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
+import Link from "next/link";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -100,6 +101,23 @@ export default function IndexPage() {
                   />
                 ))}
               </TecnologiesContainer>
+            </SectionText>
+            <SectionText>
+              <Center>
+                <Link href="/projects" passHref>
+                  <Button
+                    component="a"
+                    size="sm"
+                    // className={classes.control}
+                    variant="light"
+                    color="blue"
+                    // gradient={{ from: "blue", to: "cyan" }}
+                    // leftIcon={<IconDownload size={20} />}
+                  >
+                    LIMPAR FILTRO
+                  </Button>
+                </Link>
+              </Center>
             </SectionText>
           </div>
         )}
