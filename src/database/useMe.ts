@@ -1,3 +1,5 @@
+import { ListTecnologyName } from "./useTecnologies";
+
 export default function useMe() {
   const phone1 = "934712217";
   const me = {
@@ -16,13 +18,13 @@ export default function useMe() {
     calendly: "https://linkdocalendly",
     whatsapp: `https://api.whatsapp.com?tel=${phone1}`,
     tecnologies: [
-      "Typescript",
-      "Javascript",
+      "TypeScript",
+      "JavaScript",
+      "Next.js",
+      "React.js",
       "PHP",
       "Laravel",
-      "ReactJs",
-      "Nextjs",
-    ],
+    ] as ListTecnologyName[],
   };
 
   function getRepositoryByName(repositoryName: string) {

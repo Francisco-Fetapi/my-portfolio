@@ -11,9 +11,10 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import { IconInfoCircle } from "@tabler/icons";
 import getShortText from "../helpers/getShortText";
+import { ListTecnologyName } from "../database/useTecnologies";
 
 export interface ITecnology {
-  name: string;
+  name: ListTecnologyName;
   image: string;
   startedAt: Date;
   description: React.ReactNode;

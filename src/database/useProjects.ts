@@ -1,4 +1,5 @@
 import useMe from "./useMe";
+import { ListTecnologyName } from "./useTecnologies";
 
 export interface IProjectStatus<T = any> {
   finished: T;
@@ -6,6 +7,15 @@ export interface IProjectStatus<T = any> {
   death: T;
 }
 
+type ITags =
+  | ListTecnologyName
+  | "i18n"
+  | "Forum"
+  | "Gallery"
+  | "Keyboard Game"
+  | "JWT"
+  | "CRUD"
+  | "LocalStorage";
 export interface IProject {
   name: string;
   description: React.ReactNode;
@@ -16,7 +26,7 @@ export interface IProject {
     photoPreview?: string;
   };
   status: keyof IProjectStatus;
-  tags: string[];
+  tags: ITags[];
   createdAt: Date;
 }
 
@@ -72,7 +82,7 @@ export default function useProjects() {
         preview: "https://salaodajuly.vercel.app/",
       },
       status: "finished",
-      tags: ["HTML", "CSS", "JS", "Jquery"],
+      tags: ["HTML5", "CSS3", "JavaScript", "Jquery"],
       createdAt: new Date(2022, 4, 10),
     },
     {
@@ -83,7 +93,7 @@ export default function useProjects() {
         github: getRepositoryByName("jornal-web"),
       },
       status: "finished",
-      tags: ["HTML", "CSS", "JS", "Jquery", "PHP", "MySQL"],
+      tags: ["HTML5", "CSS3", "JavaScript", "Jquery", "PHP", "MySQL"],
       createdAt: new Date(2020, 12, 9),
     },
     {
@@ -106,7 +116,7 @@ export default function useProjects() {
         github: getRepositoryByName("jornal-web"),
       },
       status: "finished",
-      tags: ["React.js", "PHP", "MySQL", "Galeria"],
+      tags: ["React.js", "PHP", "MySQL", "Galeria" as "Gallery"],
       createdAt: new Date(2021, 3, 15),
     },
   ];
