@@ -43,7 +43,14 @@ export default function useProjects() {
         preview: "https://socialmoviesspace.vercel.app/",
       },
       status: "building",
-      tags: ["React.js", "JavaScript", "Laravel", "MySQL", "JWT"],
+      tags: [
+        "React.js",
+        "JavaScript",
+        "Material-UI",
+        "Laravel",
+        "MySQL",
+        "JWT",
+      ],
       createdAt: new Date(2021, 11, 9),
     },
     {
@@ -100,12 +107,12 @@ export default function useProjects() {
       name: "Forum",
       description:
         "Um projeto de estudo para simular um forum de discussões com um sistema de publicações, comentários e reações.",
-      images: ["forum-1.png", "forum-2.png", "forum-3.png"],
+      images: ["forum-3.png", "forum-2.png", "forum-1.png"],
       links: {
         github: getRepositoryByName("forum-front-end"),
       },
       status: "finished",
-      tags: ["React.js", "JavaScript", "PHP", "MySQL", "Forum"],
+      tags: ["React.js", "JavaScript", "Material-UI", "PHP", "MySQL", "Forum"],
       createdAt: new Date(2021, 2, 12),
     },
     {
@@ -143,7 +150,14 @@ export default function useProjects() {
         github: getRepositoryByName("sistema-login-front-end"),
       },
       status: "finished",
-      tags: ["JavaScript", "React.js", "Laravel", "MySQL", "JWT"],
+      tags: [
+        "JavaScript",
+        "React.js",
+        "Material-UI",
+        "Laravel",
+        "MySQL",
+        "JWT",
+      ],
       createdAt: new Date(2021, 4, 12),
     },
     {
@@ -240,7 +254,7 @@ export default function useProjects() {
         preview: "https://portuguese-umbundo-app.vercel.app/",
       },
       status: "building",
-      tags: ["TypeScript", "React.js", "Mantine UI", "Firebase"],
+      tags: ["TypeScript", "React.js", "Material-UI", "Firebase"],
       createdAt: new Date(2022, 9, 2),
     },
     {
@@ -283,7 +297,7 @@ export default function useProjects() {
         // preview: "https://portuguese-umbundo-app.vercel.app/",
       },
       status: "finished",
-      tags: ["TypeScript", "React.js", "Material-UI"],
+      tags: ["TypeScript", "React.js", "Material-UI", "Keyboard Game"],
       createdAt: new Date(2022, 10, 2),
     },
   ];
