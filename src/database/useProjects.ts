@@ -257,7 +257,7 @@ export default function useProjects() {
         preview: "https://portuguese-umbundo-manager.vercel.app/",
       },
       status: "building",
-      tags: ["TypeScript", "React.js", "Mantine UI", "Firebase"],
+      tags: ["TypeScript", "React.js", "Next.js", "Mantine UI", "Firebase"],
       createdAt: new Date(2022, 9, 22),
     },
     {
