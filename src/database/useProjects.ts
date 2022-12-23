@@ -66,7 +66,7 @@ export default function useProjects() {
       },
       status: "building",
       tags: ["Next.js", "TypeScript", "i18n", "Mantine UI"],
-      createdAt: new Date(2022, 11, 9),
+      createdAt: new Date(2022, 11, 23),
     },
     {
       name: "Portal Obadias Malaquias",
@@ -74,12 +74,12 @@ export default function useProjects() {
         "Portal de noticias criado para o colégio Obadias Malaquias.",
       images: ["portal-obadias-malaquias.png"],
       links: {
-        // github: getRepositoryByName("my-portfolio"),
+        github: getRepositoryByName("portal-obadias-malaquias"),
         preview: "http://portal-obadias-malaquias.vercel.app",
       },
       status: "finished",
       tags: ["Next.js", "TypeScript", "Mantine UI", "Strapi", "JWT"],
-      createdAt: new Date(2022, 11, 28),
+      createdAt: new Date(2022, 10, 9),
     },
     {
       name: "Salão de Beleza - July Otchacati",
@@ -92,7 +92,7 @@ export default function useProjects() {
       },
       status: "finished",
       tags: ["HTML5", "CSS3", "JavaScript", "Jquery"],
-      createdAt: new Date(2022, 4, 10),
+      createdAt: new Date(2022, 3, 10),
     },
     {
       name: "Jornal Web - Colégio Chimbanda",
@@ -104,7 +104,7 @@ export default function useProjects() {
       },
       status: "death",
       tags: ["HTML5", "CSS3", "JavaScript", "Jquery", "PHP", "MySQL"],
-      createdAt: new Date(2020, 12, 9),
+      createdAt: new Date(2020, 10, 9),
     },
     {
       name: "Forum",
@@ -171,10 +171,11 @@ export default function useProjects() {
       images: ["financial-manager-2.png", "financial-manager-1.png"],
       links: {
         github: getRepositoryByName("financial-manager"),
+        preview: "https://financial-manager-three.vercel.app",
       },
       status: "finished",
       tags: ["TypeScript", "React.js", "Material-UI"],
-      createdAt: new Date(2022, 7, 23),
+      createdAt: new Date(2022, 9, 19),
     },
     {
       name: "Calculadora Reativa",
@@ -255,7 +256,7 @@ export default function useProjects() {
       description: "Dicionário e tradutor Umbundo - Português.",
       images: ["pt-um-app-1.png", "pt-um-app-2.png", "pt-um-app-3.png"],
       links: {
-        // github: getRepositoryByName("portuguese-umbundo-app"),
+        github: getRepositoryByName("portuguese-umbundo-dictionary"),
         preview: "https://portuguese-umbundo-app.vercel.app/",
       },
       status: "building",
@@ -285,8 +286,9 @@ export default function useProjects() {
         "Quiz desenvolvido com PHP. Sou Angolano e Conheço Angola e Quem Quer Ser Rico serviram de inspiração. O projeto foi criado para fins de estudo.",
       images: ["quiz-1.png", "quiz-2.png", "quiz-3.png", "quiz-4.png"],
       links: {
-        // github: getRepositoryByName(""),
-        // preview: "https://portuguese-umbundo-app.vercel.app/",
+        github: getRepositoryByName(
+          "quiz-simulando-sou-angolano-e-conheco-angola"
+        ),
       },
       status: "finished",
       tags: ["HTML5", "CSS3", "JavaScript", "Jquery", "PHP", "MySQL"],
@@ -298,8 +300,8 @@ export default function useProjects() {
         "Jogo desenvolvido com React para exercitar a arte de digitar no teclado.",
       images: ["typing-fast.png"],
       links: {
-        // github: getRepositoryByName(""),
-        // preview: "https://portuguese-umbundo-app.vercel.app/",
+        github: getRepositoryByName("typing-fast"),
+        preview: "http://typing-fast.vercel.app/",
       },
       status: "finished",
       tags: ["TypeScript", "React.js", "Material-UI", "Keyboard Game"],
