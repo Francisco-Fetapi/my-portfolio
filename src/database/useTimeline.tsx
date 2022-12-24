@@ -283,10 +283,11 @@ export default function useTimeline() {
       ),
       description: (
         <>
-          Lí apenas para consolidar os conhecimentos já adquiridos e talvez
+          Li apenas para consolidar os conhecimentos já adquiridos e talvez
           aprender mais uma ou outra coisa que talvez acabou escapando. Terminar
           este livro foi um sufoco, principalmente porque estava num formato que
-          parecia meio que uma documentação.
+          parecia meio que uma documentação. No final acabou se tornando a minha
+          principal fonte de consulta.
         </>
       ),
     });
