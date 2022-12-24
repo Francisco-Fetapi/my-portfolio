@@ -161,7 +161,7 @@ export default function useTimeline() {
     });
 
     timelineEntity.addEvent({
-      date: new Date(2019, 6, 29),
+      date: new Date(2019, 6, 10),
       title: (
         <>
           Fiz o{" "}
@@ -182,7 +182,7 @@ export default function useTimeline() {
     });
 
     timelineEntity.addEvent({
-      date: new Date(2019, 6, 29),
+      date: new Date(2019, 6, 12),
       title: (
         <>
           Repeti o{" "}
@@ -201,7 +201,7 @@ export default function useTimeline() {
     });
 
     timelineEntity.addEvent({
-      date: new Date(2019, 6, 29),
+      date: new Date(2019, 6, 18),
       title: <>Primeiros {`"programinhas"`}</>,
       description: (
         <>
