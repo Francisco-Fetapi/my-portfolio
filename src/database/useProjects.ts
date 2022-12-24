@@ -15,7 +15,7 @@ type ITags =
   | "Gallery"
   | "Keyboard Game"
   | "JWT"
-  | "CRUD"
+  | "Tic-Tac-Toe"
   | "LocalStorage";
 export interface IProject {
   name: string;
@@ -98,7 +98,7 @@ export default function useProjects() {
       name: "Jornal Web - Colégio Chimbanda",
       description:
         "Jornal interno para o colégio Chimbanda. O sistema foi criado para um cólegio perto da minha localidade para servir como principal ferramente na publicação de noticias internas da instituição. Infelizmente o site foi descontinuado e o projeto se tornou apenas de estudo.",
-      images: ["jornal-web.png"],
+      images: ["jornal-web-2.png", "jornal-web.png"],
       links: {
         github: getRepositoryByName("jornal-web"),
       },
@@ -133,9 +133,9 @@ export default function useProjects() {
 
   let someProjects: IProject[] = [
     {
-      name: "Typing Master",
+      name: "Typing Master 2",
       description:
-        "Um projeto criado para exercitar a habilidade de usar o teclado",
+        "Um projeto criado para exercitar a habilidade de usar o teclado. Uma versão melhor do antigo Typing Master.",
       images: ["typing-master-1.png", "typing-master-2.png"],
       links: {
         github: getRepositoryByName("typing-master-2"),
@@ -226,7 +226,7 @@ export default function useProjects() {
       createdAt: new Date(2021, 5, 28),
     },
     {
-      name: "Jogo da Velha",
+      name: "Jogo da Velha (React)",
       description:
         "Uma versão do famoso Tic-Tac-Toe desenvolvido com React para fins de estudo.",
       images: ["jogo-da-velha-react-2.png", "jogo-da-velha-react-1.png"],
@@ -235,7 +235,7 @@ export default function useProjects() {
         preview: "https://jogo-da-velha-fetapi.vercel.app",
       },
       status: "finished",
-      tags: ["JavaScript", "React.js", "Material-UI"],
+      tags: ["JavaScript", "React.js", "Material-UI", "Tic-Tac-Toe"],
       createdAt: new Date(2021, 6, 21),
     },
     {
@@ -307,8 +307,69 @@ export default function useProjects() {
       tags: ["TypeScript", "React.js", "Material-UI", "Keyboard Game"],
       createdAt: new Date(2022, 10, 2),
     },
+    {
+      name: "Lyrics",
+      description:
+        "Sistema que busca a legenda de uma música através do nome do artista e o título da música. Criado para fins de estudo para consolidar o consumo de API's externas.",
+      images: ["lyrics-api.png"],
+      links: {
+        github: getRepositoryByName("lyrics-api"),
+        preview: "https://fetapilyrics.vercel.app/",
+      },
+      status: "finished",
+      tags: ["JavaScript", "React.js", "Material-UI"],
+      createdAt: new Date(2022, 1, 24),
+    },
   ];
-  const allProjects = someProjects.concat(recentProjects);
+
+  const secondaryProjects: IProject[] = [
+    {
+      name: "Jogo da Velha (Jquery)",
+      description:
+        "Uma versão do famoso Tic-Tac-Toe desenvolvido com Jquery para fins de estudo.",
+      images: ["jogo-da-velha-html-1.png"],
+      links: {
+        github: getRepositoryByName("jogo-da-velha-html-css-js"),
+        preview:
+          "https://francisco-fetapi.github.io/jogo-da-velha-html-css-js/",
+      },
+      status: "finished",
+      tags: ["JavaScript", "Jquery", "Bootstrap", "Tic-Tac-Toe"],
+      createdAt: new Date(2020, 3, 2),
+    },
+    {
+      name: "Typing Master",
+      description:
+        "Um mini-jogo criado com Jquery para exercitar datilografia. Foi desenvolvido para fins de estudo.",
+      images: [
+        "typing-master2-1.png",
+        "typing-master2-2.png",
+        "typing-master2-3.png",
+      ],
+      links: {
+        github: getRepositoryByName("typing-master"),
+        preview: "https://francisco-fetapi.github.io/typing-master/",
+      },
+      status: "finished",
+      tags: ["JavaScript", "Jquery", "Bootstrap", "Keyboard Game"],
+      createdAt: new Date(2020, 4, 3),
+    },
+    {
+      name: "Mestre no Teclado",
+      description:
+        "Com a mesma proposta do Typing Master, este também é um projeto criado para exercitar datilografia.",
+      images: ["mestre-no-teclado-1.png", "mestre-no-teclado-2.png"],
+      links: {
+        github: getRepositoryByName("Mestre-no-teclado"),
+        preview: "https://francisco-fetapi.github.io/Mestre-no-teclado/",
+      },
+      status: "finished",
+      tags: ["JavaScript", "Jquery", "Bootstrap", "Keyboard Game"],
+      createdAt: new Date(2020, 4, 28),
+    },
+  ];
+
+  const allProjects = someProjects.concat(recentProjects, secondaryProjects);
 
   someProjects = listProjectsFromLastToBegin(someProjects);
 
