@@ -352,19 +352,20 @@ export default function useTimeline() {
       ),
       description: (
         <>
-          O link do repositório com todos os exercicios que fiz depois de
-          finalizar o{" "}
-          <ExternalLink reference="cursojscursoemvideo">
-            Curso de JS do Curso em Video
-          </ExternalLink>{" "}
-          pode ser acessado{" "}
-          <ExternalLink reference="exercicesjs">clicando aqui</ExternalLink>.
           Durante a realização desses exercicíos foi quando finalmente{" "}
           <u>
             APRENDI{" "}
             <ExternalLink reference="javascript">JAVASCRIPT</ExternalLink>
           </u>
           .
+          <br />
+          <br />O link do repositório com todos os exercicios que fiz depois de
+          finalizar o{" "}
+          <ExternalLink reference="cursojscursoemvideo">
+            Curso de JS do Curso em Video
+          </ExternalLink>{" "}
+          pode ser acessado{" "}
+          <ExternalLink reference="exercicesjs">clicando aqui</ExternalLink>.
         </>
       ),
     });
