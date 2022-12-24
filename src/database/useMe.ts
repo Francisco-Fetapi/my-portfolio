@@ -13,7 +13,7 @@ export default function useMe() {
     instagram: "https://www.instagram.com/franciscofetapi/",
     facebook: "https://facebook.com/alexander.garret.75",
     linkedin: "https://www.linkedin.com/in/francisco-fetapi-058472223/",
-    downloadCV: "https://downloadcv.com",
+    downloadCV: "https://downloadcv.com", //english,portuguese
     phone1,
     phone2: "958727914",
     calendly: "https://linkdocalendly",
