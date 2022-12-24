@@ -271,6 +271,26 @@ export default function useTimeline() {
       ),
     });
 
+    timelineEntity.addEvent({
+      date: new Date(2019, 10, 11),
+      title: (
+        <>
+          Li o livro de{" "}
+          <ExternalLink reference="htmlcssk19livro">
+            HTML/CSS e JS da K19
+          </ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Lí apenas para consolidar os conhecimentos já adquiridos e talvez
+          aprender mais uma ou outra coisa que talvez acabou escapando. Terminar
+          este livro foi um sufoco, principalmente porque estava num formato que
+          parecia meio que uma documentação.
+        </>
+      ),
+    });
+
     return Timeline.timelines;
   }
 

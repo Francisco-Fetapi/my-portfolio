@@ -26,5 +26,7 @@ export default function useExternalLink() {
     php: "https://pt.wikipedia.org/wiki/PHP",
     frontendAndbackend: "https://en.wikipedia.org/wiki/Frontend_and_backend",
     jquery: "https://pt.wikipedia.org/wiki/JQuery",
+    htmlcssk19livro:
+      "https://pt.scribd.com/doc/171072822/k19-k02-Desenvolvimento-Web-Com-HTML-Css-Javascript",
   };
 }
