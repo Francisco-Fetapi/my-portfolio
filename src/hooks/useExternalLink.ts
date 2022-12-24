@@ -28,5 +28,9 @@ export default function useExternalLink() {
     jquery: "https://pt.wikipedia.org/wiki/JQuery",
     htmlcssk19livro:
       "https://pt.scribd.com/doc/171072822/k19-k02-Desenvolvimento-Web-Com-HTML-Css-Javascript",
+    gridlayout:
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout",
+    flexbox:
+      "https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox",
   };
 }

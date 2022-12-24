@@ -292,6 +292,36 @@ export default function useTimeline() {
       ),
     });
 
+    timelineEntity.addEvent({
+      date: new Date(2020, 1, 10),
+      title: (
+        <>
+          Fiz o curso de{" "}
+          <ExternalLink reference="htmlcssk19livro">
+            HTML/CSS do Curso em Video
+          </ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Eu bem que já me sentia confortável com{" "}
+          <ExternalLink reference="html5">HTML</ExternalLink> e{" "}
+          <ExternalLink reference="css3">CSS</ExternalLink>,mas ainda precisava
+          dar uma aprimorada no meu{" "}
+          <ExternalLink reference="css3">CSS</ExternalLink>, então dei uma
+          chance pra esse curso. Foi bom tê-lo feito, na época, me ensinou a
+          trabalhar com <code>float</code> e <code>position</code> do CSS, antes
+          desse curso não entendia muito bem essas propriedades.
+          <br />
+          <br />
+          Hoje em dia já não recomendo esse curso,
+          <ExternalLink reference="flexbox">Flexbox</ExternalLink> e{" "}
+          <ExternalLink reference="gridlayout">Grid Layout</ExternalLink> não
+          eram realidade nessa época.
+        </>
+      ),
+    });
+
     return Timeline.timelines;
   }
 
