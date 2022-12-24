@@ -53,7 +53,7 @@ export default function IndexPage() {
                 <Text color="dimmed" className={classes.description}>
                   Sou um cara apaixonado por desenvolvimento de software.
                   Atualmente com foco em{" "}
-                  <ExternalLink href="#">
+                  <ExternalLink reference="fullStack">
                     Desenvolvimento Web full-stack
                   </ExternalLink>
                   .
@@ -112,21 +112,27 @@ export default function IndexPage() {
           <SectionText sx={{ zoom: 0.8 }}>
             <Text className={classes.description}>
               Meu nome é <b>{me.name}</b>, sou{" "}
-              <ExternalLink href="#">{me.professional}</ExternalLink> que atua
-              essencialmente com tecnologias do ecossistema{" "}
-              <ExternalLink href="#">JavaScript</ExternalLink>. O meu primeiro
-              contato com programação foi em 2018 durante o <b>Ensino Médio</b>,
-              nessa fase aprendi{" "}
-              <ExternalLink href="#">Lógica de Programação</ExternalLink> usando
-              o <ExternalLink href="#">Visual G</ExternalLink>. Depois de criar{" "}
-              <ExternalLink href="#"> algoritmos</ExternalLink> que eram
-              executados no <ExternalLink href="#">terminal</ExternalLink> me vi
+              <ExternalLink reference="fullStack">
+                {me.professional}
+              </ExternalLink>{" "}
+              que atua essencialmente com tecnologias do ecossistema{" "}
+              <ExternalLink reference="javascript">JavaScript</ExternalLink>. O
+              meu primeiro contato com programação foi em 2018 durante o{" "}
+              <b>Ensino Médio</b>, nessa fase aprendi{" "}
+              <ExternalLink reference="programmingLogic">
+                Lógica de Programação
+              </ExternalLink>{" "}
+              usando o <ExternalLink reference="visualg">Visual G</ExternalLink>
+              . Depois de criar{" "}
+              <ExternalLink reference="algorithms"> algoritmos</ExternalLink>{" "}
+              que eram executados no{" "}
+              <ExternalLink reference="prompt">terminal</ExternalLink> me vi
               curioso em criar uma interface amigavél para os meus
               mini-programas, e foi assim que me deparei com{" "}
-              <ExternalLink href="#">HTML5</ExternalLink>,{" "}
-              <ExternalLink href="#">CSS3</ExternalLink> e{" "}
-              <ExternalLink href="#">JavaScript</ExternalLink>, e desde ai
-              continuei estudando sem parar.
+              <ExternalLink reference="html5">HTML5</ExternalLink>,{" "}
+              <ExternalLink reference="css3">CSS3</ExternalLink> e{" "}
+              <ExternalLink reference="javascript">JavaScript</ExternalLink>, e
+              desde ai continuei estudando sem parar.
             </Text>
             <Text className={classes.description}>
               Nasci aos{" "}
@@ -135,7 +141,10 @@ export default function IndexPage() {
               </b>
               , falo Português (minha língua materna) e tenho um Inglês
               intermediário. Atualmente vivo em{" "}
-              <ExternalLink href="#">Angola, Benguela, Lobito</ExternalLink>.
+              <ExternalLink reference="lobito">
+                Angola, Benguela, Lobito
+              </ExternalLink>
+              .
             </Text>
             <Text className={classes.description}>
               Comecei a trabalhar profissionalmente com programação atendendo
