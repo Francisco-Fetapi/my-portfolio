@@ -220,7 +220,7 @@ export default function useTimeline() {
     });
 
     timelineEntity.addEvent({
-      date: new Date(2019, 6, 18),
+      date: new Date(2019, 7, 23),
       title: (
         <>
           Li o livro de{" "}
@@ -241,6 +241,32 @@ export default function useTimeline() {
           a mínima porque{" "}
           <ExternalLink reference="frontendAndbackend">back-end</ExternalLink>{" "}
           não era o meu foco.
+          <br />
+          <br />
+          Também aprendi <ExternalLink reference="jquery">
+            Jquery
+          </ExternalLink>{" "}
+          através dele.
+        </>
+      ),
+    });
+
+    timelineEntity.addEvent({
+      date: new Date(2019, 7, 29),
+      title: (
+        <>
+          Re-criei o projeto do{" "}
+          <ExternalLink reference="htmlcsscaelumlivro">
+            Livro da Caelum
+          </ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Voltei a criar o projeto do livro,<b> O Mirror Fashion</b>, só que
+          dessa vez por mim mesmo. Tive muita dificuldade, principalmente com{" "}
+          <ExternalLink reference="css3">CSS</ExternalLink>, mas no final,
+          consegui.
         </>
       ),
     });

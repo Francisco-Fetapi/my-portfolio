@@ -25,5 +25,6 @@ export default function useExternalLink() {
       "https://www.caelum.com.br/apostila/apostila-html-css-javascript.pdf",
     php: "https://pt.wikipedia.org/wiki/PHP",
     frontendAndbackend: "https://en.wikipedia.org/wiki/Frontend_and_backend",
+    jquery: "https://pt.wikipedia.org/wiki/JQuery",
   };
 }
