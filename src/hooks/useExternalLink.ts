@@ -12,5 +12,8 @@ export default function useExternalLink() {
     algorithms: "https://pt.wikipedia.org/wiki/Algoritmo",
     prompt: "https://pt.wikipedia.org/wiki/Terminal_(inform%C3%A1tica)",
     lobito: "https://pt.wikipedia.org/wiki/Lobito",
+    algorithmCourse:
+      "https://www.youtube.com/playlist?list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfXV",
+    cSharp: "https://pt.wikipedia.org/wiki/C_Sharp",
   };
 }

@@ -292,7 +292,7 @@ export default function useProjects() {
       },
       status: "finished",
       tags: ["HTML5", "CSS3", "JavaScript", "Jquery", "PHP", "MySQL"],
-      createdAt: new Date(2019, 10, 2),
+      createdAt: new Date(2020, 10, 2),
     },
     {
       name: "Typing Fast",

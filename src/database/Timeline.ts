@@ -8,17 +8,24 @@ export class Timeline {
       Timeline.timelines[getYear] = [];
     }
     const alreadyExists = Timeline.timelines[getYear].some(
-      (currentTimeline) => currentTimeline.date === timeline.date
+      (currentTimeline) => currentTimeline.title === timeline.title
     );
     if (alreadyExists) return;
 
     Timeline.timelines[getYear].push(timeline);
-    this.orderEventsByMonthDESC(getYear);
+    this.orderEventsByMonthASC(getYear);
   }
   orderEventsByMonthDESC(year: string) {
     Timeline.timelines[year] = Timeline.timelines[year].sort((a, b) => {
       if (a.date < b.date) return 1;
       if (a.date > b.date) return -1;
+      return 0;
+    });
+  }
+  orderEventsByMonthASC(year: string) {
+    Timeline.timelines[year] = Timeline.timelines[year].sort((a, b) => {
+      if (a.date < b.date) return -1;
+      if (a.date > b.date) return 1;
       return 0;
     });
   }
