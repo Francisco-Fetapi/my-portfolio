@@ -219,6 +219,32 @@ export default function useTimeline() {
       ),
     });
 
+    timelineEntity.addEvent({
+      date: new Date(2019, 6, 18),
+      title: (
+        <>
+          Li o livro de{" "}
+          <ExternalLink reference="htmlcsscaelumlivro">
+            HTML/CSS e JS da Caelum
+          </ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Foi muito bom ter lido, pela primeira vez, um documento que organizava
+          tudo que eu precisa saber de inicio sobre{" "}
+          <ExternalLink reference="html5">HTML</ExternalLink>,{" "}
+          <ExternalLink reference="css3">CSS</ExternalLink> e{" "}
+          <ExternalLink reference="javascript">JavaScript</ExternalLink>. O
+          livro também me permitiu conhecer o{" "}
+          <ExternalLink reference="php">PHP</ExternalLink>, mas na época não dei
+          a mínima porque{" "}
+          <ExternalLink reference="frontendAndbackend">back-end</ExternalLink>{" "}
+          não era o meu foco.
+        </>
+      ),
+    });
+
     return Timeline.timelines;
   }
 

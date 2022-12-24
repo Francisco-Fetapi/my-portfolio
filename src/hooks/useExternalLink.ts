@@ -21,5 +21,9 @@ export default function useExternalLink() {
     courseJSEssencial:
       "https://www.youtube.com/watch?v=ipHuSfOYhwA&list=PLInBAd9OZCzxl38aAYdyoMHVg0xCgxrRx",
     rbteachChannel: "https://www.youtube.com/@RBtechinfo",
+    htmlcsscaelumlivro:
+      "https://www.caelum.com.br/apostila/apostila-html-css-javascript.pdf",
+    php: "https://pt.wikipedia.org/wiki/PHP",
+    frontendAndbackend: "https://en.wikipedia.org/wiki/Frontend_and_backend",
   };
 }
