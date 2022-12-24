@@ -206,7 +206,7 @@ export default function useProjects() {
       },
       status: "finished",
       tags: ["HTML5", "CSS3", "JavaScript", "Jquery", "Bootstrap"],
-      createdAt: new Date(2020, 5, 18),
+      createdAt: new Date(2020, 2, 18),
     },
     {
       name: "Gestor de Tarefas",
