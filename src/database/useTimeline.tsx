@@ -134,7 +134,89 @@ export default function useTimeline() {
           </ExternalLink>
         </>
       ),
-      description: <>Primeiro curso que fiz sobre programação web</>,
+      description: <>Primeiro curso que fiz sobre programação web.</>,
+    });
+
+    timelineEntity.addEvent({
+      date: new Date(2019, 5, 21),
+      title: <>Primeiras telas</>,
+      description: (
+        <>
+          Na época estava aprendendo{" "}
+          <ExternalLink reference="programmingLogic">
+            Lógica de Programação
+          </ExternalLink>{" "}
+          com <ExternalLink reference="cSharp">C#</ExternalLink> através do{" "}
+          <ExternalLink reference="prompt">Terminal</ExternalLink> então
+          exercitava criando a{" "}
+          <ExternalLink reference="graphicInterface">
+            Interface Gráfica
+          </ExternalLink>{" "}
+          dos <ExternalLink reference="algorithms">Algoritmos</ExternalLink> que
+          desenvolviamos em sala de aula usando{" "}
+          <ExternalLink reference="html5">HTML</ExternalLink> e{" "}
+          <ExternalLink reference="css3">CSS</ExternalLink>.
+        </>
+      ),
+    });
+
+    timelineEntity.addEvent({
+      date: new Date(2019, 6, 29),
+      title: (
+        <>
+          Fiz o{" "}
+          <ExternalLink reference="courseJSEssencial">
+            Curso de JavaScript Essencial
+          </ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          O curso de JavaScript Essencial do{" "}
+          <ExternalLink reference="rbteachChannel">canal RBteach</ExternalLink>{" "}
+          me fascinou, ou melhor, o jeito como o{" "}
+          <ExternalLink reference="javascript">JavaScript</ExternalLink> estava
+          sendo apresentado, o que ele era capaz de fazer me fascinou.{" "}
+        </>
+      ),
+    });
+
+    timelineEntity.addEvent({
+      date: new Date(2019, 6, 29),
+      title: (
+        <>
+          Repeti o{" "}
+          <ExternalLink reference="courseJSEssencial">
+            Curso de JavaScript Essencial
+          </ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Demorei até absorver os fundamentos do{" "}
+          <ExternalLink reference="javascript">JavaScript</ExternalLink> e pra
+          isso precisei re-assistir o curso (e exercitar, claro) inumeras vezes.
+        </>
+      ),
+    });
+
+    timelineEntity.addEvent({
+      date: new Date(2019, 6, 29),
+      title: <>Primeiros {`"programinhas"`}</>,
+      description: (
+        <>
+          Depois de aprender{" "}
+          <ExternalLink reference="javascript">JavaScript</ExternalLink> me vi
+          entusiasmado a criar os mesmos algoritmos que criava na escola com{" "}
+          <ExternalLink reference="cSharp">C#</ExternalLink> usando{" "}
+          <ExternalLink reference="html5">HTML</ExternalLink>,{" "}
+          <ExternalLink reference="css3">CSS</ExternalLink> e{" "}
+          <ExternalLink reference="javascript">JavaScript</ExternalLink>. Criei
+          inicialmente um algoritmo que SOMA 2 NÚMEROS, depois, um que RECEBE UM
+          NÚMERO E GERA A TABUADA DAQUELE NÚMERO, e diversos outros, tudo com
+          essa tríade maravilhosa.
+        </>
+      ),
     });
 
     return Timeline.timelines;

@@ -16,5 +16,10 @@ export default function useExternalLink() {
       "https://www.youtube.com/playlist?list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfXV",
     cSharp: "https://pt.wikipedia.org/wiki/C_Sharp",
     courseHTMLCSSiConectado: "https://www.youtube.com/watch?v=JMWutVBmZbc",
+    graphicInterface:
+      "https://pt.wikipedia.org/wiki/Interface_gr%C3%A1fica_do_utilizador",
+    courseJSEssencial:
+      "https://www.youtube.com/watch?v=ipHuSfOYhwA&list=PLInBAd9OZCzxl38aAYdyoMHVg0xCgxrRx",
+    rbteachChannel: "https://www.youtube.com/@RBtechinfo",
   };
 }
