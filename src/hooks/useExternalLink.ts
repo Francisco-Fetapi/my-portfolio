@@ -15,5 +15,6 @@ export default function useExternalLink() {
     algorithmCourse:
       "https://www.youtube.com/playlist?list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfXV",
     cSharp: "https://pt.wikipedia.org/wiki/C_Sharp",
+    courseHTMLCSSiConectado: "https://www.youtube.com/watch?v=JMWutVBmZbc",
   };
 }

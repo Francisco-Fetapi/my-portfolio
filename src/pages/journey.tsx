@@ -30,7 +30,7 @@ export default function IndexPage() {
               um desenvolvedor mais tecnicamente capacitado.
               <br />
               <br />
-              Darei o meu máximo para descrever TODAS as etapas do meu processo
+              Darei o meu máximo para descrever ALGUMAS etapas do meu processo
               de crescimento ao longo dos anos logo abaixo.
             </Text>
           </Box>

@@ -106,6 +106,37 @@ export default function useTimeline() {
       ),
     });
 
+    timelineEntity.addEvent({
+      date: new Date(2019, 3, 15),
+      title: (
+        <>
+          Primeiro contato com <ExternalLink reference="css3">CSS</ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Depois de tanto estar imerso no universo Web me deparei com o{" "}
+          <ExternalLink reference="css3">CSS</ExternalLink> e foi amor a
+          primeira vista. Acabei conhecendo o{" "}
+          <ExternalLink reference="css3">CSS</ExternalLink> através de um
+          tutorial no YouTube.
+        </>
+      ),
+    });
+
+    timelineEntity.addEvent({
+      date: new Date(2019, 3, 21),
+      title: (
+        <>
+          Fiz o{" "}
+          <ExternalLink reference="courseHTMLCSSiConectado">
+            Curso de HTML/CSS do iConectado
+          </ExternalLink>
+        </>
+      ),
+      description: <>Primeiro curso que fiz sobre programação web</>,
+    });
+
     return Timeline.timelines;
   }
 
