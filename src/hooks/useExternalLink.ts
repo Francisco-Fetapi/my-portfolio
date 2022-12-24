@@ -32,5 +32,15 @@ export default function useExternalLink() {
       "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout",
     flexbox:
       "https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox",
+    cursohtmlcsscursoemvideo:
+      "https://www.youtube.com/playlist?list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o",
+    cursojscursoemvideo:
+      "https://www.youtube.com/playlist?list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm",
+    exercicesjs:
+      "https://github.com/Francisco-Fetapi/JavaScript_exercicios-cursoemvideo",
+    exercices2019:
+      "https://github.com/Francisco-Fetapi/primeiros_exercicios_2019",
+    buildingLayouts: "https://github.com/Francisco-Fetapi/construindo_layouts",
+    mirrorFashion: "https://github.com/Francisco-Fetapi/Site-Mirror-fashion",
   };
 }
