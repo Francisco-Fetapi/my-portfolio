@@ -57,7 +57,7 @@ export default function useExternalLink() {
     jsdefinitiveguide: "",
     poo: "",
     coursemysqlcursoemvideo: "",
-    bd: "",
+    modelbd: "",
     sql: "",
     courselaraveljoao: "",
     laravel: "",

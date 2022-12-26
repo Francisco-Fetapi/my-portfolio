@@ -568,15 +568,17 @@ export default function useTimeline() {
           Já sabia executar consultas simples com{" "}
           <ExternalLink reference="sql">SQL</ExternalLink> (como um CRUD, por
           exemplo), mas para coisas mais complexas relacionadas a{" "}
-          <ExternalLink reference="bd">Banco de Dados</ExternalLink> e
-          relacionamentos tinha certa dificuldade. Depois de concluir o curso me
-          senti capaz de criar sistemas para além de um CRUD.
+          <ExternalLink reference="modelbd">
+            Modelagem de Banco de Dados
+          </ExternalLink>{" "}
+          e relacionamentos tinha certa dificuldade. Depois de concluir o curso
+          me senti capaz de criar sistemas para além de um CRUD.
         </>
       ),
     });
 
     timelineEntity.addEvent({
-      date: new Date(2021, 5, 12),
+      date: new Date(2021, 6, 2),
       title: (
         <>
           Fiz o{" "}

@@ -116,7 +116,7 @@ export default function useProjects() {
       },
       status: "finished",
       tags: ["React.js", "JavaScript", "Material-UI", "PHP", "MySQL", "Forum"],
-      createdAt: new Date(2021, 8, 12),
+      createdAt: new Date(2021, 5, 12),
     },
     {
       name: "Galeria",
