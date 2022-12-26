@@ -453,6 +453,27 @@ export default function useTimeline() {
     });
 
     timelineEntity.addEvent({
+      date: new Date(2020, 6, 3),
+      title: (
+        <>
+          Li o livro{" "}
+          <ExternalLink reference="jsdefinitiveguide">
+            {`"JavaScript - O guia definitivo"`}
+          </ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          <b>Li as primeiras 700 páginas</b> desse maravilhoso livro numa
+          maratona sem trégua. As útlimas 300 páginas eram apenas um guia de
+          referência. O livro mais completo de{" "}
+          <ExternalLink reference="javascript">JavaScript</ExternalLink> que já
+          lí até hoje, meio antigo, mas ainda muito útil.
+        </>
+      ),
+    });
+
+    timelineEntity.addEvent({
       date: new Date(2021, 0, 21),
       title: (
         <>

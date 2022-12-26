@@ -54,5 +54,6 @@ export default function useExternalLink() {
     mui: "",
     bootstrap: "",
     coursejoaoreact: "",
+    jsdefinitiveguide: "",
   };
 }
