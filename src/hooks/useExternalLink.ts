@@ -56,5 +56,10 @@ export default function useExternalLink() {
     coursejoaoreact: "",
     jsdefinitiveguide: "",
     poo: "",
+    coursemysqlcursoemvideo: "",
+    bd: "",
+    sql: "",
+    courselaraveljoao: "",
+    laravel: "",
   };
 }

@@ -553,6 +553,46 @@ export default function useTimeline() {
       ),
     });
 
+    timelineEntity.addEvent({
+      date: new Date(2021, 4, 10),
+      title: (
+        <>
+          Fiz o{" "}
+          <ExternalLink reference="coursemysqlcursoemvideo">
+            Curso de MySQL do Curso em Video
+          </ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Já sabia executar consultas simples com{" "}
+          <ExternalLink reference="sql">SQL</ExternalLink> (como um CRUD, por
+          exemplo), mas para coisas mais complexas relacionadas a{" "}
+          <ExternalLink reference="bd">Banco de Dados</ExternalLink> e
+          relacionamentos tinha certa dificuldade. Depois de concluir o curso me
+          senti capaz de criar sistemas para além de um CRUD.
+        </>
+      ),
+    });
+
+    timelineEntity.addEvent({
+      date: new Date(2021, 5, 12),
+      title: (
+        <>
+          Fiz o{" "}
+          <ExternalLink reference="courselaraveljoao">
+            Curso de Laravel de João Ribeiro
+          </ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Foi com esse curso que tive as minhas primeiras impressões em relação
+          ao <ExternalLink reference="laravel">Laravel</ExternalLink>.
+        </>
+      ),
+    });
+
     return Timeline.timelines;
   }
 
