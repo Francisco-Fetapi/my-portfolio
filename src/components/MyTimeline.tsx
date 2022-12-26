@@ -95,7 +95,13 @@ function TimeLine({ year, timelines }: TimeLineProps) {
                   <Group spacing={2} align="center" mt={10}>
                     <IconCalendarTime size={15} />
                     <Text size="xs" mt={4} color="dimmed">
-                      {getMonth(timeline.date, locale)} -{" "}
+                      <span
+                        style={{
+                          textTransform: "capitalize",
+                        }}
+                      >
+                        {getMonth(timeline.date, locale)} -{" "}
+                      </span>
                       {dateDistance(timeline.date, locale)}
                     </Text>
                   </Group>

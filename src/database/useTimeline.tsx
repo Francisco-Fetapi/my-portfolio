@@ -215,6 +215,12 @@ export default function useTimeline() {
           inicialmente um algoritmo que SOMA 2 NÚMEROS, depois, um que RECEBE UM
           NÚMERO E GERA A TABUADA DAQUELE NÚMERO, e diversos outros, tudo com
           essa tríade maravilhosa.
+          <br />
+          <br />
+          <ExternalLink reference="exercices2019">
+            Clique aqui
+          </ExternalLink>{" "}
+          para acessar o link do repositório com os exercicíos.
         </>
       ),
     });
