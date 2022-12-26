@@ -17,7 +17,7 @@ export default function useTimeline() {
   const { allProjects } = useProjects();
   const { me } = useMe();
 
-  function addEvents() {
+  function loadEvents() {
     Timeline.timelines = {};
 
     allProjects.forEach((project) => {
@@ -481,6 +481,17 @@ export default function useTimeline() {
           Depois de tanto adiar, finalmente dei uma chance para o{" "}
           <b>React.js</b> e hoje posso afirmar sem medo que é a tecnológia que
           mais me impressionou durante toda a minha jornada.
+          <br />
+          <br />
+          Fiz o{" "}
+          <ExternalLink reference="coursejoaoreact">
+            Curso de React.js de João Ribeiro
+          </ExternalLink>{" "}
+          e mais tarder lí a{" "}
+          <ExternalLink reference="reactjsdocs">
+            documentação do React
+          </ExternalLink>{" "}
+          de ponta à ponta.
         </>
       ),
     });
@@ -504,8 +515,11 @@ export default function useTimeline() {
     return Timeline.timelines;
   }
 
-  const timeline: TimeLines = useMemo(addEvents, [allProjects, timelineEntity]);
-  // const timeline: TimeLines = addEvents();
+  const timeline: TimeLines = useMemo(loadEvents, [
+    allProjects,
+    timelineEntity,
+  ]);
+  // const timeline: TimeLines = loadEvents();
 
   const years = Object.keys(timeline);
 

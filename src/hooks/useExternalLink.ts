@@ -50,7 +50,9 @@ export default function useExternalLink() {
     git: "",
     github: "https://github.com",
     reactjs: "",
+    reactjsdocs: "",
     mui: "",
     bootstrap: "",
+    coursejoaoreact: "",
   };
 }
