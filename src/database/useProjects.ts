@@ -116,7 +116,7 @@ export default function useProjects() {
       },
       status: "finished",
       tags: ["React.js", "JavaScript", "Material-UI", "PHP", "MySQL", "Forum"],
-      createdAt: new Date(2021, 2, 12),
+      createdAt: new Date(2021, 5, 12),
     },
     {
       name: "Galeria",
@@ -127,7 +127,7 @@ export default function useProjects() {
       },
       status: "finished",
       tags: ["React.js", "JavaScript", "PHP", "MySQL", "Galeria" as "Gallery"],
-      createdAt: new Date(2021, 3, 15),
+      createdAt: new Date(2021, 4, 15),
     },
   ];
 
@@ -162,7 +162,7 @@ export default function useProjects() {
         "MySQL",
         "JWT",
       ],
-      createdAt: new Date(2021, 4, 12),
+      createdAt: new Date(2021, 6, 12),
     },
     {
       name: "Financial Manager",
@@ -188,7 +188,7 @@ export default function useProjects() {
       },
       status: "finished",
       tags: ["JavaScript", "React.js", "CSS3"],
-      createdAt: new Date(2021, 2, 23),
+      createdAt: new Date(2021, 1, 9),
     },
     {
       name: "Calculadora Simples",
@@ -223,7 +223,7 @@ export default function useProjects() {
       },
       status: "finished",
       tags: ["JavaScript", "React.js", "Material-UI"],
-      createdAt: new Date(2021, 5, 28),
+      createdAt: new Date(2021, 2, 28),
     },
     {
       name: "Jogo da Velha (React)",
@@ -236,7 +236,7 @@ export default function useProjects() {
       },
       status: "finished",
       tags: ["JavaScript", "React.js", "Material-UI", "Tic-Tac-Toe"],
-      createdAt: new Date(2021, 6, 21),
+      createdAt: new Date(2021, 1, 22),
     },
     {
       name: "Android App Simulation",
@@ -249,7 +249,7 @@ export default function useProjects() {
       },
       status: "death",
       tags: ["JavaScript", "React.js", "Material-UI"],
-      createdAt: new Date(2021, 7, 19),
+      createdAt: new Date(2021, 3, 19),
     },
     {
       name: "Portuguese - Umbundo",
