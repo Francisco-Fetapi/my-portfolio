@@ -43,5 +43,9 @@ export default function useExternalLink() {
     buildingLayouts: "https://github.com/Francisco-Fetapi/construindo_layouts",
     mirrorFashion: "https://github.com/Francisco-Fetapi/Site-Mirror-fashion",
     typescript: "",
+    phpcoursecursoemvideo: "",
+    mysql: "",
+    crud: "",
+    phpcourseexcript: "",
   };
 }

@@ -261,7 +261,7 @@ export default function useTimeline() {
       date: new Date(2019, 7, 29),
       title: (
         <>
-          Re-criei o projeto do{" "}
+          Recriei o projeto do{" "}
           <ExternalLink reference="htmlcsscaelumlivro">
             Livro da Caelum
           </ExternalLink>
@@ -376,19 +376,82 @@ export default function useTimeline() {
       ),
     });
 
-    // timelineEntity.addEvent({
-    //   date: new Date(2020, 4, 12),
-    //   title: (
-    //     <>
+    timelineEntity.addEvent({
+      date: new Date(2020, 4, 30),
+      title: (
+        <>
+          Fiz o{" "}
+          <ExternalLink reference="phpcoursecursoemvideo">
+            Curso de PHP do Curso em Video
+          </ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Comecei a estudar o <ExternalLink reference="php">PHP</ExternalLink>{" "}
+          porque senti a necessidade de persistir dados em algumas aplicações.
+          Logo no começo dos meus estudos com PHP eu já estava de olho no{" "}
+          <ExternalLink reference="mysql">MySQL</ExternalLink>
+        </>
+      ),
+    });
 
-    //     </>
-    //   ),
-    //   description: (
-    //     <>
+    timelineEntity.addEvent({
+      date: new Date(2020, 5, 5),
+      title: <>Li um Livro de PHP + MySQL</>,
+      description: (
+        <>
+          Embora não tenha a referencia do livro em questão, foi com ele que,
+          pela primeira vez criei um{" "}
+          <ExternalLink reference="crud">
+            <abbr title="Create,Read,Update,Delete">CRUD</abbr>
+          </ExternalLink>
+          .
+        </>
+      ),
+    });
 
-    //     </>
-    //   ),
-    // });
+    timelineEntity.addEvent({
+      date: new Date(2020, 5, 20),
+      title: (
+        <>
+          Fiz o{" "}
+          <ExternalLink reference="phpcourseexcript">
+            Curso de PHP do eXcript
+          </ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Ao aprender algo novo sempre acabo fazendo mais de um curso e esse foi
+          o segundo curso de <ExternalLink reference="php">PHP</ExternalLink>{" "}
+          que fiz.
+        </>
+      ),
+    });
+
+    timelineEntity.addEvent({
+      date: new Date(2020, 5, 20),
+      title: (
+        <>
+          Recriei o{" "}
+          <ExternalLink reference="mirrorFashion">Mirror Fashion</ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          No livro de{" "}
+          <ExternalLink reference="htmlcsscaelumlivro">
+            HTML/CSS e JS da Caelum
+          </ExternalLink>{" "}
+          também tinha uma seção dedicada ao{" "}
+          <ExternalLink reference="php">PHP</ExternalLink>, depois de aprendê-lo
+          recriei o site da{" "}
+          <ExternalLink reference="mirrorFashion">Mirror Fashion</ExternalLink>{" "}
+          usando <b>PHP</b> e <b>MySQL</b>.
+        </>
+      ),
+    });
 
     return Timeline.timelines;
   }
