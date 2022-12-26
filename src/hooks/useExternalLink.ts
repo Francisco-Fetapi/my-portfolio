@@ -47,5 +47,6 @@ export default function useExternalLink() {
     mysql: "",
     crud: "",
     phpcourseexcript: "",
+    git: "",
   };
 }

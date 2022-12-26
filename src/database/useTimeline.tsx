@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import ExternalLink from "../components/ExternalLink";
 import { Timeline, timelineEntity } from "./Timeline";
+import useMe from "./useMe";
 import useProjects from "./useProjects";
 export interface TimeLine {
   title: React.ReactNode;
@@ -14,12 +15,10 @@ export interface TimeLines {
 
 export default function useTimeline() {
   const { allProjects } = useProjects();
+  const { me } = useMe();
 
   function addEvents() {
     Timeline.timelines = {};
-    // if (Object.keys(Timeline.timelines).length === 0) {
-
-    // }
 
     allProjects.forEach((project) => {
       timelineEntity.addEvent({
@@ -453,11 +452,27 @@ export default function useTimeline() {
       ),
     });
 
+    timelineEntity.addEvent({
+      date: new Date(2021, 0, 21),
+      title: (
+        <>
+          Entrei no <ExternalLink reference="github">Github</ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Criei uma conta no github e coloquei todos os meus projetos pra lá.
+          Também tive o meu primeiro contato com o{" "}
+          <ExternalLink reference="git">Git</ExternalLink>.
+        </>
+      ),
+    });
+
     return Timeline.timelines;
   }
 
-  // const timeline: TimeLines = useMemo(addEvents, [allProjects, timelineEntity]);
-  const timeline: TimeLines = addEvents();
+  const timeline: TimeLines = useMemo(addEvents, [allProjects, timelineEntity]);
+  // const timeline: TimeLines = addEvents();
 
   const years = Object.keys(timeline);
 
