@@ -456,7 +456,7 @@ export default function useTimeline() {
       date: new Date(2021, 0, 21),
       title: (
         <>
-          Entrei no <ExternalLink reference="github">Github</ExternalLink>
+          Me cadastrei no <ExternalLink reference="github">Github</ExternalLink>
         </>
       ),
       description: (

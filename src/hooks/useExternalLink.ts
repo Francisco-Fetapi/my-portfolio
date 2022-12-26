@@ -48,5 +48,6 @@ export default function useExternalLink() {
     crud: "",
     phpcourseexcript: "",
     git: "",
+    github: "https://github.com",
   };
 }
