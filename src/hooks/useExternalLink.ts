@@ -42,5 +42,6 @@ export default function useExternalLink() {
       "https://github.com/Francisco-Fetapi/primeiros_exercicios_2019",
     buildingLayouts: "https://github.com/Francisco-Fetapi/construindo_layouts",
     mirrorFashion: "https://github.com/Francisco-Fetapi/Site-Mirror-fashion",
+    typescript: "",
   };
 }

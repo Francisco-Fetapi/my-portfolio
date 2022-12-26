@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 
 import { TimeLines } from "../database/useTimeline";
 import dateDistance from "../helpers/dateDistance";
+import getMonth from "../helpers/getMonth";
 import useCurrentLocale from "../hooks/useCurrentLocale";
 
 interface MyTimelineProps {
@@ -68,6 +69,7 @@ interface TimeLineProps {
 
 function TimeLine({ year, timelines }: TimeLineProps) {
   const { locale } = useCurrentLocale();
+
   return (
     <Transition
       mounted={true}
@@ -93,6 +95,7 @@ function TimeLine({ year, timelines }: TimeLineProps) {
                   <Group spacing={2} align="center" mt={10}>
                     <IconCalendarTime size={15} />
                     <Text size="xs" mt={4} color="dimmed">
+                      {getMonth(timeline.date, locale)} -{" "}
                       {dateDistance(timeline.date, locale)}
                     </Text>
                   </Group>
