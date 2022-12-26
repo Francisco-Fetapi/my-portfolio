@@ -94,16 +94,18 @@ function TimeLine({ year, timelines }: TimeLineProps) {
                 {timeline.date && (
                   <Group spacing={2} align="center" mt={10}>
                     <IconCalendarTime size={15} />
-                    <Text size="xs" mt={4} color="dimmed">
-                      <span
-                        style={{
-                          textTransform: "capitalize",
-                        }}
+                    <Group spacing={2} align="center" mt={4}>
+                      <Text
+                        size="xs"
+                        sx={{ textTransform: "capitalize" }}
+                        weight="bold"
                       >
-                        {getMonth(timeline.date, locale)} -{" "}
-                      </span>
-                      {dateDistance(timeline.date, locale)}
-                    </Text>
+                        {getMonth(timeline.date, locale)}&nbsp;-&nbsp;
+                      </Text>
+                      <Text size="xs" color="dimmed">
+                        {dateDistance(timeline.date, locale)}
+                      </Text>
+                    </Group>
                   </Group>
                 )}
               </Timeline.Item>
