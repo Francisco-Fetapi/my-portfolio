@@ -468,6 +468,39 @@ export default function useTimeline() {
       ),
     });
 
+    timelineEntity.addEvent({
+      date: new Date(2021, 0, 29),
+      title: (
+        <>
+          Comecei a estudar{" "}
+          <ExternalLink reference="reactjs">React.js</ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Depois de tanto adiar, finalmente dei uma chance para o{" "}
+          <b>React.js</b> e hoje posso afirmar sem medo que é a tecnológia que
+          mais me impressionou durante toda a minha jornada.
+        </>
+      ),
+    });
+    timelineEntity.addEvent({
+      date: new Date(2021, 2, 20),
+      title: (
+        <>
+          Aprendi o <ExternalLink reference="mui">Material-UI</ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Durante muito tempo utilizei o{" "}
+          <ExternalLink reference="bootstrap">Bootstrap</ExternalLink> como
+          biblioteca CSS. Quando conheci o Material-UI fiquei fascinado e decidi
+          estudá-lo.
+        </>
+      ),
+    });
+
     return Timeline.timelines;
   }
 

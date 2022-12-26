@@ -49,5 +49,8 @@ export default function useExternalLink() {
     phpcourseexcript: "",
     git: "",
     github: "https://github.com",
+    reactjs: "",
+    mui: "",
+    bootstrap: "",
   };
 }
