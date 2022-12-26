@@ -474,6 +474,26 @@ export default function useTimeline() {
     });
 
     timelineEntity.addEvent({
+      date: new Date(2020, 7, 28),
+      title: (
+        <>
+          Fiz o{" "}
+          <ExternalLink reference="jsdefinitiveguide">
+            Curso de PHP POO do Curso em Video
+          </ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Bem que eu já entendia os conceitos da{" "}
+          <ExternalLink reference="poo">Orientação à Objetos</ExternalLink>, mas
+          tinha dificuldade em utilizá-los na prática, esse curso foi o que
+          realmente me ensinou.
+        </>
+      ),
+    });
+
+    timelineEntity.addEvent({
       date: new Date(2021, 0, 21),
       title: (
         <>
