@@ -1,6 +1,9 @@
+import useMe from "../database/useMe";
+
 export type IExternalLinks = ReturnType<typeof useExternalLink>;
 
 export default function useExternalLink() {
+  const { getRepositoryByName } = useMe();
   return {
     javascript: "https://pt.wikipedia.org/wiki/JavaScript",
     html5: "https://pt.wikipedia.org/wiki/HTML",
@@ -69,5 +72,7 @@ export default function useExternalLink() {
     courselaraveljoao:
       "https://www.youtube.com/watch?v=0T5gM1WRNsY&list=PLXik_5Br-zO893qVjjP7a4qg4NYrl33w1",
     laravel: "https://pt.wikipedia.org/wiki/Laravel",
+    socialmoviesspace: getRepositoryByName("projeto-tcc"),
+    tccpdf: "",
   };
 }

@@ -104,7 +104,7 @@ export default function useProjects() {
       },
       status: "death",
       tags: ["HTML5", "CSS3", "JavaScript", "Jquery", "PHP", "MySQL"],
-      createdAt: new Date(2020, 10, 9),
+      createdAt: new Date(2020, 11, 9),
     },
     {
       name: "Forum",

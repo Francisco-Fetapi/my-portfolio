@@ -595,6 +595,26 @@ export default function useTimeline() {
       ),
     });
 
+    timelineEntity.addEvent({
+      date: new Date(2022, 1, 2),
+      title: (
+        <>
+          Terminei meu <b>Trabalho de Conclusão de Curso</b>
+        </>
+      ),
+      description: (
+        <>
+          Terminei de redigir{" "}
+          <ExternalLink reference="tccpdf">o documento</ExternalLink> que
+          descreve os processos envolvidos na elaboração do{" "}
+          <ExternalLink reference="socialmoviesspace">
+            Social Movies Space
+          </ExternalLink>
+          .
+        </>
+      ),
+    });
+
     return Timeline.timelines;
   }
 
