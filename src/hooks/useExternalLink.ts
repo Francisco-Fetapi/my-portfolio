@@ -42,24 +42,32 @@ export default function useExternalLink() {
       "https://github.com/Francisco-Fetapi/primeiros_exercicios_2019",
     buildingLayouts: "https://github.com/Francisco-Fetapi/construindo_layouts",
     mirrorFashion: "https://github.com/Francisco-Fetapi/Site-Mirror-fashion",
-    typescript: "",
-    phpcoursecursoemvideo: "",
-    mysql: "",
-    crud: "",
-    phpcourseexcript: "",
-    git: "",
+    typescript: "https://pt.wikipedia.org/wiki/TypeScript",
+    phpcoursecursoemvideo:
+      "https://www.youtube.com/watch?v=F7KzJ7e6EAc&list=PLHz_AreHm4dm4beCCCmW4xwpmLf6EHY9k",
+    phppoocursoemvideo:
+      "https://www.youtube.com/watch?v=KlIL63MeyMY&list=PLHz_AreHm4dmGuLII3tsvryMMD7VgcT7x",
+    mysql: "https://pt.wikipedia.org/wiki/MySQL",
+    crud: "https://pt.wikipedia.org/wiki/CRUD",
+    phpcourseexcript:
+      "https://www.youtube.com/watch?v=R_yRrYUHai0&list=PLesCEcYj003TrV2MvUOnmVtMdgIp0C4Pd",
+    git: "https://pt.wikipedia.org/wiki/Git",
     github: "https://github.com",
-    reactjs: "",
-    reactjsdocs: "",
-    mui: "",
-    bootstrap: "",
-    coursejoaoreact: "",
-    jsdefinitiveguide: "",
-    poo: "",
-    coursemysqlcursoemvideo: "",
-    modelbd: "",
-    sql: "",
-    courselaraveljoao: "",
-    laravel: "",
+    reactjs: "https://pt.wikipedia.org/wiki/React_(JavaScript)",
+    reactjsdocs: "https://reactjs.org/docs/getting-started.html",
+    mui: "https://mui.com/",
+    bootstrap: "https://getbootstrap.com/",
+    coursejoaoreact:
+      "https://www.youtube.com/watch?v=C8M94QLJy0o&list=PLXik_5Br-zO9YVs9bxi7zoQlKq59VPTX1",
+    jsdefinitiveguide:
+      "https://www.pdfdrive.com/javascript-o-guia-definitivo-e185837261.html",
+    poo: "https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_orientada_a_objetos",
+    coursemysqlcursoemvideo:
+      "https://www.youtube.com/watch?v=Ofktsne-utM&list=PLHz_AreHm4dkBs-795Dsgvau_ekxg8g1r",
+    modelbd: "https://pt.wikipedia.org/wiki/Modelagem_de_dados",
+    sql: "https://pt.wikipedia.org/wiki/SQL",
+    courselaraveljoao:
+      "https://www.youtube.com/watch?v=0T5gM1WRNsY&list=PLXik_5Br-zO893qVjjP7a4qg4NYrl33w1",
+    laravel: "https://pt.wikipedia.org/wiki/Laravel",
   };
 }

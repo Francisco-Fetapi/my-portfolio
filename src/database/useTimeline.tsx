@@ -478,7 +478,7 @@ export default function useTimeline() {
       title: (
         <>
           Fiz o{" "}
-          <ExternalLink reference="jsdefinitiveguide">
+          <ExternalLink reference="phppoocursoemvideo">
             Curso de PHP POO do Curso em Video
           </ExternalLink>
         </>
