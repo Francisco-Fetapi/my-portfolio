@@ -114,11 +114,12 @@ export function ProjectCard({
                 src={`/projects_img/${image}`}
                 height={PROJECT_IMAGE_CARD_IMAGE_HEIGHT * 1.7}
                 width={PROJECT_CARD_MAX_WIDTH}
+                placeholder="blur"
+                blurDataURL={`/projects_img/${image}`}
+                quality={80}
+                layout="responsive"
                 alt={name}
-                style={{
-                  objectFit: "contain",
-                  // maxWidth: "100%",
-                }}
+                className="image"
               />
             </Carousel.Slide>
           ))}

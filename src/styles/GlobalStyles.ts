@@ -5,5 +5,7 @@ interface StylesProps {
 }
 
 export const GlobalStyles = createGlobalStyle<StylesProps>`
-    
+    .image{
+      object-fit:cover;
+    }
 `;
