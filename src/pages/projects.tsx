@@ -10,7 +10,6 @@ import SecondTitle from "../components/SecondTitle";
 import SlideProject from "../components/SlideProjects";
 import useProjects from "../database/useProjects";
 import useMe from "../database/useMe";
-import RouterTransition from "../components/RouterTransition";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
 import Link from "next/link";
@@ -32,7 +31,6 @@ export default function IndexPage() {
         <title>Projetos</title>
       </Head>
       <AppScheme>
-        <RouterTransition />
         {!filteredProjects ? (
           <>
             <Box mt={10}>

@@ -1,16 +1,7 @@
 import Head from "next/head";
 import AppScheme from "../components/AppScheme";
 import MainTitle from "../components/MainTitle";
-import {
-  Center,
-  createStyles,
-  Title,
-  Box,
-  Grid,
-  Group,
-  Text,
-  Button,
-} from "@mantine/core";
+import { createStyles, Box, Grid, Group, Text, Button } from "@mantine/core";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 
 import Link from "next/link";
@@ -21,7 +12,6 @@ import TecnologyCard from "../components/TecnologyCard";
 import TecnologiesContainer from "../components/TecnologiesContainer";
 import useMe from "../database/useMe";
 import useTecnologies from "../database/useTecnologies";
-import RouterTransition from "../components/RouterTransition";
 import ExternalLink from "../components/ExternalLink";
 
 const PHOTO_SIZE = 250;
@@ -44,7 +34,6 @@ export default function IndexPage() {
         <title>Sobre</title>
       </Head>
       <AppScheme>
-        <RouterTransition />
         <Box mt={20}>
           <Grid gutter="lg" justify="flex-end">
             <Grid.Col md={8} xs={12}>
