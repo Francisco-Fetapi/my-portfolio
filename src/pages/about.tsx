@@ -101,6 +101,10 @@ export default function IndexPage() {
                   height={PHOTO_SIZE + 50}
                   alt="Minha foto"
                   className={classes2.image}
+                  quality={100}
+                  placeholder="blur"
+                  blurDataURL={me.photo}
+                  // layout="responsive"
                 />
                 <Text mt={10} color="dimmed" size="xs" align="center">
                   {me.name}

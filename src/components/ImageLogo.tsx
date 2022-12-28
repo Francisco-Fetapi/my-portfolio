@@ -1,5 +1,6 @@
 import { Box, Avatar, Text, Group } from "@mantine/core";
 import useMe from "../database/useMe";
+import Image from "next/image";
 
 export default function ImageLogo() {
   const { me } = useMe();
@@ -11,12 +12,17 @@ export default function ImageLogo() {
         zoom: 0.85,
       }}
     >
-      <Avatar
+      <Image
         src={me.photo}
         alt="Minha foto"
-        sx={{
+        style={{
           borderRadius: "50%",
         }}
+        width={40}
+        height={40}
+        quality={100}
+        placeholder="blur"
+        blurDataURL={me.photo}
       />
       <Box>
         <Text size="md" weight={600}>
