@@ -48,7 +48,7 @@ export default function IndexPage() {
         <Box mt={20}>
           <Grid gutter="lg" justify="flex-end">
             <Grid.Col md={8} xs={12}>
-              <MainTitle>Sobre</MainTitle>
+              <MainTitle align="flex-start">Sobre Mim</MainTitle>
               <Box sx={{ zoom: 0.9, width: "100%", maxWidth: 600 }}>
                 <Text color="dimmed" className={classes.description}>
                   Sou um cara apaixonado por desenvolvimento de software.
