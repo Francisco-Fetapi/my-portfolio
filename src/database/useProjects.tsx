@@ -42,7 +42,7 @@ export default function useProjects() {
         <>
           Uma rede social para amantes de filmes e seriados. O sistema oferece
           um sistema de autenticação, sistema de publicações, comentários,
-          reações e busca dados da API do{" "}
+          reações e busca informações da API do{" "}
           <ExternalLink reference="tmdb">ThemovieDB</ExternalLink>.
         </>
       ),
@@ -153,9 +153,9 @@ export default function useProjects() {
       name: "Galeria",
       description: (
         <>
-          Um pequeno sistema criado para fazer o upload de imagens públicas.
-          Todas as imagens serão visualizadas publicamente. Criado para
-          exercitar <ExternalLink reference="reactjs">React</ExternalLink> +{" "}
+          Um pequeno sistema criado para fazer o upload de imagens. Todas as
+          imagens serão visualizadas publicamente. Criado para exercitar{" "}
+          <ExternalLink reference="reactjs">React</ExternalLink> +{" "}
           <ExternalLink reference="php">PHP</ExternalLink>.
         </>
       ),
@@ -411,7 +411,11 @@ export default function useProjects() {
         <>
           Jogo desenvolvido com{" "}
           <ExternalLink reference="reactjs">React</ExternalLink> para exercitar
-          a arte de digitar no teclado.
+          a arte de digitar no teclado. Uma versão melhor do{" "}
+          <ExternalLink href={getRepositoryByName("Mestre-no-teclado")}>
+            Mestre no Teclado
+          </ExternalLink>
+          .
         </>
       ),
       images: ["typing-fast.png"],
