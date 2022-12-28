@@ -3,6 +3,7 @@ import ExternalLink from "../components/ExternalLink";
 import { Timeline, timelineEntity } from "./Timeline";
 import useMe from "./useMe";
 import useProjects from "./useProjects";
+import { Code } from "@mantine/core";
 export interface TimeLine {
   title: React.ReactNode;
   description?: React.ReactNode;
@@ -59,7 +60,7 @@ export default function useTimeline() {
         <>
           Fiz o{" "}
           <ExternalLink reference="algorithmCourse">
-            Curso de Algoritmos
+            Curso de Algoritmos do Curso em Video
           </ExternalLink>
         </>
       ),
@@ -68,7 +69,7 @@ export default function useTimeline() {
           Estava de férias e tinha acabado de conseguir meu primeiro computador,
           logo após isso comecei a fazer o curso de algoritmos e até hoje foi a
           melhor decisão que já tomei na minha vida, tudo começou a partir
-          disso, é loucura pensar nisso.
+          disso.
         </>
       ),
     });
@@ -92,7 +93,7 @@ export default function useTimeline() {
 
     timelineEntity.addEvent({
       date: new Date(2019, 2, 12),
-      title: <>Re-Inicio das Aulas</>,
+      title: <>Reinicio das aulas</>,
       description: (
         <>
           Depois de voltar às aulas foi um tanto díficil conciliar o que estava
@@ -175,7 +176,7 @@ export default function useTimeline() {
           <ExternalLink reference="rbteachChannel">canal RBteach</ExternalLink>{" "}
           me fascinou, ou melhor, o jeito como o{" "}
           <ExternalLink reference="javascript">JavaScript</ExternalLink> estava
-          sendo apresentado, o que ele era capaz de fazer me fascinou.{" "}
+          sendo apresentado e o que ele era capaz de fazer.{" "}
         </>
       ),
     });
@@ -194,7 +195,7 @@ export default function useTimeline() {
         <>
           Demorei até absorver os fundamentos do{" "}
           <ExternalLink reference="javascript">JavaScript</ExternalLink> e pra
-          isso precisei re-assistir o curso (e exercitar, claro) inumeras vezes.
+          isso precisei reassistir o curso (e exercitar, claro) inumeras vezes.
         </>
       ),
     });
@@ -211,9 +212,9 @@ export default function useTimeline() {
           <ExternalLink reference="html5">HTML</ExternalLink>,{" "}
           <ExternalLink reference="css3">CSS</ExternalLink> e{" "}
           <ExternalLink reference="javascript">JavaScript</ExternalLink>. Criei
-          inicialmente um algoritmo que SOMA 2 NÚMEROS, depois, um que RECEBE UM
-          NÚMERO E GERA A TABUADA DAQUELE NÚMERO, e diversos outros, tudo com
-          essa tríade maravilhosa.
+          inicialmente um algoritmo que <b>SOMA 2 NÚMEROS</b>, depois, um que{" "}
+          <b>RECEBE UM NÚMERO E GERA A TABUADA DAQUELE NÚMERO</b>, e diversos
+          outros, tudo com essa tríade maravilhosa.
           <br />
           <br />
           <ExternalLink reference="exercices2019">
@@ -315,7 +316,7 @@ export default function useTimeline() {
           dar uma aprimorada no meu{" "}
           <ExternalLink reference="css3">CSS</ExternalLink>, então dei uma
           chance pra esse curso. Foi bom tê-lo feito, lembro que na época, me
-          ensinou a trabalhar com <code>float</code> e <code>position</code> do
+          ensinou a trabalhar com <Code>float</Code> e <Code>position</Code> do
           CSS, antes desse curso não entendia muito bem essas propriedades.
           <br />
           <br />
@@ -358,10 +359,10 @@ export default function useTimeline() {
       description: (
         <>
           Durante a realização desses exercicíos foi quando finalmente{" "}
-          <u>
-            APRENDI{" "}
-            <ExternalLink reference="javascript">JAVASCRIPT</ExternalLink>
-          </u>
+          <b>
+            aprendi{" "}
+            <ExternalLink reference="javascript">JavaScript</ExternalLink>
+          </b>
           .
           <br />
           <br />O link do repositório com todos os exercicios que fiz depois de
@@ -465,7 +466,7 @@ export default function useTimeline() {
       description: (
         <>
           <b>Li as primeiras 700 páginas</b> desse maravilhoso livro numa
-          maratona sem trégua. As útlimas 300 páginas eram apenas um guia de
+          maratona sem tréguas. As útlimas 300 páginas eram apenas um guia de
           referência. O livro mais completo de{" "}
           <ExternalLink reference="javascript">JavaScript</ExternalLink> que já
           lí até hoje, meio antigo, mas ainda muito útil.
@@ -528,7 +529,7 @@ export default function useTimeline() {
           <ExternalLink reference="coursejoaoreact">
             Curso de React.js de João Ribeiro
           </ExternalLink>{" "}
-          e mais tarder lí a{" "}
+          e mais tarde lí a{" "}
           <ExternalLink reference="reactjsdocs">
             documentação do React
           </ExternalLink>{" "}
@@ -547,8 +548,8 @@ export default function useTimeline() {
         <>
           Durante muito tempo utilizei o{" "}
           <ExternalLink reference="bootstrap">Bootstrap</ExternalLink> como
-          biblioteca CSS. Quando conheci o Material-UI fiquei fascinado e decidi
-          estudá-lo.
+          principal biblioteca CSS. Quando conheci o Material-UI fiquei
+          fascinado e decidi estudá-lo.
         </>
       ),
     });
@@ -566,13 +567,15 @@ export default function useTimeline() {
       description: (
         <>
           Já sabia executar consultas simples com{" "}
-          <ExternalLink reference="sql">SQL</ExternalLink> (como um CRUD, por
-          exemplo), mas para coisas mais complexas relacionadas a{" "}
+          <ExternalLink reference="sql">SQL</ExternalLink> (como um{" "}
+          <ExternalLink reference="crud">CRUD</ExternalLink>, por exemplo), mas
+          para coisas mais complexas relacionadas a{" "}
           <ExternalLink reference="modelbd">
             Modelagem de Banco de Dados
           </ExternalLink>{" "}
           e relacionamentos tinha certa dificuldade. Depois de concluir o curso
-          me senti capaz de criar sistemas para além de um CRUD.
+          me senti capaz de criar sistemas para além de um{" "}
+          <ExternalLink reference="crud">CRUD</ExternalLink>.
         </>
       ),
     });
@@ -639,7 +642,7 @@ export default function useTimeline() {
           Finalmente dei uma chance ao Typescript. No começo mal queria saber de
           tipagem, aprendi o básico de{" "}
           <ExternalLink reference="cSharp">C#</ExternalLink> no Ensino Médio e
-          com ele veio também o preconceito por linguagens fortemente tipadas,
+          com isso veio também o preconceito por linguagens fortemente tipadas,
           definitivamente não me agradavam.
           <br />
           <br />
