@@ -34,6 +34,9 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
     if (years.includes(year)) {
       setActiveTab(year);
     }
+    if (!year) {
+      setActiveTab(years[0]);
+    }
   }, [year]);
 
   return (

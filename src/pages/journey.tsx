@@ -1,12 +1,13 @@
 import Head from "next/head";
 import AppScheme from "../components/AppScheme";
-import { Box, Text } from "@mantine/core";
+import { Box, Text, Anchor } from "@mantine/core";
 import MainTitle from "../components/MainTitle";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 import SectionText from "../components/SectionText";
 import MyTimeline from "../components/MyTimeline";
 import useTimeline from "../database/useTimeline";
 import RouterTransition from "../components/RouterTransition";
+import Link from "next/link";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -22,16 +23,16 @@ export default function IndexPage() {
           <MainTitle>Jornada</MainTitle>
           <Box sx={{ zoom: 0.9 }}>
             <Text className={classes.description}>
-              A minha jornada como desenvolvedor &nbsp;
-              <u>
-                <i>começou em 2018</i>
-              </u>
+              A minha jornada como desenvolvedor começou em{" "}
+              <Link href="/journey?year=2018" passHref>
+                <Anchor>2018</Anchor>
+              </Link>
               , de lá pra cá passei por um tanto de experiências que me tornaram
               um desenvolvedor mais tecnicamente capacitado.
               <br />
               <br />
-              Darei o meu máximo para descrever ALGUMAS etapas do meu processo
-              de crescimento ao longo dos anos logo abaixo.
+              Darei o meu máximo para descrever algumas etapas do meu processo
+              de crescimento ao longo dos anos logo abaixo:
             </Text>
           </Box>
         </Box>
