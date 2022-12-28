@@ -92,7 +92,7 @@ export default function useProjects() {
       },
       status: "finished",
       tags: ["HTML5", "CSS3", "JavaScript", "Jquery"],
-      createdAt: new Date(2022, 3, 10),
+      createdAt: new Date(2022, 4, 14),
     },
     {
       name: "Jornal Web - Colégio Chimbanda",
@@ -175,7 +175,7 @@ export default function useProjects() {
       },
       status: "finished",
       tags: ["TypeScript", "React.js", "Material-UI"],
-      createdAt: new Date(2022, 9, 19),
+      createdAt: new Date(2022, 8, 2),
     },
     {
       name: "Calculadora Reativa",
@@ -261,12 +261,12 @@ export default function useProjects() {
       },
       status: "building",
       tags: ["TypeScript", "React.js", "Material-UI", "Firebase"],
-      createdAt: new Date(2022, 9, 2),
+      createdAt: new Date(2022, 9, 8),
     },
     {
       name: "Portuguese - Umbundo (Manager)",
       description:
-        "Gestor do Dicionário e tradutor Umbundo - Português. Sistema utilizado para gerenciar o conteúdo da aplicação Portuguese - Umbundo.",
+        "Gestor do Dicionário e tradutor Umbundo - Português. Sistema utilizado para gerenciá-lo.",
       images: [
         "tradutor-um-pt-manager.png",
         "tradutor-um-pt-manager-2.png",
@@ -278,7 +278,7 @@ export default function useProjects() {
       },
       status: "building",
       tags: ["TypeScript", "React.js", "Next.js", "Mantine UI", "Firebase"],
-      createdAt: new Date(2022, 9, 22),
+      createdAt: new Date(2022, 9, 28),
     },
     {
       name: "Quiz - Quem Sabe?",
@@ -305,7 +305,7 @@ export default function useProjects() {
       },
       status: "finished",
       tags: ["TypeScript", "React.js", "Material-UI", "Keyboard Game"],
-      createdAt: new Date(2022, 10, 2),
+      createdAt: new Date(2022, 9, 3),
     },
     {
       name: "Lyrics",

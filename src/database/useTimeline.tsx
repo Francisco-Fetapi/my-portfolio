@@ -653,7 +653,7 @@ export default function useTimeline() {
     });
 
     timelineEntity.addEvent({
-      date: new Date(2022, 4, 13),
+      date: new Date(2022, 5, 13),
       title: (
         <>
           Fiz o{" "}
@@ -677,6 +677,26 @@ export default function useTimeline() {
           </ExternalLink>
           , do qual tanto ouvia falar e como se não bastasse aprendi a programar
           com <ExternalLink reference="testing">Testes</ExternalLink>.
+        </>
+      ),
+    });
+
+    timelineEntity.addEvent({
+      date: new Date(2022, 6, 10),
+      title: (
+        <>
+          Comecei a estudar{" "}
+          <ExternalLink reference="nextjs">Next.js</ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Tive as minhas primeiras impressões com o Next.js lendo a sua{" "}
+          <ExternalLink reference="nextjsdocs">documentação</ExternalLink>.
+          <br />
+          <br />
+          Aprendi o <b>Next.js</b> com <b>TypeScipt</b> e isso acabou melhorando
+          o meu entendimento do TypeScript ainda mais.
         </>
       ),
     });

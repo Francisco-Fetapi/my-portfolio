@@ -78,5 +78,7 @@ export default function useExternalLink() {
     coursetypescriptotavio: "",
     designpatterns: "",
     testing: "",
+    nextjs: "",
+    nextjsdocs: "",
   };
 }
