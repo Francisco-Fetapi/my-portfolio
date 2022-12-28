@@ -81,5 +81,11 @@ export default function useExternalLink() {
     nextjs: "",
     nextjsdocs: "",
     tmdb: "",
+    redux: "",
+    reduxtoolkit: "",
+    tictactoe: "",
+    souangolanoeconhecoangolaapp: "",
+    quemquerserricoapp: "",
+    datilography: "",
   };
 }

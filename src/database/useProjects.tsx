@@ -172,8 +172,16 @@ export default function useProjects() {
   let someProjects: IProject[] = [
     {
       name: "Typing Master 2",
-      description:
-        "Um projeto criado para exercitar a habilidade de usar o teclado. Uma versão melhor do antigo Typing Master.",
+      description: (
+        <>
+          Um projeto criado para exercitar a habilidade de usar o teclado. Uma
+          versão melhor do{" "}
+          <ExternalLink href={getRepositoryByName("typing-master")}>
+            primeiro Typing Master
+          </ExternalLink>
+          .
+        </>
+      ),
       images: ["typing-master-1.png", "typing-master-2.png"],
       links: {
         github: getRepositoryByName("typing-master-2"),
@@ -185,8 +193,14 @@ export default function useProjects() {
     },
     {
       name: "Sistema de SignUp/Login",
-      description:
-        "Um projeto de estudo criado para exercitar o sistema de autenticação via JWT.",
+      description: (
+        <>
+          Um projeto de estudo criado para exercitar o sistema de autenticação
+          via JWT. Construido com{" "}
+          <ExternalLink reference="reactjs">React</ExternalLink> +{" "}
+          <ExternalLink reference="laravel">Laravel</ExternalLink>.
+        </>
+      ),
       images: ["sistema-login-jwt-1.png", "sistema-login-jwt-2.png"],
       links: {
         github: getRepositoryByName("sistema-login-front-end"),
@@ -204,8 +218,15 @@ export default function useProjects() {
     },
     {
       name: "Financial Manager",
-      description:
-        "Projeto de estudo desenvolvido para consolidar os conhecimentos relacionados ao Redux. O sistema serve para registar as receitas e despesa finceiras.",
+      description: (
+        <>
+          Projeto de estudo desenvolvido para consolidar os conhecimentos
+          relacionados ao <ExternalLink reference="redux">Redux</ExternalLink>{" "}
+          (com{" "}
+          <ExternalLink reference="reduxtoolkit">Redux Toolkit</ExternalLink>).
+          O sistema serve para registar as receitas e despesa finceiras.
+        </>
+      ),
       images: ["financial-manager-2.png", "financial-manager-1.png"],
       links: {
         github: getRepositoryByName("financial-manager"),
@@ -217,8 +238,13 @@ export default function useProjects() {
     },
     {
       name: "Calculadora Reativa",
-      description:
-        "O meu primeiro projeto de estudo desenvolvido com React. Uma calculadora que realiza as principais operações da matemática.",
+      description: (
+        <>
+          O meu primeiro projeto de estudo desenvolvido com{" "}
+          <ExternalLink reference="reactjs">React</ExternalLink>. Uma
+          calculadora que realiza as principais operações da matemática.
+        </>
+      ),
       images: ["calculadora-react-1.png", "calculadora-react-2.png"],
       links: {
         github: getRepositoryByName("calculadora-react"),
@@ -230,8 +256,14 @@ export default function useProjects() {
     },
     {
       name: "Calculadora Simples",
-      description:
-        "A calculadora realiza operações simples da matemática. Desenvolvi esta calculadora para treinar manipulação do DOM com Jquery e treinar Bootstrap.",
+      description: (
+        <>
+          A calculadora realiza operações simples da matemática. Desenvolvi esta
+          calculadora para treinar manipulação do DOM com{" "}
+          <ExternalLink reference="jquery">Jquery</ExternalLink> e treinar{" "}
+          <ExternalLink reference="bootstrap">Bootstrap</ExternalLink>.
+        </>
+      ),
       images: [
         // "calculadora-html-css-js-1.png",
         "calculadora-html-css-js-2.png",
@@ -248,8 +280,14 @@ export default function useProjects() {
     },
     {
       name: "Gestor de Tarefas",
-      description:
-        "Basicamente um CRUD de tarefas, com ele é possivel: registar, ver, eliminar e editar tarefas. Criado para treinar React + Material UI.",
+      description: (
+        <>
+          Basicamente um CRUD de tarefas, com ele é possivel: registar, ver,
+          eliminar e editar tarefas. Criado para treinar{" "}
+          <ExternalLink reference="reactjs">React</ExternalLink> +{" "}
+          <ExternalLink reference="mui">Material UI</ExternalLink>.
+        </>
+      ),
       images: [
         "gestor-de-tarefas-1.png",
         "gestor-de-tarefas-2.png",
@@ -265,8 +303,15 @@ export default function useProjects() {
     },
     {
       name: "Jogo da Velha (React)",
-      description:
-        "Uma versão do famoso Tic-Tac-Toe desenvolvido com React para fins de estudo.",
+      description: (
+        <>
+          Uma versão do famoso{" "}
+          <ExternalLink reference="tictactoe">Tic-Tac-Toe</ExternalLink>{" "}
+          desenvolvido com{" "}
+          <ExternalLink reference="reactjs">React</ExternalLink> para fins de
+          estudo.
+        </>
+      ),
       images: ["jogo-da-velha-react-2.png", "jogo-da-velha-react-1.png"],
       links: {
         github: getRepositoryByName("jogo-da-velha"),
@@ -278,8 +323,14 @@ export default function useProjects() {
     },
     {
       name: "Android App Simulation",
-      description:
-        "Interface estática de uma aplicação android desenvolvida com Material-UI para fins de estudo.",
+      description: (
+        <>
+          Interface estática de uma aplicação android desenvolvida com{" "}
+          <ExternalLink reference="reactjs">React</ExternalLink> +{" "}
+          <ExternalLink reference="mui">Material-UI</ExternalLink> para fins de
+          estudo.
+        </>
+      ),
       images: ["layout-material-ui-1.png", "layout-material-ui-2.png"],
       links: {
         github: getRepositoryByName("layout1-material-ui"),
@@ -291,7 +342,7 @@ export default function useProjects() {
     },
     {
       name: "Portuguese - Umbundo",
-      description: "Dicionário e tradutor Umbundo - Português.",
+      description: <>Dicionário e tradutor Umbundo - Português.</>,
       images: ["pt-um-app-1.png", "pt-um-app-2.png", "pt-um-app-3.png"],
       links: {
         github: getRepositoryByName("portuguese-umbundo-dictionary"),
@@ -303,8 +354,18 @@ export default function useProjects() {
     },
     {
       name: "Portuguese - Umbundo (Manager)",
-      description:
-        "Gestor do Dicionário e tradutor Umbundo - Português. Sistema utilizado para gerenciá-lo.",
+      description: (
+        <>
+          Gestor do{" "}
+          <ExternalLink
+            href={getRepositoryByName("portuguese-umbundo-dictionary")}
+          >
+            Dicionário e tradutor Umbundo - Português
+          </ExternalLink>
+          . Sistema utilizado para adicionar palavras e expressões ao
+          dicionário.
+        </>
+      ),
       images: [
         "tradutor-um-pt-manager.png",
         "tradutor-um-pt-manager-2.png",
@@ -320,8 +381,20 @@ export default function useProjects() {
     },
     {
       name: "Quiz - Quem Sabe?",
-      description:
-        "Quiz desenvolvido com PHP. Sou Angolano e Conheço Angola e Quem Quer Ser Rico serviram de inspiração. O projeto foi criado para fins de estudo.",
+      description: (
+        <>
+          Quiz desenvolvido com <ExternalLink reference="php">PHP</ExternalLink>
+          .{" "}
+          <ExternalLink reference="souangolanoeconhecoangolaapp">
+            Sou Angolano e Conheço Angola
+          </ExternalLink>{" "}
+          e{" "}
+          <ExternalLink reference="quemquerserricoapp">
+            Quem Quer Ser Rico
+          </ExternalLink>{" "}
+          serviram de inspiração. O projeto foi criado para fins de estudo.
+        </>
+      ),
       images: ["quiz-1.png", "quiz-2.png", "quiz-3.png", "quiz-4.png"],
       links: {
         github: getRepositoryByName(
@@ -334,8 +407,13 @@ export default function useProjects() {
     },
     {
       name: "Typing Fast",
-      description:
-        "Jogo desenvolvido com React para exercitar a arte de digitar no teclado.",
+      description: (
+        <>
+          Jogo desenvolvido com{" "}
+          <ExternalLink reference="reactjs">React</ExternalLink> para exercitar
+          a arte de digitar no teclado.
+        </>
+      ),
       images: ["typing-fast.png"],
       links: {
         github: getRepositoryByName("typing-fast"),
@@ -363,8 +441,15 @@ export default function useProjects() {
   const secondaryProjects: IProject[] = [
     {
       name: "Jogo da Velha (Jquery)",
-      description:
-        "Uma versão do famoso Tic-Tac-Toe desenvolvido com Jquery para fins de estudo.",
+      description: (
+        <>
+          Uma versão do famoso{" "}
+          <ExternalLink reference="tictactoe">Tic-Tac-Toe</ExternalLink>{" "}
+          desenvolvido com{" "}
+          <ExternalLink reference="jquery">Jquery</ExternalLink> para fins de
+          estudo.
+        </>
+      ),
       images: ["jogo-da-velha-html-1.png"],
       links: {
         github: getRepositoryByName("jogo-da-velha-html-css-js"),
@@ -377,8 +462,13 @@ export default function useProjects() {
     },
     {
       name: "Typing Master",
-      description:
-        "Um mini-jogo criado com Jquery para exercitar datilografia. Foi desenvolvido para fins de estudo.",
+      description: (
+        <>
+          Um mini-jogo criado com{" "}
+          <ExternalLink reference="jquery">Jquery</ExternalLink> para exercitar
+          datilografia. Foi desenvolvido para fins de estudo.
+        </>
+      ),
       images: [
         "typing-master2-1.png",
         "typing-master2-2.png",
@@ -394,8 +484,16 @@ export default function useProjects() {
     },
     {
       name: "Mestre no Teclado",
-      description:
-        "Com a mesma proposta do Typing Master, este também é um projeto criado para exercitar datilografia.",
+      description: (
+        <>
+          Com a mesma proposta do{" "}
+          <ExternalLink href={getRepositoryByName("typing-master")}>
+            Typing Master
+          </ExternalLink>
+          , este também é um projeto criado para exercitar{" "}
+          <ExternalLink reference="datilography">datilografia</ExternalLink>.
+        </>
+      ),
       images: ["mestre-no-teclado-1.png", "mestre-no-teclado-2.png"],
       links: {
         github: getRepositoryByName("Mestre-no-teclado"),
