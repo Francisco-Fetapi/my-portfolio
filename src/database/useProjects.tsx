@@ -77,8 +77,13 @@ export default function useProjects() {
     },
     {
       name: "Portal Obadias Malaquias",
-      description:
-        "Portal de noticias criado para o colégio Obadias Malaquias.",
+      description: (
+        <>
+          Portal de noticias criado para o colégio <b>Obadias Malaquias</b>. O
+          sistema concentra todas as noticias do referido colégio de modo a
+          facilitar a propagação de noticias.
+        </>
+      ),
       images: ["portal-obadias-malaquias.png"],
       links: {
         github: getRepositoryByName("portal-obadias-malaquias"),
@@ -90,8 +95,14 @@ export default function useProjects() {
     },
     {
       name: "Salão de Beleza - July Otchacati",
-      description:
-        "Uma landing page contendo informações sobre o salão de beleza July Otchacati de maneira a facilitar o contato com possiveis clientes. A partir do site também o possivel saber a cultura, objetivos e valores do salão.",
+      description: (
+        <>
+          Uma landing page contendo informações sobre o{" "}
+          <b>Salão de Beleza - July Otchacati</b> de maneira a facilitar o
+          contato com possiveis clientes. A partir do site também é possivel
+          saber a cultura, objetivos e valores do salão.
+        </>
+      ),
       images: ["salao-de-beleza-2.png", "salao-de-beleza-1.png"],
       links: {
         github: getRepositoryByName("salao-de-beleza-da-july"),
@@ -103,8 +114,14 @@ export default function useProjects() {
     },
     {
       name: "Jornal Web - Colégio Chimbanda",
-      description:
-        "Jornal interno para o colégio Chimbanda. O sistema foi criado para um cólegio perto da minha localidade para servir como principal ferramente na publicação de noticias internas da instituição. Infelizmente o site foi descontinuado e o projeto se tornou apenas de estudo.",
+      description: (
+        <>
+          Jornal interno desenvolvido para o <b>Colégio Chimbanda</b>. O sistema
+          foi criado para um cólegio perto da minha localidade para servir como
+          principal ferramente na publicação de noticias internas da
+          instituição. Infelizmente o site foi descontinuado.
+        </>
+      ),
       images: ["jornal-web-2.png", "jornal-web.png"],
       links: {
         github: getRepositoryByName("jornal-web"),
@@ -115,8 +132,15 @@ export default function useProjects() {
     },
     {
       name: "Forum",
-      description:
-        "Um projeto de estudo para simular um forum de discussões com um sistema de publicações, comentários e reações. Foi o meu primeiro Projeto com React + PHP no back-end.",
+      description: (
+        <>
+          Um projeto de estudo criado para simular um forum de discussões com um
+          sistema de publicações, comentários e reações. Foi o meu primeiro
+          projeto com <ExternalLink reference="reactjs">React</ExternalLink> +{" "}
+          <ExternalLink reference="php">PHP</ExternalLink> no{" "}
+          <ExternalLink reference="frontendAndbackend">back-end</ExternalLink>.
+        </>
+      ),
       images: ["forum-3.png", "forum-2.png", "forum-1.png"],
       links: {
         github: getRepositoryByName("forum-front-end"),
@@ -127,7 +151,14 @@ export default function useProjects() {
     },
     {
       name: "Galeria",
-      description: "Um sistema para upload de imagens públicas.",
+      description: (
+        <>
+          Um pequeno sistema criado para fazer o upload de imagens públicas.
+          Todas as imagens serão visualizadas publicamente. Criado para
+          exercitar <ExternalLink reference="reactjs">React</ExternalLink> +{" "}
+          <ExternalLink reference="php">PHP</ExternalLink>.
+        </>
+      ),
       images: ["galeria-react-1.png"],
       links: {
         github: getRepositoryByName("jornal-web"),
