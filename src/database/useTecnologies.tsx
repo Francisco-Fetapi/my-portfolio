@@ -48,7 +48,7 @@ export default function useTecnologies() {
       image: "/css.svg",
       startedAt: new Date(),
       description:
-        "Linguagem de estilos que usei desde o começo da minha jornada. Hoje em dia utilizo várias tecnologias em cima dela, mas ainda assim o CSS é ainda uma das tecnologias mais importantes na minha jornada.",
+        "Linguagem de estilos que usei desde o começo da minha jornada. Hoje em dia utilizo várias tecnologias em cima dele, mas ainda assim o CSS é uma das tecnologias que mais utilizo no meu dia à dia.",
     },
     {
       name: "JavaScript",
@@ -85,21 +85,21 @@ export default function useTecnologies() {
       image: "/php.svg",
       startedAt: new Date(),
       description:
-        "Aprendi PHP nos meados de 2019 quando senti a necessidade de construir o back-end de alguns projetos, de lá pra cá muito aprendi sobre a linguagem e seu ecossistema.",
+        "Aprendi PHP nos meados de 2019, de lá pra cá muito aprendi sobre a linguagem e seu ecossistema.",
     },
     {
       name: "Laravel",
       image: "/laravel.svg",
       startedAt: new Date(),
       description:
-        "O Laravel me livrou de um monte de coisa chata que eu sempre tinha que tratar em qualquer projeto com PHP, um deles era montar a extrutura para trabalhar com MVC, depois de aprender o Laravel aumentei em 10x o tempo de desenvolvimento.",
+        "O Laravel aumentou em 10x o meu tempo de desenvolvimento com PHP.",
     },
     {
       name: "MySQL",
       image: "/mysql.svg",
       startedAt: new Date(),
       description:
-        "O MySQL e o PHP andam quase sempre juntos, depois de ter aprendido o PHP, me vi forçado a aprender o MySQL.",
+        "Aprendi o MySQL em conjunto com PHP. É com toda certeza o Banco de dados que mais utilizo.",
     },
     {
       name: "Node.js",
