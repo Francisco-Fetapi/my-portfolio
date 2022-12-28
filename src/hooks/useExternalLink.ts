@@ -74,5 +74,9 @@ export default function useExternalLink() {
     laravel: "https://pt.wikipedia.org/wiki/Laravel",
     socialmoviesspace: getRepositoryByName("projeto-tcc"),
     tccpdf: "",
+    typescriptdocs: "",
+    coursetypescriptotavio: "",
+    designpatterns: "",
+    testing: "",
   };
 }

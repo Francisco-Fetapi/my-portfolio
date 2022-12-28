@@ -606,11 +606,77 @@ export default function useTimeline() {
         <>
           Terminei de redigir{" "}
           <ExternalLink reference="tccpdf">o documento</ExternalLink> que
-          descreve os processos envolvidos na elaboração do{" "}
+          descreve os processos envolvidos durante a elaboração do{" "}
           <ExternalLink reference="socialmoviesspace">
             Social Movies Space
           </ExternalLink>
           .
+        </>
+      ),
+    });
+
+    timelineEntity.addEvent({
+      date: new Date(2022, 3, 2),
+      title: <>Concluí o Ensino Médio</>,
+      description: (
+        <>
+          Concluí o Ensino Médio no curso de <b>Informática de Gestão</b> no{" "}
+          <b>Instituto Politécnico de Administração e Gestão da Catumbela</b>.
+        </>
+      ),
+    });
+
+    timelineEntity.addEvent({
+      date: new Date(2022, 4, 13),
+      title: (
+        <>
+          Comecei a estudar{" "}
+          <ExternalLink reference="typescript">TypeScript</ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Finalmente dei uma chance ao Typescript. No começo mal queria saber de
+          tipagem, aprendi o básico de{" "}
+          <ExternalLink reference="cSharp">C#</ExternalLink> no Ensino Médio e
+          com ele veio também o preconceito por linguagens fortemente tipadas,
+          definitivamente não me agradavam.
+          <br />
+          <br />
+          Aprendi o básico lendo a{" "}
+          <ExternalLink reference="typescriptdocs">
+            documentação do TypeScript
+          </ExternalLink>
+          .
+        </>
+      ),
+    });
+
+    timelineEntity.addEvent({
+      date: new Date(2022, 4, 13),
+      title: (
+        <>
+          Fiz o{" "}
+          <ExternalLink reference="coursetypescriptotavio">
+            Curso de TypeScript do Otávio Miranda
+          </ExternalLink>
+        </>
+      ),
+      description: (
+        <>
+          Comecei esse curso com o objetivo de aprender{" "}
+          <ExternalLink reference="typescript">TypeScript</ExternalLink>, mas
+          aprendi muito mais do que esperava.
+          <br />
+          <br />
+          Nesse curso consolidei melhor ainda o que sabia sobre{" "}
+          <ExternalLink reference="poo">Orientação a Objetos</ExternalLink>,
+          aprendi sobre{" "}
+          <ExternalLink reference="designpatterns">
+            Padrões de Projetos
+          </ExternalLink>
+          , do qual tanto ouvia falar e como se não bastasse aprendi a programar
+          com <ExternalLink reference="testing">Testes</ExternalLink>.
         </>
       ),
     });
