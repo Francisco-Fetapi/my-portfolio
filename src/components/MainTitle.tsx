@@ -24,6 +24,9 @@ const useStyles = createStyles((theme) => ({
     fontSize: 30,
     fontWeight: 700,
     textTransform: "uppercase",
+    [theme.fn.smallerThan("xs")]: {
+      fontSize: 22,
+    },
   },
 }));
 
