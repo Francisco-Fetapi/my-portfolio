@@ -2,7 +2,7 @@ import {
   Card,
   Anchor,
   Box,
-  Image,
+  // Image,
   Text,
   ActionIcon,
   Group,
@@ -19,6 +19,7 @@ import SlideProjectImage from "./SlideProjectImage";
 import { Carousel } from "@mantine/carousel";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export const PROJECT_CARD_MAX_WIDTH = 380;
 export const PROJECT_CARD_HEIGHT = 480;
@@ -111,11 +112,12 @@ export function ProjectCard({
             <Carousel.Slide key={image}>
               <Image
                 src={`/projects_img/${image}`}
-                height={PROJECT_IMAGE_CARD_IMAGE_HEIGHT * 1.5}
-                width="100%"
+                height={PROJECT_IMAGE_CARD_IMAGE_HEIGHT * 1.7}
+                width={PROJECT_CARD_MAX_WIDTH}
                 alt={name}
-                sx={{
-                  objectFit: "cover",
+                style={{
+                  objectFit: "contain",
+                  // maxWidth: "100%",
                 }}
               />
             </Carousel.Slide>
