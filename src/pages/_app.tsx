@@ -6,15 +6,20 @@ import { ColorSchemeProvider } from "@mantine/core";
 import { parseCookies, setCookie } from "nookies";
 import { AppProps } from "next/app";
 import RouterTransition from "../components/RouterTransition";
+import nookies from "nookies";
 
 type IColor = "light" | "dark";
+
+// "next-translate": "^1.6.0",
 interface WithColorScheme {
   preferredColorScheme: IColor;
 }
 const THEME_COOKIE = "theme_mantine_portfolio";
 export default function App(props: AppProps & WithColorScheme) {
   const { Component, pageProps } = props;
-  const [colorScheme, setColorScheme] = useState<IColor>("light");
+  const [colorScheme, setColorScheme] = useState<IColor>(
+    props.preferredColorScheme || "light"
+  );
 
   function toggleColorScheme(value: "light" | "dark") {
     const nextColorScheme =
@@ -61,10 +66,10 @@ export default function App(props: AppProps & WithColorScheme) {
   );
 }
 
-// App.getInitialProps = ({ ctx }: { ctx: any }) => {
-//   const cookies = nookies.get(ctx);
-//   console.log("server cookies", cookies);
-//   return {
-//     preferredColorScheme: cookies[THEME_COOKIE] || "light",
-//   };
-// };
+App.getInitialProps = ({ ctx }: { ctx: any }) => {
+  const cookies = nookies.get(ctx);
+
+  return {
+    preferredColorScheme: cookies[THEME_COOKIE] || "light",
+  };
+};
