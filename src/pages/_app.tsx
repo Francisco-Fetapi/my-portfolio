@@ -53,7 +53,7 @@ export default function App(props: AppProps & WithColorScheme) {
           toggleColorScheme={toggleColorScheme}
         >
           <AppProvider Page={<Component {...pageProps} />} />
-          {/* <RouterTransition /> */}
+          <RouterTransition />
         </ColorSchemeProvider>
       </AppStore>
     </>
