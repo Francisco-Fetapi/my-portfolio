@@ -6,8 +6,6 @@ import { ColorSchemeProvider } from "@mantine/core";
 import { parseCookies, setCookie } from "nookies";
 import { AppProps } from "next/app";
 import RouterTransition from "../components/RouterTransition";
-import { NextRouter, useRouter } from "next/router";
-import { persistLocaleCookie } from "../helpers/persistLocaleCookie";
 
 type IColor = "light" | "dark";
 interface WithColorScheme {
@@ -39,6 +37,7 @@ export default function App(props: AppProps & WithColorScheme) {
       <Head>
         <title>Francisco Fetapi - Portfolio</title>
         <link rel="shortcut icon" href="/favicon.svg" />
+
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
