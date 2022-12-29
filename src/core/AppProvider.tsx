@@ -16,7 +16,7 @@ export default function AppProvider({ Page }: MantineProviderInterface) {
       withNormalizeCSS
       theme={{
         /** Put your mantine theme override here */
-        fontFamily: "Roboto, sans-serif",
+        fontFamily: "Raleway, Roboto, sans-serif",
         colorScheme,
         black: "#333",
         // white: "#F4F4F4",
