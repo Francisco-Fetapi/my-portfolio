@@ -169,11 +169,15 @@ function TimeLine({
       </Box>
       <Timeline bulletSize={20} lineWidth={4}>
         {timelines[year].map((timeline, key) => {
+          let animate = null;
+          if (key % 2 === 0) animate = "fade-left";
+          if (key % 2 !== 0) animate = "fade-right";
+          if (key <= 1) animate = undefined;
           return (
             <Timeline.Item
               title={<Title order={4}>{timeline.title}</Title>}
               key={key}
-              data-aos={key > 1 ? "fade-right" : undefined}
+              data-aos={animate}
             >
               <Text align="justify" color="dimmed" size="sm">
                 {timeline.description}
