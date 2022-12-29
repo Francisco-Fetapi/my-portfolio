@@ -15,7 +15,6 @@ type ITags =
   | "Forum"
   | "Gallery"
   | "Keyboard Game"
-  | "JWT"
   | "Tic-Tac-Toe"
   | "LocalStorage";
 export interface IProject {
@@ -52,14 +51,7 @@ export default function useProjects() {
         preview: "https://socialmoviesspace.vercel.app/",
       },
       status: "building",
-      tags: [
-        "React.js",
-        "JavaScript",
-        "Material-UI",
-        "Laravel",
-        "MySQL",
-        "JWT",
-      ],
+      tags: ["React.js", "JavaScript", "Material-UI", "Laravel", "MySQL"],
       createdAt: new Date(2021, 11, 9),
     },
     {
@@ -90,7 +82,7 @@ export default function useProjects() {
         preview: "http://portal-obadias-malaquias.vercel.app",
       },
       status: "finished",
-      tags: ["Next.js", "TypeScript", "Mantine UI", "Strapi", "JWT"],
+      tags: ["Next.js", "TypeScript", "Mantine UI", "Strapi"],
       createdAt: new Date(2022, 10, 9),
     },
     {
@@ -206,14 +198,7 @@ export default function useProjects() {
         github: getRepositoryByName("sistema-login-front-end"),
       },
       status: "finished",
-      tags: [
-        "JavaScript",
-        "React.js",
-        "Material-UI",
-        "Laravel",
-        "MySQL",
-        "JWT",
-      ],
+      tags: ["JavaScript", "React.js", "Material-UI", "Laravel", "MySQL"],
       createdAt: new Date(2021, 6, 12),
     },
     {

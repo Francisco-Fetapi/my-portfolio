@@ -10,7 +10,6 @@ import nookies from "nookies";
 
 type IColor = "light" | "dark";
 
-// "next-translate": "^1.6.0",
 interface WithColorScheme {
   preferredColorScheme: IColor;
 }
