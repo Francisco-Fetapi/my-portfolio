@@ -10,7 +10,7 @@ import {
   Transition,
   Anchor,
 } from "@mantine/core";
-import { useWindowScroll } from "@mantine/hooks";
+import { useWindowScroll, useDidUpdate } from "@mantine/hooks";
 import { IconArrowLeft, IconCalendarTime, IconArrowRight } from "@tabler/icons";
 import { useRouter } from "next/router";
 import { CSSProperties, useEffect, useState, useRef } from "react";
@@ -51,7 +51,7 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
     }
   }, [year]);
 
-  useEffect(() => {
+  useDidUpdate(() => {
     backToTop();
   }, [activeTab]);
 

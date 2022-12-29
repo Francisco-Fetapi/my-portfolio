@@ -6,6 +6,8 @@ import { ColorSchemeProvider } from "@mantine/core";
 import { parseCookies, setCookie } from "nookies";
 import { AppProps } from "next/app";
 import RouterTransition from "../components/RouterTransition";
+import { NextRouter, useRouter } from "next/router";
+import { persistLocaleCookie } from "../helpers/persistLocaleCookie";
 
 type IColor = "light" | "dark";
 interface WithColorScheme {

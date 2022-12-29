@@ -4,6 +4,9 @@ import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import setLanguage from "next-translate/setLanguage";
+import { persistLocaleCookie } from "../helpers/persistLocaleCookie";
+import { ILocales } from "../helpers/dateDistance";
 
 const useStyles = createStyles((theme) => ({
   button: {
@@ -32,8 +35,15 @@ function ImgLanguage({ locale }: { locale?: string }) {
 
 export function LanguageToggle() {
   const { classes } = useStyles();
-  const { asPath, locales, locale: currentLocale, defaultLocale } = useRouter();
+
+  const router = useRouter();
+  const { locales, locale: currentLocale, defaultLocale } = router;
   const { t } = useTranslation("common");
+
+  async function changeLanguage(locale: ILocales) {
+    await setLanguage(locale);
+    persistLocaleCookie(locale);
+  }
 
   return (
     <Group noWrap spacing={0}>
@@ -49,14 +59,14 @@ export function LanguageToggle() {
         </Menu.Target>
         <Menu.Dropdown>
           {locales?.map((locale) => (
-            <Link key={locale} locale={locale} href={asPath}>
-              <Menu.Item
-                icon={<ImgLanguage locale={locale} />}
-                disabled={locale === currentLocale}
-              >
-                {t(locale)}
-              </Menu.Item>
-            </Link>
+            <Menu.Item
+              icon={<ImgLanguage locale={locale} />}
+              disabled={locale === currentLocale}
+              onClick={() => changeLanguage(locale as ILocales)}
+              key={locale}
+            >
+              {t(locale)}
+            </Menu.Item>
           ))}
         </Menu.Dropdown>
       </Menu>
