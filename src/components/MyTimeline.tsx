@@ -1,17 +1,19 @@
 import {
   Group,
   Timeline,
+  Center,
   Title,
   Box,
   Text,
   ActionIcon,
   Tabs,
   Transition,
+  Anchor,
 } from "@mantine/core";
-import { usePagination } from "@mantine/hooks";
+import { useWindowScroll } from "@mantine/hooks";
 import { IconArrowLeft, IconCalendarTime, IconArrowRight } from "@tabler/icons";
 import { useRouter } from "next/router";
-import { CSSProperties, useEffect, useState } from "react";
+import { CSSProperties, useEffect, useState, useRef } from "react";
 
 import { TimeLines } from "../database/useTimeline";
 import dateDistance from "../helpers/dateDistance";
@@ -21,14 +23,24 @@ import useCurrentLocale from "../hooks/useCurrentLocale";
 interface MyTimelineProps {
   timelines: TimeLines;
 }
+const stylesDisabled: CSSProperties = {
+  pointerEvents: "none",
+  cursor: "default",
+  opacity: "0.5",
+  userSelect: "none",
+};
 
 export default function MyTimeline({ timelines }: MyTimelineProps) {
   const firstYear = Object.keys(timelines)[0];
   const years = Object.keys(timelines).reverse();
   const router = useRouter();
   const year = router.query.year as string;
-
+  const [scroll, scrollTo] = useWindowScroll();
+  const refControls = useRef<HTMLDivElement | null>(null);
   const [activeTab, setActiveTab] = useState<string | null>(year || years[0]);
+
+  const isFirst = activeTab == firstYear;
+  const isLast = activeTab == years[0];
 
   useEffect(() => {
     if (years.includes(year)) {
@@ -38,6 +50,10 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
       setActiveTab(years[0]);
     }
   }, [year]);
+
+  useEffect(() => {
+    backToTop();
+  }, [activeTab]);
 
   function nextYear() {
     if (activeTab) {
@@ -58,34 +74,44 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
     }
   }
 
+  function backToTop() {
+    if (refControls.current) {
+      const distanceFromTop = refControls.current.offsetTop;
+      scrollTo({ y: distanceFromTop - 90 });
+    }
+  }
+
   return (
     <Box mt={50} sx={{ maxWidth: 500 }}>
       <Tabs value={activeTab!} color="blue" onTabChange={setActiveTab}>
-        {/* <Center> */}
-        {/* <Tabs.List position="center">
-          {years.map((year) => (
-            <Tabs.Tab
-              value={year}
-              key={year}
-              sx={{
-                width: `${100 / years.length}%`,
-              }}
-            >
-              {year}
-            </Tabs.Tab>
-          ))}
-        </Tabs.List> */}
-
         <Tabs.Panel value={activeTab!} pt="xs">
           <TimeLine
             prev={prevYear}
             next={nextYear}
             timelines={timelines}
             year={activeTab!}
-            isFirst={activeTab == firstYear}
-            isLast={activeTab == years[0]}
+            isFirst={isFirst}
+            isLast={isLast}
+            refControls={refControls}
           />
         </Tabs.Panel>
+
+        <Center>
+          <Group mt={10} spacing={50}>
+            <Anchor
+              onClick={prevYear}
+              style={isFirst ? stylesDisabled : undefined}
+            >
+              &larr; Anterior
+            </Anchor>
+            <Anchor
+              onClick={nextYear}
+              style={isLast ? stylesDisabled : undefined}
+            >
+              Próximo &rarr;
+            </Anchor>
+          </Group>
+        </Center>
       </Tabs>
     </Box>
   );
@@ -98,6 +124,7 @@ interface TimeLineProps {
   next: () => void;
   isFirst: boolean;
   isLast: boolean;
+  refControls: React.MutableRefObject<HTMLDivElement | null>;
 }
 
 function TimeLine({
@@ -107,14 +134,9 @@ function TimeLine({
   next,
   isFirst,
   isLast,
+  refControls,
 }: TimeLineProps) {
   const { locale } = useCurrentLocale();
-
-  const stylesDisabled: CSSProperties = {
-    pointerEvents: "none",
-    cursor: "default",
-    opacity: "0.5",
-  };
 
   return (
     <Box my={40} key={year}>
@@ -125,6 +147,7 @@ function TimeLine({
           gridTemplateColumns: "auto 1fr auto",
           alignItems: "center",
         }}
+        ref={refControls}
       >
         <ActionIcon
           size="lg"

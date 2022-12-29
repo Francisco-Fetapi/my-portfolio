@@ -1,6 +1,6 @@
 import { IconArrowUp } from "@tabler/icons";
 import { useWindowScroll } from "@mantine/hooks";
-import { ActionIcon, Affix, Button, Text, Transition } from "@mantine/core";
+import { ActionIcon, Affix, Transition } from "@mantine/core";
 
 export default function ScrollToTop() {
   const [scroll, scrollTo] = useWindowScroll();
