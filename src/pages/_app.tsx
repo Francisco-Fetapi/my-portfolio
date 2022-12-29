@@ -7,6 +7,8 @@ import { parseCookies, setCookie } from "nookies";
 import { AppProps } from "next/app";
 import RouterTransition from "../components/RouterTransition";
 import nookies from "nookies";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 type IColor = "light" | "dark";
 
@@ -34,6 +36,10 @@ export default function App(props: AppProps & WithColorScheme) {
     const cookies = parseCookies();
     const nextColor = (cookies[THEME_COOKIE] || colorScheme) as IColor;
     toggleColorScheme(nextColor);
+  }, []);
+
+  useEffect(() => {
+    AOS.init();
   }, []);
 
   return (

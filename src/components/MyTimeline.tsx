@@ -168,33 +168,36 @@ function TimeLine({
         </ActionIcon>
       </Box>
       <Timeline bulletSize={20} lineWidth={4}>
-        {timelines[year].map((timeline, key) => (
-          <Timeline.Item
-            title={<Title order={4}>{timeline.title}</Title>}
-            key={key}
-          >
-            <Text align="justify" color="dimmed" size="sm">
-              {timeline.description}
-            </Text>
-            {timeline.date && (
-              <Group spacing={2} align="center" mt={10}>
-                <IconCalendarTime size={15} />
-                <Group spacing={2} align="center" mt={4}>
-                  <Text
-                    size="xs"
-                    sx={{ textTransform: "capitalize" }}
-                    weight="bold"
-                  >
-                    {getMonth(timeline.date, locale)}&nbsp;-&nbsp;
-                  </Text>
-                  <Text size="xs" color="dimmed">
-                    {dateDistance(timeline.date, locale)}
-                  </Text>
+        {timelines[year].map((timeline, key) => {
+          return (
+            <Timeline.Item
+              title={<Title order={4}>{timeline.title}</Title>}
+              key={key}
+              data-aos={key > 1 ? "fade-right" : undefined}
+            >
+              <Text align="justify" color="dimmed" size="sm">
+                {timeline.description}
+              </Text>
+              {timeline.date && (
+                <Group spacing={2} align="center" mt={10}>
+                  <IconCalendarTime size={15} />
+                  <Group spacing={2} align="center" mt={4}>
+                    <Text
+                      size="xs"
+                      sx={{ textTransform: "capitalize" }}
+                      weight="bold"
+                    >
+                      {getMonth(timeline.date, locale)}&nbsp;-&nbsp;
+                    </Text>
+                    <Text size="xs" color="dimmed">
+                      {dateDistance(timeline.date, locale)}
+                    </Text>
+                  </Group>
                 </Group>
-              </Group>
-            )}
-          </Timeline.Item>
-        ))}
+              )}
+            </Timeline.Item>
+          );
+        })}
       </Timeline>
     </Box>
   );
