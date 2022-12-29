@@ -25,8 +25,8 @@ export const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontSize: 48,
+    // fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontSize: 40,
     fontWeight: 900,
     lineHeight: 1.1,
     margin: 0,
@@ -34,7 +34,7 @@ export const useStyles = createStyles((theme) => ({
     color: theme.colorScheme === "dark" ? theme.white : theme.black,
 
     [BREAKPOINT]: {
-      fontSize: 42,
+      fontSize: 35,
       lineHeight: 1.2,
     },
   },
