@@ -42,6 +42,8 @@ export default function App(props: AppProps & WithColorScheme) {
     AOS.init();
   }, []);
 
+  AOS.refresh();
+
   return (
     <>
       <Head>

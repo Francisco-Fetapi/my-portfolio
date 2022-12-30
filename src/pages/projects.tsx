@@ -13,6 +13,7 @@ import useMe from "../database/useMe";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
 import Link from "next/link";
+import AOS from "aos";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -59,23 +60,17 @@ export default function IndexPage() {
             <SectionText>
               <SecondTitle>MAIS PROJETOS</SecondTitle>
               <TecnologiesContainer>
-                {someProjects.map((project, key) => {
-                  let animate = null;
-                  if (key % 2 !== 0) animate = "fade-left";
-                  if (key % 2 === 0) animate = "fade-right";
-
-                  return (
-                    <ProjectCard
-                      {...project}
-                      key={project.name + key}
-                      data-aos={animate}
-                    />
-                  );
-                })}
+                {someProjects.map((project, key) => (
+                  <ProjectCard
+                    {...project}
+                    key={project.name + key}
+                    position={key}
+                  />
+                ))}
               </TecnologiesContainer>
             </SectionText>
 
-            <SectionText>
+            <SectionText data-aos="fade-up" data-aos-duration="2000">
               <SecondTitle noOrnament>
                 ALGUM PROJETO EM MENTE? VAMOS TRABALHAR JUNTOS
               </SecondTitle>
@@ -105,13 +100,14 @@ export default function IndexPage() {
                 {filteredProjects.map((project, key) => (
                   <ProjectCard
                     {...project}
-                    // description={project.description?.toString().repeat(key + 2)}
                     key={project.name + key}
+                    position={key}
                   />
                 ))}
               </TecnologiesContainer>
             </SectionText>
-            <SectionText>
+
+            <SectionText data-aos="fade-up">
               <Center>
                 <Link href="/projects" passHref>
                   <Button

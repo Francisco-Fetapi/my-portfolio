@@ -69,7 +69,9 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-interface ArticleCardProps extends IProject {}
+interface ArticleCardProps extends IProject {
+  position: number;
+}
 
 export function ProjectCard({
   className,
@@ -80,6 +82,7 @@ export function ProjectCard({
   status,
   tags,
   createdAt,
+  position,
   ...others
 }: ArticleCardProps &
   Omit<React.ComponentPropsWithoutRef<"div">, keyof ArticleCardProps>) {
@@ -98,12 +101,16 @@ export function ProjectCard({
     target: "_blank",
     rel: "noopener noreferrer",
   };
+  let animate = null;
+  if (position % 2 !== 0) animate = "fade-left";
+  if (position % 2 === 0) animate = "fade-right";
 
   return (
     <Card
       withBorder
       radius="md"
       className={cx(classes.card, className)}
+      data-aos={animate}
       {...others}
     >
       <Card.Section>
