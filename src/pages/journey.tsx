@@ -9,18 +9,21 @@ import useTimeline from "../database/useTimeline";
 import Link from "next/link";
 import CustomLink from "../components/CustomLink";
 import Trans from "next-translate/Trans";
+import useTranslation from "next-translate/useTranslation";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
   const { timeline } = useTimeline();
+  const { t } = useTranslation("common");
+
   return (
     <div>
       <Head>
-        <title>Jornada</title>
+        <title>{t("journey")}</title>
       </Head>
       <AppScheme>
         <Box mt={10}>
-          <MainTitle>Jornada</MainTitle>
+          <MainTitle>{t("journey")}</MainTitle>
           <Box
             sx={{ zoom: 0.9 }}
             data-aos="zoom-in-right"

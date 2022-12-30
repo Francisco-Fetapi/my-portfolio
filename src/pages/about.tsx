@@ -89,7 +89,7 @@ export default function IndexPage() {
   return (
     <div>
       <Head>
-        <title>Sobre</title>
+        <title>{t("about_me")}</title>
       </Head>
       <AppScheme>
         <Box mt={20}>
