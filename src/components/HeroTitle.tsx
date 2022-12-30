@@ -77,15 +77,32 @@ export function HeroTitle() {
   return (
     <div className={classes.wrapper}>
       <Container size={700} className={classes.inner}>
-        <Text color="dimmed" size="md" mb={20} italic weight={300}>
+        <Text
+          color="dimmed"
+          size="md"
+          mb={20}
+          italic
+          weight={300}
+          data-aos="fade-down"
+        >
           Olá, meu nome é
         </Text>
-        <h1 className={classes.title}>
+        <h1
+          className={classes.title}
+          data-aos="fade-right"
+          data-aos-delay="400"
+        >
           <TextWithGradient>{me.name}</TextWithGradient> <br />
           {me.professional}
         </h1>
 
-        <Text className={classes.description} color="dimmed">
+        <Text
+          className={classes.description}
+          color="dimmed"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="700"
+        >
           Apaixonado por desenvolvimento de software. Atualmente crio sistemas
           para a internet atuando como desenvolvedor{" "}
           <ExternalLink reference="fullStack">full-stack</ExternalLink>. A minha
@@ -94,6 +111,7 @@ export function HeroTitle() {
             <ExternalLink reference="javascript">JavaScript</ExternalLink>/
             <ExternalLink reference="typescript">TypeScript</ExternalLink>
           </span>
+          .
         </Text>
 
         <Group className={classes.controls}>
@@ -106,6 +124,9 @@ export function HeroTitle() {
             target="__blank"
             gradient={{ from: "blue", to: "cyan" }}
             leftIcon={<IconDownload size={20} />}
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
           >
             Baixar CV
           </Button>
@@ -118,6 +139,9 @@ export function HeroTitle() {
             variant="default"
             className={classes.control}
             leftIcon={<GithubIcon size={20} />}
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
           >
             GitHub
           </Button>
