@@ -19,7 +19,12 @@ export default function IndexPage() {
       <AppScheme>
         <Box mt={10}>
           <MainTitle>Jornada</MainTitle>
-          <Box sx={{ zoom: 0.9 }}>
+          <Box
+            sx={{ zoom: 0.9 }}
+            data-aos="zoom-in-right"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
             <Text className={classes.description}>
               A minha jornada como desenvolvedor começou em{" "}
               <Link href="/journey?year=2018" passHref>
@@ -34,7 +39,11 @@ export default function IndexPage() {
             </Text>
           </Box>
         </Box>
-        <SectionText>
+        <SectionText
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="1200"
+        >
           <MyTimeline timelines={timeline} />
         </SectionText>
       </AppScheme>

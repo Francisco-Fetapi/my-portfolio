@@ -1,7 +1,15 @@
 import Head from "next/head";
 import AppScheme from "../components/AppScheme";
 import MainTitle from "../components/MainTitle";
-import { createStyles, Box, Grid, Group, Text, Button } from "@mantine/core";
+import {
+  createStyles,
+  MediaQuery,
+  Box,
+  Grid,
+  Group,
+  Text,
+  Button,
+} from "@mantine/core";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 
 import Link from "next/link";
@@ -29,6 +37,58 @@ export default function IndexPage() {
   const { me } = useMe();
   const { frontEndTecnologies, backEndTecnologies, otherTecnologies } =
     useTecnologies();
+
+  function TextAboutMe() {
+    return (
+      <div>
+        <Text className={classes.description}>
+          Meu nome é <b>{me.name}</b>, sou{" "}
+          <ExternalLink reference="fullStack">{me.professional}</ExternalLink>{" "}
+          que atua essencialmente com tecnologias do ecossistema{" "}
+          <ExternalLink reference="javascript">JavaScript</ExternalLink>. O meu
+          primeiro contato com programação foi em{" "}
+          <CustomLink href="/journey?year=2018">2018</CustomLink> durante o{" "}
+          <b>Ensino Médio</b>, nessa fase aprendi{" "}
+          <ExternalLink reference="programmingLogic">
+            Lógica de Programação
+          </ExternalLink>{" "}
+          usando o <ExternalLink reference="visualg">Visual G</ExternalLink>.
+          Depois de criar{" "}
+          <ExternalLink reference="algorithms"> algoritmos</ExternalLink> que
+          eram executados no{" "}
+          <ExternalLink reference="prompt">terminal</ExternalLink> me vi curioso
+          em criar uma interface amigavél para os meus mini-programas, e foi
+          assim que me deparei com{" "}
+          <ExternalLink reference="html5">HTML5</ExternalLink>,{" "}
+          <ExternalLink reference="css3">CSS3</ExternalLink> e{" "}
+          <ExternalLink reference="javascript">JavaScript</ExternalLink>, e
+          desde ai continuei estudando sem parar.
+        </Text>
+        <Text className={classes.description}>
+          Nasci aos{" "}
+          <b>
+            {me.birthday.toLocaleDateString()} ({me.getMyAge()} anos)
+          </b>
+          , falo Português (minha língua materna) e tenho um Inglês
+          intermediário. Atualmente vivo em{" "}
+          <ExternalLink reference="lobito">
+            Angola, Benguela, Lobito
+          </ExternalLink>
+          .
+        </Text>
+        <Text className={classes.description}>
+          Comecei a trabalhar profissionalmente com programação atendendo
+          demandas de clientes da minha localidade, antes disso apenas criava
+          projetos de estudo.
+        </Text>
+        <Text className={classes.description}>
+          As minhas paixões são: Programação, Cinema (Filmes, Séries e Animes),
+          Música e Literatura.
+        </Text>
+      </div>
+    );
+  }
+
   return (
     <div>
       <Head>
@@ -117,59 +177,28 @@ export default function IndexPage() {
             </Grid.Col>
           </Grid>
 
-          <SectionText
-            sx={{ zoom: 0.8 }}
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            data-aos-offset="-150"
-          >
-            <Text className={classes.description}>
-              Meu nome é <b>{me.name}</b>, sou{" "}
-              <ExternalLink reference="fullStack">
-                {me.professional}
-              </ExternalLink>{" "}
-              que atua essencialmente com tecnologias do ecossistema{" "}
-              <ExternalLink reference="javascript">JavaScript</ExternalLink>. O
-              meu primeiro contato com programação foi em{" "}
-              <CustomLink href="/journey?year=2018">2018</CustomLink> durante o{" "}
-              <b>Ensino Médio</b>, nessa fase aprendi{" "}
-              <ExternalLink reference="programmingLogic">
-                Lógica de Programação
-              </ExternalLink>{" "}
-              usando o <ExternalLink reference="visualg">Visual G</ExternalLink>
-              . Depois de criar{" "}
-              <ExternalLink reference="algorithms"> algoritmos</ExternalLink>{" "}
-              que eram executados no{" "}
-              <ExternalLink reference="prompt">terminal</ExternalLink> me vi
-              curioso em criar uma interface amigavél para os meus
-              mini-programas, e foi assim que me deparei com{" "}
-              <ExternalLink reference="html5">HTML5</ExternalLink>,{" "}
-              <ExternalLink reference="css3">CSS3</ExternalLink> e{" "}
-              <ExternalLink reference="javascript">JavaScript</ExternalLink>, e
-              desde ai continuei estudando sem parar.
-            </Text>
-            <Text className={classes.description}>
-              Nasci aos{" "}
-              <b>
-                {me.birthday.toLocaleDateString()} ({me.getMyAge()} anos)
-              </b>
-              , falo Português (minha língua materna) e tenho um Inglês
-              intermediário. Atualmente vivo em{" "}
-              <ExternalLink reference="lobito">
-                Angola, Benguela, Lobito
-              </ExternalLink>
-              .
-            </Text>
-            <Text className={classes.description}>
-              Comecei a trabalhar profissionalmente com programação atendendo
-              demandas de clientes da minha localidade, antes disso apenas
-              criava projetos de estudo.
-            </Text>
-            <Text className={classes.description}>
-              As minhas paixões são: Programação, Cinema (Filmes, Séries e
-              Animes), Música e Literatura.
-            </Text>
-          </SectionText>
+          <MediaQuery smallerThan="md" styles={{ display: "none" }}>
+            <SectionText
+              sx={{ zoom: 0.8 }}
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-offset="-150"
+              data-aos-delay="2300"
+            >
+              <TextAboutMe />
+            </SectionText>
+          </MediaQuery>
+
+          <MediaQuery largerThan="md" styles={{ display: "none" }}>
+            <SectionText
+              sx={{ zoom: 0.8 }}
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-offset="-150"
+            >
+              <TextAboutMe />
+            </SectionText>
+          </MediaQuery>
         </Box>
 
         <SectionText>
