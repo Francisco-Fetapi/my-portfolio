@@ -1,23 +1,18 @@
 export type TranslationProjects = typeof translations;
 
 const translations = {
-  test: "teste",
   intro: `
-  Desde o momento que digitei a minha primeira
-                  <i>linha de código</i> até agora desenvolvi vários projetos de
-                  estudo para ganhar proeficiencia nas tecnologias que conheço,
-                  além é claro de ter atendido as demandas de um ou outro
-                  cliente.
-                  <br></br>
-                  <br></br>
-                  Abaixo eis uma lista dos projetos que desenvolvi ao longo dos
-                  anos.
+  From the moment I typed my first
+                   <i>line of code</i> so far I have developed several study projects to gain proficiency in the technologies I know, in addition, of course, to having met the demands of one or another client.
+                   <br></br>
+                   <br></br>
+                   Below is a list of projects I've developed over the years.
   `,
-  top_projects: "EM DESTAQUE",
-  more_projects: "MAIS PROJETOS",
-  have_a_project_in_mind: "ALGUM PROJETO EM MENTE? VAMOS TRABALHAR JUNTOS",
-  lets_talk: "Vamos falar",
-  take_a_look_at_all_projects: "VER TODOS OS PROJETOS",
+  top_projects: "Featured Projects",
+  more_projects: "MORE PROJECTS",
+  have_a_project_in_mind: "ANY PROJECT IN MIND? LET'S WORK TOGETHER",
+  lets_talk: "Let's talk",
+  take_a_look_at_all_projects: "SEE ALL PROJECTS",
 };
 
 export default translations;
