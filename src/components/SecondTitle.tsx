@@ -44,6 +44,7 @@ export default function SecondTitle({
       className={classes.container}
       data-aos="fade-left"
       data-aos-duration="1000"
+      data-aos-once="true"
     >
       {noOrnament ? <div /> : <div className={classes.ornament} />}
       <Title order={2} className={classes.title} align="center">

@@ -81,6 +81,7 @@ export default function TecnologyCard({
           data-aos={`flip-${selectedAnimation}`}
           data-aos-delay={String(position * 300)}
           data-aos-duration="500"
+          data-aos-once="true"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img

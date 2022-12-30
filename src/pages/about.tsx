@@ -184,6 +184,7 @@ export default function IndexPage() {
               data-aos-duration="1000"
               data-aos-offset="-150"
               data-aos-delay="2300"
+              data-aos-once="true"
             >
               <TextAboutMe />
             </SectionText>
@@ -195,6 +196,7 @@ export default function IndexPage() {
               data-aos="fade-right"
               data-aos-duration="1000"
               data-aos-offset="-150"
+              data-aos-once="true"
             >
               <TextAboutMe />
             </SectionText>

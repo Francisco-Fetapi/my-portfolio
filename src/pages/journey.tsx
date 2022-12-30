@@ -43,6 +43,7 @@ export default function IndexPage() {
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="1200"
+          data-aos-once="true"
         >
           <MyTimeline timelines={timeline} />
         </SectionText>

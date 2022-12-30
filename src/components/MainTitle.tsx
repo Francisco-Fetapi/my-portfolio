@@ -41,6 +41,7 @@ export default function MainTitle({ children, align }: MainTitleProps) {
       }}
       data-aos="fade-up"
       data-aos-duration="1000"
+      data-aos-once="true"
     >
       <Title order={1} className={classes.title}>
         {children}
