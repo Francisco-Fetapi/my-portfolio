@@ -1,4 +1,6 @@
 {
   "hello_my_name_is": "Olá, meu nome é",
-  "shortDescription": "Apaixonado por desenvolvimento de software. Atualmente crio sistemas para a internet atuando como desenvolvedor <1>full-stack</1>. A minha stack é principalmente voltada à <2> <3>JavaScript</3>/ <4>TypeScript</4> </2>."
+  "shortDescription_1": "Apaixonado por desenvolvimento de software. Atualmente crio sistemas para a internet atuando como",
+  "shortDescription_2": "A minha stack é principalmente voltada à",
+  "download_cv": "Baixar CV"
 }

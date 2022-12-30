@@ -106,19 +106,14 @@ export function HeroTitle() {
           data-aos-duration="1000"
           data-aos-delay="700"
         >
-          <Trans
-            i18nKey="home:shortDescription"
-            components={[
-              // eslint-disable-next-line react/jsx-key
-              <ExternalLink reference="fullStack" />,
-              // eslint-disable-next-line react/jsx-key
-              <span />,
-              // eslint-disable-next-line react/jsx-key
-              <ExternalLink reference="javascript" />,
-              // eslint-disable-next-line react/jsx-key
-              <ExternalLink reference="typescript" />,
-            ]}
-          />
+          {t("shortDescription_1")}{" "}
+          <ExternalLink reference="fullStack">{me.professional}</ExternalLink>.{" "}
+          {t("shortDescription_2")}{" "}
+          <span>
+            <ExternalLink reference="javascript">JavaScript</ExternalLink>/
+            <ExternalLink reference="typescript">TypeScript</ExternalLink>
+          </span>
+          .
         </Text>
 
         <Group className={classes.controls}>
@@ -135,7 +130,7 @@ export function HeroTitle() {
             data-aos-duration="1000"
             data-aos-delay="1000"
           >
-            Baixar CV
+            {t("download_cv")}
           </Button>
 
           <Button
