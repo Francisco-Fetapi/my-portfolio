@@ -9,13 +9,13 @@ import { FooterLinks, FooterLinksProps } from "./FooterLinks";
 export default function Footer() {
   const { me } = useMe();
   const { years } = useTimeline();
-  const { t } = useTranslation("commom");
+  const { t } = useTranslation("common");
   const { links } = useMenuLinks();
 
   const footer: FooterLinksProps["data"] = [
     { title: t("navigation"), links },
     {
-      title: t("tecnolgies"),
+      title: t("tecnologies"),
       links: me.tecnologies.slice(0, 5).map((tec) => ({
         href: "/projects?tag=" + tec.toLowerCase(),
         label: tec,

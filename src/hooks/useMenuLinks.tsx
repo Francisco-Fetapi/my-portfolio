@@ -1,10 +1,14 @@
+import useTranslation from "next-translate/useTranslation";
+
 export default function useMenuLinks() {
+  const { t } = useTranslation("common");
+
   const links = [
-    { label: "Página Inicial", href: "/" },
-    { label: "Sobre", href: "/about" },
-    { label: "Jornada", href: "/journey" },
-    { label: "Projetos", href: "/projects" },
-    { label: "Contacto", href: "/contact" },
+    { label: t("main_page"), href: "/" },
+    { label: t("about"), href: "/about" },
+    { label: t("journey"), href: "/journey" },
+    { label: t("projects"), href: "/projects" },
+    { label: t("contact"), href: "/contact" },
   ];
 
   return { links };
