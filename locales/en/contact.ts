@@ -1,14 +1,13 @@
 export type TranslationContact = typeof translations;
 
 const translations = {
-  intro: `Se quiseres fazer alguma pergunta ou apenas dar um &quot;Oi&quot;,
-  darei o meu melhor para lhe atender o mais rápido possivel. Estou
-  sempre aberto para discutir novas ideias e participar de novos
-  projetos.`,
-  i_hope_see_you: "Espero ver você em breve!",
-  contact_me: "Entre em contacto",
-  contact_me_by:
-    "Entre em contacto comigo por meio de um dos elementos abaixo:",
+  intro: `If you have any questions or just want to say "Hi",
+  I will do my best to answer you as soon as possible. I am
+  always open to discuss new ideas and participate in new
+  projects.`,
+  i_hope_see_you: "I hope to see you soon!",
+  contact_me: "Get in touch",
+  contact_me_by: "Get in touch with me using one of the elements below:",
 };
 
 export default translations;
