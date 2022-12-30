@@ -2,6 +2,7 @@ import { createStyles, Container, Text, Button, Group } from "@mantine/core";
 import { GithubIcon } from "@mantine/ds";
 import { IconDownload } from "@tabler/icons";
 import useTranslation from "next-translate/useTranslation";
+import Trans from "next-translate/Trans";
 import useMe from "../database/useMe";
 import ExternalLink from "./ExternalLink";
 
@@ -105,15 +106,19 @@ export function HeroTitle() {
           data-aos-duration="1000"
           data-aos-delay="700"
         >
-          Apaixonado por desenvolvimento de software. Atualmente crio sistemas
-          para a internet atuando como desenvolvedor{" "}
-          <ExternalLink reference="fullStack">full-stack</ExternalLink>. A minha
-          stack é principalmente voltada à{" "}
-          <span>
-            <ExternalLink reference="javascript">JavaScript</ExternalLink>/
-            <ExternalLink reference="typescript">TypeScript</ExternalLink>
-          </span>
-          .
+          <Trans
+            i18nKey="home:shortDescription"
+            components={[
+              // eslint-disable-next-line react/jsx-key
+              <ExternalLink reference="fullStack" />,
+              // eslint-disable-next-line react/jsx-key
+              <span />,
+              // eslint-disable-next-line react/jsx-key
+              <ExternalLink reference="javascript" />,
+              // eslint-disable-next-line react/jsx-key
+              <ExternalLink reference="typescript" />,
+            ]}
+          />
         </Text>
 
         <Group className={classes.controls}>
