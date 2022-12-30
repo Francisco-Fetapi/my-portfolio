@@ -39,6 +39,8 @@ export default function MainTitle({ children, align }: MainTitleProps) {
       style={{
         alignItems: align || "center",
       }}
+      data-aos="fade-up"
+      data-aos-duration="1000"
     >
       <Title order={1} className={classes.title}>
         {children}
