@@ -73,19 +73,24 @@ export default function useExternalLink() {
       "https://www.youtube.com/watch?v=0T5gM1WRNsY&list=PLXik_5Br-zO893qVjjP7a4qg4NYrl33w1",
     laravel: "https://pt.wikipedia.org/wiki/Laravel",
     socialmoviesspace: getRepositoryByName("projeto-tcc"),
-    tccpdf: "",
-    typescriptdocs: "",
-    coursetypescriptotavio: "",
-    designpatterns: "",
-    testing: "",
-    nextjs: "",
-    nextjsdocs: "",
-    tmdb: "",
-    redux: "",
-    reduxtoolkit: "",
-    tictactoe: "",
-    souangolanoeconhecoangolaapp: "",
-    quemquerserricoapp: "",
-    datilography: "",
+    tccpdf:
+      "https://drive.google.com/file/d/1PUuUInKajHslJYbmJ8yJGYgI7gmkGLvi/view?usp=share_link",
+    typescriptdocs: "https://www.typescriptlang.org/pt/docs/handbook/",
+    coursetypescriptotavio:
+      "https://www.youtube.com/watch?v=oQPYxhqoH1o&list=PLbIBj8vQhvm0Q_TMvL22kkpdUW8sP8Yql",
+    designpatterns:
+      "https://pt.wikipedia.org/wiki/Padr%C3%A3o_de_projeto_de_software",
+    testing: "https://pt.wikipedia.org/wiki/Teste_de_software",
+    nextjs: "https://pt.wikipedia.org/wiki/Next.js",
+    nextjsdocs: "https://nextjs.org/docs/getting-started",
+    tmdb: "https://pt.wikipedia.org/wiki/The_Movie_Database",
+    redux: "https://pt.wikipedia.org/wiki/Redux_(biblioteca_JavaScript)",
+    reduxtoolkit: "https://redux-toolkit.js.org/",
+    tictactoe: "https://pt.wikipedia.org/wiki/Jogo_da_velha",
+    souangolanoeconhecoangolaapp:
+      "https://play.google.com/store/apps/details?id=ao.evolium.conhecoangola&hl=pt&gl=US",
+    quemquerserricoapp:
+      "https://quem-quer-ser-rico-lite.br.uptodown.com/android",
+    datilography: "https://pt.wikipedia.org/wiki/Datilografia",
   };
 }
