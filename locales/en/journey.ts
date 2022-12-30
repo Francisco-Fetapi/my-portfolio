@@ -1,5 +1,5 @@
 const translations = {
-  test: "teste",
+  intro: ``,
 };
 
 export default translations;

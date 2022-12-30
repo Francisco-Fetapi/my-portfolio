@@ -12,6 +12,7 @@ import {
 } from "@mantine/core";
 import { useWindowScroll, useDidUpdate } from "@mantine/hooks";
 import { IconArrowLeft, IconCalendarTime, IconArrowRight } from "@tabler/icons";
+import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
 import { CSSProperties, useEffect, useState, useRef } from "react";
 
@@ -41,6 +42,8 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
 
   const isFirst = activeTab == firstYear;
   const isLast = activeTab == years[0];
+
+  const { t } = useTranslation("common");
 
   useEffect(() => {
     if (years.includes(year)) {
@@ -102,13 +105,13 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
               onClick={prevYear}
               style={isFirst ? stylesDisabled : undefined}
             >
-              &larr; Anterior
+              &larr; {t("previous")}
             </Anchor>
             <Anchor
               onClick={nextYear}
               style={isLast ? stylesDisabled : undefined}
             >
-              Próximo &rarr;
+              {t("next")} &rarr;
             </Anchor>
           </Group>
         </Center>

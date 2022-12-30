@@ -16,6 +16,8 @@ const translations = {
   all_rights_reserved: "Todos os direitos reservados.",
   download_cv: "Baixar CV",
   other_tecnologies: "OUTRAS TECNOLOGIAS",
+  next: "Próximo",
+  previous: "Anterior",
 };
 
 export default translations;

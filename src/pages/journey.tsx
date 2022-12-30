@@ -7,6 +7,8 @@ import SectionText from "../components/SectionText";
 import MyTimeline from "../components/MyTimeline";
 import useTimeline from "../database/useTimeline";
 import Link from "next/link";
+import CustomLink from "../components/CustomLink";
+import Trans from "next-translate/Trans";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -26,16 +28,13 @@ export default function IndexPage() {
             data-aos-delay="400"
           >
             <Text className={classes.description}>
-              A minha jornada como desenvolvedor começou em{" "}
-              <Link href="/journey?year=2018" passHref>
-                <Anchor>2018</Anchor>
-              </Link>
-              , de lá pra cá passei por um tanto de experiências que me tornaram
-              um desenvolvedor mais tecnicamente capacitado.
-              <br />
-              <br />
-              Darei o meu máximo para descrever algumas etapas do meu processo
-              de crescimento ao longo dos anos logo abaixo:
+              <Trans
+                i18nKey="journey:intro"
+                components={{
+                  year: <CustomLink href="/journey?year=2018" />,
+                  br: <br />,
+                }}
+              />
             </Text>
           </Box>
         </Box>
