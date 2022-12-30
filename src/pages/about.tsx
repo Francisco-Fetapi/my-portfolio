@@ -121,6 +121,7 @@ export default function IndexPage() {
             sx={{ zoom: 0.8 }}
             data-aos="fade-right"
             data-aos-duration="1000"
+            data-aos-offset="-150"
           >
             <Text className={classes.description}>
               Meu nome é <b>{me.name}</b>, sou{" "}
