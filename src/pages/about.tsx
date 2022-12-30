@@ -39,7 +39,12 @@ export default function IndexPage() {
           <Grid gutter="lg" justify="flex-end">
             <Grid.Col md={8} xs={12}>
               <MainTitle align="flex-start">Sobre Mim</MainTitle>
-              <Box sx={{ zoom: 0.9, width: "100%", maxWidth: 600 }}>
+              <Box
+                sx={{ zoom: 0.9, width: "100%", maxWidth: 600 }}
+                data-aos="zoom-in-right"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+              >
                 <Text color="dimmed" className={classes.description}>
                   Sou um cara apaixonado por desenvolvimento de software.
                   Atualmente com foco em{" "}
@@ -56,6 +61,9 @@ export default function IndexPage() {
                     variant="gradient"
                     size="md"
                     gradient={{ from: "blue", to: "cyan" }}
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    data-aos-delay="1000"
                   >
                     Contactar
                   </Button>
@@ -67,6 +75,9 @@ export default function IndexPage() {
                   href={me.downloadCV}
                   target="__blank"
                   color="blue"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-delay="1000"
                 >
                   Baixar Curriculum
                 </Button>
@@ -84,6 +95,9 @@ export default function IndexPage() {
                     marginTop: 30,
                   },
                 })}
+                data-aos="flip-left"
+                data-aos-delay="1500"
+                data-aos-duration="1000"
               >
                 <Image
                   src={me.photo}
@@ -103,7 +117,11 @@ export default function IndexPage() {
             </Grid.Col>
           </Grid>
 
-          <SectionText sx={{ zoom: 0.8 }}>
+          <SectionText
+            sx={{ zoom: 0.8 }}
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <Text className={classes.description}>
               Meu nome é <b>{me.name}</b>, sou{" "}
               <ExternalLink reference="fullStack">
