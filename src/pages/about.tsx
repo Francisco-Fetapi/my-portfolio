@@ -174,24 +174,36 @@ export default function IndexPage() {
         <SectionText>
           <SecondTitle>FRONT-END</SecondTitle>
           <TecnologiesContainer>
-            {frontEndTecnologies.map((tecnology) => (
-              <TecnologyCard tecnology={tecnology} key={tecnology.name} />
+            {frontEndTecnologies.map((tecnology, key) => (
+              <TecnologyCard
+                tecnology={tecnology}
+                key={tecnology.name}
+                position={key}
+              />
             ))}
           </TecnologiesContainer>
         </SectionText>
         <SectionText>
           <SecondTitle>BACK-END</SecondTitle>
           <TecnologiesContainer>
-            {backEndTecnologies.map((tecnology) => (
-              <TecnologyCard tecnology={tecnology} key={tecnology.name} />
+            {backEndTecnologies.map((tecnology, key) => (
+              <TecnologyCard
+                tecnology={tecnology}
+                key={tecnology.name}
+                position={key}
+              />
             ))}
           </TecnologiesContainer>
         </SectionText>
         <SectionText>
           <SecondTitle>OUTRAS TECNOLOGIAS</SecondTitle>
           <TecnologiesContainer>
-            {otherTecnologies.map((tecnology) => (
-              <TecnologyCard tecnology={tecnology} key={tecnology.name} />
+            {otherTecnologies.map((tecnology, key) => (
+              <TecnologyCard
+                tecnology={tecnology}
+                key={tecnology.name}
+                position={key}
+              />
             ))}
           </TecnologiesContainer>
         </SectionText>

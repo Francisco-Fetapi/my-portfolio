@@ -22,6 +22,7 @@ export interface ITecnology {
 
 interface TecnologyCardProps extends PaperProps {
   tecnology: ITecnology;
+  position: number;
 }
 
 const useStyles = createStyles((theme) => ({
@@ -48,10 +49,18 @@ const useStyles = createStyles((theme) => ({
 
 export default function TecnologyCard({
   tecnology,
+  position,
   ...paperProps
 }: TecnologyCardProps) {
   const { classes } = useStyles();
   const [opened, { close, open, toggle }] = useDisclosure(false);
+  const animations = ["up", "down", "left", "right"];
+  let selectedAnimation =
+    animations[Math.round(Math.random() * animations.length)];
+  console.log(selectedAnimation);
+  if (!selectedAnimation) {
+    selectedAnimation = animations[0];
+  }
 
   return (
     <Popover
@@ -69,6 +78,9 @@ export default function TecnologyCard({
           onMouseEnter={open}
           onMouseLeave={close}
           onClick={toggle}
+          data-aos={`flip-${selectedAnimation}`}
+          data-aos-delay={String(position * 300)}
+          data-aos-duration="500"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
