@@ -59,13 +59,19 @@ export default function IndexPage() {
             <SectionText>
               <SecondTitle>MAIS PROJETOS</SecondTitle>
               <TecnologiesContainer>
-                {someProjects.map((project, key) => (
-                  <ProjectCard
-                    {...project}
-                    // description={project.description?.toString().repeat(key + 2)}
-                    key={project.name + key}
-                  />
-                ))}
+                {someProjects.map((project, key) => {
+                  let animate = null;
+                  if (key % 2 !== 0) animate = "fade-left";
+                  if (key % 2 === 0) animate = "fade-right";
+
+                  return (
+                    <ProjectCard
+                      {...project}
+                      key={project.name + key}
+                      data-aos={animate}
+                    />
+                  );
+                })}
               </TecnologiesContainer>
             </SectionText>
 
