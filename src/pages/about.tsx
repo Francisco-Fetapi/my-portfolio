@@ -22,6 +22,7 @@ import useMe from "../database/useMe";
 import useTecnologies from "../database/useTecnologies";
 import ExternalLink from "../components/ExternalLink";
 import CustomLink from "../components/CustomLink";
+import Trans from "next-translate/Trans";
 
 const PHOTO_SIZE = 250;
 
@@ -42,27 +43,25 @@ export default function IndexPage() {
     return (
       <div>
         <Text className={classes.description}>
-          Meu nome é <b>{me.name}</b>, sou{" "}
-          <ExternalLink reference="fullStack">{me.professional}</ExternalLink>{" "}
-          que atua essencialmente com tecnologias do ecossistema{" "}
-          <ExternalLink reference="javascript">JavaScript</ExternalLink>. O meu
-          primeiro contato com programação foi em{" "}
-          <CustomLink href="/journey?year=2018">2018</CustomLink> durante o{" "}
-          <b>Ensino Médio</b>, nessa fase aprendi{" "}
-          <ExternalLink reference="programmingLogic">
-            Lógica de Programação
-          </ExternalLink>{" "}
-          usando o <ExternalLink reference="visualg">Visual G</ExternalLink>.
-          Depois de criar{" "}
-          <ExternalLink reference="algorithms"> algoritmos</ExternalLink> que
-          eram executados no{" "}
-          <ExternalLink reference="prompt">terminal</ExternalLink> me vi curioso
-          em criar uma interface amigavél para os meus mini-programas, e foi
-          assim que me deparei com{" "}
-          <ExternalLink reference="html5">HTML5</ExternalLink>,{" "}
-          <ExternalLink reference="css3">CSS3</ExternalLink> e{" "}
-          <ExternalLink reference="javascript">JavaScript</ExternalLink>, e
-          desde ai continuei estudando sem parar.
+          <Trans
+            i18nKey="about:auto_biography"
+            components={{
+              b: <b />,
+              linkFullStack: <ExternalLink reference="fullStack" />,
+              linkJs: <ExternalLink reference="javascript" />,
+              link2018: <CustomLink href="/journey?year=2018" />,
+              linkLogic: <ExternalLink reference="programmingLogic" />,
+              linkVisualG: <ExternalLink reference="visualg" />,
+              linkAlgorithms: <ExternalLink reference="algorithms" />,
+              linkTerminal: <ExternalLink reference="prompt" />,
+              linkHTML: <ExternalLink reference="html5" />,
+              linkCSS: <ExternalLink reference="css3" />,
+            }}
+            values={{
+              myName: me.name,
+              myProfessional: me.professional,
+            }}
+          />
         </Text>
         <Text className={classes.description}>
           Nasci aos{" "}
