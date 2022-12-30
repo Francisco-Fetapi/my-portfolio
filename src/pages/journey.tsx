@@ -6,7 +6,6 @@ import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitl
 import SectionText from "../components/SectionText";
 import MyTimeline from "../components/MyTimeline";
 import useTimeline from "../database/useTimeline";
-import Link from "next/link";
 import CustomLink from "../components/CustomLink";
 import Trans from "next-translate/Trans";
 import useTranslation from "next-translate/useTranslation";
