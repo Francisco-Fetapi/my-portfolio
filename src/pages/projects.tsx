@@ -13,7 +13,6 @@ import useMe from "../database/useMe";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
 import Link from "next/link";
-import AOS from "aos";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -36,7 +35,12 @@ export default function IndexPage() {
           <>
             <Box mt={10}>
               <MainTitle>Projetos</MainTitle>
-              <Box sx={{ zoom: 0.9 }}>
+              <Box
+                sx={{ zoom: 0.9 }}
+                data-aos="zoom-in-right"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+              >
                 <Text className={classes.description}>
                   Desde o momento que digitei a minha primeira{" "}
                   <i>linha de código</i> até agora desenvolvi vários projetos de
