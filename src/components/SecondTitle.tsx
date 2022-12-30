@@ -40,7 +40,11 @@ export default function SecondTitle({
   const { classes } = useStyles();
 
   return (
-    <div className={classes.container}>
+    <div
+      className={classes.container}
+      data-aos="fade-left"
+      data-aos-duration="1000"
+    >
       {noOrnament ? <div /> : <div className={classes.ornament} />}
       <Title order={2} className={classes.title} align="center">
         {children}
