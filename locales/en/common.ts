@@ -5,6 +5,7 @@ const translations = {
   pt: "Portuguese",
   change_language: "Change language",
   professional: "Full-Stack Developer",
+  download_cv: "Download CV",
 };
 
 export default translations;

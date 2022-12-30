@@ -76,6 +76,7 @@ export function HeroTitle() {
   const { classes } = useStyles();
   const { me } = useMe();
   const { t } = useTranslation("home");
+  const { t: t2 } = useTranslation("common");
 
   return (
     <div className={classes.wrapper}>
@@ -130,7 +131,7 @@ export function HeroTitle() {
             data-aos-duration="1000"
             data-aos-delay="1000"
           >
-            {t("download_cv")}
+            {t2("download_cv")}
           </Button>
 
           <Button

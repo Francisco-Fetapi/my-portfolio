@@ -23,6 +23,7 @@ import useTecnologies from "../database/useTecnologies";
 import ExternalLink from "../components/ExternalLink";
 import CustomLink from "../components/CustomLink";
 import Trans from "next-translate/Trans";
+import useTranslation from "next-translate/useTranslation";
 
 const PHOTO_SIZE = 250;
 
@@ -38,6 +39,9 @@ export default function IndexPage() {
   const { me } = useMe();
   const { frontEndTecnologies, backEndTecnologies, otherTecnologies } =
     useTecnologies();
+
+  const { t } = useTranslation("about");
+  const { t: t2 } = useTranslation("common");
 
   function TextAboutMe() {
     return (
@@ -64,26 +68,20 @@ export default function IndexPage() {
           />
         </Text>
         <Text className={classes.description}>
-          Nasci aos{" "}
-          <b>
-            {me.birthday.toLocaleDateString()} ({me.getMyAge()} anos)
-          </b>
-          , falo Português (minha língua materna) e tenho um Inglês
-          intermediário. Atualmente vivo em{" "}
-          <ExternalLink reference="lobito">
-            Angola, Benguela, Lobito
-          </ExternalLink>
-          .
+          <Trans
+            i18nKey="about:auto_biography_2"
+            components={{
+              b: <b />,
+              linkLobito: <ExternalLink reference="lobito" />,
+            }}
+            values={{
+              birthday: me.birthday.toLocaleDateString(),
+              years: me.getMyAge(),
+            }}
+          />
         </Text>
-        <Text className={classes.description}>
-          Comecei a trabalhar profissionalmente com programação atendendo
-          demandas de clientes da minha localidade, antes disso apenas criava
-          projetos de estudo.
-        </Text>
-        <Text className={classes.description}>
-          As minhas paixões são: Programação, Cinema (Filmes, Séries e Animes),
-          Música e Literatura.
-        </Text>
+        <Text className={classes.description}>{t("auto_biography_3")}</Text>
+        <Text className={classes.description}>{t("auto_biography_4")}</Text>
       </div>
     );
   }
@@ -97,7 +95,7 @@ export default function IndexPage() {
         <Box mt={20}>
           <Grid gutter="lg" justify="flex-end">
             <Grid.Col md={8} xs={12}>
-              <MainTitle align="flex-start">Sobre Mim</MainTitle>
+              <MainTitle align="flex-start">{t("about_me")}</MainTitle>
               <Box
                 sx={{ zoom: 0.9, width: "100%", maxWidth: 600 }}
                 data-aos="zoom-in-right"
@@ -105,12 +103,13 @@ export default function IndexPage() {
                 data-aos-delay="400"
               >
                 <Text color="dimmed" className={classes.description}>
-                  Sou um cara apaixonado por desenvolvimento de software.
-                  Atualmente com foco em{" "}
-                  <ExternalLink reference="fullStack">
-                    Desenvolvimento Web full-stack
-                  </ExternalLink>
-                  .
+                  <Trans
+                    i18nKey="about:intro_biography"
+                    components={{
+                      b: <b />,
+                      linkFullStack: <ExternalLink reference="fullStack" />,
+                    }}
+                  />
                 </Text>
               </Box>
               <Group mt={30}>
@@ -124,7 +123,7 @@ export default function IndexPage() {
                     data-aos-duration="1000"
                     data-aos-delay="1000"
                   >
-                    Contactar
+                    {t("to_contact")}
                   </Button>
                 </Link>
                 <Button
@@ -138,7 +137,7 @@ export default function IndexPage() {
                   data-aos-duration="1000"
                   data-aos-delay="1000"
                 >
-                  Baixar Curriculum
+                  {t2("download_cv")}
                 </Button>
               </Group>
             </Grid.Col>
@@ -227,7 +226,7 @@ export default function IndexPage() {
           </TecnologiesContainer>
         </SectionText>
         <SectionText>
-          <SecondTitle>OUTRAS TECNOLOGIAS</SecondTitle>
+          <SecondTitle>{t2("other_tecnologies")}</SecondTitle>
           <TecnologiesContainer>
             {otherTecnologies.map((tecnology, key) => (
               <TecnologyCard
