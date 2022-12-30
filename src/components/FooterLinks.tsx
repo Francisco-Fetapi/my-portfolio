@@ -9,6 +9,7 @@ import {
 } from "@mantine/core";
 
 import { MantineLogo } from "@mantine/ds";
+import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import useContacts from "../database/useContacts";
 import useMe from "../database/useMe";
@@ -122,6 +123,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
   const { classes } = useStyles();
   const { me } = useMe();
   const { contacts } = useContacts();
+  const { t } = useTranslation("common");
 
   const linksSocial = contacts.filter((contact) => {
     const linksToShow = ["Whatsapp", "Telemóvel", "Calendly"];
@@ -156,14 +158,14 @@ export function FooterLinks({ data }: FooterLinksProps) {
             color="dimmed"
             className={classes.description}
           >
-            Projetado e Desenvolvido por <i>{me.name}</i>
+            {t("projected_by")} <i>{me.name}</i>
           </Text>
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          © {new Date().getFullYear()} - Todos os direitos reservados.
+          © {new Date().getFullYear()} - {t("all_rights_reserved")}
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>

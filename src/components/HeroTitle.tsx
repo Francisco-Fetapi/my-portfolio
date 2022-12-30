@@ -1,6 +1,8 @@
 import { createStyles, Container, Text, Button, Group } from "@mantine/core";
 import { GithubIcon } from "@mantine/ds";
 import { IconDownload } from "@tabler/icons";
+import useTranslation from "next-translate/useTranslation";
+import Trans from "next-translate/Trans";
 import useMe from "../database/useMe";
 import ExternalLink from "./ExternalLink";
 
@@ -73,6 +75,8 @@ export const useStyles = createStyles((theme) => ({
 export function HeroTitle() {
   const { classes } = useStyles();
   const { me } = useMe();
+  const { t } = useTranslation("home");
+  const { t: t2 } = useTranslation("common");
 
   return (
     <div className={classes.wrapper}>
@@ -85,7 +89,7 @@ export function HeroTitle() {
           weight={300}
           data-aos="fade-down"
         >
-          Olá, meu nome é
+          {t("hello_my_name_is")}
         </Text>
         <h1
           className={classes.title}
@@ -103,10 +107,9 @@ export function HeroTitle() {
           data-aos-duration="1000"
           data-aos-delay="700"
         >
-          Apaixonado por desenvolvimento de software. Atualmente crio sistemas
-          para a internet atuando como desenvolvedor{" "}
-          <ExternalLink reference="fullStack">full-stack</ExternalLink>. A minha
-          stack é principalmente voltada à{" "}
+          {t("shortDescription_1")}{" "}
+          <ExternalLink reference="fullStack">{me.professional}</ExternalLink>.{" "}
+          {t("shortDescription_2")}{" "}
           <span>
             <ExternalLink reference="javascript">JavaScript</ExternalLink>/
             <ExternalLink reference="typescript">TypeScript</ExternalLink>
@@ -128,7 +131,7 @@ export function HeroTitle() {
             data-aos-duration="1000"
             data-aos-delay="1000"
           >
-            Baixar CV
+            {t2("download_cv")}
           </Button>
 
           <Button

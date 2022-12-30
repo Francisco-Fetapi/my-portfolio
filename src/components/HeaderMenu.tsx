@@ -33,6 +33,7 @@ import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
 import Link from "next/link";
 import ImageLogo from "./ImageLogo";
+import useMenuLinks from "../hooks/useMenuLinks";
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -137,20 +138,13 @@ interface HeaderMegaMenuProps {
   toggleDrawer: () => void;
 }
 
-export const links = [
-  { label: "Página Inicial", href: "/" },
-  { label: "Sobre", href: "/about" },
-  { label: "Jornada", href: "/journey" },
-  { label: "Projetos", href: "/projects" },
-  { label: "Contacto", href: "/contact" },
-];
-
 export function HeaderMegaMenu({}: HeaderMegaMenuProps) {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
   const { classes, theme } = useStyles();
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const router = useRouter();
+  const { links } = useMenuLinks();
 
   const Links = useMemo(() => {
     return links.map((link) => {

@@ -13,6 +13,8 @@ import useMe from "../database/useMe";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
 import Link from "next/link";
+import Trans from "next-translate/Trans";
+import useTranslation from "next-translate/useTranslation";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -25,16 +27,19 @@ export default function IndexPage() {
     return getProjectsByTag(tagQuery);
   }, [tagQuery]);
 
+  const { t: t2 } = useTranslation("common");
+  const { t } = useTranslation("projects");
+
   return (
     <div>
       <Head>
-        <title>Projetos</title>
+        <title>{t2("projects")}</title>
       </Head>
       <AppScheme>
         {!filteredProjects ? (
           <>
             <Box mt={10}>
-              <MainTitle>Projetos</MainTitle>
+              <MainTitle>{t2("projects")}</MainTitle>
               <Box
                 sx={{ zoom: 0.9 }}
                 data-aos="zoom-in-right"
@@ -42,27 +47,25 @@ export default function IndexPage() {
                 data-aos-delay="400"
               >
                 <Text className={classes.description}>
-                  Desde o momento que digitei a minha primeira{" "}
-                  <i>linha de código</i> até agora desenvolvi vários projetos de
-                  estudo para ganhar proeficiencia nas tecnologias que conheço,
-                  além é claro de ter atendido as demandas de um ou outro
-                  cliente.
-                  <br />
-                  <br />
-                  Abaixo eis uma lista dos projetos que desenvolvi ao longo dos
-                  anos.
+                  <Trans
+                    i18nKey="projects:intro"
+                    components={{
+                      i: <i />,
+                      b: <b />,
+                    }}
+                  />
                 </Text>
               </Box>
             </Box>
 
             <SectionText>
-              <SecondTitle>EM DESTAQUE</SecondTitle>
+              <SecondTitle>{t("top_projects")}</SecondTitle>
               <SectionText>
                 <SlideProject />
               </SectionText>
             </SectionText>
             <SectionText>
-              <SecondTitle>MAIS PROJETOS</SecondTitle>
+              <SecondTitle>{t("more_projects")}</SecondTitle>
               <TecnologiesContainer>
                 {someProjects.map((project, key) => (
                   <ProjectCard
@@ -76,7 +79,7 @@ export default function IndexPage() {
 
             <SectionText data-aos="fade-up" data-aos-duration="2000">
               <SecondTitle noOrnament>
-                ALGUM PROJETO EM MENTE? VAMOS TRABALHAR JUNTOS
+                {t("have_a_project_in_mind")}
               </SecondTitle>
               <SectionText>
                 <Center>
@@ -90,7 +93,7 @@ export default function IndexPage() {
                     gradient={{ from: "blue", to: "cyan" }}
                     // leftIcon={<IconDownload size={20} />}
                   >
-                    Vamos falar
+                    {t("lets_talk")}
                   </Button>
                 </Center>
               </SectionText>
@@ -123,7 +126,7 @@ export default function IndexPage() {
                     // gradient={{ from: "blue", to: "cyan" }}
                     // leftIcon={<IconDownload size={20} />}
                   >
-                    VER TODOS OS PROJETOS
+                    {t("take_a_look_at_all_projects")}
                   </Button>
                 </Link>
               </Center>

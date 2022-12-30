@@ -6,19 +6,23 @@ import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitl
 import SectionText from "../components/SectionText";
 import MyTimeline from "../components/MyTimeline";
 import useTimeline from "../database/useTimeline";
-import Link from "next/link";
+import CustomLink from "../components/CustomLink";
+import Trans from "next-translate/Trans";
+import useTranslation from "next-translate/useTranslation";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
   const { timeline } = useTimeline();
+  const { t } = useTranslation("common");
+
   return (
     <div>
       <Head>
-        <title>Jornada</title>
+        <title>{t("journey")}</title>
       </Head>
       <AppScheme>
         <Box mt={10}>
-          <MainTitle>Jornada</MainTitle>
+          <MainTitle>{t("journey")}</MainTitle>
           <Box
             sx={{ zoom: 0.9 }}
             data-aos="zoom-in-right"
@@ -26,16 +30,13 @@ export default function IndexPage() {
             data-aos-delay="400"
           >
             <Text className={classes.description}>
-              A minha jornada como desenvolvedor começou em{" "}
-              <Link href="/journey?year=2018" passHref>
-                <Anchor>2018</Anchor>
-              </Link>
-              , de lá pra cá passei por um tanto de experiências que me tornaram
-              um desenvolvedor mais tecnicamente capacitado.
-              <br />
-              <br />
-              Darei o meu máximo para descrever algumas etapas do meu processo
-              de crescimento ao longo dos anos logo abaixo:
+              <Trans
+                i18nKey="journey:intro"
+                components={{
+                  year: <CustomLink href="/journey?year=2018" />,
+                  br: <br />,
+                }}
+              />
             </Text>
           </Box>
         </Box>

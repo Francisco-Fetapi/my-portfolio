@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Anchor } from "@mantine/core";
 
 interface CustomLinkProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   href: string;
 }
 

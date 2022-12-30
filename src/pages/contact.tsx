@@ -13,20 +13,23 @@ import {
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 import useMe from "../database/useMe";
 import useContacts from "../database/useContacts";
+import useTranslation from "next-translate/useTranslation";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
   const { me } = useMe();
   const { contacts } = useContacts();
+  const { t } = useTranslation("contact");
+  const { t: t2 } = useTranslation("common");
 
   return (
     <div>
       <Head>
-        <title>Contacto</title>
+        <title>{t("contact")}</title>
       </Head>
       <AppScheme>
         <Box mt={20}>
-          <MainTitle>Contacto</MainTitle>
+          <MainTitle>{t2("contact")}</MainTitle>
           {/* <br /> */}
           <Box
             sx={{ zoom: 0.9 }}
@@ -35,12 +38,7 @@ export default function IndexPage() {
             data-aos-delay="400"
             data-aos-once="true"
           >
-            <Text className={classes.description}>
-              Se quiseres fazer alguma pergunta ou apenas dar um &quot;Oi&quot;,
-              darei o meu melhor para lhe atender o mais rápido possivel. Estou
-              sempre aberto para discutir novas ideias e participar de novos
-              projetos.
-            </Text>
+            <Text className={classes.description}>{t("intro")}</Text>
           </Box>
           <br />
           <Box
@@ -51,7 +49,7 @@ export default function IndexPage() {
             data-aos-once="true"
           >
             <Text className={classes.description}>
-              Espero ver você em breve! : {")"}
+              {t("i_hope_see_you")} : {")"}
             </Text>
           </Box>
         </Box>
@@ -66,10 +64,10 @@ export default function IndexPage() {
           data-aos-once="true"
         >
           <Title align="center" order={3} mb={10}>
-            Entre em contacto
+            {t("contact_me")}
           </Title>
           <Text align="center" size="sm" color="dimmed">
-            Entre em contacto comigo por meio de um dos elementos abaixo:
+            {t("contact_me_by")}
           </Text>
           <br />
           <SimpleGrid

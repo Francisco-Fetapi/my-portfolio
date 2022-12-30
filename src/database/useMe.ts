@@ -1,13 +1,16 @@
+import useTranslation from "next-translate/useTranslation";
 import { ListTecnologyName } from "./useTecnologies";
 
 export default function useMe() {
   const phone1 = "934712217";
   const birthday = new Date(2002, 10, 10);
+  const { t } = useTranslation("common");
   const me = {
     name: "Francisco Fetapi",
     email: "franciscofetapi@gmail.com",
     photo: "/my-photo1.jpg",
-    professional: "Desenvolvedor Full-Stack",
+    // professional: "Desenvolvedor Full-Stack",
+    professional: t("professional"),
     github: "https://github.com/Francisco-Fetapi",
     twitter: "https://twitter.com/FranciscoFetapi",
     instagram: "https://www.instagram.com/franciscofetapi/",

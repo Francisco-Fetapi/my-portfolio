@@ -2,7 +2,7 @@ import { Anchor } from "@mantine/core";
 import useExternalLink, { IExternalLinks } from "../hooks/useExternalLink";
 
 interface ExternalLinkProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   reference?: keyof IExternalLinks;
   href?: string;
 }

@@ -22,6 +22,8 @@ import useMe from "../database/useMe";
 import useTecnologies from "../database/useTecnologies";
 import ExternalLink from "../components/ExternalLink";
 import CustomLink from "../components/CustomLink";
+import Trans from "next-translate/Trans";
+import useTranslation from "next-translate/useTranslation";
 
 const PHOTO_SIZE = 250;
 
@@ -38,53 +40,48 @@ export default function IndexPage() {
   const { frontEndTecnologies, backEndTecnologies, otherTecnologies } =
     useTecnologies();
 
+  const { t } = useTranslation("about");
+  const { t: t2 } = useTranslation("common");
+
   function TextAboutMe() {
     return (
       <div>
         <Text className={classes.description}>
-          Meu nome é <b>{me.name}</b>, sou{" "}
-          <ExternalLink reference="fullStack">{me.professional}</ExternalLink>{" "}
-          que atua essencialmente com tecnologias do ecossistema{" "}
-          <ExternalLink reference="javascript">JavaScript</ExternalLink>. O meu
-          primeiro contato com programação foi em{" "}
-          <CustomLink href="/journey?year=2018">2018</CustomLink> durante o{" "}
-          <b>Ensino Médio</b>, nessa fase aprendi{" "}
-          <ExternalLink reference="programmingLogic">
-            Lógica de Programação
-          </ExternalLink>{" "}
-          usando o <ExternalLink reference="visualg">Visual G</ExternalLink>.
-          Depois de criar{" "}
-          <ExternalLink reference="algorithms"> algoritmos</ExternalLink> que
-          eram executados no{" "}
-          <ExternalLink reference="prompt">terminal</ExternalLink> me vi curioso
-          em criar uma interface amigavél para os meus mini-programas, e foi
-          assim que me deparei com{" "}
-          <ExternalLink reference="html5">HTML5</ExternalLink>,{" "}
-          <ExternalLink reference="css3">CSS3</ExternalLink> e{" "}
-          <ExternalLink reference="javascript">JavaScript</ExternalLink>, e
-          desde ai continuei estudando sem parar.
+          <Trans
+            i18nKey="about:auto_biography"
+            components={{
+              b: <b />,
+              linkFullStack: <ExternalLink reference="fullStack" />,
+              linkJs: <ExternalLink reference="javascript" />,
+              link2018: <CustomLink href="/journey?year=2018" />,
+              linkLogic: <ExternalLink reference="programmingLogic" />,
+              linkVisualG: <ExternalLink reference="visualg" />,
+              linkAlgorithms: <ExternalLink reference="algorithms" />,
+              linkTerminal: <ExternalLink reference="prompt" />,
+              linkHTML: <ExternalLink reference="html5" />,
+              linkCSS: <ExternalLink reference="css3" />,
+            }}
+            values={{
+              myName: me.name,
+              myProfessional: me.professional,
+            }}
+          />
         </Text>
         <Text className={classes.description}>
-          Nasci aos{" "}
-          <b>
-            {me.birthday.toLocaleDateString()} ({me.getMyAge()} anos)
-          </b>
-          , falo Português (minha língua materna) e tenho um Inglês
-          intermediário. Atualmente vivo em{" "}
-          <ExternalLink reference="lobito">
-            Angola, Benguela, Lobito
-          </ExternalLink>
-          .
+          <Trans
+            i18nKey="about:auto_biography_2"
+            components={{
+              b: <b />,
+              linkLobito: <ExternalLink reference="lobito" />,
+            }}
+            values={{
+              birthday: me.birthday.toLocaleDateString(),
+              years: me.getMyAge(),
+            }}
+          />
         </Text>
-        <Text className={classes.description}>
-          Comecei a trabalhar profissionalmente com programação atendendo
-          demandas de clientes da minha localidade, antes disso apenas criava
-          projetos de estudo.
-        </Text>
-        <Text className={classes.description}>
-          As minhas paixões são: Programação, Cinema (Filmes, Séries e Animes),
-          Música e Literatura.
-        </Text>
+        <Text className={classes.description}>{t("auto_biography_3")}</Text>
+        <Text className={classes.description}>{t("auto_biography_4")}</Text>
       </div>
     );
   }
@@ -92,13 +89,13 @@ export default function IndexPage() {
   return (
     <div>
       <Head>
-        <title>Sobre</title>
+        <title>{t("about_me")}</title>
       </Head>
       <AppScheme>
         <Box mt={20}>
           <Grid gutter="lg" justify="flex-end">
             <Grid.Col md={8} xs={12}>
-              <MainTitle align="flex-start">Sobre Mim</MainTitle>
+              <MainTitle align="flex-start">{t("about_me")}</MainTitle>
               <Box
                 sx={{ zoom: 0.9, width: "100%", maxWidth: 600 }}
                 data-aos="zoom-in-right"
@@ -106,12 +103,13 @@ export default function IndexPage() {
                 data-aos-delay="400"
               >
                 <Text color="dimmed" className={classes.description}>
-                  Sou um cara apaixonado por desenvolvimento de software.
-                  Atualmente com foco em{" "}
-                  <ExternalLink reference="fullStack">
-                    Desenvolvimento Web full-stack
-                  </ExternalLink>
-                  .
+                  <Trans
+                    i18nKey="about:intro_biography"
+                    components={{
+                      b: <b />,
+                      linkFullStack: <ExternalLink reference="fullStack" />,
+                    }}
+                  />
                 </Text>
               </Box>
               <Group mt={30}>
@@ -125,7 +123,7 @@ export default function IndexPage() {
                     data-aos-duration="1000"
                     data-aos-delay="1000"
                   >
-                    Contactar
+                    {t("to_contact")}
                   </Button>
                 </Link>
                 <Button
@@ -139,7 +137,7 @@ export default function IndexPage() {
                   data-aos-duration="1000"
                   data-aos-delay="1000"
                 >
-                  Baixar Curriculum
+                  {t2("download_cv")}
                 </Button>
               </Group>
             </Grid.Col>
@@ -228,7 +226,7 @@ export default function IndexPage() {
           </TecnologiesContainer>
         </SectionText>
         <SectionText>
-          <SecondTitle>OUTRAS TECNOLOGIAS</SecondTitle>
+          <SecondTitle>{t2("other_tecnologies")}</SecondTitle>
           <TecnologiesContainer>
             {otherTecnologies.map((tecnology, key) => (
               <TecnologyCard
