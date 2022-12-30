@@ -165,7 +165,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
       </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          © {new Date().getFullYear()} - Todos os direitos reservados.
+          © {new Date().getFullYear()} - {t("all_rights_reserved")}
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
