@@ -1,4 +1,6 @@
-const translations = {
+import { TranslationCommon } from "../en/common";
+
+const translations: TranslationCommon = {
   greeting: "Olá Mundo!",
   change_theme: "Alterar tema",
   en: "Inglês",

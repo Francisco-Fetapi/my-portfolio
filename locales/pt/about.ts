@@ -1,4 +1,6 @@
-const translations = {
+import { TranslationAbout } from "../en/about";
+
+const translations: TranslationAbout = {
   auto_biography: `
       Meu nome é <b>{{myName}}</b>, sou
           <linkFullStack>{{myProfessional}}</linkFullStack>

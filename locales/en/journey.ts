@@ -1,3 +1,5 @@
+export type TranslationJourney = typeof translations;
+
 const translations = {
   intro: ``,
 };

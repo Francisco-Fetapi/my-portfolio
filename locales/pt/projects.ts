@@ -1,4 +1,6 @@
-const translations = {
+import { TranslationProjects } from "../en/projects";
+
+const translations: TranslationProjects = {
   test: "teste",
   intro: `
   Desde o momento que digitei a minha primeira

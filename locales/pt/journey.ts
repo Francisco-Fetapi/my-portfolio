@@ -1,4 +1,6 @@
-const translations = {
+import { TranslationJourney } from "../en/journey";
+
+const translations: TranslationJourney = {
   intro: `
   A minha jornada como desenvolvedor começou em
               <year>2018</year>
