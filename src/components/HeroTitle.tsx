@@ -1,6 +1,7 @@
 import { createStyles, Container, Text, Button, Group } from "@mantine/core";
 import { GithubIcon } from "@mantine/ds";
 import { IconDownload } from "@tabler/icons";
+import useTranslation from "next-translate/useTranslation";
 import useMe from "../database/useMe";
 import ExternalLink from "./ExternalLink";
 
@@ -73,6 +74,7 @@ export const useStyles = createStyles((theme) => ({
 export function HeroTitle() {
   const { classes } = useStyles();
   const { me } = useMe();
+  const { t } = useTranslation("home");
 
   return (
     <div className={classes.wrapper}>
@@ -85,7 +87,7 @@ export function HeroTitle() {
           weight={300}
           data-aos="fade-down"
         >
-          Olá, meu nome é
+          {t("hello_my_name_is")}
         </Text>
         <h1
           className={classes.title}
