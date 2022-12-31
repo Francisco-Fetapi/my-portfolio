@@ -16,6 +16,8 @@ export default function useTranslationComponents() {
       linkTerminal: <ExternalLink reference="prompt" />,
       linkHTML: <ExternalLink reference="html5" />,
       linkCSS: <ExternalLink reference="css3" />,
+      year: <CustomLink href="/journey?year=2018" />,
+      br: <br />,
     },
   };
 }

@@ -15,6 +15,7 @@ import { useMemo } from "react";
 import Link from "next/link";
 import Trans from "next-translate/Trans";
 import useTranslation from "next-translate/useTranslation";
+import useTranslationComponents from "../hooks/useTranslationComponents";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -29,6 +30,7 @@ export default function IndexPage() {
 
   const { t: t2 } = useTranslation("common");
   const { t } = useTranslation("projects");
+  const { componentsForTranslation } = useTranslationComponents();
 
   return (
     <div>
@@ -49,10 +51,7 @@ export default function IndexPage() {
                 <Text className={classes.description}>
                   <Trans
                     i18nKey="projects:intro"
-                    components={{
-                      i: <i />,
-                      b: <b />,
-                    }}
+                    components={componentsForTranslation}
                   />
                 </Text>
               </Box>

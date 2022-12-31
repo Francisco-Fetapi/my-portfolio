@@ -9,11 +9,13 @@ import useTimeline from "../database/useTimeline";
 import CustomLink from "../components/CustomLink";
 import Trans from "next-translate/Trans";
 import useTranslation from "next-translate/useTranslation";
+import useTranslationComponents from "../hooks/useTranslationComponents";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
   const { timeline } = useTimeline();
   const { t } = useTranslation("common");
+  const { componentsForTranslation } = useTranslationComponents();
 
   return (
     <div>
@@ -32,10 +34,7 @@ export default function IndexPage() {
             <Text className={classes.description}>
               <Trans
                 i18nKey="journey:intro"
-                components={{
-                  year: <CustomLink href="/journey?year=2018" />,
-                  br: <br />,
-                }}
+                components={componentsForTranslation}
               />
             </Text>
           </Box>
