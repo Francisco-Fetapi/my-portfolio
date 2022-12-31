@@ -1,5 +1,6 @@
 import Trans from "next-translate/Trans";
 import { ITecnology } from "../components/TecnologyCard";
+import useTranslationComponents from "../hooks/useTranslationComponents";
 
 export interface LanguageName<T = any> {
   HTML5: T;
@@ -42,7 +43,13 @@ interface TecnologyDescriptionTranslatedProps {
 function TecnologyDescriptionTranslated({
   name,
 }: TecnologyDescriptionTranslatedProps) {
-  return <Trans i18nKey={`useTecnologies:${name}`} />;
+  const { componentsForTranslation } = useTranslationComponents();
+  return (
+    <Trans
+      i18nKey={`useTecnologies:${name}`}
+      components={componentsForTranslation}
+    />
+  );
 }
 
 export default function useTecnologies() {
@@ -107,7 +114,7 @@ export default function useTecnologies() {
       name: "Node.js",
       image: "/nodejs2.svg",
       startedAt: new Date(),
-      description: <TecnologyDescriptionTranslated name="mysql" />,
+      description: <TecnologyDescriptionTranslated name="nodejs" />,
     },
     {
       name: "MongoDB",
