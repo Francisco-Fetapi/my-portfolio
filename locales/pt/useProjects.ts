@@ -31,80 +31,78 @@ const translations /*:TranslationUseProjects*/ = {
   <linkPhp>PHP</linkPhp>.`,
   typingmaster2: `Um projeto criado para exercitar a habilidade de usar o teclado. Uma
   versão melhor do
-  <ExternalLink href={getRepositoryByName("typing-master")}>
+  <linkTypingMaster>
     primeiro Typing Master
-  </ExternalLink>
+  </linkTypingMaster>
   .`,
   signuplogin: `Um projeto de estudo criado para exercitar o sistema de autenticação
   via JWT. Construido com
-  <ExternalLink reference="reactjs">React</ExternalLink> +
-  <ExternalLink reference="laravel">Laravel</ExternalLink>.`,
+  <linkReactjs>React</linkReactjs> +
+  <linkLaravel>Laravel</linkLaravel>.`,
   financialmanager: `Projeto de estudo desenvolvido para consolidar os conhecimentos
-  relacionados ao <ExternalLink reference="redux">Redux</ExternalLink>
+  relacionados ao <linkRedux>Redux</linkRedux>
   (com
-  <ExternalLink reference="reduxtoolkit">Redux Toolkit</ExternalLink>).
+  <linkReduxToolkit>Redux Toolkit</linkReduxToolkit>).
   O sistema serve para registar as receitas e despesa finceiras.`,
   calculadorareativa: `O meu primeiro projeto de estudo desenvolvido com
-  <ExternalLink reference="reactjs">React</ExternalLink>. Uma
+  <linkReactjs>React</linkReactjs>. Uma
   calculadora que realiza as principais operações da matemática.`,
   calculadorasimples: `A calculadora realiza operações simples da matemática. Desenvolvi esta
   calculadora para treinar manipulação do DOM com
-  <ExternalLink reference="jquery">Jquery</ExternalLink> e treinar
-  <ExternalLink reference="bootstrap">Bootstrap</ExternalLink>.`,
+  <linkJquery>Jquery</linkJque> e treinar
+  <linkBootstrap>Bootstrap</linkBootstrap>.`,
   gestordetarefas: `Basicamente um CRUD de tarefas, com ele é possivel: registar, ver,
   eliminar e editar tarefas. Criado para treinar
-  <ExternalLink reference="reactjs">React</ExternalLink> +
-  <ExternalLink reference="mui">Material UI</ExternalLink>.`,
+  <linkReactjs>React</linkReactjs> +
+  <linkMui>Material UI</linkMui>.`,
   jogodavelhareact: `Uma versão do famoso
-  <ExternalLink reference="tictactoe">Tic-Tac-Toe</ExternalLink>
+  <linkTicTacToe>Tic-Tac-Toe</linkTicTacToe>
   desenvolvido com
-  <ExternalLink reference="reactjs">React</ExternalLink> para fins de
+  <linkReactjs>React</linkReactjs> para fins de
   estudo.`,
   androidappsimulation: `Interface estática de uma aplicação android desenvolvida com
-  <ExternalLink reference="reactjs">React</ExternalLink> +
-  <ExternalLink reference="mui">Material-UI</ExternalLink> para fins de
+  <linkReactjs>React</linkReactjs> +
+  <linkMui>Material-UI</linkMui> para fins de
   estudo.`,
   ptum: `Dicionário e tradutor Umbundo - Português.`,
   ptummanager: `Gestor do
-  <ExternalLink
-    href={getRepositoryByName("portuguese-umbundo-dictionary")}
-  >
+  <linkPtUm>
     Dicionário e tradutor Umbundo - Português
-  </ExternalLink>
+  </linkPtUm>
   . Sistema utilizado para adicionar palavras e expressões ao
   dicionário.`,
-  quiz: `Quiz desenvolvido com <ExternalLink reference="php">PHP</ExternalLink>
+  quiz: `Quiz desenvolvido com <linkPhp>PHP</linkPhp>
   .
-  <ExternalLink reference="souangolanoeconhecoangolaapp">
+  <linkSouAngoEConheAng>
     Sou Angolano e Conheço Angola
-  </ExternalLink>
+  </linkSouAngoEConheAng>
   e
-  <ExternalLink reference="quemquerserricoapp">
+  <linkQuemQuerSerRico>
     Quem Quer Ser Rico
-  </ExternalLink>
+  </linkQuemQuerSerRico>
   serviram de inspiração. O projeto foi criado para fins de estudo.`,
   typingfast: `Jogo desenvolvido com
-  <ExternalLink reference="reactjs">React</ExternalLink> para exercitar
+  <linkReactjs>React</linkReactjs> para exercitar
   a arte de digitar no teclado. Uma versão melhor do
-  <ExternalLink href={getRepositoryByName("Mestre-no-teclado")}>
+  <linkMestreNoTeclado>
     Mestre no Teclado
-  </ExternalLink>
+  </linkMestreNoTeclado>
   .`,
   lyrics: `Sistema que busca a legenda de uma música através do nome do artista e o título da música. Criado para fins de estudo para consolidar o consumo de API's externas.`,
   jogodavelhajquery: `Uma versão do famoso
-  <ExternalLink reference="tictactoe">Tic-Tac-Toe</ExternalLink>
+  <linkTicTacToe>Tic-Tac-Toe</linkTicTacToe>
   desenvolvido com
-  <ExternalLink reference="jquery">Jquery</ExternalLink> para fins de
+  <linkJquery>Jquery</linkJquery> para fins de
   estudo.`,
   typingmaster: `Um mini-jogo criado com
-  <ExternalLink reference="jquery">Jquery</ExternalLink> para exercitar
+  <linkJquery>Jquery</linkJquery> para exercitar
   datilografia. Foi desenvolvido para fins de estudo.`,
   mestrenoteclado: `Com a mesma proposta do
-  <ExternalLink href={getRepositoryByName("typing-master")}>
+  <linkTypingMaster>
     Typing Master
-  </ExternalLink>
+  </linkTypingMaster>
   , este também é um projeto criado para exercitar
-  <ExternalLink reference="datilography">datilografia</ExternalLink>.`,
+  <linkDatilography>datilografia</linkDatilography>.`,
 };
 
 export default translations;

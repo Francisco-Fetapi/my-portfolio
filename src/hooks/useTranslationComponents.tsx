@@ -34,7 +34,7 @@ export default function useTranslationComponents() {
       linkBootstrap: <ExternalLink reference="bootstrap" />,
       linkMui: <ExternalLink reference="mui" />,
       linkTicTacToe: <ExternalLink reference="tictactoe" />,
-      linkPtUmManager: (
+      linkPtUm: (
         <ExternalLink
           href={getRepositoryByName("portuguese-umbundo-dictionary")}
         />
