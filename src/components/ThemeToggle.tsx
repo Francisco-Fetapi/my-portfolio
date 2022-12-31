@@ -6,9 +6,11 @@ import {
   Box,
 } from "@mantine/core";
 import { IconSun, IconMoon } from "@tabler/icons";
+import useTranslation from "next-translate/useTranslation";
 
 export function ThemeToggle() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const { t } = useTranslation("common");
 
   return (
     <Group position="center">
@@ -21,7 +23,7 @@ export function ThemeToggle() {
             label: (
               <Center>
                 <IconSun size={16} stroke={1.5} />
-                <Box ml={10}>Claro</Box>
+                <Box ml={10}>{t("light")}</Box>
               </Center>
             ),
           },
@@ -30,7 +32,7 @@ export function ThemeToggle() {
             label: (
               <Center>
                 <IconMoon size={16} stroke={1.5} />
-                <Box ml={10}>Escuro</Box>
+                <Box ml={10}>{t("dark")}</Box>
               </Center>
             ),
           },

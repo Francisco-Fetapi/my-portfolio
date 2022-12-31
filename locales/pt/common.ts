@@ -5,6 +5,8 @@ const translations: TranslationCommon = {
   change_theme: "Alterar tema",
   en: "Inglês",
   pt: "Português",
+  light: "Claro",
+  dark: "Escuro",
   change_language: "Mudar idioma",
   professional: "Desenvolvedor Full-Stack",
   navigation: "Navegação",
