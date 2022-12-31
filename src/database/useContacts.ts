@@ -8,10 +8,12 @@ import {
   IconBrandGmail,
   IconBrandWhatsapp,
 } from "@tabler/icons";
+import useTranslation from "next-translate/useTranslation";
 import useMe from "./useMe";
 
 export default function useContacts() {
   const { me } = useMe();
+  const { t } = useTranslation("common");
 
   const contacts = [
     {
@@ -54,7 +56,7 @@ export default function useContacts() {
       Icon: IconPhoneCall,
       href: `tel://${me.phone2}`,
       icon: "phone.svg",
-      label: "Telemóvel",
+      label: t("telephone"),
     },
     {
       Icon: IconCalendar,

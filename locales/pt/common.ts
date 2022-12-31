@@ -22,6 +22,7 @@ const translations: TranslationCommon = {
   other_tecnologies: "OUTRAS TECNOLOGIAS",
   next: "Próximo",
   previous: "Anterior",
+  telephone: "Telemóvel",
 };
 
 export default translations;

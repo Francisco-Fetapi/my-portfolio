@@ -22,6 +22,7 @@ const translations = {
   other_tecnologies: "OTHER TECHNOLOGIES",
   next: "Next",
   previous: "Previous",
+  telephone: "Telephone",
 };
 
 export default translations;

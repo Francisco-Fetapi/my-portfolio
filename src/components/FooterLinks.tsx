@@ -126,7 +126,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
   const { t } = useTranslation("common");
 
   const linksSocial = contacts.filter((contact) => {
-    const linksToShow = ["Whatsapp", "Telemóvel", "Calendly"];
+    const linksToShow = ["Whatsapp", t("telephone"), "Calendly"];
     return linksToShow.includes(contact.label);
   });
 
