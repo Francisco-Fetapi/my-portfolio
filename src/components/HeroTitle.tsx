@@ -130,6 +130,7 @@ export function HeroTitle() {
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-delay="1000"
+            data-aos-offset="-200"
           >
             {t2("download_cv")}
           </Button>
@@ -145,6 +146,7 @@ export function HeroTitle() {
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-delay="1000"
+            data-aos-offset="-200"
           >
             GitHub
           </Button>
