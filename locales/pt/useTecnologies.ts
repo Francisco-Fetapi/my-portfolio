@@ -27,7 +27,7 @@ const translations: TranslationUseTecnologies = {
     "Ferramenta que uso para prototipar os sistemas. Não sou designer, mas consigo me virar com ela.",
   phpmyadmin:
     "O gestor de banco de dados que uso nos meus projetos com PHP + MySQL.",
-  insomnia: "Ferramente que uso para testar alguma API.",
+  insomnia: "Ferramenta que uso para testar alguma API.",
 };
 
 export default translations;
