@@ -149,31 +149,30 @@ export function ProjectCard({
       <Group
         mt={1}
         sx={{
-          width: 300,
+          width: PROJECT_CARD_MAX_WIDTH - 20,
         }}
-        className="show_short_and_view_more"
+        // className="show_short_and_view_more"
       >
-        {tags.map((tag) => {
-          const currentTag = tag.toLowerCase();
+        {tags
+          .filter((tag) => tag !== tagQuery)
+          .slice(0, 5)
+          .map((tag) => {
+            const currentTag = tag.toLowerCase();
 
-          if (currentTag === tagQuery) {
-            return <div />;
-          }
-
-          return (
-            <Link href={`/projects/?tag=${currentTag}`} key={tag} passHref>
-              <Anchor
-                color="dimmed"
-                size="xs"
-                style={{
-                  paddingRight: 10,
-                }}
-              >
-                {tag}
-              </Anchor>
-            </Link>
-          );
-        })}
+            return (
+              <Link href={`/projects/?tag=${currentTag}`} key={tag} passHref>
+                <Anchor
+                  color="dimmed"
+                  size="xs"
+                  style={{
+                    paddingRight: 4,
+                  }}
+                >
+                  {tag}
+                </Anchor>
+              </Link>
+            );
+          })}
       </Group>
       <br />
 
