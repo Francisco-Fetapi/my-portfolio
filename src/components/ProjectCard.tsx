@@ -146,21 +146,29 @@ export function ProjectCard({
       >
         {name}
       </Text>
-      <Group mt={1}>
+      <Group
+        mt={1}
+        sx={{
+          width: 300,
+        }}
+        className="show_short_and_view_more"
+      >
         {tags.map((tag) => {
           const currentTag = tag.toLowerCase();
 
           if (currentTag === tagQuery) {
-            return (
-              <Text size="xs" underline>
-                {tag}
-              </Text>
-            );
+            return <div />;
           }
 
           return (
             <Link href={`/projects/?tag=${currentTag}`} key={tag} passHref>
-              <Anchor color="dimmed" size="xs">
+              <Anchor
+                color="dimmed"
+                size="xs"
+                style={{
+                  paddingRight: 10,
+                }}
+              >
                 {tag}
               </Anchor>
             </Link>
