@@ -2,32 +2,28 @@ export type TranslationUseTecnologies = typeof translations;
 
 const translations = {
   html5:
-    "Tudo começou por ele, nada seria possivel sem ele, o bom e velho HTML.",
-  css3: "Linguagem de estilos que usei desde o começo da minha jornada. Hoje em dia utilizo várias tecnologias em cima dele, mas ainda assim o CSS é uma das tecnologias que mais utilizo no meu dia à dia.",
-  js: "A principal tecnologia da minha stack de desenvolvimento. Foi com JavaScript que criei o meu primeiro programa.",
-  ts: "Depois do TypeScript já não mais desenvolvo projetos com JavaScript. Antes a ideia da tipagem não me agradava em nada, hoje já não vivo sem.",
+    "It all started with him, nothing would be possible without him, the good old HTML.",
+  css3: "Language of styles that I used since the beginning of my journey. Nowadays I use several technologies on top of it, but still CSS is one of the technologies I use most in my daily routine",
+  js: "The core technology of my development stack. It was with JavaScript that I created my first program.",
+  ts: "After TypeScript, I no longer develop projects with JavaScript. Before, I didn't want to hear about typing, I didn't like it at all, today I can't live without it.",
   reactjs:
-    "React é sem sombra de dúvidas a melhor tecnológia que aprendi durante toda a minha jornada como desenvolvedor front-end.",
+    "React is without a doubt the best technology I've learned throughout my journey as a front-end developer.",
   nextjs:
-    "O Framework React mais amado pela comunidade. O Next.js acabou se tornando a minha principal ferramente no desenvolvimento Web Front-End.",
-  php: "Aprendi PHP nos meados de 2019, de lá pra cá muito aprendi sobre a linguagem e seu ecossistema.",
-  laravel: "O Laravel aumentou em 10x o meu tempo de desenvolvimento com PHP.",
+    "The most loved React Framework by the community. Next.js ended up becoming my main tool in Web Front-End development.",
+  php: "I learned PHP in mid-2019, since then I've learned a lot about the language and its ecosystem.",
+  laravel: "Laravel has increased my PHP development time by 10x.",
   mysql:
-    "Aprendi o MySQL em conjunto com PHP. É com toda certeza o Banco de dados que mais utilizo.",
-  nodejs: `<b>JavaScript no back-end</b>, no começo não sabia que tal coisa era
-  possivel, depois de trabalhar cerca de 2 anos com PHP, dei uma chance
-  para o Node.Js e não me arrependo de tê-lo feito.`,
+    "I learned MySQL together with PHP. It is certainly the database that I use the most.",
+  nodejs: `<b>JavaScript on the backend</b>, at first I didn't know such a thing was possible, after working with PHP for about 2 years I gave Node.Js a chance and I don't regret doing it .`,
   mongodb:
-    "No começo até foi um tanto confuso PENSAR EM BANCOS DE DADOS NÃO RELACIONAIS, mas com o tempo acabei me acostumando com o MongoDB, um grande parceiro do Node.js.",
+    "In the beginning it was even a bit confusing THINKING ABOUT NON-RELATIONAL DATABASES, but over time I ended up getting used to MongoDB, a great partner of Node.js.",
   strapi:
-    "O Strapi é com toda a certeza a melhor opção no universo Node.js quando o assunto é Headless CMS.",
-  vscode: `Editor de código que uso meu dia a dia. O VS Code é com certeza o meu
-  editor preferido.`,
+    "Strapi is certainly the best option in the Node.js universe when it comes to Headless CMS.",
+  vscode: `Code editor that I use on a daily basis. VS Code is definitely my favorite editor.`,
   adobexd:
-    "Ferramenta que uso para prototipar os sistemas. Não sou designer, mas consigo me virar com ela.",
-  phpmyadmin:
-    "O gestor de banco de dados que uso nos meus projetos com PHP + MySQL.",
-  insomnia: "Ferramente que uso para testar alguma API.",
+    "Tool I use to prototype systems. I'm not a designer, but I can get by with it.",
+  phpmyadmin: "The database manager I use in my projects with PHP + MySQL.",
+  insomnia: "Tool I use to test some API.",
 };
 
 export default translations;
