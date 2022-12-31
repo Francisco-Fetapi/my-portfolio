@@ -39,14 +39,7 @@ export default function useProjects() {
   const recentProjects: IProject[] = [
     {
       name: "Social Movies Space",
-      description: (
-        <>
-          Uma rede social para amantes de filmes e seriados. O sistema oferece
-          um sistema de autenticação, sistema de publicações, comentários,
-          reações e busca informações da API do{" "}
-          <ExternalLink reference="tmdb">ThemovieDB</ExternalLink>.
-        </>
-      ),
+      description: <ProjectDescriptionTranslated name="sms" />,
       images: ["sms-demo-2.png", "sms-demo-1.png"],
       links: {
         github: getRepositoryByName("projeto-tcc"),

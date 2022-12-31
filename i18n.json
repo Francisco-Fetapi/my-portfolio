@@ -6,7 +6,7 @@
     "/": ["home"],
     "/about": ["about", "useTecnologies"],
     "/journey": ["journey"],
-    "/projects": ["projects"],
+    "/projects": ["projects", "useProjects"],
     "/contact": ["contact"]
   }
 }
