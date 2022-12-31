@@ -1,5 +1,7 @@
+import Trans from "next-translate/Trans";
 import ExternalLink from "../components/ExternalLink";
 import { listProjectsFromLastToBegin } from "../helpers/listProjectsFromLastToBegin";
+import useTranslationComponents from "../hooks/useTranslationComponents";
 import useMe from "./useMe";
 import { ListTecnologyName } from "./useTecnologies";
 
@@ -511,4 +513,20 @@ export default function useProjects() {
   }
 
   return { someProjects, recentProjects, allProjects, getProjectsByTag };
+}
+
+interface ProjectDescriptionTranslatedProps {
+  name: string;
+}
+
+function ProjectDescriptionTranslated({
+  name,
+}: ProjectDescriptionTranslatedProps) {
+  const { componentsForTranslation } = useTranslationComponents();
+  return (
+    <Trans
+      i18nKey={`useProjects:${name}`}
+      components={componentsForTranslation}
+    />
+  );
 }
