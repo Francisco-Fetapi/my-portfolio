@@ -4,7 +4,7 @@
   "pages": {
     "*": ["common"],
     "/": ["home"],
-    "/about": ["about"],
+    "/about": ["about", "useTecnologies"],
     "/journey": ["journey"],
     "/projects": ["projects"],
     "/contact": ["contact"]

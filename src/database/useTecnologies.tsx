@@ -1,3 +1,4 @@
+import Trans from "next-translate/Trans";
 import { ITecnology } from "../components/TecnologyCard";
 
 export interface LanguageName<T = any> {
@@ -34,49 +35,53 @@ export type ListTecnology<T = any> = LanguageName<T> &
 
 export type ListTecnologyName = keyof ListTecnology;
 
+interface TecnologyDescriptionTranslatedProps {
+  name: string;
+}
+
+function TecnologyDescriptionTranslated({
+  name,
+}: TecnologyDescriptionTranslatedProps) {
+  return <Trans i18nKey={`useTecnologies:${name}`} />;
+}
+
 export default function useTecnologies() {
   const frontEndTecnologies: ITecnology[] = [
     {
       name: "HTML5",
       image: "/html5.svg",
       startedAt: new Date(),
-      description:
-        "Tudo começou por ele, nada seria possivel sem ele, o bom e velho HTML.",
+      description: <TecnologyDescriptionTranslated name="html5" />,
     },
     {
       name: "CSS3",
       image: "/css.svg",
       startedAt: new Date(),
-      description:
-        "Linguagem de estilos que usei desde o começo da minha jornada. Hoje em dia utilizo várias tecnologias em cima dele, mas ainda assim o CSS é uma das tecnologias que mais utilizo no meu dia à dia.",
+      description: <TecnologyDescriptionTranslated name="css3" />,
     },
     {
       name: "JavaScript",
       image: "/javascript.svg",
       startedAt: new Date(),
-      description:
-        "A principal tecnologia da minha stack de desenvolvimento. Foi com JavaScript que criei o meu primeiro programa.",
+      description: <TecnologyDescriptionTranslated name="js" />,
     },
     {
       name: "TypeScript",
       image: "/typescript.svg",
       startedAt: new Date(),
-      description:
-        "Depois do TypeScript já não mais desenvolvo projetos com JavaScript. Antes a ideia da tipagem não me agradava em nada, hoje já não vivo sem.",
+      description: <TecnologyDescriptionTranslated name="ts" />,
     },
     {
       name: "React.js",
       image: "/react.svg",
       startedAt: new Date(),
-      description:
-        "React é sem sombra de dúvidas a melhor tecnológia que aprendi durante toda a minha jornada como desenvolvedor front-end.",
+      description: <TecnologyDescriptionTranslated name="reactjs" />,
     },
     {
       name: "Next.js",
       image: "/nextjs-line.svg",
       startedAt: new Date(),
-      description:
-        "O Framework React mais amado pela comunidade. O Next.js acabou se tornando a minha principal ferramente no desenvolvimento Web Front-End.",
+      description: <TecnologyDescriptionTranslated name="nextjs" />,
     },
   ];
   const backEndTecnologies: ITecnology[] = [
@@ -84,48 +89,37 @@ export default function useTecnologies() {
       name: "PHP",
       image: "/php.svg",
       startedAt: new Date(),
-      description:
-        "Aprendi PHP nos meados de 2019, de lá pra cá muito aprendi sobre a linguagem e seu ecossistema.",
+      description: <TecnologyDescriptionTranslated name="php" />,
     },
     {
       name: "Laravel",
       image: "/laravel.svg",
       startedAt: new Date(),
-      description:
-        "O Laravel aumentou em 10x o meu tempo de desenvolvimento com PHP.",
+      description: <TecnologyDescriptionTranslated name="laravel" />,
     },
     {
       name: "MySQL",
       image: "/mysql.svg",
       startedAt: new Date(),
-      description:
-        "Aprendi o MySQL em conjunto com PHP. É com toda certeza o Banco de dados que mais utilizo.",
+      description: <TecnologyDescriptionTranslated name="mysql" />,
     },
     {
       name: "Node.js",
       image: "/nodejs2.svg",
       startedAt: new Date(),
-      description: (
-        <>
-          <b>JavaScript no back-end</b>, no começo não sabia que tal coisa era
-          possivel, depois de trabalhar cerca de 2 anos com PHP, dei uma chance
-          para o Node.Js e não me arrependo de tê-lo feito.
-        </>
-      ),
+      description: <TecnologyDescriptionTranslated name="mysql" />,
     },
     {
       name: "MongoDB",
       image: "/mongodb.svg",
       startedAt: new Date(),
-      description:
-        "No começo até foi um tanto confuso PENSAR EM BANCOS DE DADOS NÃO RELACIONAIS, mas com o tempo acabei me acostumando com o MongoDB, um grande parceiro do Node.js.",
+      description: <TecnologyDescriptionTranslated name="mongodb" />,
     },
     {
       name: "Strapi",
       image: "/strapi.ico",
       startedAt: new Date(),
-      description:
-        "O Strapi é com toda a certeza a melhor opção no universo Node.js quando o assunto é Headless CMS.",
+      description: <TecnologyDescriptionTranslated name="strapi" />,
     },
   ];
 
@@ -134,28 +128,25 @@ export default function useTecnologies() {
       name: "VS Code",
       image: "/visual-studio-code.svg",
       startedAt: new Date(),
-      description: `Editor de código que uso meu dia a dia. O VS Code é com certeza o meu
-      editor preferido.`,
+      description: <TecnologyDescriptionTranslated name="vscode" />,
     },
     {
       name: "Adobe XD",
       image: "/adobexd.png",
       startedAt: new Date(),
-      description:
-        "Ferramenta que uso para prototipar os sistemas. Não sou designer, mas consigo me virar com ela.",
+      description: <TecnologyDescriptionTranslated name="adobexd" />,
     },
     {
       name: "PhpMyAdmin",
       image: "/phpmyadmin.ico",
       startedAt: new Date(),
-      description:
-        "O gestor de banco de dados que uso nos meus projetos com PHP + MySQL.",
+      description: <TecnologyDescriptionTranslated name="phpmyadmin" />,
     },
     {
       name: "Insomnia Rest Client",
       image: "/insomnia.ico",
       startedAt: new Date(),
-      description: "Ferramente que uso para testar alguma API.",
+      description: <TecnologyDescriptionTranslated name="insomnia" />,
     },
   ];
 
