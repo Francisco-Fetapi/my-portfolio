@@ -24,6 +24,7 @@ import ExternalLink from "../components/ExternalLink";
 import CustomLink from "../components/CustomLink";
 import Trans from "next-translate/Trans";
 import useTranslation from "next-translate/useTranslation";
+import useTranslationComponents from "../hooks/useTranslationComponents";
 
 const PHOTO_SIZE = 250;
 
@@ -40,6 +41,8 @@ export default function IndexPage() {
   const { frontEndTecnologies, backEndTecnologies, otherTecnologies } =
     useTecnologies();
 
+  const { componentsForTranslation } = useTranslationComponents();
+
   const { t } = useTranslation("about");
   const { t: t2 } = useTranslation("common");
 
@@ -49,18 +52,7 @@ export default function IndexPage() {
         <Text className={classes.description}>
           <Trans
             i18nKey="about:auto_biography"
-            components={{
-              b: <b />,
-              linkFullStack: <ExternalLink reference="fullStack" />,
-              linkJs: <ExternalLink reference="javascript" />,
-              link2018: <CustomLink href="/journey?year=2018" />,
-              linkLogic: <ExternalLink reference="programmingLogic" />,
-              linkVisualG: <ExternalLink reference="visualg" />,
-              linkAlgorithms: <ExternalLink reference="algorithms" />,
-              linkTerminal: <ExternalLink reference="prompt" />,
-              linkHTML: <ExternalLink reference="html5" />,
-              linkCSS: <ExternalLink reference="css3" />,
-            }}
+            components={componentsForTranslation}
             values={{
               myName: me.name,
               myProfessional: me.professional,
@@ -70,10 +62,7 @@ export default function IndexPage() {
         <Text className={classes.description}>
           <Trans
             i18nKey="about:auto_biography_2"
-            components={{
-              b: <b />,
-              linkLobito: <ExternalLink reference="lobito" />,
-            }}
+            components={componentsForTranslation}
             values={{
               birthday: me.birthday.toLocaleDateString(),
               years: me.getMyAge(),
@@ -105,10 +94,7 @@ export default function IndexPage() {
                 <Text color="dimmed" className={classes.description}>
                   <Trans
                     i18nKey="about:intro_biography"
-                    components={{
-                      b: <b />,
-                      linkFullStack: <ExternalLink reference="fullStack" />,
-                    }}
+                    components={componentsForTranslation}
                   />
                 </Text>
               </Box>
