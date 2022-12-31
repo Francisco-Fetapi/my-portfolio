@@ -27,9 +27,9 @@ const useStyles = createStyles((theme) => ({
       padding: "0px 25px",
     },
     fontWeight: 900,
-    fontFamily: "Roboto,sans-serif",
     margin: 0,
     padding: "0px 50px",
+    textTransform: "uppercase",
   },
 }));
 
