@@ -1,7 +1,7 @@
 import { TranslationContact } from "../en/contact";
 
 const translations: TranslationContact = {
-  intro: `Se quiseres fazer alguma pergunta ou apenas dar um &quot;Oi&quot;,
+  intro: `Se quiseres fazer alguma pergunta ou apenas dar um "Oi",
   darei o meu melhor para lhe atender o mais rápido possivel. Estou
   sempre aberto para discutir novas ideias e participar de novos
   projetos.`,
