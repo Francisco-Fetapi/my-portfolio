@@ -26,6 +26,7 @@ const translations = {
   finished: "Finished",
   building: "Building",
   death: "Deprecated",
+  timeline: "Timeline",
 };
 
 export default translations;

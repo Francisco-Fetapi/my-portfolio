@@ -47,7 +47,7 @@ export default function IndexPage() {
           data-aos-delay="1200"
           data-aos-once="true"
         >
-          <SecondTitle>Linha do Tempo</SecondTitle>
+          <SecondTitle>{t("timeline")}</SecondTitle>
           <br />
           <MyTimeline timelines={timeline} />
         </SectionText>
