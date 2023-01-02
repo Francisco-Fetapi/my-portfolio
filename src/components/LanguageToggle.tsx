@@ -23,9 +23,15 @@ const useStyles = createStyles((theme) => ({
 
 function ImgLanguage({ locale }: { locale?: string }) {
   const { defaultLocale } = useRouter();
+  const extensions = {
+    pt: "svg",
+    en: "jpg",
+  };
   return (
     <Image
-      src={`/${locale || defaultLocale}-language.png`}
+      src={`/${locale || defaultLocale}-language.${
+        extensions[locale as keyof typeof extensions]
+      }`}
       alt="Language"
       width={20}
       height={15}
