@@ -23,6 +23,9 @@ const translations = {
   next: "Next",
   previous: "Previous",
   telephone: "Telephone",
+  finished: "Finished",
+  building: "Building",
+  death: "Deprecated",
 };
 
 export default translations;

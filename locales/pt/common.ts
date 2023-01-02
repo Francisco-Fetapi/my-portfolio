@@ -23,6 +23,9 @@ const translations: TranslationCommon = {
   next: "Próximo",
   previous: "Anterior",
   telephone: "Telemóvel",
+  finished: "Finalizado",
+  building: "Construindo",
+  death: "Depreciado",
 };
 
 export default translations;
