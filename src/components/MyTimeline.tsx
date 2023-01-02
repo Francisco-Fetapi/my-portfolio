@@ -79,14 +79,20 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
 
   function backToTop() {
     if (refControls.current) {
-      const distanceFromTop = refControls.current.offsetTop;
-      scrollTo({ y: distanceFromTop - 90 });
+      const el = refControls.current;
+      const distanceFromTop =
+        window.pageYOffset + el.getBoundingClientRect().top;
+      const y = distanceFromTop - 90;
+
+      scrollTo({ y });
+      console.log("Scrolled to", y);
     }
   }
 
   return (
     <Box mt={50} sx={{ maxWidth: 500 }}>
       <Tabs value={activeTab!} color="blue" onTabChange={setActiveTab}>
+        <div ref={refControls} />
         <Tabs.Panel value={activeTab!} pt="xs">
           <TimeLine
             prev={prevYear}
@@ -95,7 +101,7 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
             year={activeTab!}
             isFirst={isFirst}
             isLast={isLast}
-            refControls={refControls}
+            // refControls={refControls}
           />
         </Tabs.Panel>
 
@@ -127,7 +133,6 @@ interface TimeLineProps {
   next: () => void;
   isFirst: boolean;
   isLast: boolean;
-  refControls: React.MutableRefObject<HTMLDivElement | null>;
 }
 
 function TimeLine({
@@ -137,12 +142,11 @@ function TimeLine({
   next,
   isFirst,
   isLast,
-  refControls,
 }: TimeLineProps) {
   const { locale } = useCurrentLocale();
 
   return (
-    <Box my={40} key={year}>
+    <Box my={40}>
       <Box
         mb={20}
         sx={{
@@ -150,7 +154,6 @@ function TimeLine({
           gridTemplateColumns: "auto 1fr auto",
           alignItems: "center",
         }}
-        ref={refControls}
       >
         <ActionIcon
           size="lg"

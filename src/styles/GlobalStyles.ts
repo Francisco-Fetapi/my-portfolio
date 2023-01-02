@@ -13,6 +13,7 @@ export const GlobalStyles = createGlobalStyle<StylesProps>`
     }
     body{
       overflow-x: hidden;
+      display:grid;
     }
     .show_short_and_view_more{
     text-overflow:ellipsis;
