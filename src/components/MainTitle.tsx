@@ -37,7 +37,7 @@ export default function MainTitle({ children, align }: MainTitleProps) {
     <div
       className={classes.container}
       style={{
-        alignItems: align || "center",
+        alignItems: align || "flex-start",
       }}
       data-aos="fade-up"
       data-aos-duration="1000"
