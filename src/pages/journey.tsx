@@ -10,6 +10,7 @@ import CustomLink from "../components/CustomLink";
 import Trans from "next-translate/Trans";
 import useTranslation from "next-translate/useTranslation";
 import useTranslationComponents from "../hooks/useTranslationComponents";
+import SecondTitle from "../components/SecondTitle";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -39,12 +40,15 @@ export default function IndexPage() {
             </Text>
           </Box>
         </Box>
+
         <SectionText
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="1200"
           data-aos-once="true"
         >
+          <SecondTitle>Linha do Tempo</SecondTitle>
+          <br />
           <MyTimeline timelines={timeline} />
         </SectionText>
       </AppScheme>

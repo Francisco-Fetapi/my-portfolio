@@ -93,7 +93,7 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
   }
 
   return (
-    <Box mt={50} sx={{ maxWidth: 500 }}>
+    <Box sx={{ maxWidth: 500, margin: "0 auto", paddingRight: "20px" }}>
       <Tabs value={activeTab!} color="blue" onTabChange={setActiveTab}>
         <div ref={refControls} />
         <Tabs.Panel value={activeTab!} pt="xs">
@@ -149,7 +149,7 @@ function TimeLine({
   const { locale } = useCurrentLocale();
 
   return (
-    <Box my={40}>
+    <Box mb={40}>
       <Box
         mb={20}
         sx={{
@@ -188,7 +188,7 @@ function TimeLine({
               key={key}
               data-aos={animate}
             >
-              <Text align="justify" color="dimmed" size="sm">
+              <Text color="dimmed" size="sm">
                 {timeline.description}
               </Text>
               {timeline.date && (
