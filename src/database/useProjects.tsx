@@ -11,14 +11,7 @@ export interface IProjectStatus<T = any> {
   death: T;
 }
 
-type ITags =
-  | ListTecnologyName
-  | "i18n"
-  | "Forum"
-  | "Gallery"
-  | "Keyboard Game"
-  | "Tic-Tac-Toe"
-  | "LocalStorage";
+type ITags = ListTecnologyName | "i18n" | "Keyboard Game" | "Tic-Tac-Toe";
 export interface IProject {
   name: string;
   description: React.ReactNode;
@@ -104,7 +97,7 @@ export default function useProjects() {
         github: getRepositoryByName("forum-front-end"),
       },
       status: "finished",
-      tags: ["React.js", "JavaScript", "Material-UI", "PHP", "MySQL", "Forum"],
+      tags: ["React.js", "JavaScript", "Material-UI", "PHP", "MySQL"],
       createdAt: new Date(2021, 5, 12),
     },
     {
@@ -115,7 +108,7 @@ export default function useProjects() {
         github: getRepositoryByName("jornal-web"),
       },
       status: "finished",
-      tags: ["React.js", "JavaScript", "PHP", "MySQL", "Galeria" as "Gallery"],
+      tags: ["React.js", "JavaScript", "PHP", "MySQL"],
       createdAt: new Date(2021, 4, 15),
     },
   ];
@@ -130,7 +123,7 @@ export default function useProjects() {
         preview: "https://typing-master-2.vercel.app",
       },
       status: "finished",
-      tags: ["TypeScript", "React.js", "Mantine UI", "Keyboard Game"],
+      tags: ["Keyboard Game", "TypeScript", "React.js", "Mantine UI"],
       createdAt: new Date(2022, 8, 13),
     },
     {
@@ -210,7 +203,7 @@ export default function useProjects() {
         preview: "https://jogo-da-velha-fetapi.vercel.app",
       },
       status: "finished",
-      tags: ["JavaScript", "React.js", "Material-UI", "Tic-Tac-Toe"],
+      tags: ["Tic-Tac-Toe", "JavaScript", "React.js", "Material-UI"],
       createdAt: new Date(2021, 1, 22),
     },
     {
@@ -275,7 +268,7 @@ export default function useProjects() {
         preview: "http://typing-fast.vercel.app/",
       },
       status: "finished",
-      tags: ["TypeScript", "React.js", "Material-UI", "Keyboard Game"],
+      tags: ["Keyboard Game", "TypeScript", "React.js", "Material-UI"],
       createdAt: new Date(2022, 9, 3),
     },
     {
@@ -303,7 +296,7 @@ export default function useProjects() {
           "https://francisco-fetapi.github.io/jogo-da-velha-html-css-js/",
       },
       status: "finished",
-      tags: ["JavaScript", "Jquery", "Bootstrap", "Tic-Tac-Toe"],
+      tags: ["Tic-Tac-Toe", "JavaScript", "Jquery", "Bootstrap"],
       createdAt: new Date(2020, 3, 2),
     },
     {
@@ -319,7 +312,7 @@ export default function useProjects() {
         preview: "https://francisco-fetapi.github.io/typing-master/",
       },
       status: "finished",
-      tags: ["JavaScript", "Jquery", "Bootstrap", "Keyboard Game"],
+      tags: ["Keyboard Game", "JavaScript", "Jquery", "Bootstrap"],
       createdAt: new Date(2020, 4, 3),
     },
     {
@@ -331,7 +324,7 @@ export default function useProjects() {
         preview: "https://francisco-fetapi.github.io/Mestre-no-teclado/",
       },
       status: "finished",
-      tags: ["JavaScript", "Jquery", "Bootstrap", "Keyboard Game"],
+      tags: ["Keyboard Game", "JavaScript", "Jquery", "Bootstrap"],
       createdAt: new Date(2020, 4, 28),
     },
   ];
