@@ -11,7 +11,7 @@ import {
 } from "@mantine/core";
 import { IProject } from "../database/useProjects";
 
-import { IconBrandGithub, IconExternalLink } from "@tabler/icons";
+import { IconBrandGithub, IconCalendar, IconExternalLink } from "@tabler/icons";
 import dateDistance from "../helpers/dateDistance";
 import useCurrentLocale from "../hooks/useCurrentLocale";
 import ProjectStatus from "./ProjectStatus";
@@ -182,11 +182,12 @@ export function ProjectCard({
 
       <div style={{ flexGrow: 1 }} />
       <Group position="apart" className={classes.footer}>
-        <Center>
+        <Group spacing={5}>
+          <IconCalendar size={17} />
           <Text size="xs" color="dimmed">
             {dateDistance(createdAt, locale)}
           </Text>
-        </Center>
+        </Group>
 
         <Group spacing={8} mr={0}>
           <a {...githubLink}>

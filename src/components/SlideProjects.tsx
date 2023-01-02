@@ -1,6 +1,5 @@
 import { Carousel } from "@mantine/carousel";
 import useProjects from "../database/useProjects";
-
 import ProjectSlideItem from "./ProjectSlideItem";
 
 export const CAROUSEL_HEIGHT = 400;
@@ -31,6 +30,7 @@ export const SLIDE_STYLES = {
 
 export default function SlideProject() {
   const { recentProjects } = useProjects();
+
   return (
     <Carousel
       sx={{ maxWidth: CAROUSEL_WIDTH, height: CAROUSEL_HEIGHT }}
