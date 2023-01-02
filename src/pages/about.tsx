@@ -24,7 +24,7 @@ import useTecnologies from "../database/useTecnologies";
 import Trans from "next-translate/Trans";
 import useTranslation from "next-translate/useTranslation";
 import useTranslationComponents from "../hooks/useTranslationComponents";
-import { IconPhone,IconDownload } from "@tabler/icons";
+import { IconPhone, IconDownload } from "@tabler/icons";
 
 const PHOTO_SIZE = 250;
 
@@ -108,7 +108,7 @@ export default function IndexPage() {
                     data-aos="fade-right"
                     data-aos-duration="1000"
                     data-aos-delay="1000"
-                    leftIcon={<IconPhone />}
+                    leftIcon={<IconPhone size={20} />}
                   >
                     {t("to_contact")}
                   </Button>
@@ -123,7 +123,7 @@ export default function IndexPage() {
                   data-aos="fade-left"
                   data-aos-duration="1000"
                   data-aos-delay="1000"
-                  leftIcon={<IconDownload />}
+                  leftIcon={<IconDownload size={20} />}
                 >
                   {t2("download_cv")}
                 </Button>
