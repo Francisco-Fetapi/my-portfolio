@@ -20,11 +20,11 @@ import TecnologyCard from "../components/TecnologyCard";
 import TecnologiesContainer from "../components/TecnologiesContainer";
 import useMe from "../database/useMe";
 import useTecnologies from "../database/useTecnologies";
-import ExternalLink from "../components/ExternalLink";
-import CustomLink from "../components/CustomLink";
+
 import Trans from "next-translate/Trans";
 import useTranslation from "next-translate/useTranslation";
 import useTranslationComponents from "../hooks/useTranslationComponents";
+import { IconPhone,IconDownload } from "@tabler/icons";
 
 const PHOTO_SIZE = 250;
 
@@ -108,6 +108,7 @@ export default function IndexPage() {
                     data-aos="fade-right"
                     data-aos-duration="1000"
                     data-aos-delay="1000"
+                    leftIcon={<IconPhone />}
                   >
                     {t("to_contact")}
                   </Button>
@@ -122,6 +123,7 @@ export default function IndexPage() {
                   data-aos="fade-left"
                   data-aos-duration="1000"
                   data-aos-delay="1000"
+                  leftIcon={<IconDownload />}
                 >
                   {t2("download_cv")}
                 </Button>

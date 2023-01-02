@@ -48,6 +48,9 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
   useEffect(() => {
     if (years.includes(year)) {
       setActiveTab(year);
+      setTimeout(() => {
+        backToTopTimeline();
+      }, 2000);
     }
     if (!year) {
       setActiveTab(years[0]);
@@ -55,7 +58,7 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
   }, [year]);
 
   useDidUpdate(() => {
-    backToTop();
+    backToTopTimeline();
   }, [activeTab]);
 
   function nextYear() {
@@ -77,7 +80,7 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
     }
   }
 
-  function backToTop() {
+  function backToTopTimeline() {
     if (refControls.current) {
       const el = refControls.current;
       const distanceFromTop =
