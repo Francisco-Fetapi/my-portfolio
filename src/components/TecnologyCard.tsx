@@ -57,7 +57,6 @@ export default function TecnologyCard({
   const animations = ["up", "down", "left", "right"];
   let selectedAnimation =
     animations[Math.round(Math.random() * animations.length)];
-  console.log(selectedAnimation);
   if (!selectedAnimation) {
     selectedAnimation = animations[0];
   }

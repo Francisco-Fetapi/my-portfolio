@@ -2,7 +2,6 @@ import { createStyles, Container, Text, Button, Group } from "@mantine/core";
 import { GithubIcon } from "@mantine/ds";
 import { IconDownload } from "@tabler/icons";
 import useTranslation from "next-translate/useTranslation";
-import Trans from "next-translate/Trans";
 import useMe from "../database/useMe";
 import ExternalLink from "./ExternalLink";
 

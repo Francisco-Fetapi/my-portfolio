@@ -16,6 +16,7 @@ interface WithColorScheme {
   preferredColorScheme: IColor;
 }
 const THEME_COOKIE = "theme_mantine_portfolio";
+
 export default function App(props: AppProps & WithColorScheme) {
   const { Component, pageProps } = props;
   const [colorScheme, setColorScheme] = useState<IColor>(
@@ -42,7 +43,9 @@ export default function App(props: AppProps & WithColorScheme) {
     AOS.init();
   }, []);
 
-  AOS.refresh();
+  useEffect(() => {
+    AOS.refresh();
+  }, [colorScheme]);
 
   return (
     <>
