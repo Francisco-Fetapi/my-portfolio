@@ -103,6 +103,17 @@ const translations: TranslationUseProjects = {
   </linkTypingMaster>
   , este também é um projeto criado para exercitar
   <linkDatilography>datilografia</linkDatilography>.`,
+  my_portfolio: "Meu Portfólio",
+  beauty_salon: "Salão de Beleza - July Otchacati",
+  jornal_web: "Jornal Web - Colégio Chimbanda",
+  signup_system: "Sistema de SignUp/Login",
+  reactive_calculator: "Calculadora Reativa",
+  simple_calculator: "Calculadora Simples",
+  task_manager: "Gestor de Tarefas",
+  tictactoereact: "Jogo da Velha (React)",
+  tictactoe: "Jogo da Velha (Jquery)",
+  quizname: "Quiz - Quem Sabe?",
+  keyboard_master: "Mestre no Teclado",
 };
 
 export default translations;

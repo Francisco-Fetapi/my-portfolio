@@ -83,7 +83,15 @@ const translations = {
   <linkDatilography>typing</linkDatilography>.`,
   my_portfolio: "My Portfolio",
   beauty_salon: "Beauty Salon - July Otchacati",
-  jornal_web: "Jornal Web - Colégio Chimbanda",
+  jornal_web: "Web Journal - Chimbanda College",
+  signup_system: "SignUp/Login System",
+  reactive_calculator: "Reactive Calculator",
+  simple_calculator: "Simple Calculator",
+  task_manager: "Task Manager",
+  tictactoereact: "Tic-Tac-Toe (React)",
+  tictactoe: "Tic-Tac-Toe (Jquery)",
+  quizname: "Quiz - Who knows?",
+  keyboard_master: "KeyBoard Master",
 };
 
 export default translations;

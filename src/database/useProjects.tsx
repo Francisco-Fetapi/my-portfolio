@@ -129,7 +129,7 @@ export default function useProjects() {
       createdAt: new Date(2022, 8, 13),
     },
     {
-      name: "Sistema de SignUp/Login",
+      name: t("signup_system"),
       description: <ProjectDescriptionTranslated name="signuplogin" />,
       images: ["sistema-login-jwt-1.png", "sistema-login-jwt-2.png"],
       links: {
@@ -152,7 +152,7 @@ export default function useProjects() {
       createdAt: new Date(2022, 8, 2),
     },
     {
-      name: "Calculadora Reativa",
+      name: t("reactive_calculator"),
       description: <ProjectDescriptionTranslated name="calculadorareativa" />,
       images: ["calculadora-react-1.png", "calculadora-react-2.png"],
       links: {
@@ -164,7 +164,7 @@ export default function useProjects() {
       createdAt: new Date(2021, 1, 9),
     },
     {
-      name: "Calculadora Simples",
+      name: t("simple_calculator"),
       description: <ProjectDescriptionTranslated name="calculadorasimples" />,
       images: [
         // "calculadora-html-css-js-1.png",
@@ -181,7 +181,7 @@ export default function useProjects() {
       createdAt: new Date(2020, 2, 18),
     },
     {
-      name: "Gestor de Tarefas",
+      name: t("task_manager"),
       description: <ProjectDescriptionTranslated name="gestordetarefas" />,
       images: [
         "gestor-de-tarefas-1.png",
@@ -197,7 +197,7 @@ export default function useProjects() {
       createdAt: new Date(2021, 2, 28),
     },
     {
-      name: "Jogo da Velha (React)",
+      name: t("tictactoereact"),
       description: <ProjectDescriptionTranslated name="jogodavelhareact" />,
       images: ["jogo-da-velha-react-2.png", "jogo-da-velha-react-1.png"],
       links: {
@@ -249,7 +249,7 @@ export default function useProjects() {
       createdAt: new Date(2022, 9, 28),
     },
     {
-      name: "Quiz - Quem Sabe?",
+      name: t("quizname"),
       description: <ProjectDescriptionTranslated name="quiz" />,
       images: ["quiz-1.png", "quiz-2.png", "quiz-3.png", "quiz-4.png"],
       links: {
@@ -289,7 +289,7 @@ export default function useProjects() {
 
   const secondaryProjects: IProject[] = [
     {
-      name: "Jogo da Velha (Jquery)",
+      name: t("tictactoe"),
       description: <ProjectDescriptionTranslated name="jogodavelhajquery" />,
       images: ["jogo-da-velha-html-1.png"],
       links: {
@@ -318,7 +318,7 @@ export default function useProjects() {
       createdAt: new Date(2020, 4, 3),
     },
     {
-      name: "Mestre no Teclado",
+      name: "keyboard_master",
       description: <ProjectDescriptionTranslated name="mestrenoteclado" />,
       images: ["mestre-no-teclado-1.png", "mestre-no-teclado-2.png"],
       links: {
