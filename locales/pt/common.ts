@@ -27,6 +27,7 @@ const translations: TranslationCommon = {
   building: "Construindo",
   death: "Depreciado",
   timeline: "Linha do Tempo",
+  i_created: "Criei o",
 };
 
 export default translations;

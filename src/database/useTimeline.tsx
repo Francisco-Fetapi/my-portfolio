@@ -4,6 +4,7 @@ import { Timeline, timelineEntity } from "./Timeline";
 import useMe from "./useMe";
 import useProjects from "./useProjects";
 import { Code } from "@mantine/core";
+import useTranslation from "next-translate/useTranslation";
 export interface TimeLine {
   title: React.ReactNode;
   description?: React.ReactNode;
@@ -17,6 +18,7 @@ export interface TimeLines {
 export default function useTimeline() {
   const { allProjects } = useProjects();
   const { me } = useMe();
+  const { t } = useTranslation("common");
 
   function loadEvents() {
     Timeline.timelines = {};
@@ -26,7 +28,7 @@ export default function useTimeline() {
         date: project.createdAt,
         title: (
           <>
-            Criei o{" "}
+            {t("i_created")}{" "}
             <ExternalLink
               href={project.links.preview || project.links.github || "#"}
             >
