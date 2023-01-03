@@ -81,6 +81,9 @@ const translations = {
   </linkTypingMaster>
   , this is also a project created to exercise
   <linkDatilography>typing</linkDatilography>.`,
+  my_portfolio: "My Portfolio",
+  beauty_salon: "Beauty Salon - July Otchacati",
+  jornal_web: "Jornal Web - Colégio Chimbanda",
 };
 
 export default translations;

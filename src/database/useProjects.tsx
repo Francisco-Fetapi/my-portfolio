@@ -1,4 +1,5 @@
 import Trans from "next-translate/Trans";
+import useTranslation from "next-translate/useTranslation";
 import ExternalLink from "../components/ExternalLink";
 import { listProjectsFromLastToBegin } from "../helpers/listProjectsFromLastToBegin";
 import useTranslationComponents from "../hooks/useTranslationComponents";
@@ -28,6 +29,7 @@ export interface IProject {
 
 export default function useProjects() {
   const { getRepositoryByName } = useMe();
+  const { t } = useTranslation("useProjects");
 
   const recentProjects: IProject[] = [
     {
@@ -43,7 +45,7 @@ export default function useProjects() {
       createdAt: new Date(2021, 11, 9),
     },
     {
-      name: "Meu portfolio",
+      name: t("my_portfolio"),
       description: <ProjectDescriptionTranslated name="portfolio" />,
       images: ["portfolio_home.png"],
       links: {
@@ -67,7 +69,7 @@ export default function useProjects() {
       createdAt: new Date(2022, 10, 9),
     },
     {
-      name: "Salão de Beleza - July Otchacati",
+      name: t("beauty_salon"),
       description: <ProjectDescriptionTranslated name="july" />,
       images: ["salao-de-beleza-2.png", "salao-de-beleza-1.png"],
       links: {
@@ -79,7 +81,7 @@ export default function useProjects() {
       createdAt: new Date(2022, 4, 14),
     },
     {
-      name: "Jornal Web - Colégio Chimbanda",
+      name: t("jornal_web"),
       description: <ProjectDescriptionTranslated name="chimbanda" />,
       images: ["jornal-web-2.png", "jornal-web.png"],
       links: {
@@ -101,7 +103,7 @@ export default function useProjects() {
       createdAt: new Date(2021, 5, 12),
     },
     {
-      name: "Galeria",
+      name: t("gallery"),
       description: <ProjectDescriptionTranslated name="gallery" />,
       images: ["galeria-react-1.png"],
       links: {
