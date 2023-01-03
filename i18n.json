@@ -5,7 +5,7 @@
     "*": ["common"],
     "/": ["home"],
     "/about": ["about", "useTecnologies"],
-    "/journey": ["journey", "useProjects"],
+    "/journey": ["journey", "useProjects", "useTimeline"],
     "/projects": ["projects", "useProjects"],
     "/contact": ["contact"]
   }
