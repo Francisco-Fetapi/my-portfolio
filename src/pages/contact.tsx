@@ -25,7 +25,7 @@ export default function IndexPage() {
   return (
     <div>
       <Head>
-        <title>{t("contact")}</title>
+        <title>{t2("contact")}</title>
       </Head>
       <AppScheme>
         <Box mt={20}>
