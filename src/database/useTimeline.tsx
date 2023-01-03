@@ -709,10 +709,7 @@ export default function useTimeline() {
     return Timeline.timelines;
   }
 
-  const timeline: TimeLines = useMemo(loadEvents, [
-    allProjects,
-    timelineEntity,
-  ]);
+  const timeline: TimeLines = useMemo(loadEvents, [allProjects]);
   // const timeline: TimeLines = loadEvents();
 
   const years = Object.keys(timeline);
