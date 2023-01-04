@@ -50,6 +50,7 @@ export default function useTranslationComponents() {
         <ExternalLink href={getRepositoryByName("typing-master")} />
       ),
       linkDatilography: <ExternalLink reference="datilography" />,
+      linkAlgorithmCourse: <ExternalLink reference="algorithmCourse" />,
     },
   };
 }

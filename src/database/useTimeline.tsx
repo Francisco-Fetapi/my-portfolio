@@ -5,6 +5,10 @@ import useMe from "./useMe";
 import useProjects from "./useProjects";
 import { Code } from "@mantine/core";
 import useTranslation from "next-translate/useTranslation";
+import Trans from "next-translate/Trans";
+import useTranslationComponents from "../hooks/useTranslationComponents";
+import { TranslationQuery } from "next-translate";
+import getTitleAndDescriptionTranslated from "../helpers/getTitleAndDescriptionTranslated";
 export interface TimeLine {
   title: React.ReactNode;
   description?: React.ReactNode;
@@ -15,10 +19,30 @@ export interface TimeLines {
   [year: string]: TimeLine[];
 }
 
+interface TimelineItemTranslatedProps {
+  name: string;
+  values?: TranslationQuery;
+}
+
+export function TimelineItemTranslated({
+  name,
+  values,
+}: TimelineItemTranslatedProps) {
+  const { componentsForTranslation } = useTranslationComponents();
+  return (
+    <Trans
+      i18nKey={`useTimeline:${name}`}
+      components={componentsForTranslation}
+      values={values}
+    />
+  );
+}
+
 export default function useTimeline() {
   const { allProjects } = useProjects();
   const { me } = useMe();
-  const { t } = useTranslation("common");
+  const { t: t2 } = useTranslation("common");
+  const { t } = useTranslation("useTimeline");
 
   function loadEvents() {
     Timeline.timelines = {};
@@ -28,7 +52,7 @@ export default function useTimeline() {
         date: project.createdAt,
         title: (
           <>
-            {t("i_created")}{" "}
+            {t2("i_created")}{" "}
             <ExternalLink
               href={project.links.preview || project.links.github || "#"}
             >
@@ -42,50 +66,20 @@ export default function useTimeline() {
 
     timelineEntity.addEvent({
       date: new Date(2018, 2, 2),
-      title: "Comecei o Ensino Médio",
-      description: (
-        <>
-          Comecei a minha Jornada no curso de <b>Informática de Gestão</b> no{" "}
-          <b>{me.midSchool}</b>. Foi durante o Ensino Médio que tive o meu
-          primeiro contato com Programação.
-        </>
-      ),
+      ...getTitleAndDescriptionTranslated("i_started_midSchool", {
+        values: {
+          midSchool: me.midSchool,
+        },
+      }),
     });
     timelineEntity.addEvent({
       date: new Date(2018, 11, 9),
-      title: (
-        <>
-          Fiz o{" "}
-          <ExternalLink reference="algorithmCourse">
-            Curso de Algoritmos do Curso em Video
-          </ExternalLink>
-        </>
-      ),
-      description: (
-        <>
-          Estava de férias e tinha acabado de conseguir meu primeiro computador,
-          logo após isso comecei a fazer o curso de algoritmos e até hoje foi a
-          melhor decisão que já tomei na minha vida, tudo começou a partir
-          disso.
-        </>
-      ),
+      ...getTitleAndDescriptionTranslated("first_course_algorithms"),
     });
 
     timelineEntity.addEvent({
       date: new Date(2018, 9, 12),
-      title: (
-        <>
-          Primeiro contato com{" "}
-          <ExternalLink reference="html5">HTML</ExternalLink>
-        </>
-      ),
-      description: (
-        <>
-          A partir de um certo alguém no Facebook acabei conhecendo o{" "}
-          <ExternalLink reference="html5">HTML</ExternalLink> e me despertou
-          interesse. Na época até cismei em criar a minha própria rede social.
-        </>
-      ),
+      ...getTitleAndDescriptionTranslated("first_contact_with_html"),
     });
 
     timelineEntity.addEvent({
