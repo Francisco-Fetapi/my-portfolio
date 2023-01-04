@@ -46,13 +46,8 @@ export default function useTimeline() {
       description: (
         <>
           Comecei a minha Jornada no curso de <b>Informática de Gestão</b> no{" "}
-          <b>
-            <abbr title="Instituto Politécnico de Administração e Gestão da Catumbela">
-              IPAG
-            </abbr>
-          </b>
-          . Foi durante o Ensino Médio que tive o meu primeiro contato com
-          Programação.
+          <b>{me.midSchool}</b>. Foi durante o Ensino Médio que tive o meu
+          primeiro contato com Programação.
         </>
       ),
     });
@@ -626,7 +621,7 @@ export default function useTimeline() {
       description: (
         <>
           Concluí o Ensino Médio no curso de <b>Informática de Gestão</b> no{" "}
-          <b>Instituto Politécnico de Administração e Gestão da Catumbela</b>.
+          <b>{me.midSchool}</b>.
         </>
       ),
     });
