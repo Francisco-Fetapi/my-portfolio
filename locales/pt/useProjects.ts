@@ -49,7 +49,7 @@ const translations: TranslationUseProjects = {
   calculadora que realiza as principais operações da matemática.`,
   calculadorasimples: `A calculadora realiza operações simples da matemática. Desenvolvi esta
   calculadora para treinar manipulação do DOM com
-  <linkJquery>Jquery</linkJque> e treinar
+  <linkJquery>Jquery</linkJquery> e treinar
   <linkBootstrap>Bootstrap</linkBootstrap>.`,
   gestordetarefas: `Basicamente um CRUD de tarefas, com ele é possivel: registar, ver,
   eliminar e editar tarefas. Criado para treinar
@@ -114,6 +114,7 @@ const translations: TranslationUseProjects = {
   tictactoe: "Jogo da Velha (Jquery)",
   quizname: "Quiz - Quem Sabe?",
   keyboard_master: "Mestre no Teclado",
+  galleryname: "Galeria",
 };
 
 export default translations;

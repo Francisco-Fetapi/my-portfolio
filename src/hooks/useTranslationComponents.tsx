@@ -1,6 +1,7 @@
 import CustomLink from "../components/CustomLink";
 import ExternalLink from "../components/ExternalLink";
 import useMe from "../database/useMe";
+import { Code } from "@mantine/core";
 
 export default function useTranslationComponents() {
   const { getRepositoryByName } = useMe();
@@ -52,6 +53,45 @@ export default function useTranslationComponents() {
       linkDatilography: <ExternalLink reference="datilography" />,
       linkAlgorithmCourse: <ExternalLink reference="algorithmCourse" />,
       linkCsharp: <ExternalLink reference="cSharp" />,
+      linkCourseIcon: <ExternalLink reference="courseHTMLCSSiConectado" />,
+      linkGraphic: <ExternalLink reference="graphicInterface" />,
+      linkCourseJsEssencial: <ExternalLink reference="courseJSEssencial" />,
+      linkRbteach: <ExternalLink reference="rbteachChannel" />,
+      linkExercices2019: <ExternalLink reference="exercices2019" />,
+      linkCaelumBook: <ExternalLink reference="htmlcsscaelumlivro" />,
+      linkK19Book: <ExternalLink reference="htmlcssk19livro" />,
+      linkCourseHTML: <ExternalLink reference="cursohtmlcsscursoemvideo" />,
+      // eslint-disable-next-line react/no-children-prop
+      code: <Code children={undefined} />,
+      linkFlexBox: <ExternalLink reference="flexbox" />,
+      linkGridLayout: <ExternalLink reference="gridlayout" />,
+      linkCourseJS2: <ExternalLink reference="cursojscursoemvideo" />,
+      linkExercicesJs: <ExternalLink reference="exercicesjs" />,
+      linkCoursePHP: <ExternalLink reference="phpcoursecursoemvideo" />,
+      linkMySQL: <ExternalLink reference="mysql" />,
+      linkCrud: <ExternalLink reference="crud" />,
+      abbrCrud: <abbr title="Create,Read,Update,Delete" />,
+      linkExcript: <ExternalLink reference="phpcourseexcript" />,
+      linkMirrorFashion: <ExternalLink reference="mirrorFashion" />,
+      linkJSDefinitive: <ExternalLink reference="jsdefinitiveguide" />,
+      linkPoo: <ExternalLink reference="poo" />,
+      linkGithub: <ExternalLink reference="github" />,
+      linkGit: <ExternalLink reference="git" />,
+      linkCourseReact: <ExternalLink reference="coursejoaoreact" />,
+      linkReactDocs: <ExternalLink reference="reactjsdocs" />,
+      linkCourseMySQl: <ExternalLink reference="coursemysqlcursoemvideo" />,
+      linkSQL: <ExternalLink reference="sql" />,
+      linkModelBD: <ExternalLink reference="modelbd" />,
+      linkCourseLaravel: <ExternalLink reference="courselaraveljoao" />,
+      linkTCCPDF: <ExternalLink reference="tccpdf" />,
+      linkSMS: <ExternalLink reference="socialmoviesspace" />,
+      linkTypescript: <ExternalLink reference="typescript" />,
+      linkTypeScriptDocs: <ExternalLink reference="typescriptdocs" />,
+      linkTypescriptCourse: <ExternalLink reference="coursetypescriptotavio" />,
+      linkDesignPatterns: <ExternalLink reference="designpatterns" />,
+      linkTesting: <ExternalLink reference="testing"></ExternalLink>,
+      linkNextJs: <ExternalLink reference="nextjs" />,
+      linkNextjsDocs: <ExternalLink reference="nextjsdocs" />,
     },
   };
 }

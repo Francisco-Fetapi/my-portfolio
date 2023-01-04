@@ -103,7 +103,7 @@ export default function useProjects() {
       createdAt: new Date(2021, 5, 12),
     },
     {
-      name: t("gallery"),
+      name: t("galleryname"),
       description: <ProjectDescriptionTranslated name="gallery" />,
       images: ["galeria-react-1.png"],
       links: {
@@ -318,7 +318,7 @@ export default function useProjects() {
       createdAt: new Date(2020, 4, 3),
     },
     {
-      name: "keyboard_master",
+      name: t("keyboard_master"),
       description: <ProjectDescriptionTranslated name="mestrenoteclado" />,
       images: ["mestre-no-teclado-1.png", "mestre-no-teclado-2.png"],
       links: {

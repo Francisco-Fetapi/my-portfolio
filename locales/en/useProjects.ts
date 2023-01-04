@@ -92,6 +92,7 @@ const translations = {
   tictactoe: "Tic-Tac-Toe (Jquery)",
   quizname: "Quiz - Who knows?",
   keyboard_master: "KeyBoard Master",
+  galleryname: "Gallery",
 };
 
 export default translations;
