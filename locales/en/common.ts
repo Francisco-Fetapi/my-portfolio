@@ -27,7 +27,7 @@ const translations = {
   building: "Building",
   death: "Deprecated",
   timeline: "Timeline",
-  i_created: "I created the",
+  i_created: "I've created the",
 };
 
 export default translations;
