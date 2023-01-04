@@ -51,6 +51,7 @@ export default function useTranslationComponents() {
       ),
       linkDatilography: <ExternalLink reference="datilography" />,
       linkAlgorithmCourse: <ExternalLink reference="algorithmCourse" />,
+      linkCsharp: <ExternalLink reference="cSharp" />,
     },
   };
 }
