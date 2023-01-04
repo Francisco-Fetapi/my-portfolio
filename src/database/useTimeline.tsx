@@ -213,7 +213,11 @@ export default function useTimeline() {
 
     timelineEntity.addEvent({
       date: new Date(2022, 3, 2),
-      ...translated("finsish_mid_school"),
+      ...translated("finsish_mid_school", {
+        values: {
+          midSchool: me.midSchool,
+        },
+      }),
     });
 
     timelineEntity.addEvent({

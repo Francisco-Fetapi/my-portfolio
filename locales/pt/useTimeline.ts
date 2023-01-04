@@ -270,7 +270,7 @@ const translations: TranslationUseTimeline = {
   .`,
   finsish_mid_school_title: `Concluí o Ensino Médio`,
   finsish_mid_school_description: `Concluí o Ensino Médio no curso de <b>Informática de Gestão</b> no
-  <b>{me.midSchool}</b>.`,
+  <b>{{midSchool}}</b>.`,
   start_typescript_title: `Comecei a estudar
   <linkTypescript>TypeScript</linkTypescript>`,
   start_typescript_description: `Finalmente dei uma chance ao Typescript. No começo mal queria saber de
