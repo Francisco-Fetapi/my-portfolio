@@ -42,7 +42,6 @@ export default function useTimeline() {
   const { allProjects } = useProjects();
   const { me } = useMe();
   const { t: t2 } = useTranslation("common");
-  const { t } = useTranslation("useTimeline");
 
   function loadEvents() {
     Timeline.timelines = {};
