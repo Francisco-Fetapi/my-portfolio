@@ -2,7 +2,7 @@
   "locales": ["en", "pt"],
   "defaultLocale": "en",
   "pages": {
-    "*": ["common"],
+    "*": ["common", "useExternalLink"],
     "/": ["home"],
     "/about": ["about", "useTecnologies"],
     "/journey": ["journey", "useProjects", "useTimeline"],
