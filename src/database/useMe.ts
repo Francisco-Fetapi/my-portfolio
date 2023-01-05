@@ -21,7 +21,7 @@ export default function useMe() {
     downloadCV: "https://downloadcv.com", //english,portuguese
     phone1,
     phone2: "958727914",
-    calendly: "https://linkdocalendly",
+    calendly: "https://calendly.com/franciscofetapi",
     whatsapp: `https://api.whatsapp.com?tel=${phone1}`,
     tecnologies: [
       "TypeScript",
