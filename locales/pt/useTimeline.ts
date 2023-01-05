@@ -148,10 +148,10 @@ const translations: TranslationUseTimeline = {
   course_js_2_description: `Foi o melhor curso de
   <linkJs>JavaScript</linkJs> que eu
   poderia ter feito, simplesmente sensacional.`,
-  js_exercices_title: `Exercitei
+  js_exercises_title: `Exercitei
   <linkJs>JavaScript</linkJs> até não
   poder mais`,
-  js_exercices_description: `Durante a realização desses exercicíos foi quando finalmente
+  js_exercises_description: `Durante a realização desses exercicíos foi quando finalmente
   <b>
     aprendi
     <linkJs>JavaScript</linkJs>

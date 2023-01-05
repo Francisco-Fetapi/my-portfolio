@@ -146,7 +146,7 @@ export default function useTimeline() {
 
     timelineEntity.addEvent({
       date: new Date(2020, 2, 12),
-      ...translated("js_exercices"),
+      ...translated("js_exercises"),
     });
 
     timelineEntity.addEvent({
