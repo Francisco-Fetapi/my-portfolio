@@ -47,7 +47,11 @@ export default function useProjects() {
     {
       name: t("my_portfolio"),
       description: <ProjectDescriptionTranslated name="portfolio" />,
-      images: ["portfolio_home.png"],
+      images: [
+        "portfolio_home.png",
+        "portfolio_contact.png",
+        "portfolio_about.png",
+      ],
       links: {
         github: getRepositoryByName("my-portfolio"),
         preview: "https://franciscofetapi.vercel.app",
@@ -59,7 +63,10 @@ export default function useProjects() {
     {
       name: "Portal Obadias Malaquias",
       description: <ProjectDescriptionTranslated name="obadias" />,
-      images: ["portal-obadias-malaquias.png"],
+      images: [
+        "portal-obadias-malaquias.png",
+        "portal-obadias-malaquias-2.png",
+      ],
       links: {
         github: getRepositoryByName("portal-obadias-malaquias"),
         preview: "http://portal-obadias-malaquias.vercel.app",
