@@ -22,7 +22,7 @@ const translations: TranslationUseExternalLink = {
     "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout",
   flexbox:
     "https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox",
-  buildingLayouts: "https://github.com/Francisco-Fetapi/construindo_layouts",
+
   typescript: "https://pt.wikipedia.org/wiki/TypeScript",
   mysql: "https://pt.wikipedia.org/wiki/MySQL",
   crud: "https://pt.wikipedia.org/wiki/CRUD",
@@ -39,12 +39,9 @@ const translations: TranslationUseExternalLink = {
     "https://pt.wikipedia.org/wiki/Padr%C3%A3o_de_projeto_de_software",
   testing: "https://pt.wikipedia.org/wiki/Teste_de_software",
   nextjs: "https://pt.wikipedia.org/wiki/Next.js",
-  nextjsdocs: "https://nextjs.org/docs/getting-started",
   tmdb: "https://pt.wikipedia.org/wiki/The_Movie_Database",
   redux: "https://pt.wikipedia.org/wiki/Redux_(biblioteca_JavaScript)",
-  reduxtoolkit: "https://redux-toolkit.js.org/",
   tictactoe: "https://pt.wikipedia.org/wiki/Jogo_da_velha",
-  quemquerserricoapp: "https://quem-quer-ser-rico-lite.br.uptodown.com/android",
   datilography: "https://pt.wikipedia.org/wiki/Datilografia",
 };
 

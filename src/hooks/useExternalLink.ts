@@ -6,9 +6,10 @@ import useMe from "../database/useMe";
 export type IExternalLinks = ReturnType<typeof useExternalLink>;
 type LinksToTranslate = (keyof TranslationUseExternalLink)[];
 
+// type IUseExternalLink = TranslationUseExternalLink &
+
 const linksToTranslate: LinksToTranslate = [
   "algorithms",
-  "buildingLayouts",
   "cSharp",
   "crud",
   "css3",
@@ -34,7 +35,6 @@ const linksToTranslate: LinksToTranslate = [
   "poo",
   "programmingLogic",
   "prompt",
-  "quemquerserricoapp",
   "reactjs",
   "redux",
   "reduxtoolkit",
@@ -44,12 +44,11 @@ const linksToTranslate: LinksToTranslate = [
   "tmdb",
   "typescript",
   "typescriptdocs",
-  "visualg",
 ];
 
 export default function useExternalLink() {
   const { getRepositoryByName } = useMe();
-  const { t } = useTranslation("useExternalLink");
+  const { t, lang } = useTranslation("useExternalLink");
 
   const firstLinks = {
     socialmoviesspace: getRepositoryByName("projeto-tcc"),
@@ -94,6 +93,11 @@ export default function useExternalLink() {
       "https://www.youtube.com/watch?v=oQPYxhqoH1o&list=PLbIBj8vQhvm0Q_TMvL22kkpdUW8sP8Yql",
     souangolanoeconhecoangolaapp:
       "https://play.google.com/store/apps/details?id=ao.evolium.conhecoangola&hl=pt&gl=US",
+    buildingLayouts: "https://github.com/Francisco-Fetapi/construindo_layouts",
+    nextjsdocs: "https://nextjs.org/docs/getting-started",
+    reduxtoolkit: "https://redux-toolkit.js.org/",
+    quemquerserricoapp:
+      "https://quem-quer-ser-rico-lite.br.uptodown.com/android",
   };
 
   const linksTranslated = useMemo(() => {
@@ -102,12 +106,13 @@ export default function useExternalLink() {
       links[link] = t(link);
     });
 
-    console.log(links);
     return links;
-  }, []);
+  }, [lang]);
 
-  return {
+  const allLinks = {
     ...firstLinks,
     ...linksTranslated,
   };
+
+  return allLinks;
 }
