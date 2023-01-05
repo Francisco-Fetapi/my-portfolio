@@ -1,19 +1,18 @@
+import useTranslation from "next-translate/useTranslation";
 import AppScheme from "../components/AppScheme";
 import { HeroTitle } from "../components/HeroTitle";
-import { DefaultSeo, NextSeo } from "next-seo";
-import Head from "next/head";
-
-import SEO from "../../next-seo.config";
+import NextSeoTemplate from "../components/NextSeoTemplate";
 
 export default function IndexPage() {
+  const { t } = useTranslation("home");
+  const { t: tCommon } = useTranslation("common");
+
   return (
     <div>
-      <DefaultSeo
-        {...SEO}
-        title="Home"
-        description="A short description goes here."
+      <NextSeoTemplate
+        title={tCommon("main_page")}
+        description={t("seo_description")}
       />
-
       <AppScheme>
         <HeroTitle />
       </AppScheme>
