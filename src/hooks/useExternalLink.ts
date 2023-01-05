@@ -1,6 +1,7 @@
 import useTranslation from "next-translate/useTranslation";
 import { useMemo } from "react";
 import { TranslationUseExternalLink } from "../../locales/en/useExternalLink";
+// import { TranslationUseExternalLink } from "../../locales/en/useExternalLink";
 import useMe from "../database/useMe";
 
 export type IExternalLinks = ReturnType<typeof useExternalLink>;
@@ -30,14 +31,12 @@ const linksToTranslate: LinksToTranslate = [
   "modelbd",
   "mysql",
   "nextjs",
-  "nextjsdocs",
   "php",
   "poo",
   "programmingLogic",
   "prompt",
   "reactjs",
   "redux",
-  "reduxtoolkit",
   "sql",
   "testing",
   "tictactoe",
