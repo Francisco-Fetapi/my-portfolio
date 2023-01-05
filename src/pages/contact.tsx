@@ -14,6 +14,7 @@ import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitl
 import useMe from "../database/useMe";
 import useContacts from "../database/useContacts";
 import useTranslation from "next-translate/useTranslation";
+import NextSeoTemplate from "../components/NextSeoTemplate";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -24,9 +25,11 @@ export default function IndexPage() {
 
   return (
     <div>
-      <Head>
-        <title>{t2("contact")}</title>
-      </Head>
+      <NextSeoTemplate
+        title={t2("contact")}
+        description={t("intro")}
+        pageName="/contact"
+      />
       <AppScheme>
         <Box mt={20}>
           <MainTitle>{t2("contact")}</MainTitle>
