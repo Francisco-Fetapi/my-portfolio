@@ -28,6 +28,8 @@ const translations = {
   death: "Deprecated",
   timeline: "Timeline",
   i_created: "I've created the",
+  high_school_name: `Polytechnic Institute of Administration
+  and Management of Catumbela (IPAG)`,
 };
 
 export default translations;

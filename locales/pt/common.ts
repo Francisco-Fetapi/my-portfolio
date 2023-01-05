@@ -28,6 +28,7 @@ const translations: TranslationCommon = {
   death: "Depreciado",
   timeline: "Linha do Tempo",
   i_created: "Criei o",
+  high_school_name: `Instituto Politécnico de Administração e Gestão da Catumbela (IPAG)`,
 };
 
 export default translations;

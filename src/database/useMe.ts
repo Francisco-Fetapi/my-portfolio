@@ -11,8 +11,8 @@ export default function useMe() {
     photo: "/my-photo1.jpg",
     // professional: "Desenvolvedor Full-Stack",
     professional: t("professional"),
-    midSchool:
-      "Instituto Politécnico de Administração e Gestão da Catumbela (IPAG)",
+    // "Instituto Politécnico de Administração e Gestão da Catumbela (IPAG)",
+    midSchool: t("high_school_name"),
     github: "https://github.com/Francisco-Fetapi",
     twitter: "https://twitter.com/FranciscoFetapi",
     instagram: "https://www.instagram.com/franciscofetapi/",
