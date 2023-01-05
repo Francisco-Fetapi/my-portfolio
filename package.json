@@ -38,7 +38,8 @@
     "styled-components": "^5.3.6",
     "uuid": "^9.0.0",
     "date-fns": "^2.29.3",
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "next-seo": "^5.15.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
