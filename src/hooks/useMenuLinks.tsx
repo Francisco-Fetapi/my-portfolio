@@ -1,9 +1,21 @@
 import useTranslation from "next-translate/useTranslation";
 
+export type ILinksMenuPath =
+  | "/"
+  | "/about"
+  | "/journey"
+  | "/projects"
+  | "/contact";
+
+interface ILinks {
+  label: string;
+  href: ILinksMenuPath;
+}
+
 export default function useMenuLinks() {
   const { t } = useTranslation("common");
 
-  const links = [
+  const links: ILinks[] = [
     { label: t("main_page"), href: "/" },
     { label: t("about"), href: "/about" },
     { label: t("journey"), href: "/journey" },

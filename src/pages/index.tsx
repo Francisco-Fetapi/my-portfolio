@@ -12,6 +12,7 @@ export default function IndexPage() {
       <NextSeoTemplate
         title={tCommon("main_page")}
         description={t("seo_description")}
+        pageName="/"
       />
       <AppScheme>
         <HeroTitle />
