@@ -49,7 +49,7 @@ export default function App(props: AppProps & WithColorScheme) {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Francisco Fetapi - Portfolio</title>
         <link rel="shortcut icon" href="/favicon.svg" />
 
@@ -61,7 +61,7 @@ export default function App(props: AppProps & WithColorScheme) {
           name="description"
           content="Site pessoal de Francisco Fetapi. Conheça todas as etapas pelas quais passei até me tornar um desenvolvedor Full-Stack"
         />
-      </Head>
+      </Head> */}
 
       <AppStore>
         <ColorSchemeProvider
