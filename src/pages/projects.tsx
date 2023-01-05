@@ -16,6 +16,7 @@ import Link from "next/link";
 import Trans from "next-translate/Trans";
 import useTranslation from "next-translate/useTranslation";
 import useTranslationComponents from "../hooks/useTranslationComponents";
+import NextSeoTemplate from "../components/NextSeoTemplate";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -34,9 +35,11 @@ export default function IndexPage() {
 
   return (
     <div>
-      <Head>
-        <title>{t2("projects")}</title>
-      </Head>
+      <NextSeoTemplate
+        title={t2("projects")}
+        description={t("seo_description")}
+        pageName="/projects"
+      />
       <AppScheme>
         {!filteredProjects ? (
           <>

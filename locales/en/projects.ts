@@ -1,6 +1,7 @@
 export type TranslationProjects = typeof translations;
 
 const translations = {
+  seo_description: `From the moment I typed my first line of code so far I have developed several study projects to gain proficiency in the technologies I know, in addition, of course, to having met the demands of one or another client.`,
   intro: `
   From the moment I typed my first
                    <i>line of code</i> so far I have developed several study projects to gain proficiency in the technologies I know, in addition, of course, to having met the demands of one or another client.

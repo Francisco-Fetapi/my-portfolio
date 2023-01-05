@@ -1,7 +1,7 @@
 import { TranslationProjects } from "../en/projects";
 
 const translations: TranslationProjects = {
-  test: "teste",
+  seo_description: `Desde o momento que digitei a minha primeira linha de código até agora desenvolvi vários projetos de estudo para ganhar proeficiencia nas tecnologias que conheço, além é claro de ter atendido as demandas de um ou outro cliente.`,
   intro: `
   Desde o momento que digitei a minha primeira
                   <i>linha de código</i> até agora desenvolvi vários projetos de
