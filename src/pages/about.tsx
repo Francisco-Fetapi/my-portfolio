@@ -25,6 +25,7 @@ import Trans from "next-translate/Trans";
 import useTranslation from "next-translate/useTranslation";
 import useTranslationComponents from "../hooks/useTranslationComponents";
 import { IconPhone, IconDownload } from "@tabler/icons";
+import NextSeoTemplate from "../components/NextSeoTemplate";
 
 const PHOTO_SIZE = 250;
 
@@ -77,9 +78,11 @@ export default function IndexPage() {
 
   return (
     <div>
-      <Head>
-        <title>{t("about_me")}</title>
-      </Head>
+      <NextSeoTemplate
+        title={t("about_me")}
+        description={t("seo_description")}
+        pageName="/about"
+      />
       <AppScheme>
         <Box mt={20}>
           <Grid gutter="lg" justify="flex-end">

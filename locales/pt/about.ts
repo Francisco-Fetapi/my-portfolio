@@ -1,6 +1,7 @@
 import { TranslationAbout } from "../en/about";
 
 const translations: TranslationAbout = {
+  seo_description: `Meu nome é Francisco Fetapi, sou Desenvolvedor Full-Stack que atua essencialmente com tecnologias do ecossistema JavaScript. O meu primeiro contato com programação foi em 2018 durante o Ensino Médio, nessa fase aprendi Lógica de Programação usando o Visual G. Depois de criar algoritmos que eram executados no terminal me vi curioso em criar uma interface amigavél para os meus mini-programas, e foi assim que me deparei com HTML5, CSS3 e JavaScript, e desde ai continuei estudando sem parar.`,
   auto_biography: `
       Meu nome é <b>{{myName}}</b>, sou
           <linkFullStack>{{myProfessional}}</linkFullStack>

@@ -1,6 +1,7 @@
 export type TranslationAbout = typeof translations;
 
 const translations = {
+  seo_description: `My name is Francisco Fetapi, I'm a Full-Stack Developer that essentially works with ecosystem technologies JavaScript. My first contact with programming was in 2018 During middle teaching, at this stage I learned Programming Logic using the Visual G. After creating algorithms than were executed in the prompt i saw myself curious in creating a friendly interface for my mini-programs, and it was so I came across HTML5, CSS3 and JavaScript, and since then I continued studying non-stop.`,
   auto_biography: `
       My name is <b>{{myName}}</b>, I'm a
           <linkFullStack>{{myProfessional}}</linkFullStack>
