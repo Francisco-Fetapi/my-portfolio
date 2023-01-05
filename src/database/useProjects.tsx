@@ -35,7 +35,7 @@ export default function useProjects() {
     {
       name: "Social Movies Space",
       description: <ProjectDescriptionTranslated name="sms" />,
-      images: ["sms-demo-2.png", "sms-demo-1.png"],
+      images: ["sms-demo-2.webp", "sms-demo-1.png"],
       links: {
         github: getRepositoryByName("projeto-tcc"),
         preview: "https://socialmoviesspace.vercel.app/",
@@ -48,7 +48,7 @@ export default function useProjects() {
       name: t("my_portfolio"),
       description: <ProjectDescriptionTranslated name="portfolio" />,
       images: [
-        "portfolio_home.png",
+        "portfolio_home.webp",
         "portfolio_contact.png",
         "portfolio_about.png",
       ],
@@ -64,7 +64,7 @@ export default function useProjects() {
       name: "Portal Obadias Malaquias",
       description: <ProjectDescriptionTranslated name="obadias" />,
       images: [
-        "portal-obadias-malaquias.png",
+        "portal-obadias-malaquias.webp",
         "portal-obadias-malaquias-2.png",
       ],
       links: {
@@ -78,7 +78,7 @@ export default function useProjects() {
     {
       name: t("beauty_salon"),
       description: <ProjectDescriptionTranslated name="july" />,
-      images: ["salao-de-beleza-2.png", "salao-de-beleza-1.png"],
+      images: ["salao-de-beleza-2.webp", "salao-de-beleza-1.png"],
       links: {
         github: getRepositoryByName("salao-de-beleza-da-july"),
         preview: "https://salaodajuly.vercel.app/",
@@ -90,7 +90,7 @@ export default function useProjects() {
     {
       name: t("jornal_web"),
       description: <ProjectDescriptionTranslated name="chimbanda" />,
-      images: ["jornal-web-2.png", "jornal-web.png"],
+      images: ["jornal-web-2.webp", "jornal-web.png"],
       links: {
         github: getRepositoryByName("jornal-web"),
       },
@@ -101,7 +101,7 @@ export default function useProjects() {
     {
       name: "Forum",
       description: <ProjectDescriptionTranslated name="forum" />,
-      images: ["forum-3.png", "forum-2.png", "forum-1.png"],
+      images: ["forum-3.webp", "forum-2.png", "forum-1.png"],
       links: {
         github: getRepositoryByName("forum-front-end"),
       },
@@ -112,7 +112,7 @@ export default function useProjects() {
     {
       name: t("galleryname"),
       description: <ProjectDescriptionTranslated name="gallery" />,
-      images: ["galeria-react-1.png"],
+      images: ["galeria-react-1.webp"],
       links: {
         github: getRepositoryByName("jornal-web"),
       },
