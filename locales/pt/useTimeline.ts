@@ -130,7 +130,7 @@ const translations: TranslationUseTimeline = {
   course_html_2_description: `Eu bem que já me sentia confortável com
   <linkHTML>HTML</linkHTML> e
   <linkCSS>CSS</linkCSS>, mas ainda precisava
-  dar uma aprimorada no meu
+  aprimorar no meu
   <linkCSS>CSS</linkCSS>, então dei uma
   chance pra esse curso. Foi bom tê-lo feito, lembro que na época, me
   ensinou a trabalhar com <code>float</code> e <code>position</code> do
@@ -216,7 +216,7 @@ const translations: TranslationUseTimeline = {
   tinha dificuldade em utilizá-los na prática, esse curso foi o que
   realmente me ensinou.`,
   get_into_github_title: `Me cadastrei no <linkGithub>Github</linkGithub>`,
-  get_into_github_description: `Criei uma conta no github e coloquei todos os meus projetos pra lá.
+  get_into_github_description: `Criei uma conta no github e coloquei todos os meus projetos nele.
   Também tive o meu primeiro contato com o
   <linkGit>Git</linkGit>.`,
   start_in_reactjs_title: `Comecei a estudar
