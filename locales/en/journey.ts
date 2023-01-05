@@ -1,6 +1,7 @@
 export type TranslationJourney = typeof translations;
 
 const translations = {
+  seo_description: `My journey as a developer started in 2018 , from then on I went through a lot of experiences that made me a more technically skilled developer.`,
   intro: `My journey as a developer started in
   <year>2018</year>
   , from then on I went through a lot of experiences that made me

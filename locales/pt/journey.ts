@@ -1,6 +1,7 @@
 import { TranslationJourney } from "../en/journey";
 
 const translations: TranslationJourney = {
+  seo_description: `A minha jornada como desenvolvedor começou em 2018 , de lá pra cá passei por um tanto de experiências que me tornaram um desenvolvedor mais tecnicamente capacitado.`,
   intro: `
   A minha jornada como desenvolvedor começou em
               <year>2018</year>

@@ -11,18 +11,22 @@ import Trans from "next-translate/Trans";
 import useTranslation from "next-translate/useTranslation";
 import useTranslationComponents from "../hooks/useTranslationComponents";
 import SecondTitle from "../components/SecondTitle";
+import NextSeoTemplate from "../components/NextSeoTemplate";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
   const { timeline } = useTimeline();
   const { t } = useTranslation("common");
+  const { t: t2 } = useTranslation("journey");
   const { componentsForTranslation } = useTranslationComponents();
 
   return (
     <div>
-      <Head>
-        <title>{t("journey")}</title>
-      </Head>
+      <NextSeoTemplate
+        title={t("journey")}
+        description={t2("seo_description")}
+        pageName="/journey"
+      />
       <AppScheme>
         <Box mt={10}>
           <MainTitle>{t("journey")}</MainTitle>
