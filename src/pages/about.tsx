@@ -1,19 +1,9 @@
-import Head from "next/head";
 import AppScheme from "../components/AppScheme";
 import MainTitle from "../components/MainTitle";
-import {
-  createStyles,
-  MediaQuery,
-  Box,
-  Grid,
-  Group,
-  Text,
-  Button,
-} from "@mantine/core";
+import { MediaQuery, Box, Grid, Group, Text, Button } from "@mantine/core";
 import { useStyles as useStylesHeroTitleComponent } from "../components/HeroTitle";
 
 import Link from "next/link";
-import Image from "next/image";
 import SecondTitle from "../components/SecondTitle";
 import SectionText from "../components/SectionText";
 import TecnologyCard from "../components/TecnologyCard";
@@ -26,18 +16,11 @@ import useTranslation from "next-translate/useTranslation";
 import useTranslationComponents from "../hooks/useTranslationComponents";
 import { IconPhone, IconDownload } from "@tabler/icons";
 import NextSeoTemplate from "../components/NextSeoTemplate";
-
-const PHOTO_SIZE = 250;
-
-const useStyles = createStyles((theme) => ({
-  image: {
-    borderRadius: theme.radius.md,
-  },
-}));
+import MyPhoto from "../components/MyPhoto";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
-  const { classes: classes2 } = useStyles();
+
   const { me } = useMe();
   const { frontEndTecnologies, backEndTecnologies, otherTecnologies } =
     useTecnologies();
@@ -133,36 +116,7 @@ export default function IndexPage() {
               </Group>
             </Grid.Col>
             <Grid.Col md={4} xs={12}>
-              <Box
-                sx={(theme) => ({
-                  width: "100%",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  [theme.fn.smallerThan("md")]: {
-                    marginTop: 30,
-                  },
-                })}
-                data-aos="flip-left"
-                data-aos-delay="1500"
-                data-aos-duration="1000"
-              >
-                <Image
-                  src={me.photo}
-                  width={PHOTO_SIZE}
-                  height={PHOTO_SIZE + 50}
-                  alt="Minha foto"
-                  className={classes2.image}
-                  quality={100}
-                  placeholder="blur"
-                  blurDataURL={me.photo}
-                  // layout="responsive"
-                />
-                <Text mt={10} color="dimmed" size="xs" align="center">
-                  {me.name}
-                </Text>
-              </Box>
+              <MyPhoto />
             </Grid.Col>
           </Grid>
 
