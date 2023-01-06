@@ -17,6 +17,7 @@ import useTranslationComponents from "../hooks/useTranslationComponents";
 import { IconPhone, IconDownload } from "@tabler/icons";
 import NextSeoTemplate from "../components/NextSeoTemplate";
 import MyPhoto from "../components/MyPhoto";
+import { ImageJsonLd } from "next-seo";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
@@ -65,6 +66,19 @@ export default function IndexPage() {
         title={t("about_me")}
         description={t("seo_description")}
         pageName="/about"
+      />
+      <ImageJsonLd
+        images={[
+          {
+            contentUrl: me.photo,
+            creator: {
+              "@type": "Person",
+              name: me.name,
+            },
+            creditText: me.name,
+            copyrightNotice: "© " + me.name,
+          },
+        ]}
       />
       <AppScheme>
         <Box mt={20}>
