@@ -7,15 +7,10 @@ const PHOTO_SIZE = 250;
 const useStyles = createStyles((theme) => ({
   container: {
     position: "relative",
-    // border: "10px solid ",
-    // padding: "10px",
-  },
-  image: {
+    border: "10px double #f1c872",
     borderRadius: theme.radius.md,
-    // position: "absolute",
-    // top: 20,
-    // left: -20,
   },
+  image: {},
 }));
 
 export default function MyPhoto() {
@@ -37,9 +32,9 @@ export default function MyPhoto() {
           marginTop: 30,
         },
       })}
-      //   data-aos="flip-left"
-      //   data-aos-delay="1500"
-      //   data-aos-duration="1000"
+      data-aos="flip-left"
+      data-aos-delay="1500"
+      data-aos-duration="1000"
     >
       <Image
         src={me.photo}
@@ -52,9 +47,6 @@ export default function MyPhoto() {
         blurDataURL={me.photo}
         // layout="responsive"
       />
-      {/* <Text mt={20} color="dimmed" size="xs" align="center">
-         {me.name} 
-      </Text> */}
     </Box>
   );
 }
