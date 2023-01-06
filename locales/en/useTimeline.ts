@@ -237,7 +237,7 @@ const translations = {
       React documentation
     </linkReactDocs>
     end to end.`,
-  start_in_mui_title: `Learned <linkMui>Material-UI</linkMui>`,
+  start_in_mui_title: `I Learned <linkMui>Material-UI</linkMui>`,
   start_in_mui_description: `For a long time I used the
     <linkBootstrap>Bootstrap</linkBootstrap> as
     Main CSS library. When I discovered Material-UI I was

@@ -43,5 +43,5 @@ export default function RouterTransition() {
   }, [loading]);
 
   // return loading ? <NavigationProgress autoReset /> : <div />;
-  return <NavigationProgress autoReset />;
+  return <NavigationProgress autoReset zIndex={10000} />;
 }
