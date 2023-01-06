@@ -79,7 +79,15 @@ export function HeroTitle() {
 
   return (
     <div className={classes.wrapper}>
-      <Container size={700} className={classes.inner}>
+      <Container
+        size={700}
+        className={classes.inner}
+        sx={{
+          "@media (max-width:420px)": {
+            textAlign: "center",
+          },
+        }}
+      >
         <Text
           color="dimmed"
           size="md"
@@ -96,7 +104,17 @@ export function HeroTitle() {
           data-aos-delay="400"
         >
           <TextWithGradient>{me.name}</TextWithGradient> <br />
-          {me.professional}
+          <Text
+            inherit
+            sx={{
+              "@media (max-width:420px)": {
+                fontSize: 20,
+                // textAlign: "center",
+              },
+            }}
+          >
+            {me.professional}
+          </Text>
         </h1>
 
         <Text
