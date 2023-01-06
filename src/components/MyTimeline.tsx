@@ -7,7 +7,7 @@ import {
   Text,
   ActionIcon,
   Tabs,
-  Transition,
+  createStyles,
   Anchor,
 } from "@mantine/core";
 import { useWindowScroll, useDidUpdate } from "@mantine/hooks";
@@ -93,7 +93,16 @@ export default function MyTimeline({ timelines }: MyTimelineProps) {
   }
 
   return (
-    <Box sx={{ maxWidth: 500, margin: "0 auto", paddingRight: "20px" }}>
+    <Box
+      sx={{
+        maxWidth: 500,
+        margin: "0 auto",
+        paddingRight: "20px",
+        "@media(max-width:430px)": {
+          paddingRight: 2,
+        },
+      }}
+    >
       <Tabs value={activeTab!} color="blue" onTabChange={setActiveTab}>
         <div ref={refControls} />
         <Tabs.Panel value={activeTab!} pt="xs">
@@ -138,6 +147,16 @@ interface TimeLineProps {
   isLast: boolean;
 }
 
+const useStyles = createStyles((theme) => ({
+  timelineTitle: {
+    fontSize: 14,
+    color: theme.colorScheme === "dark" ? "white" : "black",
+    "@media (max-width:430px)": {
+      fontSize: 12,
+    },
+  },
+}));
+
 function TimeLine({
   year,
   timelines,
@@ -147,6 +166,7 @@ function TimeLine({
   isLast,
 }: TimeLineProps) {
   const { locale } = useCurrentLocale();
+  const { classes } = useStyles();
 
   return (
     <Box mb={40}>
@@ -184,7 +204,11 @@ function TimeLine({
           if (key <= 1) animate = undefined;
           return (
             <Timeline.Item
-              title={<Title order={4}>{timeline.title}</Title>}
+              title={
+                <Title order={2} className={classes.timelineTitle}>
+                  {timeline.title}
+                </Title>
+              }
               key={key}
               data-aos={animate}
             >
