@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle<StylesProps>`
     *{
       font-family:Raleway, Roboto, sans-serif !important;
     }
-    body{
+    body,html{
       overflow-x: hidden;
       display:grid;
     }
