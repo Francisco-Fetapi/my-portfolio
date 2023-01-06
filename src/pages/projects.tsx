@@ -17,10 +17,11 @@ import Trans from "next-translate/Trans";
 import useTranslation from "next-translate/useTranslation";
 import useTranslationComponents from "../hooks/useTranslationComponents";
 import NextSeoTemplate from "../components/NextSeoTemplate";
+import { CarouselJsonLd } from "next-seo";
 
 export default function IndexPage() {
   const { classes } = useStylesHeroTitleComponent();
-  const { someProjects, getProjectsByTag } = useProjects();
+  const { someProjects, recentProjects, getProjectsByTag } = useProjects();
   const { me } = useMe();
   const router = useRouter();
   const tagQuery = router.query.tag as string | null;
@@ -39,6 +40,19 @@ export default function IndexPage() {
         title={t2("projects")}
         description={t("seo_description")}
         pageName="/projects"
+      />
+      <CarouselJsonLd
+        ofType="default"
+        data={recentProjects.map((project) => ({
+          name: project.name,
+          url: project.links.preview || project.links.preview,
+          images: project.images,
+          authorName: me.name,
+          description: project.description,
+          datePublished: project.createdAt.toString(),
+          keywords: [me.name, project.tags].toString(),
+        }))}
+        type="project"
       />
       <AppScheme>
         {!filteredProjects ? (
