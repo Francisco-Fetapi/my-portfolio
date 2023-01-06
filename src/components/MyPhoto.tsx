@@ -9,8 +9,14 @@ const useStyles = createStyles((theme) => ({
     position: "relative",
     border: "10px double #f1c872",
     borderRadius: theme.radius.md,
+    // background: "#32344f",
+    // background: theme.black,
+    padding: 2,
   },
-  image: {},
+  image: {
+    margin: 0,
+    padding: 0,
+  },
 }));
 
 export default function MyPhoto() {
@@ -24,7 +30,7 @@ export default function MyPhoto() {
         height: "100%",
         display: "flex",
         maxWidth: PHOTO_SIZE,
-        maxHeight: PHOTO_SIZE + 50,
+        maxHeight: PHOTO_SIZE + 45,
         margin: "0 auto",
         flexDirection: "column",
         alignItems: "center",
