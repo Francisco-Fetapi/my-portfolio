@@ -10,6 +10,7 @@ export default function useTranslationComponents() {
     componentsForTranslation: {
       b: <b />,
       i: <i />,
+      span: <span />,
       linkFullStack: <ExternalLink reference="fullStack" />,
       linkLobito: <ExternalLink reference="lobito" />,
       linkJs: <ExternalLink reference="javascript" />,

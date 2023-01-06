@@ -1,8 +1,10 @@
 import { createStyles, Container, Text, Button, Group } from "@mantine/core";
 import { GithubIcon } from "@mantine/ds";
 import { IconDownload } from "@tabler/icons";
+import Trans from "next-translate/Trans";
 import useTranslation from "next-translate/useTranslation";
 import useMe from "../database/useMe";
+import useTranslationComponents from "../hooks/useTranslationComponents";
 import ExternalLink from "./ExternalLink";
 
 const BREAKPOINT = "@media (max-width: 755px)";
@@ -76,6 +78,7 @@ export function HeroTitle() {
   const { me } = useMe();
   const { t } = useTranslation("home");
   const { t: t2 } = useTranslation("common");
+  const { componentsForTranslation } = useTranslationComponents();
 
   return (
     <div className={classes.wrapper}>
@@ -124,14 +127,21 @@ export function HeroTitle() {
           data-aos-duration="1000"
           data-aos-delay="700"
         >
-          {t("shortDescription_1")}{" "}
+          {/* {t("shortDescription_1")}{" "}
           <ExternalLink reference="fullStack">{me.professional}</ExternalLink>.{" "}
           {t("shortDescription_2")}{" "}
           <span>
             <ExternalLink reference="javascript">JavaScript</ExternalLink>/
             <ExternalLink reference="typescript">TypeScript</ExternalLink>
           </span>
-          .
+          . */}
+          <Trans
+            i18nKey="home:intro"
+            components={componentsForTranslation}
+            values={{
+              professional: me.professional,
+            }}
+          />
         </Text>
 
         <Group className={classes.controls}>

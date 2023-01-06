@@ -11,7 +11,8 @@ export default function IndexPage() {
     <div>
       <NextSeoTemplate
         title={tCommon("main_page")}
-        description={t("seo_description")}
+        // description={t("seo_description")}
+        description={t("intro")}
         pageName="/"
       />
       <AppScheme>
