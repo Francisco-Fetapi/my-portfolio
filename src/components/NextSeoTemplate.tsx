@@ -1,3 +1,4 @@
+import { useMantineColorScheme } from "@mantine/core";
 import { DefaultSeo, DefaultSeoProps } from "next-seo";
 import { useRouter } from "next/router";
 import SEO from "../../next-seo.config";
@@ -13,6 +14,7 @@ export default function NextSeoTemplate({
 }: DefaultSeoProps & NextSeoTemplateProps) {
   const { locales, defaultLocale, locale: currentLocale } = useRouter();
   const { APP_URL } = process.env;
+  const { colorScheme } = useMantineColorScheme();
 
   const alternativeLocales = locales?.filter(
     (locale) => locale !== currentLocale
@@ -37,6 +39,12 @@ export default function NextSeoTemplate({
           href: "minimum-scale=1, initial-scale=1, width=device-width",
         },
       ]}
+      themeColor={colorScheme === "dark" ? "black" : "white"}
+      twitter={{
+        site: "@franciscofetapi",
+        cardType: "summary_large_image",
+        handle: "@franciscofetapi",
+      }}
       {...SEO}
       {...props}
     />
