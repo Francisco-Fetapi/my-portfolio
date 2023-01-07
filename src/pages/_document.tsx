@@ -20,6 +20,7 @@ export default class _Document extends Document {
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap"
             rel="stylesheet"
           />
+          <meta name="google-site-verification" content="6d14dRLNL4XaHP81wC2xvdTsz8KQJzjLTs5zLwOmtz8" />
         </Head>
         <body>
           <Main />
