@@ -5,7 +5,7 @@ import { resetAllState } from "../store/App.store";
 import { ColorSchemeProvider } from "@mantine/core";
 
 import I18nProvider from "next-translate/I18nProvider";
-import common from "../../locales/en/common.json";
+import common from "../../locales/en/common";
 
 interface AppSetupProps {
   children: ReactNode;
