@@ -30,10 +30,10 @@ export default function NextSeoTemplate({
             : `${APP_URL}/${locale}${pageName}`,
       }))}
       additionalLinkTags={[
-        {
-          rel: "shortcut icon",
-          href: "/favicon.svg",
-        },
+        // {
+        //   rel: "shortcut icon",
+        //   href: "/favicon.svg",
+        // },
         {
           rel: "viewport",
           href: "minimum-scale=1, initial-scale=1, width=device-width",
