@@ -7,6 +7,7 @@ export default function useMe() {
   const { t } = useTranslation("common");
   const me = {
     name: "Francisco Fetapi",
+    fullName:"Francisco Camalata Fuayenda Fetapi",
     email: "franciscofetapi@gmail.com",
     photo: "/my-photo1.jpg",
     // professional: "Desenvolvedor Full-Stack",
@@ -22,7 +23,7 @@ export default function useMe() {
     phone1,
     phone2: "958727914",
     calendly: "https://calendly.com/franciscofetapi",
-    whatsapp: `https://api.whatsapp.com?tel=${phone1}`,
+    whatsapp: `https://api.whatsapp.com/send?phone=${phone1}`,
     tecnologies: [
       "TypeScript",
       "JavaScript",
