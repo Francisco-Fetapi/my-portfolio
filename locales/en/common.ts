@@ -31,7 +31,7 @@ const translations = {
   high_school_name: `Polytechnic Institute of Administration
   and Management of Catumbela (IPAG)`,
   curriculum_link:
-    "https://github.com/Francisco-Fetapi/my-portfolio/raw/main/public/Curriculum%20-%20English.pdf",
+    "https://github.com/Francisco-Fetapi/my-portfolio/raw/main/public/Francisco%20Fetapi%20-%20Curriculum.pdf",
 };
 
 export default translations;

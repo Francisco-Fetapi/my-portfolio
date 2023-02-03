@@ -30,7 +30,7 @@ const translations: TranslationCommon = {
   i_created: "Criei o",
   high_school_name: `Instituto Politécnico de Administração e Gestão da Catumbela (IPAG)`,
   curriculum_link:
-    "https://github.com/Francisco-Fetapi/my-portfolio/raw/main/public/Curriculum%20-%20Portuguese.pdf",
+    "https://github.com/Francisco-Fetapi/my-portfolio/raw/main/public/Francisco%20Fetapi%20-%20Curriculo.pdf",
 };
 
 export default translations;
