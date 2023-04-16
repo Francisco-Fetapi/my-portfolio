@@ -314,7 +314,7 @@ const translations: TranslationUseTimeline = {
   read_algorithms_book_description: `Depois de quase <b>5 anos</b> programando finalmente tomei vergonha na cara e comecei a mergulhar no mundo dos algoritmos e estruturas de dados.`,
   create_algorithms_leetcode_repo_title: `Criei o repositorio <linkLeetocodeExercises>Algorithms Exercises</linkLeetocodeExercises>`,
   create_algorithms_leetcode_repo_description: `Para exercitar algoritmos e estruturas de dados, criei um repositorio no GitHub para resolver os problemas do <linkLeetcode>Leetcode</linkLeetcode>`,
-  read_scrum_book_title: `Li o livro <linkBookScrum>SCRUM - A arte de fazer o dobro, Jeff Sutherland</linkBookScrum>`,
+  read_scrum_book_title: `Li o livro <linkBookScrum>SCRUM - A arte de fazer o dobro do trabalho na metade do tempo, Jeff Sutherland</linkBookScrum>`,
   read_scrum_book_description: `Decidi apender mais sobre o <b>SCRUM</b> com o próprio criador. As descobertas foram maravilhosas, uma melhor que a outra.`,
   test_vibbra_title: `Fiz o teste para entrar na <linkVibbra>Vibbra</linkVibbra>`,
   test_vibbra_description: `O trabalho <b>Freelancer</b> sempre me chamou atenção, então acabei me cadastrando na <linkVibbra>Vibbra</linkVibbra>, uma plataforma que conecta profissionais à empresas, entretanto apenas <b>7% dos candidatos</b> conseguem passar no teste e serem efetivados, então dei tudo de mim e...`,

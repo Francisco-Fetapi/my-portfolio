@@ -97,12 +97,14 @@ export default function useExternalLink() {
     reduxtoolkit: "https://redux-toolkit.js.org/",
     quemquerserricoapp:
       "https://quem-quer-ser-rico-lite.br.uptodown.com/android",
-    bookScrum: "#",
-    bookAlgorithms: "#",
-    leetocodeExercises: "#",
-    vibbra: "#",
-    vibbraCertificate: "#",
-    leetcode: "#",
+    bookScrum:
+      "https://www.amazon.com/Scrum-Doing-Twice-Work-Half/dp/038534645X",
+    bookAlgorithms:
+      "https://www.amazon.com.br/Estruturas-Dados-Algoritmos-Com-Javascript/dp/8575226932",
+    leetocodeExercises: getRepositoryByName("algorithms-exercise "),
+    vibbra: "https://www.vibbra.com.br",
+    vibbraCertificate: "/vibbra-certificate.png",
+    leetcode: "https://leetcode.com/",
   };
 
   const linksTranslated = useMemo(() => {
