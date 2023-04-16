@@ -234,6 +234,28 @@ export default function useTimeline() {
       ...translated("start_nextjs"),
     });
 
+    // 2023 begins here
+    timelineEntity.addEvent({
+      date: new Date(2023, 1, 3),
+      ...translated("read_algorithms_book"),
+    });
+    timelineEntity.addEvent({
+      date: new Date(2023, 1, 25),
+      ...translated("create_algorithms_leetcode_repo"),
+    });
+    timelineEntity.addEvent({
+      date: new Date(2023, 2, 8),
+      ...translated("read_scrum_book"),
+    });
+    timelineEntity.addEvent({
+      date: new Date(2023, 2, 19),
+      ...translated("test_vibbra"),
+    });
+    timelineEntity.addEvent({
+      date: new Date(2023, 2, 29),
+      ...translated("passed_vibbra"),
+    });
+
     return Timeline.timelines;
   }
 

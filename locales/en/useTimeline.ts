@@ -312,6 +312,16 @@ const translations = {
     <br></br>
     I learned <b>Next.js</b> with <b>TypeScipt</b> and it just got better
     my understanding of TypeScript further.`,
+  read_algorithms_book_title: ``,
+  read_algorithms_book_description: ``,
+  create_algorithms_leetcode_repo_title: ``,
+  create_algorithms_leetcode_repo_description: ``,
+  read_scrum_book_title: ``,
+  read_scrum_book_description: ``,
+  test_vibbra_title: ``,
+  test_vibbra_description: ``,
+  passed_vibbra_title: ``,
+  passed_vibbra_description: ``,
 };
 
 export default translations;

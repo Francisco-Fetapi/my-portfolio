@@ -93,6 +93,12 @@ export default function useTranslationComponents() {
       linkTesting: <ExternalLink reference="testing"></ExternalLink>,
       linkNextJs: <ExternalLink reference="nextjs" />,
       linkNextjsDocs: <ExternalLink reference="nextjsdocs" />,
+      linkBookScrum: <ExternalLink reference="bookScrum" />,
+      linkBookAlgorithms: <ExternalLink reference="bookAlgorithms" />,
+      linkLeetocodeExercises: <ExternalLink reference="leetocodeExercises" />,
+      linkVibbra: <ExternalLink reference="vibbra" />,
+      linkVibbraCertificate: <ExternalLink reference="vibbraCertificate" />,
+      linkLeetcode: <ExternalLink reference="leetcode" />,
     },
   };
 }

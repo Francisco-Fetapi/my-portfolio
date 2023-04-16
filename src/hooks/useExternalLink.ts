@@ -97,6 +97,12 @@ export default function useExternalLink() {
     reduxtoolkit: "https://redux-toolkit.js.org/",
     quemquerserricoapp:
       "https://quem-quer-ser-rico-lite.br.uptodown.com/android",
+    bookScrum: "#",
+    bookAlgorithms: "#",
+    leetocodeExercises: "#",
+    vibbra: "#",
+    vibbraCertificate: "#",
+    leetcode: "#",
   };
 
   const linksTranslated = useMemo(() => {
