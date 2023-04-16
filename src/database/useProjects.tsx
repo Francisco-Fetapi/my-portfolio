@@ -114,7 +114,7 @@ export default function useProjects() {
       description: <ProjectDescriptionTranslated name="gallery" />,
       images: ["galeria-react-1.webp"],
       links: {
-        github: getRepositoryByName("jornal-web"),
+        github: getRepositoryByName("galeria-react"),
       },
       status: "finished",
       tags: ["React.js", "JavaScript", "PHP", "MySQL"],
