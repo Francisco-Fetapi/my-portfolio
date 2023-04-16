@@ -312,16 +312,16 @@ const translations = {
     <br></br>
     I learned <b>Next.js</b> with <b>TypeScipt</b> and it just got better
     my understanding of TypeScript further.`,
-  read_algorithms_book_title: ``,
-  read_algorithms_book_description: ``,
-  create_algorithms_leetcode_repo_title: ``,
-  create_algorithms_leetcode_repo_description: ``,
-  read_scrum_book_title: ``,
-  read_scrum_book_description: ``,
-  test_vibbra_title: ``,
-  test_vibbra_description: ``,
-  passed_vibbra_title: ``,
-  passed_vibbra_description: ``,
+  read_algorithms_book_title: `I read the book <linkBookAlgorithms>Algorithms and Data Structures, Loiane Grooner</linkBookAlgorithms>`,
+  read_algorithms_book_description: `After almost <b>5 years</b> programming I finally felt ashamed and started diving into the world of algorithms and data structures.`,
+  create_algorithms_leetcode_repo_title: `I created the repository <linkLeetocodeExercises>Algorithms Exercises</linkLeetocodeExercises>`,
+  create_algorithms_leetcode_repo_description: `To exercise algorithms and data structures, I created a repository on GitHub to solve <linkLeetcode>Leetcode</linkLeetcode> problems`,
+  read_scrum_book_title: `I read the book <linkBookScrum>SCRUM - The Art of Doing Double, Jeff Sutherland</linkBookScrum>`,
+  read_scrum_book_description: `I decided to learn more about <b>SCRUM</b> from the creator himself. The discoveries were wonderful, one better than the other.`,
+  test_vibbra_title: `I took the test to join <linkVibbra>Vibbra</linkVibbra>`,
+  test_vibbra_description: `The <b>Freelancer</b> job always called my attention, so I ended up registering on <linkVibbra>Vibbra</linkVibbra>, a platform that connects professionals to companies, however only <b>7% of candidates</b> manage to pass the test and get inducted, so I gave it my all and...`,
+  passed_vibbra_title: `I passed <linkVibbra>Vibbra</linkVibbra> test`,
+  passed_vibbra_description: `I ended up passing the test with a total of <b>9.4/10 points</b>, considering things like <b>Code Quality</b>, <b>Communication</b>, <b>Work remote</b>, etc...<br/><br/> I even got a <linkVibbraCertificate>Certificate</linkVibbraCertificate>`,
 };
 
 export default translations;
